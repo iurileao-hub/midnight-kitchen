@@ -201,4 +201,36 @@ Este projeto usa uma abordagem de **tutoria guiada** onde:
 
 ---
 
+## Status Atual da Sessão
+
+### Sessão 1 (07/01/2026)
+**Status:** Pausada — aguardando implementação
+
+**O que foi feito:**
+- [x] Criada estrutura do projeto
+- [x] Documentação inicial (README, DESIGN, APRENDIZAGEM)
+- [x] Esqueleto da classe `Cliente` preparado
+
+**Próxima tarefa:**
+Implementar os 5 métodos da classe `Cliente` em `models/cliente.py`:
+
+| Método | Linhas | Status |
+|--------|--------|--------|
+| `__init__` | ~8 | Pendente |
+| `apresentar()` | ~5-8 | Pendente |
+| `reagir(acao)` | ~10-15 | Pendente |
+| `aumentar_confianca(qtd)` | ~2-3 | Pendente |
+| `pode_revelar_segredo()` | 1 | Pendente |
+
+**Como retomar:**
+```bash
+cd /Users/iurileao/Documents/Projects/Projetos-Pessoais/midnight-kitchen
+python models/cliente.py  # Para testar após implementar
+```
+
+**Dica:** Comece pelo `__init__`, depois `pode_revelar_segredo()` (mais fácil),
+e deixe `reagir()` por último (mais complexo).
+
+---
+
 *Última atualização: 07/01/2026*
