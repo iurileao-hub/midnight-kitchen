@@ -224,7 +224,7 @@ Implementar os 5 métodos da classe `Cliente` em `models/cliente.py`:
 
 **Como retomar:**
 ```bash
-cd /Users/iurileao/Documents/Projects/Projetos-Pessoais/midnight-kitchen
+cd /Users/iurileao/Documents/Projects/midnight-kitchen
 python models/cliente.py  # Para testar após implementar
 ```
 
