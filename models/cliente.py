@@ -37,6 +37,7 @@ class Cliente:
     def __init__(
         self,
         nome: str,
+        genero_masculino: bool,
         idade: int,
         profissao: str,
         descricao: str,
@@ -68,7 +69,16 @@ class Cliente:
         # ════════════════════════════════════════════════════════════
         # 📝 SEU CÓDIGO AQUI (aproximadamente 8 linhas)
         # ════════════════════════════════════════════════════════════
-        pass  # Remova esta linha quando implementar
+        
+        self.nome = nome
+        self.genero_masculino = genero_masculino
+        self.idade = idade
+        self.profissao = profissao
+        self.descricao = descricao
+        self.humor = humor
+        self.prato_favorito = prato_favorito
+        self.segredo = segredo
+        self.confianca = confianca
 
     def apresentar(self) -> str:
         """
@@ -97,7 +107,10 @@ class Cliente:
         # ════════════════════════════════════════════════════════════
         # 📝 SEU CÓDIGO AQUI (aproximadamente 5-8 linhas)
         # ════════════════════════════════════════════════════════════
-        pass  # Remova esta linha quando implementar
+        if self.genero_masculino:
+            return f'{self.descricao} entra no restaurante.\nEle parece {self.humor}.\n— Boa noite... ainda está aberto?'
+        else:
+            return f'{self.descricao} entra no restaurante.\nEla parece {self.humor}.\n— Boa noite... ainda está aberto?'
 
     def reagir(self, acao: str) -> str:
         """
@@ -131,7 +144,16 @@ class Cliente:
         # ════════════════════════════════════════════════════════════
         # 📝 SEU CÓDIGO AQUI (aproximadamente 10-15 linhas)
         # ════════════════════════════════════════════════════════════
-        pass  # Remova esta linha quando implementar
+        if acao == "silencio":
+            return "O cliente olha ao redor, desconfortável com o silêncio."
+        elif acao == "pergunta_trabalho":
+            return "O cliente sorri levemente e começa a falar sobre seu trabalho."
+        elif acao == "pergunta_pessoal":
+            return "O cliente hesita, claramente desconfortável com a pergunta."
+        elif acao == "oferece_cha":
+            return "O cliente aceita o chá com um sorriso agradecido."
+        else:
+            return "O cliente olha sem entender."
 
     def aumentar_confianca(self, quantidade: int) -> None:
         """
@@ -153,7 +175,7 @@ class Cliente:
         # ════════════════════════════════════════════════════════════
         # 📝 SEU CÓDIGO AQUI (aproximadamente 2-3 linhas)
         # ════════════════════════════════════════════════════════════
-        pass  # Remova esta linha quando implementar
+        self.confianca = max(0, min(100, self.confianca + quantidade))
 
     def pode_revelar_segredo(self) -> bool:
         """
@@ -169,8 +191,7 @@ class Cliente:
         # ════════════════════════════════════════════════════════════
         # 📝 SEU CÓDIGO AQUI (1 linha)
         # ════════════════════════════════════════════════════════════
-        pass  # Remova esta linha quando implementar
-
+        return self.confianca >= 80
 
 # ════════════════════════════════════════════════════════════════════
 # ÁREA DE TESTES - Execute este arquivo diretamente para testar
@@ -186,6 +207,7 @@ if __name__ == "__main__":
     # Criar um cliente de teste
     yuki = Cliente(
         nome="Yuki Tanabe",
+        genero_masculino=False,
         idade=28,
         profissao="Fotógrafa freelancer",
         descricao="Uma jovem com uma câmera antiga pendurada no pescoço",
