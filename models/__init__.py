@@ -1,16 +1,16 @@
 """
-Pacote models - Classes do domínio do jogo Midnight Kitchen.
+Models - Classes base do Midnight Kitchen.
 
-Classes disponíveis:
-    - Cliente: Representa um cliente do restaurante
-    - Prato: Representa um prato que pode ser preparado (a implementar)
-    - Restaurante: Estado central do jogo (a implementar)
-    - Memoria: Fragmentos do passado do Master (a implementar)
+Classes:
+    - Cliente: Um visitante do restaurante
+    - Prato: Uma receita que pode ser preparada
+    - Memoria: Uma peca do quebra-cabeca
+    - Jogo: Estado central do jogo
 """
 
 from .cliente import Cliente
+from .prato import Prato
+from .memoria import Memoria
+from .jogo import Jogo
 
-# Serão adicionados conforme implementados:
-# from .prato import Prato
-# from .restaurante import Restaurante
-# from .memoria import Memoria
+__all__ = ["Cliente", "Prato", "Memoria", "Jogo"]

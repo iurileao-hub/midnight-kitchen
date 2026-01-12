@@ -1,31 +1,48 @@
 # CLAUDE.md — Midnight Kitchen
 
-Instruções para Claude Code ao trabalhar neste repositório.
-
----
-
 ## Sobre o Projeto
 
-**Midnight Kitchen** é um jogo narrativo de terminal em Python, inspirado na série japonesa *Midnight Diner* (深夜食堂).
-
-- **Tipo:** Projeto de portfólio (CS 101 Codecademy)
-- **Autor:** Dr. Iuri Leão de Almeida
-- **Status:** Em desenvolvimento (Fase 1 - Fundamentos)
+**Midnight Kitchen** e um jogo narrativo de terminal em Python.
+Se passa **10 anos antes** da serie *Midnight Diner*.
+Conta a historia de origem da **cicatriz de Master**.
 
 ---
 
-## Contexto de Tutoria
+## Metodologia de Tutoria
 
-Este projeto usa metodologia **"Esqueleto → Carne"**:
+### Esqueleto -> Carne (v2)
 
 | Claude (Tutor) | Iuri (Aprendiz) |
 |----------------|-----------------|
-| Cria estrutura de arquivos | Implementa lógica de negócio |
-| Define assinaturas de métodos | Escreve o corpo dos métodos |
-| Faz code review | Corrige e refatora |
-| Explica conceitos | Pergunta quando tem dúvidas |
+| Cria esqueleto com TODOs | Implementa os TODOs |
+| Mantem gabarito oculto | Nao ve o gabarito |
+| Guia com base no gabarito | Pergunta quando precisa |
+| Valida contra gabarito | Testa e corrige |
 
-**Objetivo:** Maximizar aprendizado através da prática guiada.
+### Arquivos de Gabarito
+
+```
+docs/gabaritos/
+├── cliente_gabarito.py    # Implementacao completa
+├── prato_gabarito.py
+├── memoria_gabarito.py
+└── jogo_gabarito.py
+```
+
+**REGRA:** O aprendiz NAO deve ver os gabaritos.
+Use-os apenas como referencia para guiar e validar.
+
+### Esqueletos
+
+Os esqueletos em `models/` contem:
+- Assinaturas de metodos completas
+- TODOs indicando o que implementar
+- Testes que validam a implementacao
+
+Os esqueletos NAO contem:
+- Dicas explicitas demais
+- Codigo de exemplo dentro dos metodos
+- Explicacoes longas sobre como fazer
 
 ---
 
@@ -33,95 +50,62 @@ Este projeto usa metodologia **"Esqueleto → Carne"**:
 
 ```
 midnight-kitchen/
-├── main.py              # Ponto de entrada (a criar)
 ├── models/
-│   ├── __init__.py
-│   ├── cliente.py       # ✅ Implementado
-│   ├── prato.py         # Próximo
-│   ├── restaurante.py   # Pendente
-│   └── memoria.py       # Pendente
-├── sistemas/
-│   ├── dialogo.py       # Pendente
-│   ├── cozinha.py       # Pendente
-│   └── revelacao.py     # Pendente
-├── dados/
-│   ├── clientes.json    # Pendente
-│   ├── pratos.json      # Pendente
-│   └── memorias.json    # Pendente
+│   ├── cliente.py      # Esqueleto - IMPLEMENTAR
+│   ├── prato.py        # Esqueleto - IMPLEMENTAR
+│   ├── memoria.py      # Esqueleto - IMPLEMENTAR
+│   └── jogo.py         # Esqueleto - IMPLEMENTAR
+├── sistemas/           # Fase 2
+├── dados/              # Fase 3
 └── docs/
-    ├── DESIGN.md        # Arquitetura completa
-    └── APRENDIZAGEM.md  # Plano de tutoria e progresso
+    ├── gabaritos/      # NAO MOSTRAR AO APRENDIZ
+    ├── DESIGN.md
+    ├── ARQUITETURA_v3.md
+    └── PERSONAGENS_PROPOSTA.md
 ```
 
 ---
 
-## Progresso Atual
+## Progresso
 
-### Fase 1: Fundamentos (Classes e Objetos)
-- [x] `Cliente` — classe completa com testes
-- [ ] `Prato` — próximo a implementar
-- [ ] `Restaurante` — pendente
-- [ ] `Memoria` — pendente
+### Fase 1: Classes Base
+- [ ] Cliente - esqueleto pronto
+- [ ] Prato - esqueleto pronto
+- [x] Memoria - IMPLEMENTADA
+- [ ] Jogo - esqueleto pronto
 
-### Próxima Tarefa
-Criar esqueleto da classe `Prato` em `models/prato.py` para Iuri implementar.
+### Fase 2: Sistemas
+- [ ] SistemaDialogo
+- [ ] SistemaCozinha
+- [ ] SistemaReflexao
 
----
-
-## Padrões de Código
-
-- **Linguagem:** Python 3.8+
-- **Estilo:** snake_case para funções/variáveis, PascalCase para classes
-- **Docstrings:** Google style com type hints
-- **Testes:** Bloco `if __name__ == "__main__"` em cada módulo
-- **Commits:** Português, presente do indicativo
+### Fase 3: Dados e Integracao
+- [ ] JSONs de clientes
+- [ ] main.py
+- [ ] Arte ASCII
 
 ---
 
-## Conceitos-Chave do Jogo
+## Mecanicas do Jogo
 
-- **5 noites:** 4 clientes + 1 revelação final
-- **Sistema de confiança:** 0-100, ≥80 revela segredo
-- **Mistério central:** Incêndio há 10 anos conecta todos os clientes ao Master
-- **Mecânica de pratos:** Ingredientes → Receita → Efeito emocional
-
----
-
-## Clientes Planejados
-
-| # | Nome | Profissão | Conexão com Master |
-|---|------|-----------|-------------------|
-| 1 | Yuki | Fotógrafa, 28 | Fotografou o incêndio |
-| 2 | Tanaka | Ex-bombeiro, 55 | Estava no incêndio |
-| 3 | Hana | Estudante, 19 | Filha de vítima |
-| 4 | Kenji | Detetive, 40 | Investiga o caso |
+- **7 dias:** 6 clientes + 1 reflexao
+- **Estados:** fechado -> cauteloso -> aberto -> vulneravel
+- **Prato como gatilho:** Descobrir prato -> Servir -> Memoria
+- **Pode falhar:** Maximo 1 falha para final bom
+- **Envelope:** So existe se Yuki (dia 1) foi sucesso
 
 ---
 
-## Comandos Úteis
+## Comandos
 
 ```bash
-# Navegar ao projeto
-cd ~/Documents/Projects/midnight-kitchen
-
-# Rodar testes de um módulo
+# Testar uma classe
 python3 models/cliente.py
-
-# Ver status do git
-git status
-
-# Commit padrão
-git add -A && git commit -m "Descrição em português"
+python3 models/prato.py
+python3 models/memoria.py
+python3 models/jogo.py
 ```
 
 ---
 
-## Referências
-
-- **Documentação:** `docs/DESIGN.md` (arquitetura), `docs/APRENDIZAGEM.md` (tutoria)
-- **Inspiração:** Midnight Diner (深夜食堂) — série Netflix
-- **Curso:** CS 101 Codecademy — Portfolio Project
-
----
-
-*Última atualização: 10/01/2026*
+*Atualizado: 12/01/2026 — Arquitetura v3*

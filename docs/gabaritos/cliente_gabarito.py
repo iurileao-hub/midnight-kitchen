@@ -1,16 +1,16 @@
 """
-Cliente - Um visitante do Midnight Kitchen.
+GABARITO - Cliente
+NAO MOSTRAR AO APRENDIZ
 
-Cada cliente tem um estado emocional que pode mudar durante a conversa.
-Quando o cliente se abre o suficiente, revela seu prato favorito.
-Ao receber esse prato, uma memoria importante e desbloqueada.
+Este arquivo contem a implementacao completa esperada.
+Usar como referencia para guiar o aprendiz.
 """
 
 
 class Cliente:
     """Representa um cliente que visita o restaurante."""
 
-    # Estados possiveis: fechado -> cauteloso -> aberto -> vulneravel
+    # Estados possiveis de abertura emocional
     ESTADOS = ["fechado", "cauteloso", "aberto", "vulneravel"]
 
     def __init__(
@@ -23,16 +23,23 @@ class Cliente:
         prato_favorito: str,
         memoria: str
     ):
-        """Inicializa o cliente com seus dados e estado inicial."""
-        # TODO: Inicializar atributos
-        # TODO: Definir estado inicial como "fechado"
-        # TODO: Criar flags para prato_descoberto e memoria_revelada
-        pass
+        self.nome = nome
+        self.idade = idade
+        self.profissao = profissao
+        self.descricao = descricao
+        self.genero_masculino = genero_masculino
+        self.prato_favorito = prato_favorito
+        self.memoria = memoria
+
+        # Estado inicial
+        self.estado = "fechado"
+        self.prato_descoberto = False
+        self.memoria_revelada = False
 
     def apresentar(self) -> str:
         """Retorna a descricao visual do cliente ao entrar."""
-        # TODO: Retornar descricao + estado atual
-        pass
+        pronome = "Ele" if self.genero_masculino else "Ela"
+        return f"{self.descricao} entra no restaurante.\n{pronome} parece {self.estado}."
 
     def mudar_estado(self, direcao: int) -> str:
         """
@@ -40,46 +47,44 @@ class Cliente:
         direcao: +1 para abrir, -1 para fechar
         Retorna o novo estado.
         """
-        # TODO: Encontrar indice atual na lista ESTADOS
-        # TODO: Mover para proximo/anterior (sem sair dos limites)
-        # TODO: Atualizar e retornar novo estado
-        pass
+        indice_atual = self.ESTADOS.index(self.estado)
+        novo_indice = max(0, min(len(self.ESTADOS) - 1, indice_atual + direcao))
+        self.estado = self.ESTADOS[novo_indice]
+        return self.estado
 
     def esta_vulneravel(self) -> bool:
         """Verifica se o cliente esta pronto para revelar o prato favorito."""
-        # TODO: Verificar se estado == "vulneravel"
-        pass
+        return self.estado == "vulneravel"
 
     def descobrir_prato(self) -> str:
         """
         Marca o prato como descoberto e retorna o nome.
         So funciona se o cliente estiver vulneravel.
         """
-        # TODO: Verificar condicoes
-        # TODO: Marcar como descoberto
-        # TODO: Retornar nome do prato ou None
-        pass
+        if self.esta_vulneravel() and not self.prato_descoberto:
+            self.prato_descoberto = True
+            return self.prato_favorito
+        return None
 
     def receber_prato(self, nome_prato: str) -> str:
         """
         Cliente recebe um prato. Se for o favorito, revela a memoria.
-        Retorna a memoria ou None.
+        Retorna a reacao do cliente.
         """
-        # TODO: Verificar se e o prato certo e foi descoberto
-        # TODO: Marcar memoria como revelada
-        # TODO: Retornar memoria ou None
-        pass
+        if nome_prato == self.prato_favorito and self.prato_descoberto:
+            self.memoria_revelada = True
+            return self.memoria
+        return None
 
     def foi_sucesso(self) -> bool:
         """Verifica se a noite foi bem sucedida com este cliente."""
-        # TODO: Retornar se memoria foi revelada
-        pass
+        return self.memoria_revelada
 
 
 # Testes
 if __name__ == "__main__":
     print("=" * 50)
-    print("TESTE - CLIENTE")
+    print("TESTE DO GABARITO - CLIENTE")
     print("=" * 50)
 
     yuki = Cliente(
@@ -92,29 +97,25 @@ if __name__ == "__main__":
         memoria="Fotos de um incendio que ela nunca conseguiu olhar"
     )
 
-    # Teste apresentacao
     print(f"\n1. Apresentacao:\n{yuki.apresentar()}")
 
-    # Teste mudanca de estado
     print(f"\n2. Estado inicial: {yuki.estado}")
-    yuki.mudar_estado(+1)
-    print(f"3. Apos +1: {yuki.estado}")
-    yuki.mudar_estado(+1)
-    yuki.mudar_estado(+1)
-    print(f"4. Apos +1, +1: {yuki.estado}")
 
-    # Teste vulnerabilidade
-    print(f"\n5. Vulneravel? {yuki.esta_vulneravel()}")
+    yuki.mudar_estado(+1)
+    print(f"3. Apos abrir: {yuki.estado}")
 
-    # Teste descoberta do prato
+    yuki.mudar_estado(+1)
+    yuki.mudar_estado(+1)
+    print(f"4. Apos abrir mais: {yuki.estado}")
+
+    print(f"5. Esta vulneravel? {yuki.esta_vulneravel()}")
+
     prato = yuki.descobrir_prato()
-    print(f"6. Prato: {prato}")
+    print(f"6. Prato descoberto: {prato}")
 
-    # Teste receber prato
     memoria = yuki.receber_prato("Tamago Gohan")
-    print(f"7. Memoria: {memoria}")
+    print(f"7. Memoria revelada: {memoria}")
 
-    # Teste sucesso
-    print(f"\n8. Sucesso? {yuki.foi_sucesso()}")
+    print(f"8. Foi sucesso? {yuki.foi_sucesso()}")
 
     print("\n" + "=" * 50)
