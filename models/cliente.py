@@ -24,15 +24,20 @@ class Cliente:
         memoria: str
     ):
         """Inicializa o cliente com seus dados e estado inicial."""
-        # TODO: Inicializar atributos
-        # TODO: Definir estado inicial como "fechado"
-        # TODO: Criar flags para prato_descoberto e memoria_revelada
-        pass
+        self.nome = nome
+        self.idade = idade
+        self.profissao = profissao
+        self.descricao = descricao
+        self.genero_masculino = genero_masculino
+        self.prato_favorito = prato_favorito
+        self.memoria = memoria
+        self.estado = "fechado"
+        self.prato_descoberto = False
+        self.memoria_revelada = False
 
     def apresentar(self) -> str:
         """Retorna a descricao visual do cliente ao entrar."""
-        # TODO: Retornar descricao + estado atual
-        pass
+        return f'{self.descricao}' # o estado atual deve ser inferido da descrição, não implicitamente citado aqui.
 
     def mudar_estado(self, direcao: int) -> str:
         """
@@ -40,40 +45,41 @@ class Cliente:
         direcao: +1 para abrir, -1 para fechar
         Retorna o novo estado.
         """
-        # TODO: Encontrar indice atual na lista ESTADOS
-        # TODO: Mover para proximo/anterior (sem sair dos limites)
-        # TODO: Atualizar e retornar novo estado
-        pass
+        indice_atual = self.ESTADOS.index(self.estado)
+        novo_indice = max(0, min(len(self.ESTADOS) - 1, indice_atual + direcao))
+        self.estado = self.ESTADOS[novo_indice]
+        return self.estado
 
-    def esta_vulneravel(self) -> bool:
+    def esta_aberto(self) -> bool:
         """Verifica se o cliente esta pronto para revelar o prato favorito."""
-        # TODO: Verificar se estado == "vulneravel"
-        pass
+        return self.estado == self.ESTADOS[2]
 
     def descobrir_prato(self) -> str:
         """
         Marca o prato como descoberto e retorna o nome.
-        So funciona se o cliente estiver vulneravel.
+        So funciona se o cliente estiver "aberto".
         """
-        # TODO: Verificar condicoes
-        # TODO: Marcar como descoberto
-        # TODO: Retornar nome do prato ou None
-        pass
+        if self.estado == 'aberto' and not self.prato_descoberto:
+            self.prato_descoberto = True
+            return self.prato_favorito
+        return None
 
     def receber_prato(self, nome_prato: str) -> str:
         """
         Cliente recebe um prato. Se for o favorito, revela a memoria.
         Retorna a memoria ou None.
         """
-        # TODO: Verificar se e o prato certo e foi descoberto
-        # TODO: Marcar memoria como revelada
-        # TODO: Retornar memoria ou None
-        pass
+        if self.prato_descoberto and nome_prato == self.prato_favorito:
+            self.estado = self.ESTADOS[3]  # Fica vulneravel
+            self.memoria_revelada = True
+            return self.memoria
+        return None
 
     def foi_sucesso(self) -> bool:
         """Verifica se a noite foi bem sucedida com este cliente."""
-        # TODO: Retornar se memoria foi revelada
-        pass
+        if self.memoria_revelada:
+            return True
+        return False
 
 
 # Testes
@@ -100,11 +106,7 @@ if __name__ == "__main__":
     yuki.mudar_estado(+1)
     print(f"3. Apos +1: {yuki.estado}")
     yuki.mudar_estado(+1)
-    yuki.mudar_estado(+1)
-    print(f"4. Apos +1, +1: {yuki.estado}")
-
-    # Teste vulnerabilidade
-    print(f"\n5. Vulneravel? {yuki.esta_vulneravel()}")
+    print(f"4. Apos +1: {yuki.estado}")
 
     # Teste descoberta do prato
     prato = yuki.descobrir_prato()

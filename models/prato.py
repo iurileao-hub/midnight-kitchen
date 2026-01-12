@@ -16,23 +16,22 @@ class Prato:
         descricao_preparo: str
     ):
         """Inicializa o prato com seus dados."""
-        # TODO: Inicializar atributos
-        pass
+        self.nome = nome
+        self.ingredientes = ingredientes
+        self.tempo_preparo = tempo_preparo
+        self.descricao_preparo = descricao_preparo
 
     def preparar(self) -> str:
         """Retorna a narrativa do preparo do prato."""
-        # TODO: Formatar e retornar nome + descricao + tempo
-        pass
+        return f"Preparando {self.nome}...\n{self.descricao_preparo}\nTempo de preparo: {self.tempo_preparo} minutos."
 
     def listar_ingredientes(self) -> str:
         """Retorna os ingredientes formatados."""
-        # TODO: Formatar lista de ingredientes
-        pass
+        return "\n".join(f"- {ingrediente}" for ingrediente in self.ingredientes)
 
     def __str__(self) -> str:
         """Representacao em texto do prato."""
-        # TODO: Retornar o nome
-        pass
+        return self.nome
 
 
 # Testes

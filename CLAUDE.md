@@ -69,9 +69,9 @@ midnight-kitchen/
 ## Progresso
 
 ### Fase 1: Classes Base
-- [ ] Cliente - esqueleto pronto
-- [ ] Prato - esqueleto pronto
 - [x] Memoria - IMPLEMENTADA
+- [x] Prato - IMPLEMENTADO
+- [x] Cliente - IMPLEMENTADO
 - [ ] Jogo - esqueleto pronto
 
 ### Fase 2: Sistemas
@@ -108,4 +108,4 @@ python3 models/jogo.py
 
 ---
 
-*Atualizado: 12/01/2026 — Arquitetura v3*
+*Atualizado: 12/01/2026 — Fase 1: 3/4 classes implementadas*
