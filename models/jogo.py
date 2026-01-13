@@ -16,63 +16,55 @@ class Jogo:
 
     def __init__(self):
         """Inicializa um novo jogo."""
-        # TODO: dia_atual comeca em 0
-        # TODO: memorias e uma lista vazia
-        # TODO: tem_envelope comeca False
-        # TODO: noites_resultados e uma lista vazia
-        pass
+        self.dia_atual = 0
+        self.memorias = []
+        self.tem_envelope = False
+        self.noites_resultados = []
 
     def iniciar_dia(self) -> int:
         """Avanca para o proximo dia e retorna o numero."""
-        # TODO: Incrementar dia_atual
-        # TODO: Retornar dia_atual
-        pass
+        self.dia_atual += 1
+        return self.dia_atual
 
     def registrar_sucesso(self, cliente_nome: str, memoria_conteudo: str):
         """Registra uma noite bem sucedida."""
-        # TODO: Criar Memoria e adicionar a lista
-        # TODO: Adicionar True a noites_resultados
-        # TODO: Se dia 1, tem_envelope = True
-        pass
+        self.memorias.append([cliente_nome, memoria_conteudo])
+        self.noites_resultados.append(True)
+        if self.dia_atual == 1:
+            self.tem_envelope = True
 
     def registrar_falha(self):
         """Registra uma noite mal sucedida."""
-        # TODO: Adicionar False a noites_resultados
-        pass
+        self.noites_resultados.append(False)
 
     def contar_memorias(self) -> int:
         """Retorna quantas memorias foram coletadas."""
-        # TODO: Retornar tamanho da lista
-        pass
+        return len(self.memorias)
 
     def contar_falhas(self) -> int:
         """Retorna quantas noites falharam."""
-        # TODO: Contar False em noites_resultados
-        pass
+        return self.noites_resultados.count(False)
 
     def pode_final_bom(self) -> bool:
         """Verifica se o jogador pode ter o final bom."""
-        # TODO: Verificar se falhas <= MAX_FALHAS_FINAL_BOM
-        pass
+        return self.contar_falhas() <= self.MAX_FALHAS_FINAL_BOM
 
     def e_dia_reflexao(self) -> bool:
         """Verifica se e o dia 7 (reflexao)."""
-        # TODO: Verificar se dia_atual == TOTAL_DIAS
-        pass
+        return self.dia_atual == self.TOTAL_DIAS
 
     def obter_memorias(self) -> list:
         """Retorna todas as memorias coletadas."""
-        # TODO: Retornar lista de memorias
-        pass
+        return self.memorias
 
     def abrir_envelope(self) -> str:
         """
         Abre o envelope de Yuki no dia 7.
         So funciona se tiver o envelope e for dia 7.
         """
-        # TODO: Verificar condicoes
-        # TODO: Retornar conteudo ou None
-        pass
+        if self.tem_envelope and self.e_dia_reflexao():
+            return "Conteudo do envelope de Yuki"
+        return None
 
 
 # Testes

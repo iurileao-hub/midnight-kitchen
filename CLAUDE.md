@@ -72,7 +72,7 @@ midnight-kitchen/
 - [x] Memoria - IMPLEMENTADA
 - [x] Prato - IMPLEMENTADO
 - [x] Cliente - IMPLEMENTADO
-- [ ] Jogo - esqueleto pronto
+- [x] Jogo - IMPLEMENTADO
 
 ### Fase 2: Sistemas
 - [ ] SistemaDialogo
@@ -108,4 +108,4 @@ python3 models/jogo.py
 
 ---
 
-*Atualizado: 12/01/2026 — Fase 1: 3/4 classes implementadas*
+*Atualizado: 13/01/2026 — Fase 1 completa!*

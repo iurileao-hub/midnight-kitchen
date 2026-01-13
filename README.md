@@ -76,7 +76,7 @@ Este projeto faz parte do **Portfolio Project: Python Terminal Game** do curso C
 
 ## Autor
 
-**Dr. Iuri Leao de Almeida**
+**Iúri Leao de Almeida**
 Projeto desenvolvido como parte da transicao para Ciencia da Computacao (FIAP 2026-2030)
 
 ## Licenca
