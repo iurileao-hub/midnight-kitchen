@@ -23,10 +23,13 @@ Conta a historia de origem da **cicatriz de Master**.
 
 ```
 docs/gabaritos/
-├── cliente_gabarito.py    # Implementacao completa
+├── cliente_gabarito.py    # Fase 1
 ├── prato_gabarito.py
 ├── memoria_gabarito.py
-└── jogo_gabarito.py
+├── jogo_gabarito.py
+├── dialogo_gabarito.py    # Fase 2
+├── cozinha_gabarito.py
+└── reflexao_gabarito.py
 ```
 
 **REGRA:** O aprendiz NAO deve ver os gabaritos.
@@ -51,11 +54,14 @@ Os esqueletos NAO contem:
 ```
 midnight-kitchen/
 ├── models/
-│   ├── cliente.py      # Esqueleto - IMPLEMENTAR
-│   ├── prato.py        # Esqueleto - IMPLEMENTAR
-│   ├── memoria.py      # Esqueleto - IMPLEMENTAR
-│   └── jogo.py         # Esqueleto - IMPLEMENTAR
-├── sistemas/           # Fase 2
+│   ├── cliente.py      # IMPLEMENTADO
+│   ├── prato.py        # IMPLEMENTADO
+│   ├── memoria.py      # IMPLEMENTADO
+│   └── jogo.py         # IMPLEMENTADO
+├── sistemas/
+│   ├── dialogo.py      # Esqueleto - IMPLEMENTAR
+│   ├── cozinha.py      # Esqueleto - IMPLEMENTAR
+│   └── reflexao.py     # Esqueleto - IMPLEMENTAR
 ├── dados/              # Fase 3
 └── docs/
     ├── gabaritos/      # NAO MOSTRAR AO APRENDIZ
@@ -75,9 +81,9 @@ midnight-kitchen/
 - [x] Jogo - IMPLEMENTADO
 
 ### Fase 2: Sistemas
-- [ ] SistemaDialogo
-- [ ] SistemaCozinha
-- [ ] SistemaReflexao
+- [ ] SistemaDialogo - esqueleto pronto
+- [ ] SistemaCozinha - esqueleto pronto
+- [ ] SistemaReflexao - esqueleto pronto
 
 ### Fase 3: Dados e Integracao
 - [ ] JSONs de clientes
@@ -99,13 +105,18 @@ midnight-kitchen/
 ## Comandos
 
 ```bash
-# Testar uma classe
+# Testar classes base (Fase 1)
 python3 models/cliente.py
 python3 models/prato.py
 python3 models/memoria.py
 python3 models/jogo.py
+
+# Testar sistemas (Fase 2)
+cd sistemas && python3 dialogo.py
+cd sistemas && python3 cozinha.py
+cd sistemas && python3 reflexao.py
 ```
 
 ---
 
-*Atualizado: 13/01/2026 — Fase 1 completa!*
+*Atualizado: 13/01/2026 — Fase 2: esqueletos prontos*
