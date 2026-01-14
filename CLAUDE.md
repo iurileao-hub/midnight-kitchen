@@ -1,4 +1,4 @@
-# CLAUDE.md — Midnight Kitchen
+# CLAUDE.md — Midnight Kitchen v2.0
 
 ## Sobre o Projeto
 
@@ -6,123 +6,157 @@
 Se passa **10 anos antes** da serie *Midnight Diner*.
 Conta a historia de origem da **cicatriz de Master**.
 
----
-
-## Metodologia de Tutoria
-
-### Esqueleto -> Carne (v2)
-
-| Claude (Tutor) | Iuri (Aprendiz) |
-|----------------|-----------------|
-| Cria esqueleto com TODOs | Implementa os TODOs |
-| Mantem gabarito oculto | Nao ve o gabarito |
-| Guia com base no gabarito | Pergunta quando precisa |
-| Valida contra gabarito | Testa e corrige |
-
-### Arquivos de Gabarito
-
-```
-docs/gabaritos/
-├── cliente_gabarito.py    # Fase 1
-├── prato_gabarito.py
-├── memoria_gabarito.py
-├── jogo_gabarito.py
-├── dialogo_gabarito.py    # Fase 2
-├── cozinha_gabarito.py
-├── reflexao_gabarito.py
-└── main_gabarito.py       # Fase 3
-```
-
-**REGRA:** O aprendiz NAO deve ver os gabaritos.
-Use-os apenas como referencia para guiar e validar.
-
-### Esqueletos
-
-Os esqueletos em `models/` contem:
-- Assinaturas de metodos completas
-- TODOs indicando o que implementar
-- Testes que validam a implementacao
-
-Os esqueletos NAO contem:
-- Dicas explicitas demais
-- Codigo de exemplo dentro dos metodos
-- Explicacoes longas sobre como fazer
+**Status atual:** Refatoracao para versao de alta qualidade.
 
 ---
 
-## Estrutura do Projeto
+## Fase Atual: Refatoracao v2.0
+
+O prototipo funcional esta completo. Agora estamos elevando o jogo
+para uma versao **apresentavel a jogadores reais**.
+
+### Objetivos
+
+1. **Interface elegante** com `rich` (cores, paineis, efeitos)
+2. **Narrativa imersiva** com prosa atmosferica
+3. **Dialogos profundos** unicos para cada personagem
+4. **Sistema de pistas** que recompensa atencao
+5. **Experiencia emocional** genuina
+
+### Documentacao Principal
+
+```
+docs/
+├── VISAO_v2.md       # Visao de produto e arquitetura
+├── NARRATIVA.md      # Guia de escrita e tom
+└── PERSONAGENS.md    # Perfis detalhados dos 6 clientes
+```
+
+---
+
+## Estrutura do Projeto (Atual)
 
 ```
 midnight-kitchen/
-├── main.py             # IMPLEMENTADO - Loop principal do jogo
+├── main.py              # Loop principal (v1 - sera refatorado)
 ├── models/
-│   ├── cliente.py      # IMPLEMENTADO
-│   ├── prato.py        # IMPLEMENTADO
-│   ├── memoria.py      # IMPLEMENTADO
-│   └── jogo.py         # IMPLEMENTADO
+│   ├── cliente.py       # Classe Cliente
+│   ├── prato.py         # Classe Prato
+│   ├── memoria.py       # Classe Memoria
+│   └── jogo.py          # Estado do jogo
 ├── sistemas/
-│   ├── dialogo.py      # IMPLEMENTADO
-│   ├── cozinha.py      # IMPLEMENTADO (9 pratos)
-│   └── reflexao.py     # IMPLEMENTADO
+│   ├── dialogo.py       # Sistema de dialogo (sera expandido)
+│   ├── cozinha.py       # Sistema de cozinha
+│   └── reflexao.py      # Dia 7 - reflexao
 ├── dados/
-│   └── clientes.json   # 6 clientes com dados completos
+│   └── clientes.json    # Dados dos clientes (sera expandido)
 └── docs/
-    ├── gabaritos/      # NAO MOSTRAR AO APRENDIZ
-    ├── DESIGN.md
-    ├── ARQUITETURA_v3.md
-    └── PERSONAGENS_PROPOSTA.md
+    ├── VISAO_v2.md      # Visao da refatoracao
+    ├── NARRATIVA.md     # Guia de narrativa
+    └── PERSONAGENS.md   # Perfis dos personagens
 ```
 
 ---
 
-## Progresso
+## Estrutura Planejada (v2.0)
 
-### Fase 1: Classes Base
-- [x] Memoria - IMPLEMENTADA
-- [x] Prato - IMPLEMENTADO
-- [x] Cliente - IMPLEMENTADO
-- [x] Jogo - IMPLEMENTADO
-
-### Fase 2: Sistemas
-- [x] SistemaDialogo - IMPLEMENTADO
-- [x] SistemaCozinha - IMPLEMENTADO
-- [x] SistemaReflexao - IMPLEMENTADO
-
-### Fase 3: Dados e Integracao
-- [x] JSONs de clientes - dados/clientes.json
-- [x] main.py - IMPLEMENTADO
-- [x] Arte ASCII - lanterna japonesa no main.py
+```
+midnight-kitchen/
+├── main.py
+├── config.py            # Configuracoes globais
+├── requirements.txt     # Dependencias (rich)
+│
+├── core/                # NOVO - Nucleo do jogo
+│   ├── game.py          # Loop e estado
+│   ├── scene.py         # Gerenciador de cenas
+│   └── renderer.py      # Renderizacao
+│
+├── models/              # Entidades (expandir)
+├── sistemas/            # Logica (expandir)
+│
+├── narrativa/           # NOVO - Conteudo narrativo
+│   ├── ambientacao.py
+│   ├── monologos.py
+│   └── transicoes.py
+│
+├── dados/               # Expandir com dialogos por personagem
+│   ├── clientes/
+│   │   ├── yuki.json
+│   │   └── ...
+│   ├── dialogos/
+│   │   ├── yuki_dialogos.json
+│   │   └── ...
+│   └── pratos.json
+│
+├── ui/                  # NOVO - Interface
+│   ├── styles.py
+│   ├── components.py
+│   ├── ascii_art.py
+│   └── effects.py
+│
+└── docs/
+```
 
 ---
 
-## Mecanicas do Jogo
+## Fases da Refatoracao
 
-- **7 dias:** 6 clientes + 1 reflexao
-- **Estados:** fechado -> cauteloso -> aberto -> vulneravel
-- **Prato como gatilho:** Descobrir prato -> Servir -> Memoria
-- **Pode falhar:** Maximo 1 falha para final bom
-- **Envelope:** So existe se Yuki (dia 1) foi sucesso
+### Fase 1: Infraestrutura UI
+- [ ] Instalar `rich`
+- [ ] Criar sistema de renderizacao
+- [ ] Implementar componentes visuais
+- [ ] Arte ASCII elaborada
+
+### Fase 2: Narrativa Base
+- [ ] Reescrever ambientacao
+- [ ] Monologos de Master
+- [ ] Descricoes expandidas
+- [ ] Transicoes entre cenas
+
+### Fase 3: Sistema de Dialogo
+- [ ] JSONs de dialogo por personagem
+- [ ] Sistema de confianca granular
+- [ ] Ramificacoes e consequencias
+- [ ] Pistas e recompensas
+
+### Fase 4: Integracao
+- [ ] Conectar sistemas
+- [ ] Balancear dificuldade
+- [ ] Testes completos
+- [ ] Polish final
 
 ---
 
 ## Comandos
 
 ```bash
-# Testar classes base (Fase 1)
-python3 models/cliente.py
-python3 models/prato.py
-python3 models/memoria.py
-python3 models/jogo.py
+# Rodar o jogo (versao atual)
+python3 main.py
 
-# Testar sistemas (Fase 2)
+# Testar sistemas individuais
 python3 sistemas/dialogo.py
 python3 sistemas/cozinha.py
 python3 sistemas/reflexao.py
-
-# Jogar o jogo completo (Fase 3)
-python3 main.py
 ```
 
 ---
 
-*Atualizado: 14/01/2026 — Jogo completo e funcional!*
+## Mecanicas do Jogo
+
+- **7 noites:** 6 clientes + 1 reflexao
+- **Estados emocionais:** fechado -> cauteloso -> aberto -> vulneravel
+- **Prato como gatilho:** Descobrir prato -> Servir -> Memoria
+- **Sistema de falha:** Maximo 1 falha para final bom
+- **Envelope:** So existe se Yuki (noite 1) foi sucesso
+
+---
+
+## Metodologia
+
+Claude guia o desenvolvimento, explicando conceitos de Python
+conforme implementamos. O foco agora e qualidade do produto,
+com aprendizado integrado ao processo.
+
+---
+
+*Atualizado: 14/01/2026 — Inicio da refatoracao v2.0*
