@@ -20,51 +20,50 @@ ESTRUTURA DE DADOS:
 - Use um dicionario OPCOES onde a chave e o estado
 """
 
+import sys
+from pathlib import Path
+
+# Adiciona o diretorio raiz do projeto ao path
+# Isso permite importar 'models' mesmo rodando de dentro de 'sistemas/'
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
 from models.cliente import Cliente
 
 
 class SistemaDialogo:
     """Sistema que gerencia conversas com clientes."""
 
-    # =========================================================================
-    # DADOS DE DIALOGO
-    # =========================================================================
-    #
-    # Voce precisa criar um dicionario OPCOES com esta estrutura:
-    #
-    # OPCOES = {
-    #     "fechado": [
-    #         {"texto": "Frase que o jogador pode dizer", "efeito": +1},
-    #         {"texto": "Outra frase", "efeito": 0},
-    #         ...
-    #     ],
-    #     "cauteloso": [...],
-    #     "aberto": [...],
-    #     "vulneravel": [...],
-    # }
-    #
-    # Efeitos:
-    #   +1 = cliente se abre mais (estado avanca)
-    #    0 = neutro (estado nao muda)
-    #   -1 = cliente se fecha (estado regride)
-    #
-    # Crie 2-3 opcoes para cada estado.
-    # =========================================================================
+    OPCOES = {
+        "fechado": [
+            {"texto": "Boa noite. O que posso servir?", "efeito": 0},
+            {"texto": "Parece cansado. Dia difícil?", "efeito": +1},
+            {"texto": "Primeira vez aqui?", "efeito": 0},
+            {"texto": "Apenas sorri e serve um chá fresco", "efeito": +1},
+        ],
+        "cauteloso": [
+            {"texto": "O que gosta de fazer nas horas vagas?", "efeito": +1},
+            {"texto": "Ja visitou outros restaurantes por aqui?", "efeito": 0},
+            {"texto": "Prefere ficar sozinho?", "efeito": -1},
+            {"texto": "Conte-me sobre seu trabalho.", "efeito": +1},
+        ],
+        "aberto": [
+            {"texto": "Qual seu prato favorito?", "efeito": +1},
+            {"texto": "Gostaria de ouvir mais sobre voce.", "efeito": 0},
+            {"texto": "Nao confia em estranhos?", "efeito": -1},
+        ],
+        "vulneravel": [
+            {"texto": "Posso ajudar em algo?", "efeito": 0},
+            {"texto": "Quer conversar sobre o que aconteceu?", "efeito": -1},
+            {"texto": "Fique a vontade para pedir o que quiser.", "efeito": 0},
+        ],
+    }
 
-    # TODO: criar dicionario OPCOES aqui (como atributo de classe)
-
-    # =========================================================================
-    # Tambem crie um dicionario RESPOSTAS para o que o cliente diz
-    # apos mudar de estado:
-    #
-    # RESPOSTAS = {
-    #     "fechado": "O cliente permanece em silencio.",
-    #     "cauteloso": "O cliente parece mais relaxado.",
-    #     ...
-    # }
-    # =========================================================================
-
-    # TODO: criar dicionario RESPOSTAS aqui (como atributo de classe)
+    RESPOSTAS = {
+        "fechado": "O cliente permanece em silêncio.",
+        "cauteloso": "O cliente parece mais relaxado.",
+        "aberto": "O cliente sorri e começa a conversar.",
+        "vulneravel": "O cliente parece confiar em você agora.",
+    }
 
     def __init__(self, cliente: Cliente):
         """
@@ -93,8 +92,7 @@ class SistemaDialogo:
         2. Buscar as opcoes desse estado no dicionario OPCOES
         3. Retornar a lista de opcoes
         """
-        # TODO: implementar
-        pass
+        return self.OPCOES.get(self.cliente.estado, [])
 
     def escolher_opcao(self, indice: int) -> str:
         """
@@ -114,8 +112,15 @@ class SistemaDialogo:
         5. Se efeito != 0, chamar self.cliente.mudar_estado(efeito)
         6. Retornar a resposta apropriada do dicionario RESPOSTAS
         """
-        # TODO: implementar
-        pass
+        opcoes = self.obter_opcoes()
+        if 0 <= indice < len(opcoes):
+            opcao = opcoes[indice]
+            efeito = opcao["efeito"]
+            if efeito != 0:
+                self.cliente.mudar_estado(efeito)
+            return self.RESPOSTAS[self.cliente.estado]
+        else:
+            return "Opcao invalida."
 
     def tentar_descobrir_prato(self) -> str:
         """
@@ -128,8 +133,7 @@ class SistemaDialogo:
             Nome do prato (str) se cliente esta aberto
             None se cliente ainda nao esta pronto
         """
-        # TODO: implementar (apenas uma linha!)
-        pass
+        return self.cliente.descobrir_prato()
 
     def obter_estado_cliente(self) -> str:
         """
@@ -137,8 +141,7 @@ class SistemaDialogo:
 
         Simplesmente retorna self.cliente.estado
         """
-        # TODO: implementar (apenas uma linha!)
-        pass
+        return self.cliente.estado
 
 
 # =============================================================================

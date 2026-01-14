@@ -5,7 +5,14 @@ Controla os dias, memorias coletadas, e determina o final.
 O envelope de Yuki so existe se a primeira noite foi sucesso.
 """
 
-from memoria import Memoria
+import sys
+from pathlib import Path
+
+# Adiciona o diretorio raiz ao path para imports funcionarem
+# tanto rodando diretamente quanto importando como pacote
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from models.memoria import Memoria
 
 
 class Jogo:

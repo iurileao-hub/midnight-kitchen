@@ -59,7 +59,7 @@ midnight-kitchen/
 │   ├── memoria.py      # IMPLEMENTADO
 │   └── jogo.py         # IMPLEMENTADO
 ├── sistemas/
-│   ├── dialogo.py      # Esqueleto - IMPLEMENTAR
+│   ├── dialogo.py      # IMPLEMENTADO
 │   ├── cozinha.py      # Esqueleto - IMPLEMENTAR
 │   └── reflexao.py     # Esqueleto - IMPLEMENTAR
 ├── dados/              # Fase 3
@@ -81,7 +81,7 @@ midnight-kitchen/
 - [x] Jogo - IMPLEMENTADO
 
 ### Fase 2: Sistemas
-- [ ] SistemaDialogo - esqueleto pronto
+- [x] SistemaDialogo - IMPLEMENTADO
 - [ ] SistemaCozinha - esqueleto pronto
 - [ ] SistemaReflexao - esqueleto pronto
 
@@ -119,4 +119,4 @@ cd sistemas && python3 reflexao.py
 
 ---
 
-*Atualizado: 13/01/2026 — Fase 2: esqueletos prontos*
+*Atualizado: 14/01/2026 — Fase 2: SistemaDialogo implementado*
