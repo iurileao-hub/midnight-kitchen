@@ -65,83 +65,69 @@ class SistemaDialogo:
         "vulneravel": "O cliente parece confiar em você agora.",
     }
 
-    def __init__(self, cliente: Cliente):
+    def __init__(self):
         """
-        Inicializa o sistema com um cliente.
+        Inicializa o sistema de dialogo.
 
-        O sistema precisa guardar uma referencia ao cliente para:
-        - Consultar seu estado atual
-        - Mudar seu estado com mudar_estado()
-        - Descobrir seu prato com descobrir_prato()
+        Este sistema e reutilizavel para multiplos clientes.
+        O cliente e passado como parametro nos metodos.
         """
-        self.cliente = cliente
+        pass
 
-    def obter_opcoes(self) -> list:
+    def obter_opcoes(self, cliente: Cliente) -> list:
         """
         Retorna as opcoes de dialogo disponiveis para o estado ATUAL do cliente.
 
         Exemplo de retorno quando cliente esta "fechado":
         [
-            {"texto": "Boa noite. O que posso servir?", "efeito": +1},
-            {"texto": "Parece cansado. Dia dificil?", "efeito": +1},
-            {"texto": "Primeira vez aqui?", "efeito": 0},
+            "Boa noite. O que posso servir?",
+            "Parece cansado. Dia dificil?",
+            "Primeira vez aqui?",
         ]
 
-        Passos:
-        1. Obter o estado atual do cliente (self.cliente.estado)
-        2. Buscar as opcoes desse estado no dicionario OPCOES
-        3. Retornar a lista de opcoes
+        Retorna apenas os textos das opcoes (para exibir ao jogador).
         """
-        return self.OPCOES.get(self.cliente.estado, [])
+        opcoes = self.OPCOES.get(cliente.estado, [])
+        return [op["texto"] for op in opcoes]
 
-    def escolher_opcao(self, indice: int) -> str:
+    def processar_escolha(self, cliente: Cliente, indice: int) -> str:
         """
         Processa a escolha do jogador e retorna a resposta do cliente.
 
         Parametros:
+            cliente: o cliente com quem estamos conversando
             indice: qual opcao o jogador escolheu (0, 1, 2, ...)
 
         Retorna:
             A resposta do cliente (string do dicionario RESPOSTAS)
-
-        Passos:
-        1. Obter a lista de opcoes atuais (use obter_opcoes())
-        2. Validar se o indice e valido (0 <= indice < len(opcoes))
-        3. Pegar a opcao escolhida: opcoes[indice]
-        4. Extrair o efeito: opcao["efeito"]
-        5. Se efeito != 0, chamar self.cliente.mudar_estado(efeito)
-        6. Retornar a resposta apropriada do dicionario RESPOSTAS
         """
-        opcoes = self.obter_opcoes()
+        opcoes = self.OPCOES.get(cliente.estado, [])
         if 0 <= indice < len(opcoes):
             opcao = opcoes[indice]
             efeito = opcao["efeito"]
             if efeito != 0:
-                self.cliente.mudar_estado(efeito)
-            return self.RESPOSTAS[self.cliente.estado]
+                cliente.mudar_estado(efeito)
+            return self.RESPOSTAS[cliente.estado]
         else:
             return "Opcao invalida."
 
-    def tentar_descobrir_prato(self) -> str:
+    def tentar_descobrir_prato(self, cliente: Cliente) -> str:
         """
         Tenta descobrir o prato favorito do cliente.
 
         Esta funcao so deve funcionar se o cliente estiver "aberto".
-        E basicamente um wrapper para self.cliente.descobrir_prato()
 
         Retorna:
             Nome do prato (str) se cliente esta aberto
             None se cliente ainda nao esta pronto
         """
-        return self.cliente.descobrir_prato()
+        return cliente.descobrir_prato()
 
-    def obter_estado_cliente(self) -> str:
+    def obter_estado_cliente(self, cliente: Cliente) -> str:
         """
         Retorna o estado emocional atual do cliente.
-
-        Simplesmente retorna self.cliente.estado
         """
-        return self.cliente.estado
+        return cliente.estado
 
 
 # =============================================================================
@@ -163,29 +149,28 @@ if __name__ == "__main__":
         memoria="Fotos do incendio"
     )
 
-    dialogo = SistemaDialogo(yuki)
+    dialogo = SistemaDialogo()
 
     # Teste 1: Estado inicial
-    print(f"\n1. Estado inicial: {dialogo.obter_estado_cliente()}")
+    print(f"\n1. Estado inicial: {dialogo.obter_estado_cliente(yuki)}")
 
     # Teste 2: Ver opcoes disponiveis
-    opcoes = dialogo.obter_opcoes()
+    opcoes = dialogo.obter_opcoes(yuki)
     print(f"2. Opcoes disponiveis:")
-    if opcoes:
-        for i, op in enumerate(opcoes):
-            print(f"   [{i}] {op['texto']} (efeito: {op['efeito']})")
+    for i, texto in enumerate(opcoes):
+        print(f"   [{i}] {texto}")
 
-    # Teste 3: Escolher uma opcao
-    resposta = dialogo.escolher_opcao(0)
+    # Teste 3: Escolher uma opcao positiva
+    resposta = dialogo.processar_escolha(yuki, 1)  # "Parece cansado. Dia dificil?" (+1)
     print(f"\n3. Resposta do cliente: {resposta}")
-    print(f"4. Novo estado: {dialogo.obter_estado_cliente()}")
+    print(f"4. Novo estado: {dialogo.obter_estado_cliente(yuki)}")
 
     # Teste 4: Continuar conversando ate "aberto"
-    dialogo.escolher_opcao(0)  # Mais uma opcao positiva
-    print(f"\n5. Estado apos mais conversa: {dialogo.obter_estado_cliente()}")
+    dialogo.processar_escolha(yuki, 0)  # Mais uma opcao positiva
+    print(f"\n5. Estado apos mais conversa: {dialogo.obter_estado_cliente(yuki)}")
 
     # Teste 5: Tentar descobrir prato
-    prato = dialogo.tentar_descobrir_prato()
+    prato = dialogo.tentar_descobrir_prato(yuki)
     print(f"6. Prato descoberto: {prato}")
 
     print("\n" + "=" * 50)

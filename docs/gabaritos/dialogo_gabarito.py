@@ -12,64 +12,74 @@ class SistemaDialogo:
     # Opcoes de dialogo por estado
     OPCOES = {
         "fechado": [
-            {"texto": "Boa noite. O que posso servir?", "efeito": +1},
-            {"texto": "Parece cansado. Dia dificil?", "efeito": +1},
+            {"texto": "Boa noite. O que posso servir?", "efeito": 0},
+            {"texto": "Parece cansado. Dia difícil?", "efeito": +1},
             {"texto": "Primeira vez aqui?", "efeito": 0},
+            {"texto": "Apenas sorri e serve um chá fresco", "efeito": +1},
         ],
         "cauteloso": [
-            {"texto": "Tem algo em mente para comer?", "efeito": +1},
-            {"texto": "Esse lugar e tranquilo, pode relaxar.", "efeito": +1},
-            {"texto": "De onde voce vem?", "efeito": 0},
+            {"texto": "O que gosta de fazer nas horas vagas?", "efeito": +1},
+            {"texto": "Ja visitou outros restaurantes por aqui?", "efeito": 0},
+            {"texto": "Prefere ficar sozinho?", "efeito": -1},
+            {"texto": "Conte-me sobre seu trabalho.", "efeito": +1},
         ],
         "aberto": [
-            {"texto": "Parece que tem algo te preocupando.", "efeito": +1},
-            {"texto": "Qual seu prato favorito?", "efeito": 0},
-            {"texto": "Quer conversar sobre isso?", "efeito": +1},
+            {"texto": "Qual seu prato favorito?", "efeito": +1},
+            {"texto": "Gostaria de ouvir mais sobre voce.", "efeito": 0},
+            {"texto": "Nao confia em estranhos?", "efeito": -1},
         ],
         "vulneravel": [
-            {"texto": "Estou ouvindo.", "efeito": 0},
-            {"texto": "Deve ter sido dificil.", "efeito": 0},
-            {"texto": "Obrigado por compartilhar.", "efeito": 0},
+            {"texto": "Posso ajudar em algo?", "efeito": 0},
+            {"texto": "Quer conversar sobre o que aconteceu?", "efeito": -1},
+            {"texto": "Fique a vontade para pedir o que quiser.", "efeito": 0},
         ],
     }
 
     RESPOSTAS = {
-        "fechado": "O cliente acena levemente.",
+        "fechado": "O cliente permanece em silêncio.",
         "cauteloso": "O cliente parece mais relaxado.",
-        "aberto": "O cliente suspira e comeca a se abrir.",
-        "vulneravel": "O cliente olha para voce com gratidao.",
+        "aberto": "O cliente sorri e começa a conversar.",
+        "vulneravel": "O cliente parece confiar em você agora.",
     }
 
-    def __init__(self, cliente: Cliente):
-        """Inicializa o sistema com um cliente."""
-        self.cliente = cliente
+    def __init__(self):
+        """
+        Inicializa o sistema de dialogo.
 
-    def obter_opcoes(self) -> list:
-        """Retorna as opcoes de dialogo disponiveis."""
-        estado = self.cliente.estado
-        return self.OPCOES.get(estado, [])
+        Este sistema e reutilizavel para multiplos clientes.
+        O cliente e passado como parametro nos metodos.
+        """
+        pass
 
-    def escolher_opcao(self, indice: int) -> str:
-        """Processa a escolha do jogador."""
-        opcoes = self.obter_opcoes()
-        if indice < 0 or indice >= len(opcoes):
+    def obter_opcoes(self, cliente: Cliente) -> list:
+        """
+        Retorna as opcoes de dialogo disponiveis para o estado ATUAL do cliente.
+        Retorna apenas os textos das opcoes (para exibir ao jogador).
+        """
+        opcoes = self.OPCOES.get(cliente.estado, [])
+        return [op["texto"] for op in opcoes]
+
+    def processar_escolha(self, cliente: Cliente, indice: int) -> str:
+        """
+        Processa a escolha do jogador e retorna a resposta do cliente.
+        """
+        opcoes = self.OPCOES.get(cliente.estado, [])
+        if 0 <= indice < len(opcoes):
+            opcao = opcoes[indice]
+            efeito = opcao["efeito"]
+            if efeito != 0:
+                cliente.mudar_estado(efeito)
+            return self.RESPOSTAS[cliente.estado]
+        else:
             return "Opcao invalida."
 
-        opcao = opcoes[indice]
-        efeito = opcao["efeito"]
-
-        if efeito != 0:
-            self.cliente.mudar_estado(efeito)
-
-        return self.RESPOSTAS.get(self.cliente.estado, "")
-
-    def tentar_descobrir_prato(self) -> str:
+    def tentar_descobrir_prato(self, cliente: Cliente) -> str:
         """Tenta descobrir o prato favorito do cliente."""
-        return self.cliente.descobrir_prato()
+        return cliente.descobrir_prato()
 
-    def obter_estado_cliente(self) -> str:
+    def obter_estado_cliente(self, cliente: Cliente) -> str:
         """Retorna o estado emocional atual do cliente."""
-        return self.cliente.estado
+        return cliente.estado
 
 
 # Testes
@@ -88,19 +98,19 @@ if __name__ == "__main__":
         memoria="Fotos do incendio"
     )
 
-    dialogo = SistemaDialogo(yuki)
+    dialogo = SistemaDialogo()
 
-    print(f"\n1. Estado inicial: {dialogo.obter_estado_cliente()}")
-    print(f"2. Opcoes disponiveis: {dialogo.obter_opcoes()}")
+    print(f"\n1. Estado inicial: {dialogo.obter_estado_cliente(yuki)}")
+    print(f"2. Opcoes disponiveis: {dialogo.obter_opcoes(yuki)}")
 
-    resposta = dialogo.escolher_opcao(0)
+    resposta = dialogo.processar_escolha(yuki, 1)  # +1
     print(f"3. Resposta: {resposta}")
-    print(f"4. Novo estado: {dialogo.obter_estado_cliente()}")
+    print(f"4. Novo estado: {dialogo.obter_estado_cliente(yuki)}")
 
     # Continuar ate aberto
-    dialogo.escolher_opcao(0)  # cauteloso -> aberto
+    dialogo.processar_escolha(yuki, 0)  # cauteloso -> aberto
 
-    prato = dialogo.tentar_descobrir_prato()
+    prato = dialogo.tentar_descobrir_prato(yuki)
     print(f"5. Prato descoberto: {prato}")
 
     print("\n" + "=" * 50)

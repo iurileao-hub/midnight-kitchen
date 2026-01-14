@@ -29,7 +29,8 @@ docs/gabaritos/
 ├── jogo_gabarito.py
 ├── dialogo_gabarito.py    # Fase 2
 ├── cozinha_gabarito.py
-└── reflexao_gabarito.py
+├── reflexao_gabarito.py
+└── main_gabarito.py       # Fase 3
 ```
 
 **REGRA:** O aprendiz NAO deve ver os gabaritos.
@@ -53,6 +54,7 @@ Os esqueletos NAO contem:
 
 ```
 midnight-kitchen/
+├── main.py             # IMPLEMENTADO - Loop principal do jogo
 ├── models/
 │   ├── cliente.py      # IMPLEMENTADO
 │   ├── prato.py        # IMPLEMENTADO
@@ -60,9 +62,10 @@ midnight-kitchen/
 │   └── jogo.py         # IMPLEMENTADO
 ├── sistemas/
 │   ├── dialogo.py      # IMPLEMENTADO
-│   ├── cozinha.py      # Esqueleto - IMPLEMENTAR
-│   └── reflexao.py     # Esqueleto - IMPLEMENTAR
-├── dados/              # Fase 3
+│   ├── cozinha.py      # IMPLEMENTADO (9 pratos)
+│   └── reflexao.py     # IMPLEMENTADO
+├── dados/
+│   └── clientes.json   # 6 clientes com dados completos
 └── docs/
     ├── gabaritos/      # NAO MOSTRAR AO APRENDIZ
     ├── DESIGN.md
@@ -82,13 +85,13 @@ midnight-kitchen/
 
 ### Fase 2: Sistemas
 - [x] SistemaDialogo - IMPLEMENTADO
-- [ ] SistemaCozinha - esqueleto pronto
-- [ ] SistemaReflexao - esqueleto pronto
+- [x] SistemaCozinha - IMPLEMENTADO
+- [x] SistemaReflexao - IMPLEMENTADO
 
 ### Fase 3: Dados e Integracao
-- [ ] JSONs de clientes
-- [ ] main.py
-- [ ] Arte ASCII
+- [x] JSONs de clientes - dados/clientes.json
+- [x] main.py - IMPLEMENTADO
+- [x] Arte ASCII - lanterna japonesa no main.py
 
 ---
 
@@ -112,11 +115,14 @@ python3 models/memoria.py
 python3 models/jogo.py
 
 # Testar sistemas (Fase 2)
-cd sistemas && python3 dialogo.py
-cd sistemas && python3 cozinha.py
-cd sistemas && python3 reflexao.py
+python3 sistemas/dialogo.py
+python3 sistemas/cozinha.py
+python3 sistemas/reflexao.py
+
+# Jogar o jogo completo (Fase 3)
+python3 main.py
 ```
 
 ---
 
-*Atualizado: 14/01/2026 — Fase 2: SistemaDialogo implementado*
+*Atualizado: 14/01/2026 — Jogo completo e funcional!*
