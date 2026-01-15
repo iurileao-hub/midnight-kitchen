@@ -164,6 +164,64 @@ class Renderer:
             except ValueError:
                 self.console.print("[erro]Digite um número.[/erro]")
 
+    def mostrar_menu_pratos(
+        self,
+        titulo: str,
+        pratos: list[tuple[str, str, str, str]],  # id, nome, nome_japones, descricao
+    ) -> int:
+        """
+        Exibe menu especializado de pratos com descrições culturais.
+
+        Returns:
+            Índice do prato escolhido (0 = cancelar)
+        """
+        from rich.panel import Panel
+        from rich.text import Text
+
+        linhas = []
+
+        for i, (_, nome, nome_jp, desc) in enumerate(pratos, 1):
+            # Nome do prato com nome japonês
+            linha_nome = Text()
+            linha_nome.append(f"{i}. ", style="menu.numero")
+            linha_nome.append(f"{nome}", style="bold white")
+            linha_nome.append(f"  {nome_jp}", style="grey50")
+            linhas.append(linha_nome)
+
+            # Descrição cultural (com wrap automático)
+            linhas.append(Text(f"   {desc}", style="grey62"))
+            linhas.append(Text())  # Espaço entre pratos
+
+        linhas.append(Text("0. [Voltar]", style="grey50"))
+
+        # Monta painel
+        conteudo = Text()
+        for i, linha in enumerate(linhas):
+            if isinstance(linha, Text):
+                conteudo.append_text(linha)
+            else:
+                conteudo.append(str(linha))
+            if i < len(linhas) - 1:
+                conteudo.append("\n")
+
+        painel = Panel(
+            conteudo,
+            title=f"[titulo]{titulo}[/titulo]",
+            border_style="grey35",
+            padding=(1, 2),
+        )
+        self.console.print(painel)
+
+        while True:
+            escolha = self.componentes.prompt_escolha("Escolha")
+            try:
+                num = int(escolha)
+                if 0 <= num <= len(pratos):
+                    return num
+                self.console.print("[erro]Opção inválida.[/erro]")
+            except ValueError:
+                self.console.print("[erro]Digite um número.[/erro]")
+
     def mostrar_status(
         self,
         nome: str,

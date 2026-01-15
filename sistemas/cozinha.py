@@ -76,15 +76,15 @@ class SistemaCozinha:
         except (FileNotFoundError, json.JSONDecodeError) as e:
             print(f"Erro ao carregar pratos: {e}")
 
-    def listar_pratos(self) -> list[tuple[str, str, str]]:
+    def listar_pratos(self) -> list[tuple[str, str, str, str]]:
         """
         Lista todos os pratos disponíveis.
 
         Returns:
-            Lista de tuplas (id, nome, descricao)
+            Lista de tuplas (id, nome, nome_japones, descricao)
         """
         return [
-            (p.id, p.nome, p.descricao)
+            (p.id, p.nome, p.nome_japones, p.descricao)
             for p in self._pratos.values()
         ]
 

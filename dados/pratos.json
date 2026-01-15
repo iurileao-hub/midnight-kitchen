@@ -3,7 +3,7 @@
     "tamago_gohan": {
       "nome": "Tamago Gohan",
       "nome_japones": "卵かけご飯",
-      "descricao": "Ovo cru batido sobre arroz quente, temperado com shoyu.",
+      "descricao": "Simplicidade que abraça: ovo cru sobre arroz quente, temperado apenas com shoyu. No Japão, é o prato que mães fazem para filhos doentes, avós preparam em manhãs frias, e adultos comem sozinhos quando precisam lembrar que foram amados.",
       "tempo_preparo": 8,
       "cliente_ideal": "yuki",
 
@@ -16,46 +16,126 @@
       "reacao_errada": "Yuki prova educadamente, mas a conexão não acontece.\n\n\"Está bom. Obrigada.\"\n\nAs palavras são gentis, mas vazias. O momento passou."
     },
 
-    "onigiri": {
-      "nome": "Onigiri",
-      "nome_japones": "おにぎり",
-      "descricao": "Bolinho de arroz recheado com umeboshi, envolto em nori.",
+    "katsudon": {
+      "nome": "Katsudon",
+      "nome_japones": "カツ丼",
+      "descricao": "O prato da vitória e da coragem. Tonkatsu dourado sobre arroz, envolvido em ovo macio. No Japão, é tradição comer katsudon antes de provas e desafios — 'katsu' significa vencer. Mas também é o prato que reconforta após derrotas que ninguém mais vê.",
+      "tempo_preparo": 20,
+      "cliente_ideal": "tanaka",
+
+      "narrativa_preparo": "O óleo aquece na panela de ferro — a mesma que usavam no quartel, você imagina.\n\nO tonkatsu mergulha com um chiado satisfatório. O panko dourado, crocante.\n\nCebolas refogadas até ficarem translúcidas. Ovos batidos, derramados em ondas douradas.\n\nO arroz forma a base. O katsu descansa em cima, cortado em pedaços generosos.\n\nComida de quem precisa de força. De quem carrega peso.",
+
+      "narrativa_servir": "A tigela de katsudon é pesada nas suas mãos. Você a coloca diante de Tanaka com respeito.\n\nO cheiro de vitória. Ou de consolo.",
+
+      "reacao_correta": "Tanaka olha para o katsudon. O rosto endurecido treme por um instante.\n\n\"No quartel...\" A voz dele falha. Ele pigarreia. \"No quartel, a gente comia isso antes das operações difíceis.\"\n\nEle pega os hashis. O primeiro bocado é lento, reverente.\n\n\"Faz dez anos que não como katsudon. Dez anos desde aquele incêndio.\"\n\nOutro bocado. As defesas caindo.\n\n\"Eu entrei naquele prédio em chamas. Um restaurante. Tinha um homem lá dentro, tentando salvar pessoas.\" Os olhos de Tanaka encontram os seus. \"Ele não era bombeiro. Era só um... um cozinheiro maluco que não conseguia deixar as pessoas morrerem.\"\n\nA respiração dele fica pesada.\n\n\"Eu não consegui salvar todo mundo. O teto desabou antes. Um homem... Takeshi, era o nome dele. Ele ficou preso.\" Tanaka empurra os hashis. \"Eu tive que escolher. Salvar quem podia ser salvo, ou morrer tentando o impossível.\"\n\nEle termina o prato em silêncio. Cada bocado, uma oração.\n\n\"O cozinheiro que tentou ajudar... ele sobreviveu. Com queimaduras. Com uma cicatriz que nunca vai sumir.\"\n\nTanaka olha para você.\n\n\"Você sabe do que estou falando, não sabe?\"",
+
+      "reacao_errada": "Tanaka come mecanicamente. Educado, mas distante.\n\n\"Bom katsudon.\"\n\nMas não é o prato que ele precisava. Não esta noite."
+    },
+
+    "ochazuke": {
+      "nome": "Ochazuke",
+      "nome_japones": "お茶漬け",
+      "descricao": "Chá verde quente derramado sobre arroz com salmão, umeboshi e nori. O prato dos trabalhadores noturnos, dos que chegam em casa quando todos dormem. No Japão, é a refeição silenciosa de quem precisa de conforto sem precisar pedir.",
       "tempo_preparo": 10,
-      "cliente_ideal": null,
+      "cliente_ideal": "ryo",
 
-      "narrativa_preparo": "Suas mãos molhadas com água salgada. O arroz quente, maleável.\n\nVocê molda com movimentos praticados — triângulos imperfeitos, do jeito que deve ser. A umeboshi no centro, azeda e reconfortante.\n\nA folha de nori envolve, crocante contra o arroz úmido.",
+      "narrativa_preparo": "O chá verde acabou de ser preparado. O aroma preenche a cozinha.\n\nArroz na tigela — sobras do jantar, como deve ser. Lascas de salmão salgado. Uma umeboshi vermelha como um coração pequeno.\n\nNori picado, cebolinha verde. Wasabi, só um toque.\n\nVocê derrama o chá quente. O arroz se solta, flutua por um momento.",
 
-      "narrativa_servir": "Você coloca o onigiri num pratinho de madeira. Simples. Reconfortante.",
+      "narrativa_servir": "A tigela fumega. Você a coloca diante de Ryo — comida de fim de turno, de madrugadas solitárias.",
 
-      "reacao_generica": "É uma boa escolha. Reconfortante. Mas não é O prato — aquele que abre portas."
+      "reacao_correta": "Ryo olha para o ochazuke. O rosto dele muda — como se visse um fantasma gentil.\n\n\"Minha mãe fazia isso.\" A voz é quase um sussurro. \"Quando eu trabalhava no turno da noite, ela sempre deixava preparado.\"\n\nEle bebe o caldo. Come o arroz amolecido. A pressa que ele carregava a noite toda finalmente se dissolve.\n\n\"Eu era taxista há dez anos. Trabalhava de madrugada, como agora.\" Ele para. \"Uma noite, peguei um passageiro estranho. Um homem que cheirava a fumaça. Sangrando. Queimado.\"\n\nRyo coloca a tigela na mesa.\n\n\"Ele disse que precisava ir ao hospital, mas primeiro... primeiro precisava ver se alguém tinha sobrevivido. Me pediu para ir até um restaurante que tinha pegado fogo.\"\n\nOs olhos de Ryo encontram os seus.\n\n\"Eu dirigi. Vi os bombeiros. Vi os corpos. Vi o homem chorar quando soube que seu amigo não tinha conseguido.\"\n\nEle termina o ochazuke.\n\n\"Eu deixei ele no hospital. Nunca mais o vi. Mas nunca esqueci aquele rosto. Aquela cicatriz nascendo.\"\n\nRyo sorri, triste.\n\n\"Você sabe do que estou falando, não sabe, Master?\"",
+
+      "reacao_errada": "Ryo agradece e come rapidamente, mas não há conexão.\n\n\"Bom. Obrigado.\"\n\nEle volta a olhar o relógio. O momento se perdeu."
     },
 
     "missoshiru": {
       "nome": "Missoshiru",
       "nome_japones": "味噌汁",
-      "descricao": "Sopa de missô com tofu e wakame.",
+      "descricao": "A sopa que é um abraço líquido. Missô dissolvido em dashi, com tofu tremulando e wakame flutuando. No Japão, é servida em todo café da manhã, todo jantar — o fio invisível que conecta todas as refeições, todas as famílias, todas as memórias de casa.",
       "tempo_preparo": 12,
-      "cliente_ideal": null,
+      "cliente_ideal": "midori",
 
-      "narrativa_preparo": "O dashi está perfeito — você preparou de madrugada, como todo dia.\n\nO missô se dissolve em espirais. Tofu cortado em cubos delicados. Wakame que se expande na água quente.\n\nO vapor sobe, carregando o cheiro de casa.",
+      "narrativa_preparo": "O dashi foi preparado de madrugada — como todo dia, como sempre.\n\nVocê aquece devagar. O missô se dissolve em espirais douradas, nuvens se formando na água.\n\nTofu cortado em cubos tremulantes. Wakame que se expande, verde-escuro.\n\nO vapor sobe. Cheiro de casa. Cheiro de cuidado.",
 
-      "narrativa_servir": "A tigela de madeira está quente nas mãos. O aroma preenche o espaço entre vocês.",
+      "narrativa_servir": "A tigela de madeira está quente nas suas mãos. Você a coloca diante de Midori.\n\nO aroma preenche o espaço entre vocês.",
 
-      "reacao_generica": "Aquece. Conforta. Mas não revela nada."
+      "reacao_correta": "Midori segura a tigela com as duas mãos. O calor parece atravessar algo nela.\n\n\"Takeshi-san fazia uma missoshiru maravilhosa.\" A voz dela é suave. \"Todo inverno, quando eu passava pelo restaurante dele, ele me chamava para entrar. 'Midori-san, está frio demais para ficar aí fora.'\"\n\nEla bebe um gole. Os olhos se fecham.\n\n\"Na noite do incêndio, eu vi tudo da minha janela.\" As mãos dela tremem na tigela. \"Vi as chamas. Vi as pessoas correndo. Vi um homem entrar no fogo quando todos corriam para fora.\"\n\nOutro gole.\n\n\"Takeshi-san não saiu. Mas o homem que entrou para salvá-lo... ele saiu. Carregando outros. Queimado. Mas vivo.\"\n\nMidori olha para você.\n\n\"Você tem a mesma gentileza dele. De Takeshi-san. A mesma maneira de fazer as pessoas se sentirem... em casa.\"\n\nEla termina a missoshiru.\n\n\"Ele teria gostado de você, Master. Vocês teriam sido amigos.\"",
+
+      "reacao_errada": "Midori bebe educadamente, mas permanece distante.\n\n\"Está boa. Obrigada.\"\n\nO frio entre vocês não derrete."
     },
 
-    "katsudon": {
-      "nome": "Katsudon",
-      "nome_japones": "カツ丼",
-      "descricao": "Tonkatsu sobre arroz, coberto com ovo e cebola.",
-      "tempo_preparo": 20,
-      "cliente_ideal": "tanaka",
+    "nikujaga": {
+      "nome": "Nikujaga",
+      "nome_japones": "肉じゃが",
+      "descricao": "O 'comfort food' definitivo do Japão. Carne, batatas e cebolas cozidos em shoyu doce até tudo ficar macio. É o prato que mães ensinam filhas, que aparece em domingos preguiçosos, que tem gosto de família mesmo quando você come sozinho.",
+      "tempo_preparo": 25,
+      "cliente_ideal": "sachiko",
 
-      "narrativa_preparo": "O tonkatsu frito até dourar. O óleo chiando, o panko crocante.\n\nCebola refogada até amolecer. Ovos batidos, derramados sobre tudo.\n\nArroz na tigela. O katsu em cima. Tradição e peso em cada camada.",
+      "narrativa_preparo": "A panela de ferro aquece devagar. Não há pressa para nikujaga.\n\nCarne em fatias finas, dourando. Cebolas que amolecem em lágrimas doces. Batatas cortadas em pedaços generosos.\n\nShoyu, mirin, um toque de açúcar. O líquido borbulha, reduz, penetra.\n\nVocê espera. Nikujaga não pode ser apressado. Como família. Como perdão.",
 
-      "narrativa_servir": "A tigela de katsudon é pesada — como deveria ser. Comida de quem precisa de força.",
+      "narrativa_servir": "O prato chega à mesa ainda borbulhando suavemente. Você o coloca diante de Sachiko.\n\nO aroma de domingo preenche o ar.",
 
-      "reacao_generica": "É saboroso. Mas este não é o prato certo para este momento."
+      "reacao_correta": "Sachiko olha para o nikujaga. Por um momento, ela parece ter cinco anos de novo.\n\n\"Papai fazia isso todo domingo.\" A voz falha. \"Dizia que era o único dia que ele tinha tempo para cozinhar direito.\"\n\nEla pega a colher. O primeiro bocado é tremido.\n\n\"Ele morreu num incêndio. Dez anos atrás.\" As palavras saem aos pedaços. \"Eu era criança. Não entendi direito. Só sabia que papai não ia mais voltar.\"\n\nEla come mais. O choro vem silencioso.\n\n\"Mamãe disse que ele morreu tentando ajudar outras pessoas. Que um homem tentou salvá-lo.\" Sachiko tira algo do bolso. Uma carta amarelada. \"Ele escreveu isso antes de sair naquela noite. Mamãe guardou. Me deu quando fiz dezoito anos.\"\n\nEla empurra a carta na sua direção.\n\n\"Na carta, ele fala sobre você, Master. Sobre seu amigo que abriu um restaurante. Sobre como tinha orgulho de você.\"\n\nSachiko termina o nikujaga.\n\n\"Papai não culpava ninguém. Ele queria que você soubesse disso.\"",
+
+      "reacao_errada": "Sachiko come em silêncio, mas a porta permanece fechada.\n\n\"Está bom. Obrigada.\"\n\nAs palavras não ditas pesam no ar."
+    },
+
+    "omurice": {
+      "nome": "Omurice",
+      "nome_japones": "オムライス",
+      "descricao": "Arroz frito envolvido em omelete dourado, com ketchup desenhando corações ou nomes. É o prato que crianças pedem em aniversários, que aparece em almoços especiais, que carrega memórias de quem cozinhou com amor para quem era pequeno demais para lembrar — mas lembra mesmo assim.",
+      "tempo_preparo": 15,
+      "cliente_ideal": "hiroto",
+
+      "narrativa_preparo": "O arroz frito já está pronto — frango, ervilhas, ketchup misturado.\n\nOs ovos batidos deslizam na frigideira quente. A omelete se forma, dourada nas bordas, cremosa no centro.\n\nUm movimento rápido. O arroz vai para o prato. A omelete envolve como um cobertor amarelo.\n\nKetchup. Você desenha algo simples. Um sol, talvez. Ou um sorriso.",
+
+      "narrativa_servir": "O omurice chega à mesa — amarelo brilhante, acolhedor. Você o coloca diante de Hiroto.\n\nComida de infância. Comida de promessas.",
+
+      "reacao_correta": "Hiroto olha para o omurice. O rosto jovem dele se contorce, lutando contra algo.\n\n\"O senhor fez isso para mim uma vez.\" A voz dele treme. \"Eu tinha oito anos. O senhor não lembra, mas eu lembro tudo.\"\n\nEle não toca o prato ainda.\n\n\"Meus pais estavam no restaurante do Takeshi-san naquela noite. Eu estava no quarto dos fundos, esperando eles terminarem de jantar.\" Os olhos de Hiroto enchem de lágrimas. \"Quando o fogo começou, um homem me pegou no colo. Me carregou através da fumaça. Me disse que ia ficar tudo bem.\"\n\nEle finalmente pega a colher.\n\n\"Quando a gente saiu, o prédio estava desabando. O homem me colocou no chão e voltou. Voltou para tentar salvar mais gente.\"\n\nO primeiro bocado.\n\n\"Meus pais não sobreviveram. Mas eu sobrevivi. Por causa daquele homem.\"\n\nHiroto olha para você, para a cicatriz que você carrega.\n\n\"O senhor me salvou, Master. O senhor voltou para mim quando todo mundo corria para longe.\"\n\nEle come o omurice inteiro, chorando em silêncio.\n\n\"Eu cresci por causa do senhor. E eu nunca disse obrigado.\"",
+
+      "reacao_errada": "Hiroto come educadamente, mas algo permanece guardado.\n\n\"Está bom. Obrigado.\"\n\nA verdade continua esperando."
+    },
+
+    "onigiri": {
+      "nome": "Onigiri",
+      "nome_japones": "おにぎり",
+      "descricao": "Triângulos de arroz moldados à mão, recheados com umeboshi ou salmão, envoltos em nori crocante. No Japão, são vendidos em toda konbini, mas os melhores são feitos em casa — imperfeitos, assimétricos, carregando o formato das mãos de quem os fez.",
+      "tempo_preparo": 10,
+      "cliente_ideal": null,
+
+      "narrativa_preparo": "Suas mãos molhadas com água salgada. O arroz quente, maleável.\n\nVocê molda com movimentos praticados — triângulos imperfeitos, do jeito que deve ser. A umeboshi no centro, azeda e reconfortante.\n\nA folha de nori envolve, crocante contra o arroz úmido.",
+
+      "narrativa_servir": "Você coloca os onigiri num pratinho de madeira. Simples. Reconfortante.",
+
+      "reacao_generica": "É uma boa escolha. Reconfortante. Mas não é O prato — aquele que abre portas."
+    },
+
+    "gyudon": {
+      "nome": "Gyudon",
+      "nome_japones": "牛丼",
+      "descricao": "Fatias finas de carne bovina cozidas em shoyu doce sobre arroz fumegante. O prato dos estudantes, dos trabalhadores de escritório, dos que precisam de energia para continuar. No Japão, representa persistência — seguir em frente mesmo quando o dia foi difícil.",
+      "tempo_preparo": 15,
+      "cliente_ideal": null,
+
+      "narrativa_preparo": "A carne fatia fina, quase transparente. Cebolas em meias-luas.\n\nShoyu, mirin, dashi. O líquido borbulha, a carne cozinha em segundos.\n\nArroz na tigela. A carne por cima, nadando no caldo doce. Um ovo cru descansa no centro — opcional, mas você sempre coloca.",
+
+      "narrativa_servir": "A tigela de gyudon é reconfortante. Você a coloca no balcão.\n\nComida de quem precisa continuar.",
+
+      "reacao_generica": "Saboroso. Reconfortante. Mas esta noite, algo diferente era necessário."
+    },
+
+    "yakitori": {
+      "nome": "Yakitori",
+      "nome_japones": "焼き鳥",
+      "descricao": "Espetinhos de frango grelhados sobre carvão, pincelados com tare doce e salgado. É a comida dos izakayas, das noites com amigos, das conversas que só acontecem depois do terceiro copo. No Japão, yakitori significa companhia — raramente se come sozinho.",
+      "tempo_preparo": 18,
+      "cliente_ideal": null,
+
+      "narrativa_preparo": "Os espetinhos repousam sobre a grelha. O carvão crepita.\n\nVocê vira cada um com precisão. O tare carameliza, fumando. O cheiro preenche o restaurante inteiro.\n\nNegima — frango e cebolinha alternados. Tsukune — almôndegas de frango. Cada espetinho, uma pequena obra.",
+
+      "narrativa_servir": "Os espetinhos chegam ainda fumegando. Você os coloca num suporte de madeira.\n\nComida de noites longas. De conversas honestas.",
+
+      "reacao_generica": "O yakitori está perfeito. Mas não é o prato que esta pessoa precisava — não esta noite."
     }
   }
 }

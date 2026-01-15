@@ -223,15 +223,13 @@ class Noite:
         prato_id = self._prato_revelado
         nome = self.dialogo.cliente_dados.get("nome", "Cliente")
 
-        # Mostra menu de pratos
+        # Mostra menu de pratos com descrições culturais
         self.renderer.limpar()
         pratos = self.cozinha.listar_pratos()
-        opcoes_prato = [(nome, desc[:40] + "...") for _, nome, desc in pratos]
 
-        escolha = self.renderer.mostrar_menu(
+        escolha = self.renderer.mostrar_menu_pratos(
             "Qual prato preparar?",
-            opcoes_prato,
-            permitir_cancelar=True,
+            pratos,
         )
 
         if escolha == 0:
