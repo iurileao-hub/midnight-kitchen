@@ -132,10 +132,11 @@ class Renderer:
         texto: str,
         estado: Optional[str] = None,
         tempo: Optional[str] = None,
+        nome_japones: Optional[str] = None,
     ) -> None:
         """Exibe fala de um cliente."""
         painel = self.componentes.painel_dialogo(
-            nome, texto, estado, tempo
+            nome, texto, estado, tempo, nome_japones
         )
         self.console.print(painel)
 

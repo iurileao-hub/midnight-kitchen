@@ -74,14 +74,18 @@ class Componentes:
         texto: str,
         estado: Optional[str] = None,
         tempo: Optional[str] = None,
+        nome_japones: Optional[str] = None,
     ) -> Panel:
         """
         Cria um painel para diálogo de um personagem.
-        """
-        # Indicador de estado emocional
-        indicador = AsciiArt.indicador_estado(estado) if estado else ""
 
-        titulo = f"{indicador} {personagem}" if indicador else personagem
+        A cor da borda indica sutilmente o nível de confiança.
+        """
+        # Monta título com nome + kanji
+        if nome_japones:
+            titulo = f"{personagem} ({nome_japones})"
+        else:
+            titulo = personagem
 
         return Panel(
             f'"{texto}"',
@@ -90,7 +94,7 @@ class Componentes:
             subtitle_align="right",
             border_style=Tema.cor_por_estado(estado) if estado else CORES["borda"],
             width=LARGURA_PAINEL,
-            padding=(0, 2),
+            padding=(1, 2),
         )
 
     def menu_opcoes(

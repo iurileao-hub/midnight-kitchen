@@ -1,6 +1,7 @@
 {
   "id": "ryo",
   "nome": "Ryo",
+  "nome_japones": "涼",
   "idade": 35,
   "profissao": "Motorista de táxi noturno",
   "genero_masculino": true,

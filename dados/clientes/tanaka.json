@@ -1,6 +1,7 @@
 {
   "id": "tanaka",
   "nome": "Tanaka",
+  "nome_japones": "田中",
   "idade": 58,
   "profissao": "Ex-bombeiro aposentado",
   "genero_masculino": true,

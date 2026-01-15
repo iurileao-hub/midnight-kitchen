@@ -101,12 +101,13 @@ CORES = {
     "texto_sutil": "grey50",
     "destaque": "wheat1",
 
-    # Estados emocionais
-    "fechado": "grey50",
-    "cauteloso": "dark_khaki",
-    "curioso": "khaki1",
-    "aberto": "pale_green1",
-    "vulneravel": "light_coral",
+    # Estados emocionais (cores sutis para bordas)
+    # Transição de tons frios para quentes
+    "fechado": "grey30",           # Frio, distante
+    "cauteloso": "grey42",         # Ainda reservado
+    "curioso": "grey54",           # Neutro, atento
+    "aberto": "dark_sea_green4",   # Acolhedor, sutil
+    "vulneravel": "rosy_brown",    # Íntimo, quente
 
     # UI
     "borda": "grey35",

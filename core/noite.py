@@ -116,28 +116,25 @@ class Noite:
         self.renderer.pausar()
 
     def _mostrar_status(self) -> None:
-        """Mostra o status atual (cliente, confiança, tempo)."""
+        """Mostra o diálogo atual do cliente."""
         self.renderer.limpar()
 
         nome = self.dialogo.cliente_dados.get("nome", "Cliente")
+        nome_japones = self.dialogo.cliente_dados.get("nome_japones", "")
         estado = self.dialogo.obter_estado_emocional().value
-        confianca = self.dialogo.confianca
         tempo_str = self.tempo.formatar() if self.tempo else ""
 
-        self.renderer.mostrar_status(nome, estado, confianca, tempo_str)
-
-        # Contexto do momento
+        # Contexto do momento (se houver)
         contexto = self.dialogo.obter_contexto()
         if contexto:
-            self.renderer.espaco()
             self.renderer.console.print(f"[sutil]{contexto}[/sutil]")
+            self.renderer.espaco()
 
-        # O que o cliente diz
+        # Diálogo do cliente (com nome + kanji e cor sutil da borda)
         texto = self.dialogo.obter_texto()
         if texto:
-            self.renderer.espaco()
             self.renderer.mostrar_dialogo_cliente(
-                nome, texto, estado, tempo_str
+                nome, texto, estado, tempo_str, nome_japones
             )
 
     def _processar_turno(self) -> Optional[ResultadoNoiteCompleto]:

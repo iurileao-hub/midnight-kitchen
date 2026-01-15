@@ -1,6 +1,7 @@
 {
   "id": "yuki",
   "nome": "Yuki",
+  "nome_japones": "雪",
   "idade": 28,
   "profissao": "Fotógrafa freelancer",
   "genero_masculino": false,

@@ -1,6 +1,7 @@
 {
   "id": "sachiko",
   "nome": "Sachiko",
+  "nome_japones": "幸子",
   "idade": 32,
   "profissao": "Contadora em grande empresa",
   "genero_masculino": false,

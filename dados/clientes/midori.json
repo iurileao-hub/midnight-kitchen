@@ -1,6 +1,7 @@
 {
   "id": "midori",
   "nome": "Midori",
+  "nome_japones": "緑",
   "idade": 67,
   "profissao": "Aposentada, ex-florista",
   "genero_masculino": false,

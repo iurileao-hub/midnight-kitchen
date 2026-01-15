@@ -1,6 +1,7 @@
 {
   "id": "hiroto",
   "nome": "Hiroto",
+  "nome_japones": "大翔",
   "idade": 18,
   "profissao": "Estudante universitário",
   "genero_masculino": true,
