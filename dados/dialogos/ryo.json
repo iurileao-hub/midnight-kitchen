@@ -1,0 +1,671 @@
+{
+  "cliente_id": "ryo",
+  "no_inicial": "chegada",
+
+  "nos": {
+    "chegada": {
+      "id": "chegada",
+      "contexto": "Ryo entrou apressado, olhando para os lados. Quer algo para viagem.",
+      "texto": "",
+      "opcoes": [
+        {
+          "texto": "Para viagem? O que gostaria?",
+          "dica": "prático",
+          "impacto": 5,
+          "tipo": "dialogo_curto",
+          "proximo": "viagem_oque"
+        },
+        {
+          "texto": "Você parece precisar de mais do que comida rápida.",
+          "dica": "observador",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "mais_que_comida"
+        },
+        {
+          "texto": "Táxi noturno? Horário difícil.",
+          "dica": "notou uniforme",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "taxi_noturno"
+        },
+        {
+          "texto": "[Começar a preparar algo simples sem perguntar]",
+          "dica": "intuitivo",
+          "impacto": 8,
+          "tipo": "silencio",
+          "proximo": "preparar_sem_perguntar"
+        }
+      ]
+    },
+
+    "taxi_noturno": {
+      "id": "taxi_noturno",
+      "contexto": "Ryo olha para o próprio uniforme, como se tivesse esquecido.",
+      "texto": "\"É. Táxi noturno.\"\n\nOs dedos tamborilam na perna.\n\n\"Prefiro a noite. Menos gente. Menos... perguntas.\"",
+      "opcoes": [
+        {
+          "texto": "Perguntas sobre o quê?",
+          "dica": "curioso",
+          "impacto": 8,
+          "tipo": "dialogo_curto",
+          "proximo": "perguntas_oque"
+        },
+        {
+          "texto": "Entendo. Às vezes o silêncio é mais confortável.",
+          "dica": "empático",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "silencio_confortavel"
+        }
+      ]
+    },
+
+    "silencio_confortavel": {
+      "id": "silencio_confortavel",
+      "contexto": "Algo em Ryo desacelera um pouco.",
+      "texto": "\"É.\"\n\nEle olha ao redor, menos agitado agora.\n\n\"Trabalhei em restaurante antes. Tempo diferente. Mais barulho, mais gente.\"\n\nOs dedos param de tamborilar.\n\n\"Mudei de área. Há dez anos.\"",
+      "e_pista": true,
+      "pista_id": "trabalhou_restaurante",
+      "opcoes": [
+        {
+          "texto": "Por que mudou?",
+          "dica": "direto",
+          "impacto": 8,
+          "tipo": "dialogo_medio",
+          "proximo": "porque_mudou"
+        },
+        {
+          "texto": "Dez anos é muito tempo. O que aconteceu?",
+          "dica": "perceptivo",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "dez_anos"
+        },
+        {
+          "texto": "Quer algo de comer? Você parece faminto.",
+          "dica": "prático",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "algo_comer"
+        }
+      ]
+    },
+
+    "dez_anos": {
+      "id": "dez_anos",
+      "contexto": "O rosto de Ryo se fecha por um instante.",
+      "texto": "\"O restaurante... fechou.\"\n\nEle não olha para você.\n\n\"Um incêndio. O chefe morreu. E eu...\" Ele para. Engole.\n\n\"Eu mudei de profissão depois disso.\"",
+      "e_pista": true,
+      "pista_id": "incendio",
+      "pensamento_master": "Incêndio. A palavra ecoa. Suas mãos continuam o trabalho por reflexo.",
+      "opcoes": [
+        {
+          "texto": "Você estava lá quando aconteceu?",
+          "dica": "cuidadoso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "estava_la"
+        },
+        {
+          "texto": "Perder um chefe assim... não é fácil.",
+          "dica": "empático",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "perder_chefe"
+        }
+      ]
+    },
+
+    "estava_la": {
+      "id": "estava_la",
+      "contexto": "Ryo finalmente para de se mexer.",
+      "texto": "\"Estava.\"\n\nA palavra sai pequena.\n\n\"Estava trabalhando quando o alarme tocou. E eu...\" Os olhos dele se fixam em algum ponto distante.\n\n\"Eu corri. Não olhei para trás. Enquanto outros ficaram para ajudar, eu corri.\"",
+      "e_pista": true,
+      "pista_id": "correu",
+      "opcoes": [
+        {
+          "texto": "Sobreviver não é vergonha.",
+          "dica": "consolador",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "nao_vergonha"
+        },
+        {
+          "texto": "Quem ficou para ajudar?",
+          "dica": "curioso",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "quem_ficou"
+        }
+      ]
+    },
+
+    "quem_ficou": {
+      "id": "quem_ficou",
+      "contexto": "Ryo engole em seco.",
+      "texto": "\"O chefe. Takeshi-san. Ele voltou para tirar as pessoas.\"\n\nPausa.\n\n\"E tinha outro funcionário. Mais novo que eu. Um garoto.\"\n\nOs olhos de Ryo estão úmidos.\n\n\"Ele ficou também. Ajudou a tirar gente. Enquanto eu corri.\"\n\nEle ri amargamente. \"Ele era só um garoto. E eu, um covarde adulto.\"",
+      "e_pista": true,
+      "pista_id": "outro_funcionario",
+      "pensamento_master": "Outro funcionário. Mais novo. Garoto. As palavras ecoam em você de um jeito estranho.",
+      "gatilho_prato": true,
+      "opcoes": [
+        {
+          "texto": "Você sobreviveu. Às vezes é o suficiente.",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "sobreviveu"
+        },
+        {
+          "texto": "O que vocês comiam depois do turno? No restaurante.",
+          "dica": "mudando assunto",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "depois_turno"
+        }
+      ]
+    },
+
+    "depois_turno": {
+      "id": "depois_turno",
+      "contexto": "Ryo pisca, surpreso com a pergunta.",
+      "texto": "\"Depois do turno?\"\n\nAlgo muda no rosto dele. Uma sombra de sorriso.\n\n\"Ochazuke. O chefe fazia ochazuke pra gente. Arroz com chá verde, simples assim.\"\n\nEle fecha os olhos por um segundo.\n\n\"Faz dez anos que não como isso. Não consigo.\"",
+      "revelacao_prato": "ochazuke",
+      "opcoes": [
+        {
+          "texto": "Talvez esteja na hora de tentar. Posso fazer um.",
+          "dica": "acolhedor",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "fazer_ochazuke"
+        }
+      ]
+    },
+
+    "fazer_ochazuke": {
+      "id": "fazer_ochazuke",
+      "contexto": "Ryo hesita. Os dedos param completamente.",
+      "texto": "\"Eu...\"\n\nEle olha para a porta. Depois para você.\n\n\"Tá. Tá bom.\"",
+      "opcoes": [
+        {
+          "texto": "Ochazuke. Vou preparar.",
+          "dica": "",
+          "impacto": 20,
+          "tipo": "cozinha",
+          "proximo": "preparar_ochazuke"
+        }
+      ]
+    },
+
+    "preparar_ochazuke": {
+      "id": "preparar_ochazuke",
+      "contexto": "Você começa a preparar o ochazuke.",
+      "texto": "",
+      "tipo_cena": "cozinha",
+      "prato": "ochazuke"
+    },
+
+    "mais_que_comida": {
+      "id": "mais_que_comida",
+      "contexto": "Ryo para de se mexer por um segundo.",
+      "texto": "\"Por que diz isso?\"\n\nA pergunta sai defensiva, mas algo nele vacila.\n\n\"Estou bem. Só... só com pressa.\"",
+      "opcoes": [
+        {
+          "texto": "Ninguém olha para a porta dez vezes em um minuto se está 'bem'.",
+          "dica": "observador",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "olha_porta"
+        },
+        {
+          "texto": "Tudo bem. O que quer para viagem?",
+          "dica": "respeitando",
+          "impacto": 5,
+          "tipo": "dialogo_curto",
+          "proximo": "viagem_oque"
+        }
+      ]
+    },
+
+    "olha_porta": {
+      "id": "olha_porta",
+      "contexto": "Ryo olha para a porta instintivamente, depois se força a parar.",
+      "texto": "\"Hábito.\"\n\nEle ri nervoso.\n\n\"Dez anos dirigindo táxi de noite. A gente fica... atento.\" Pausa. \"E antes disso, eu... trabalhava em outro lugar. À noite também.\"",
+      "e_pista": true,
+      "pista_id": "outro_lugar",
+      "opcoes": [
+        {
+          "texto": "Que outro lugar?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "silencio_confortavel"
+        }
+      ]
+    },
+
+    "viagem_oque": {
+      "id": "viagem_oque",
+      "contexto": "Ryo olha para o menu rapidamente.",
+      "texto": "\"Qualquer coisa. Onigiri, talvez.\"\n\nOs dedos voltam a tamborilar.\n\n\"Rápido, se puder. Tenho que voltar pro táxi.\"",
+      "opcoes": [
+        {
+          "texto": "Pode sentar enquanto preparo. Não vai demorar.",
+          "dica": "gentil",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "sentar_preparar"
+        }
+      ]
+    },
+
+    "sentar_preparar": {
+      "id": "sentar_preparar",
+      "contexto": "Ryo hesita, depois senta no banco mais próximo da porta.",
+      "texto": "Ele não relaxa, mas pelo menos está sentado.\n\nEnquanto você prepara o onigiri, ele olha ao redor.\n\n\"Esse lugar é antigo, né? Parece... familiar de algum jeito.\"",
+      "opcoes": [
+        {
+          "texto": "Já esteve aqui antes?",
+          "dica": "curioso",
+          "impacto": 8,
+          "tipo": "dialogo_curto",
+          "proximo": "esteve_antes"
+        },
+        {
+          "texto": "Restaurantes de madrugada têm algo em comum. Atraem o mesmo tipo de pessoa.",
+          "dica": "filosófico",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "mesmo_tipo"
+        }
+      ]
+    },
+
+    "mesmo_tipo": {
+      "id": "mesmo_tipo",
+      "contexto": "Ryo para de tamborilar.",
+      "texto": "\"Que tipo?\"\n\nA pergunta é genuína.\n\n\"Gente fugindo de alguma coisa?\"",
+      "opcoes": [
+        {
+          "texto": "Às vezes. Ou gente procurando um lugar para parar de fugir.",
+          "dica": "profundo",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "parar_fugir"
+        }
+      ]
+    },
+
+    "parar_fugir": {
+      "id": "parar_fugir",
+      "contexto": "Ryo fica em silêncio por um momento.",
+      "texto": "\"Parar de fugir...\"\n\nEle olha para as próprias mãos.\n\n\"Eu trabalhei num restaurante assim. Dez anos atrás. Era garçom. O chefe era... era bom.\"\n\nA voz dele muda.\n\n\"O lugar pegou fogo. Eu corri. E nunca parei.\"",
+      "e_pista": true,
+      "pista_id": "correu",
+      "opcoes": [
+        {
+          "texto": "Dez anos correndo é muito tempo.",
+          "dica": "empático",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "quem_ficou"
+        }
+      ]
+    },
+
+    "preparar_sem_perguntar": {
+      "id": "preparar_sem_perguntar",
+      "contexto": "Você começa a preparar algo simples. Ryo observa.",
+      "texto": "O cheiro de arroz e nori preenche o ar.\n\nRyo para de olhar para a porta. Por um momento, só observa você trabalhar.\n\n\"Trabalhei num restaurante assim. Faz tempo.\"",
+      "e_pista": true,
+      "pista_id": "trabalhou_restaurante",
+      "opcoes": [
+        {
+          "texto": "Restaurante bom para trabalhar?",
+          "dica": "casual",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "restaurante_bom"
+        }
+      ]
+    },
+
+    "restaurante_bom": {
+      "id": "restaurante_bom",
+      "contexto": "Algo suaviza no rosto de Ryo.",
+      "texto": "\"Era. O chefe era bom. Takeshi-san.\"\n\nO nome sai com peso.\n\n\"A gente comia ochazuke depois do turno. Ele fazia pra equipe toda.\"",
+      "e_pista": true,
+      "pista_id": "takeshi",
+      "opcoes": [
+        {
+          "texto": "Parece que você gostava de trabalhar lá. Por que saiu?",
+          "dica": "direto",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "dez_anos"
+        }
+      ]
+    },
+
+    "perguntas_oque": {
+      "id": "perguntas_oque",
+      "contexto": "Ryo desvia o olhar para a janela escura.",
+      "texto": "\"Sobre tudo.\"\n\nEle suspira.\n\n\"'Como você está?' 'Está se alimentando?' 'Já faz um ano, não acha que deveria...'\" Ele imita as vozes com amargura.\n\n\"As pessoas acham que existe um prazo pro luto. Como se fosse uma dívida que você paga e pronto.\"",
+      "e_pista": true,
+      "pista_id": "luto",
+      "opcoes": [
+        {
+          "texto": "Perdeu alguém.",
+          "dica": "direto",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "perdeu_alguem"
+        },
+        {
+          "texto": "Não existe prazo. Cada um tem seu tempo.",
+          "dica": "empático",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "silencio_confortavel"
+        },
+        {
+          "texto": "Quer algo quente? Noite fria pra dirigir.",
+          "dica": "mudando assunto",
+          "impacto": 8,
+          "tipo": "dialogo_curto",
+          "proximo": "algo_comer"
+        }
+      ]
+    },
+
+    "perdeu_alguem": {
+      "id": "perdeu_alguem",
+      "contexto": "Ryo fecha os olhos por um segundo.",
+      "texto": "\"Mika. Minha esposa.\"\n\nAs palavras saem secas, ensaiadas de tanto repetir.\n\n\"Acidente de carro. Há um ano. Ela estava voltando do trabalho e...\" Ele para. Engole.\n\n\"Eu estava dirigindo o táxi. Enquanto ela morria, eu estava levando um bêbado pro outro lado da cidade.\"",
+      "e_pista": true,
+      "pista_id": "mika",
+      "opcoes": [
+        {
+          "texto": "Você não tinha como saber.",
+          "dica": "consolador",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "nao_tinha_como"
+        },
+        {
+          "texto": "Como ela era?",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "como_era_mika"
+        }
+      ]
+    },
+
+    "nao_tinha_como": {
+      "id": "nao_tinha_como",
+      "contexto": "Ryo ri sem humor.",
+      "texto": "\"Todo mundo diz isso. 'Não tinha como saber.' 'Não é sua culpa.'\"\n\nEle olha para as próprias mãos.\n\n\"Mas eu deveria estar em casa. Deveria ter pegado ela. A gente tinha combinado, mas eu peguei mais uma corrida. Só mais uma.\"",
+      "opcoes": [
+        {
+          "texto": "O que ela diria se te visse assim?",
+          "dica": "provocativo",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "como_era_mika"
+        },
+        {
+          "texto": "Você está com fome? Deixa eu preparar algo.",
+          "dica": "prático",
+          "impacto": 8,
+          "tipo": "dialogo_curto",
+          "proximo": "algo_comer"
+        }
+      ]
+    },
+
+    "como_era_mika": {
+      "id": "como_era_mika",
+      "contexto": "O rosto de Ryo suaviza pela primeira vez.",
+      "texto": "\"Mika...\"\n\nEle quase sorri.\n\n\"Ela adorava cozinhar. Passava horas na cozinha nos domingos. O prato favorito dela era curry udon. Dizia que era 'abraço em forma de comida'.\"",
+      "e_pista": true,
+      "pista_id": "curry_udon",
+      "revelacao_prato": "curry_udon",
+      "opcoes": [
+        {
+          "texto": "Curry udon... Posso fazer um, se quiser.",
+          "dica": "acolhedor",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "fazer_curry"
+        },
+        {
+          "texto": "Ela cozinhava pra você?",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "cozinhava_pra_ele"
+        }
+      ]
+    },
+
+    "cozinhava_pra_ele": {
+      "id": "cozinhava_pra_ele",
+      "contexto": "Ryo olha para o balcão, perdido em memórias.",
+      "texto": "\"Toda noite que eu chegava do turno. Não importava a hora.\"\n\nOs olhos dele ficam úmidos.\n\n\"Ela deixava o curry udon pronto, era só esquentar. Dizia que ninguém deveria comer sozinho de madrugada.\"\n\nEle ri baixinho. \"E agora eu como sozinho toda noite.\"",
+      "opcoes": [
+        {
+          "texto": "Não esta noite. Deixa eu fazer um curry udon pra você.",
+          "dica": "caloroso",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "fazer_curry"
+        }
+      ]
+    },
+
+    "fazer_curry": {
+      "id": "fazer_curry",
+      "contexto": "Ryo hesita. Os olhos marejados.",
+      "texto": "\"Eu...\"\n\nEle olha para a porta. Depois para você.\n\n\"Faz um ano que não como curry udon. Não consigo.\"\n\nMas ele não se levanta.\n\n\"Tá. Tá bom.\"",
+      "opcoes": [
+        {
+          "texto": "Curry udon. Vou preparar.",
+          "dica": "",
+          "impacto": 20,
+          "tipo": "cozinha",
+          "proximo": "preparar_curry"
+        }
+      ]
+    },
+
+    "preparar_curry": {
+      "id": "preparar_curry",
+      "contexto": "Você começa a preparar o curry udon.",
+      "texto": "",
+      "tipo_cena": "cozinha",
+      "prato": "curry_udon"
+    },
+
+    "porque_mudou": {
+      "id": "porque_mudou",
+      "contexto": "Ryo olha para o balcão, evitando seu olhar.",
+      "texto": "\"Por que mudei?\"\n\nEle ri sem humor.\n\n\"O restaurante queimou. E junto com ele, a pessoa que eu achava que era.\"\n\nOs dedos voltam a tamborilar.\n\n\"Táxi é mais fácil. Você só dirige. Não precisa ser nada pra ninguém.\"",
+      "e_pista": true,
+      "pista_id": "incendio",
+      "opcoes": [
+        {
+          "texto": "O que aconteceu no incêndio?",
+          "dica": "direto",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "dez_anos"
+        },
+        {
+          "texto": "Às vezes dirigir é só outra forma de fugir.",
+          "dica": "provocativo",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "parar_fugir"
+        }
+      ]
+    },
+
+    "algo_comer": {
+      "id": "algo_comer",
+      "contexto": "Ryo olha para o menu sem realmente ver.",
+      "texto": "\"Algo quente seria bom.\"\n\nEle esfrega as mãos.\n\n\"Minha esposa... ela sempre deixava algo quente pra quando eu chegava. Curry udon, geralmente.\"\n\nA voz dele falha no final.\n\n\"Faz um ano que ela morreu. Um ano que eu como sozinho.\"",
+      "e_pista": true,
+      "pista_id": "mika",
+      "opcoes": [
+        {
+          "texto": "Curry udon. Posso fazer um.",
+          "dica": "atento",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "fazer_curry"
+        },
+        {
+          "texto": "Como ela era? Sua esposa.",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "como_era_mika"
+        }
+      ]
+    },
+
+    "perder_chefe": {
+      "id": "perder_chefe",
+      "contexto": "Ryo para de se mexer completamente.",
+      "texto": "\"Takeshi-san era mais que um chefe.\"\n\nA voz dele fica rouca.\n\n\"Ele me ensinou tudo. Paciência, atenção, respeito pela comida. E quando o fogo começou...\"\n\nEle engole.\n\n\"Ele voltou pra dentro. Pra tirar as pessoas. E eu corri.\"",
+      "e_pista": true,
+      "pista_id": "takeshi",
+      "opcoes": [
+        {
+          "texto": "Você estava em pânico. É humano.",
+          "dica": "consolador",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "nao_vergonha"
+        },
+        {
+          "texto": "Quem mais ficou?",
+          "dica": "curioso",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "quem_ficou"
+        }
+      ]
+    },
+
+    "nao_vergonha": {
+      "id": "nao_vergonha",
+      "contexto": "Ryo balança a cabeça lentamente.",
+      "texto": "\"Não é vergonha?\"\n\nEle olha para as próprias mãos.\n\n\"Eu deixei meu chefe morrer. Deixei um garoto de dezoito anos ser mais corajoso que eu.\"\n\nOs olhos dele estão vazios.\n\n\"E dez anos depois, deixei minha esposa morrer porque peguei mais uma corrida.\"\n\nEle ri amargamente. \"Parece que fugir é a única coisa que eu sei fazer.\"",
+      "e_pista": true,
+      "pista_id": "padrao_fuga",
+      "opcoes": [
+        {
+          "texto": "Você está aqui. Parado. Isso já é diferente.",
+          "dica": "observador",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "parou"
+        },
+        {
+          "texto": "O que sua esposa fazia quando você chegava do turno?",
+          "dica": "mudando foco",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "algo_comer"
+        }
+      ]
+    },
+
+    "parou": {
+      "id": "parou",
+      "contexto": "Ryo olha ao redor como se visse o lugar pela primeira vez.",
+      "texto": "\"É. Parei.\"\n\nEle respira fundo.\n\n\"Mika sempre dizia que eu precisava parar de correr. Que um dia eu ia me cansar.\"\n\nOs olhos dele ficam úmidos.\n\n\"Ela fazia curry udon pra mim. Toda noite. Dizia que era 'comida pra quem precisa de um abraço'.\"",
+      "e_pista": true,
+      "pista_id": "curry_udon",
+      "revelacao_prato": "curry_udon",
+      "opcoes": [
+        {
+          "texto": "Curry udon. Vou fazer um pra você.",
+          "dica": "decisivo",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "fazer_curry"
+        }
+      ]
+    },
+
+    "sobreviveu": {
+      "id": "sobreviveu",
+      "contexto": "Ryo fica em silêncio por um longo momento.",
+      "texto": "\"Sobrevivi.\"\n\nA palavra sai pesada.\n\n\"O chefe não. O garoto... ele sobreviveu, mas com cicatrizes. E eu saí sem um arranhão.\"\n\nEle fecha os olhos.\n\n\"Às vezes acho que a pior cicatriz é a que ninguém vê.\"",
+      "pensamento_master": "Cicatrizes que ninguém vê. Suas mãos param por um instante sobre a cicatriz no seu rosto.",
+      "opcoes": [
+        {
+          "texto": "Algumas cicatrizes a gente carrega por dentro.",
+          "dica": "compreensivo",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "cicatrizes_dentro"
+        },
+        {
+          "texto": "Você veio aqui por um motivo. O que quer comer?",
+          "dica": "prático",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "algo_comer"
+        }
+      ]
+    },
+
+    "cicatrizes_dentro": {
+      "id": "cicatrizes_dentro",
+      "contexto": "Ryo olha para você com atenção pela primeira vez.",
+      "texto": "\"Você fala como quem sabe.\"\n\nEle observa seu rosto.\n\n\"Minha esposa Mika... ela dizia a mesma coisa. Que as piores feridas são as que a gente não mostra.\"\n\nA voz dele suaviza.\n\n\"Ela fazia curry udon pra mim. Dizia que comida quente cura por dentro.\"",
+      "e_pista": true,
+      "pista_id": "curry_udon",
+      "revelacao_prato": "curry_udon",
+      "opcoes": [
+        {
+          "texto": "Curry udon. Posso fazer um pra você.",
+          "dica": "acolhedor",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "fazer_curry"
+        }
+      ]
+    },
+
+    "esteve_antes": {
+      "id": "esteve_antes",
+      "contexto": "Ryo franze a testa, tentando lembrar.",
+      "texto": "\"Não sei. Talvez.\"\n\nEle olha ao redor com mais atenção.\n\n\"Trabalhei num restaurante parecido. Dez anos atrás. Antes de virar taxista.\"\n\nOs olhos param em você por um segundo.\n\n\"Tinha um cozinheiro lá. Um garoto. Mais novo que eu.\"",
+      "e_pista": true,
+      "pista_id": "trabalhou_restaurante",
+      "pensamento_master": "Um garoto. Mais novo. As palavras ecoam de um jeito estranho.",
+      "opcoes": [
+        {
+          "texto": "O que aconteceu com esse restaurante?",
+          "dica": "curioso",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "dez_anos"
+        },
+        {
+          "texto": "Restaurantes de noite atraem as mesmas almas.",
+          "dica": "filosófico",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "mesmo_tipo"
+        }
+      ]
+    }
+  }
+}

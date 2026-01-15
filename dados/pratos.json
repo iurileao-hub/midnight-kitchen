@@ -1,0 +1,61 @@
+{
+  "pratos": {
+    "tamago_gohan": {
+      "nome": "Tamago Gohan",
+      "nome_japones": "卵かけご飯",
+      "descricao": "Ovo cru batido sobre arroz quente, temperado com shoyu.",
+      "tempo_preparo": 8,
+      "cliente_ideal": "yuki",
+
+      "narrativa_preparo": "Você pega uma tigela de cerâmica — a mesma que usa há anos, com uma pequena lasca na borda que só você conhece.\n\nO arroz está na temperatura perfeita. Não quente demais, não frio. Você aprendeu a sentir isso com as mãos.\n\nO ovo quebra limpo. A gema dourada repousa sobre o branco, como um sol em miniatura.\n\nShoyu — apenas algumas gotas. O suficiente para realçar, não para dominar.\n\nUm par de hashis descansa ao lado. A simplicidade perfeita.",
+
+      "narrativa_servir": "Você coloca a tigela diante de Yuki. O vapor sobe em espirais suaves.\n\nO ovo dourado brilha sobre o arroz branco. Simples. Honesto. Como deveria ser.",
+
+      "reacao_correta": "Yuki olha para o prato. Por um momento, ela não se move.\n\nEntão, devagar, ela pega os hashis. Mistura o ovo com o arroz — o gesto automático de quem fez isso mil vezes na infância.\n\nO primeiro bocado.\n\nOs olhos dela se fecham. Quando abrem novamente, estão úmidos.\n\n\"É exatamente assim que ela fazia.\"\n\nA armadura que Yuki carregou a noite toda finalmente cede. Não com um colapso dramático, mas com uma exalação suave. Uma rendição gentil.\n\n\"Eu fotografei um incêndio há dez anos. Um restaurante como este.\" Ela fala olhando para o prato. \"Eu era jovem. Achei que estava documentando algo importante.\"\n\nEla para. Come mais um pouco. As palavras vêm mais fáceis agora, entre os bocados.\n\n\"Um homem entrou no fogo para salvar pessoas. Eu fotografei tudo. O heroísmo. O horror. O momento em que o teto desabou.\"\n\nO envelope amarelado está no balcão. Ela o empurra gentilmente na sua direção.\n\n\"Nunca tive coragem de olhar de verdade. Mas você... você parece alguém que entende sobre carregar coisas.\"\n\nEla termina o tamago gohan. Cada grão de arroz.",
+
+      "reacao_errada": "Yuki prova educadamente, mas a conexão não acontece.\n\n\"Está bom. Obrigada.\"\n\nAs palavras são gentis, mas vazias. O momento passou."
+    },
+
+    "onigiri": {
+      "nome": "Onigiri",
+      "nome_japones": "おにぎり",
+      "descricao": "Bolinho de arroz recheado com umeboshi, envolto em nori.",
+      "tempo_preparo": 10,
+      "cliente_ideal": null,
+
+      "narrativa_preparo": "Suas mãos molhadas com água salgada. O arroz quente, maleável.\n\nVocê molda com movimentos praticados — triângulos imperfeitos, do jeito que deve ser. A umeboshi no centro, azeda e reconfortante.\n\nA folha de nori envolve, crocante contra o arroz úmido.",
+
+      "narrativa_servir": "Você coloca o onigiri num pratinho de madeira. Simples. Reconfortante.",
+
+      "reacao_generica": "É uma boa escolha. Reconfortante. Mas não é O prato — aquele que abre portas."
+    },
+
+    "missoshiru": {
+      "nome": "Missoshiru",
+      "nome_japones": "味噌汁",
+      "descricao": "Sopa de missô com tofu e wakame.",
+      "tempo_preparo": 12,
+      "cliente_ideal": null,
+
+      "narrativa_preparo": "O dashi está perfeito — você preparou de madrugada, como todo dia.\n\nO missô se dissolve em espirais. Tofu cortado em cubos delicados. Wakame que se expande na água quente.\n\nO vapor sobe, carregando o cheiro de casa.",
+
+      "narrativa_servir": "A tigela de madeira está quente nas mãos. O aroma preenche o espaço entre vocês.",
+
+      "reacao_generica": "Aquece. Conforta. Mas não revela nada."
+    },
+
+    "katsudon": {
+      "nome": "Katsudon",
+      "nome_japones": "カツ丼",
+      "descricao": "Tonkatsu sobre arroz, coberto com ovo e cebola.",
+      "tempo_preparo": 20,
+      "cliente_ideal": "tanaka",
+
+      "narrativa_preparo": "O tonkatsu frito até dourar. O óleo chiando, o panko crocante.\n\nCebola refogada até amolecer. Ovos batidos, derramados sobre tudo.\n\nArroz na tigela. O katsu em cima. Tradição e peso em cada camada.",
+
+      "narrativa_servir": "A tigela de katsudon é pesada — como deveria ser. Comida de quem precisa de força.",
+
+      "reacao_generica": "É saboroso. Mas este não é o prato certo para este momento."
+    }
+  }
+}

@@ -1,0 +1,2720 @@
+{
+  "cliente_id": "yuki",
+  "no_inicial": "chegada",
+
+  "nos": {
+    "chegada": {
+      "id": "chegada",
+      "contexto": "Yuki acabou de sentar no canto do balcão, evitando contato visual. Segura a bolsa protetoramente.",
+      "texto": "",
+      "e_pista": false,
+      "opcoes": [
+        {
+          "texto": "Boa noite. O cardápio está ali, se quiser olhar.",
+          "dica": "neutro",
+          "impacto": 8,
+          "tipo": "dialogo_curto",
+          "proximo": "cardapio"
+        },
+        {
+          "texto": "Câmera bonita. Pentax K1000?",
+          "dica": "observador",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "camera_interesse"
+        },
+        {
+          "texto": "Parece cansada. Quer começar com um chá quente?",
+          "dica": "acolhedor",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "cha_oferecido"
+        },
+        {
+          "texto": "[Continuar trabalhando em silêncio]",
+          "dica": "respeitoso",
+          "impacto": 10,
+          "tipo": "silencio",
+          "proximo": "silencio_inicial"
+        }
+      ]
+    },
+
+    "cardapio": {
+      "id": "cardapio",
+      "contexto": "Yuki olha brevemente para o cardápio na parede.",
+      "texto": "Ela acena com a cabeça, mas não olha para o cardápio. Seus olhos ficam no balcão, traçando os veios da madeira.\n\n\"Qualquer coisa está bom. Algo... simples.\"",
+      "e_pista": false,
+      "opcoes": [
+        {
+          "texto": "Onigiri? Simples, mas reconfortante.",
+          "dica": "prático",
+          "impacto": 8,
+          "tipo": "dialogo_curto",
+          "proximo": "onigiri"
+        },
+        {
+          "texto": "Noites longas pedem algo quente. Que tal missoshiru?",
+          "dica": "atencioso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "missoshiru"
+        },
+        {
+          "texto": "Você parece carregar algo pesado. Às vezes comida simples ajuda.",
+          "dica": "perceptivo",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "carregar_peso"
+        }
+      ]
+    },
+
+    "onigiri": {
+      "id": "onigiri",
+      "contexto": "Você prepara um onigiri simples.",
+      "texto": "Ela aceita o onigiri e dá uma mordida pequena. O arroz está morno, reconfortante.\n\n\"Obrigada.\"\n\nO silêncio se estende, mas é confortável. Ela relaxa um pouco.\n\n\"Este lugar... tem algo de familiar. Não sei explicar.\"",
+      "e_pista": false,
+      "opcoes": [
+        {
+          "texto": "Talvez lembre de algum lugar que você conhecia?",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "lugar_familiar"
+        },
+        {
+          "texto": "Câmeras antigas como a sua também têm algo de familiar.",
+          "dica": "observador",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "camera_interesse"
+        },
+        {
+          "texto": "[Deixar ela aproveitar em paz]",
+          "dica": "respeitoso",
+          "impacto": 10,
+          "tipo": "silencio",
+          "proximo": "aproveitar_paz"
+        }
+      ]
+    },
+
+    "missoshiru": {
+      "id": "missoshiru",
+      "contexto": "Você prepara uma tigela de missoshiru quente.",
+      "texto": "O vapor sobe da tigela. Yuki segura com as duas mãos, absorvendo o calor.\n\n\"Isso... é bom.\"\n\nEla bebe devagar. Os ombros descem um pouco.\n\n\"Faz tempo que não como algo assim. Algo feito por outra pessoa.\"",
+      "e_pista": false,
+      "opcoes": [
+        {
+          "texto": "Mora sozinha há muito tempo?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "mora_sozinha"
+        },
+        {
+          "texto": "Comida feita por outros tem um sabor diferente. Mais cuidado.",
+          "dica": "acolhedor",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "sabor_cuidado"
+        },
+        {
+          "texto": "[Apenas sorrir e deixar ela aproveitar]",
+          "dica": "respeitoso",
+          "impacto": 12,
+          "tipo": "silencio",
+          "proximo": "aproveitar_paz"
+        }
+      ]
+    },
+
+    "carregar_peso": {
+      "id": "carregar_peso",
+      "contexto": "Yuki para por um momento. Seus olhos vão para a bolsa.",
+      "texto": "\"Peso...\"\n\nEla repete a palavra baixinho, como testando o som.\n\n\"É. Você poderia dizer isso.\"\n\nSeus dedos tocam a câmera no pescoço. A alça está gasta.\n\n\"Às vezes a gente carrega coisas que não consegue largar. Nem olhar direito.\"",
+      "e_pista": true,
+      "pista_id": "peso_carregar",
+      "opcoes": [
+        {
+          "texto": "Essa câmera parece ter visto muita coisa.",
+          "dica": "observador",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "historias_camera"
+        },
+        {
+          "texto": "Às vezes ajuda compartilhar o peso.",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "compartilhar_peso"
+        },
+        {
+          "texto": "Posso preparar algo enquanto você pensa?",
+          "dica": "prático",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "preparar_algo"
+        }
+      ]
+    },
+
+    "lugar_familiar": {
+      "id": "lugar_familiar",
+      "contexto": "Yuki olha ao redor, pensativa.",
+      "texto": "\"Talvez.\"\n\nEla fica em silêncio por um momento.\n\n\"Quando eu era mais nova... antes de tudo mudar... havia um restaurante que minha família frequentava.\" Ela sorri, um sorriso pequeno. \"Não era diferente deste. Pequeno. Acolhedor.\"\n\nOs olhos dela escurecem um pouco.\n\n\"Faz muito tempo.\"",
+      "e_pista": true,
+      "pista_id": "restaurante_familia",
+      "opcoes": [
+        {
+          "texto": "O que mudou?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "o_que_mudou"
+        },
+        {
+          "texto": "Lugares assim guardam memórias.",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "guardam_memorias"
+        },
+        {
+          "texto": "Sua família ainda frequenta restaurantes assim?",
+          "dica": "pessoal",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "familia_agora"
+        }
+      ]
+    },
+
+    "aproveitar_paz": {
+      "id": "aproveitar_paz",
+      "contexto": "O silêncio se estende confortavelmente.",
+      "texto": "Yuki termina de comer em silêncio. Você trabalha na cozinha.\n\nO chiado do óleo, o barulho da chuva lá fora.\n\nDepois de um tempo, ela fala, quase para si mesma:\n\n\"É estranho... eu vim aqui sem motivo. Só andando. Mas parece que era para eu estar aqui.\"",
+      "e_pista": false,
+      "opcoes": [
+        {
+          "texto": "Às vezes nossos pés sabem o caminho antes da gente.",
+          "dica": "filosófico",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "pes_sabem"
+        },
+        {
+          "texto": "Você parece precisar de um lugar quieto.",
+          "dica": "perceptivo",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "lugar_quieto"
+        },
+        {
+          "texto": "[Apenas acenar, concordando]",
+          "dica": "silencioso",
+          "impacto": 10,
+          "tipo": "silencio",
+          "proximo": "acenar_concordando"
+        }
+      ]
+    },
+
+    "mora_sozinha": {
+      "id": "mora_sozinha",
+      "contexto": "Yuki acena levemente.",
+      "texto": "\"Faz... dez anos.\"\n\nEla olha para a tigela de missoshiru.\n\n\"Depois que saí de casa, nunca mais voltei. E depois do que aconteceu...\" Ela para. \"Bem. É mais fácil sozinha.\"",
+      "e_pista": true,
+      "pista_id": "dez_anos_sozinha",
+      "opcoes": [
+        {
+          "texto": "O que aconteceu há dez anos?",
+          "dica": "direto",
+          "impacto": 8,
+          "tipo": "dialogo_medio",
+          "proximo": "dez_anos_atras"
+        },
+        {
+          "texto": "Mais fácil, mas talvez mais solitário?",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "mais_solitario"
+        },
+        {
+          "texto": "Eu também trabalho sozinho. Entendo.",
+          "dica": "empático",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "trabalho_sozinho"
+        }
+      ]
+    },
+
+    "sabor_cuidado": {
+      "id": "sabor_cuidado",
+      "contexto": "Yuki considera suas palavras.",
+      "texto": "\"Cuidado...\"\n\nEla olha para a tigela quase vazia.\n\n\"Minha mãe cozinhava assim. Com cuidado.\" Uma pausa longa. \"Ela fazia um prato especial aos domingos. Tamago gohan. Ovo cru sobre arroz quente.\"\n\nOs olhos dela se perdem em algum lugar distante.\n\n\"Parou de fazer quando meu pai foi embora.\"",
+      "e_pista": true,
+      "pista_id": "mae_tamago",
+      "pensamento_master": "Tamago gohan. Um prato simples. Cheio de memória.",
+      "opcoes": [
+        {
+          "texto": "Tamago gohan? Posso fazer isso.",
+          "dica": "oferecendo",
+          "impacto": 20,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_tamago_direto"
+        },
+        {
+          "texto": "Às vezes os pratos que lembramos são os mais simples.",
+          "dica": "reflexivo",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "pratos_simples"
+        },
+        {
+          "texto": "Seu pai foi embora quando você era jovem?",
+          "dica": "pessoal",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "pai_embora"
+        }
+      ]
+    },
+
+    "oferecer_tamago_direto": {
+      "id": "oferecer_tamago_direto",
+      "contexto": "Yuki olha para você, surpresa.",
+      "texto": "\"Você... sabe fazer?\"\n\nHá algo nos olhos dela — esperança? — que não estava lá antes.\n\n\"Faz tanto tempo que eu não como. Não desde...\" Ela respira fundo.\n\n\"Eu gostaria muito. Se não for incômodo.\"",
+      "e_pista": false,
+      "revelacao_prato": "tamago_gohan",
+      "opcoes": [
+        {
+          "texto": "Claro. É um dos meus favoritos.",
+          "dica": "",
+          "impacto": 20,
+          "tipo": "cozinha",
+          "proximo": "preparar_tamago"
+        }
+      ]
+    },
+
+    "pratos_simples": {
+      "id": "pratos_simples",
+      "contexto": "Yuki concorda lentamente.",
+      "texto": "\"É verdade.\"\n\nEla mexe na alça da câmera.\n\n\"Sabe... eu costumava fotografar comida. Pratos elaborados, bonitos. Mas as fotos que eu mais gostava eram de pratos assim. Simples. Cheios de história.\"\n\nEla olha para você.\n\n\"Você cozinha há muito tempo?\"",
+      "e_pista": false,
+      "opcoes": [
+        {
+          "texto": "Dez anos neste restaurante.",
+          "dica": "honesto",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "dez_anos_aqui"
+        },
+        {
+          "texto": "O suficiente para saber que comida conta histórias.",
+          "dica": "filosófico",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "comida_historias"
+        }
+      ]
+    },
+
+    "dez_anos_aqui": {
+      "id": "dez_anos_aqui",
+      "contexto": "Algo passa pelo rosto de Yuki.",
+      "texto": "\"Dez anos...\"\n\nEla repete o número como se significasse algo.\n\n\"Eu também... há dez anos... tudo mudou para mim também.\"\n\nSeus olhos vão para a bolsa. Para o envelope que você mal consegue ver.\n\n\"Às vezes acho que esses dez anos foram uma vida inteira.\"",
+      "e_pista": true,
+      "pista_id": "dez_anos_coincidencia",
+      "pensamento_master": "Dez anos. O mesmo tempo desde o incêndio. Coincidência?",
+      "opcoes": [
+        {
+          "texto": "O que aconteceu há dez anos?",
+          "dica": "direto",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "aconteceu_dez_anos"
+        },
+        {
+          "texto": "Esse envelope na sua bolsa... faz parte desses dez anos?",
+          "dica": "observador",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "envelope_dez_anos"
+        },
+        {
+          "texto": "Dez anos é tempo suficiente para muita coisa mudar.",
+          "dica": "neutro",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "muita_coisa_mudar"
+        }
+      ]
+    },
+
+    "camera_interesse": {
+      "id": "camera_interesse",
+      "contexto": "Yuki olha surpresa para você, depois para a câmera no pescoço.",
+      "texto": "\"Você... entende de câmeras?\"\n\nPela primeira vez, ela olha diretamente para você. Há algo — curiosidade, talvez — por trás da cautela.\n\n\"É uma K1000, sim. Minha primeira câmera de verdade.\"",
+      "e_pista": true,
+      "pista_id": "camera_primeira",
+      "opcoes": [
+        {
+          "texto": "Câmeras mecânicas têm alma. As digitais perderam isso.",
+          "dica": "filosófico",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "alma_camera"
+        },
+        {
+          "texto": "Primeira câmera? Há quanto tempo fotografa?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "tempo_fotografia"
+        },
+        {
+          "texto": "A alça parece bem gasta. Muitas histórias nessa câmera.",
+          "dica": "observador",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "historias_camera"
+        }
+      ]
+    },
+
+    "alma_camera": {
+      "id": "alma_camera",
+      "contexto": "Yuki olha para a câmera com carinho.",
+      "texto": "\"Alma... é uma boa palavra para isso.\"\n\nEla acaricia a câmera.\n\n\"Cada foto que você tira com uma câmera assim é um compromisso. Você não pode simplesmente deletar e tentar de novo. Você tem que estar presente.\"\n\nA voz dela suaviza.\n\n\"Às vezes isso é bom. Às vezes... é um peso.\"",
+      "e_pista": false,
+      "opcoes": [
+        {
+          "texto": "Que tipo de fotos você tira?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "tipo_fotos"
+        },
+        {
+          "texto": "Compromisso pode ser pesado quando a foto é difícil.",
+          "dica": "perceptivo",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "foto_dificil"
+        },
+        {
+          "texto": "Posso preparar algo enquanto conversamos?",
+          "dica": "acolhedor",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "preparar_algo"
+        }
+      ]
+    },
+
+    "tempo_fotografia": {
+      "id": "tempo_fotografia",
+      "contexto": "Yuki faz uma conta mental.",
+      "texto": "\"Dez anos com esta câmera.\" Ela passa os dedos pela alça gasta. \"Comprei ela... na noite em que tudo mudou.\"\n\nAlgo escurece em seu olhar.\n\n\"Era para ser minha primeira saída como fotógrafa de verdade. Eu ia fotografar a cidade à noite.\"",
+      "e_pista": true,
+      "pista_id": "noite_mudanca",
+      "opcoes": [
+        {
+          "texto": "O que aconteceu nessa noite?",
+          "dica": "direto",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "noite_aconteceu"
+        },
+        {
+          "texto": "Dez anos... mesma época que abri este restaurante.",
+          "dica": "revelador",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "mesma_epoca"
+        },
+        {
+          "texto": "E desde então? Ainda fotografa a cidade?",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "ainda_fotografa"
+        }
+      ]
+    },
+
+    "historias_camera": {
+      "id": "historias_camera",
+      "contexto": "Yuki passa os dedos pela alça gasta da câmera.",
+      "texto": "\"Dez anos de histórias.\"\n\nEla faz uma pausa. Os dedos param no couro gasto.\n\n\"Algumas histórias... a gente preferia não ter contado.\"",
+      "e_pista": true,
+      "pista_id": "dez_anos",
+      "opcoes": [
+        {
+          "texto": "Fotografar é testemunhar. Nem todo testemunho é fácil de carregar.",
+          "dica": "empático",
+          "impacto": 18,
+          "tipo": "dialogo_longo",
+          "proximo": "testemunhar"
+        },
+        {
+          "texto": "Dez anos é muito tempo. O que você fotografava naquela época?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "fotografava_antes"
+        },
+        {
+          "texto": "Histórias difíceis às vezes precisam de um lugar para descansar.",
+          "dica": "acolhedor",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "lugar_descansar"
+        }
+      ]
+    },
+
+    "cha_oferecido": {
+      "id": "cha_oferecido",
+      "contexto": "Você prepara um chá verde e coloca diante dela.",
+      "texto": "Ela aceita a xícara com as duas mãos. O vapor sobe entre vocês.\n\n\"Obrigada.\"\n\nEla bebe em silêncio por um momento. Os ombros descem um pouco — apenas um pouco.\n\n\"Este lugar é... quieto. Diferente de lá fora.\"",
+      "e_pista": false,
+      "opcoes": [
+        {
+          "texto": "Shinjuku nunca dorme de verdade. Mas aqui, o barulho não entra.",
+          "dica": "acolhedor",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "lugar_quieto"
+        },
+        {
+          "texto": "Você trabalha à noite? Fotógrafa, pelo equipamento.",
+          "dica": "observador",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "trabalho_noite"
+        },
+        {
+          "texto": "[Apenas acenar e deixá-la apreciar o momento]",
+          "dica": "respeitoso",
+          "impacto": 15,
+          "tipo": "silencio",
+          "proximo": "apreciar_momento"
+        }
+      ]
+    },
+
+    "lugar_quieto": {
+      "id": "lugar_quieto",
+      "contexto": "Yuki olha ao redor, absorvendo o silêncio.",
+      "texto": "\"É bom ter um lugar assim.\"\n\nEla segura a xícara de chá.\n\n\"Eu costumava ter um lugar assim. Um restaurante que minha família frequentava.\" Ela sorri triste. \"Faz muito tempo.\"\n\nSeus olhos vão para a câmera.\n\n\"Acho que foi por isso que virei fotógrafa. Para encontrar lugares assim em outros cantos.\"",
+      "e_pista": true,
+      "pista_id": "lugar_antigo",
+      "opcoes": [
+        {
+          "texto": "E encontrou?",
+          "dica": "curioso",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "encontrou_lugares"
+        },
+        {
+          "texto": "Há quanto tempo fotografa?",
+          "dica": "pessoal",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "tempo_fotografia"
+        },
+        {
+          "texto": "Talvez este lugar possa ser um desses para você.",
+          "dica": "acolhedor",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "este_lugar"
+        }
+      ]
+    },
+
+    "trabalho_noite": {
+      "id": "trabalho_noite",
+      "contexto": "Yuki olha para a câmera.",
+      "texto": "\"Fotógrafa, sim. Mas não de noite.\" Ela faz uma pausa. \"Não mais.\"\n\nEla mexe na xícara de chá.\n\n\"Fotografo arquitetura agora. Prédios. Paisagens. Coisas que... que ficam paradas.\"\n\nHá algo não dito ali.",
+      "e_pista": true,
+      "pista_id": "nao_fotografa_noite",
+      "opcoes": [
+        {
+          "texto": "Por que não fotografa mais à noite?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "porque_nao_noite"
+        },
+        {
+          "texto": "Coisas que ficam paradas... diferente de pessoas?",
+          "dica": "perceptivo",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "diferente_pessoas"
+        },
+        {
+          "texto": "Cada um encontra seu caminho na profissão.",
+          "dica": "neutro",
+          "impacto": 8,
+          "tipo": "dialogo_medio",
+          "proximo": "seu_caminho"
+        }
+      ]
+    },
+
+    "apreciar_momento": {
+      "id": "apreciar_momento",
+      "contexto": "O silêncio se estende confortavelmente.",
+      "texto": "Yuki bebe o chá devagar. Você trabalha na cozinha.\n\nO tempo passa. A chuva cai lá fora.\n\nDepois de um longo momento, ela fala:\n\n\"Sabe... eu não ia parar aqui. Estava só andando.\" Ela olha para a cortina de noren. \"Mas algo neste lugar me fez entrar.\"",
+      "e_pista": false,
+      "opcoes": [
+        {
+          "texto": "Às vezes a gente encontra o que precisa sem procurar.",
+          "dica": "filosófico",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "sem_procurar"
+        },
+        {
+          "texto": "O que você estava procurando?",
+          "dica": "direto",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "estava_procurando"
+        },
+        {
+          "texto": "Quer comer algo? A noite é longa.",
+          "dica": "prático",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "silencio_inicial": {
+      "id": "silencio_inicial",
+      "contexto": "Você continua seu trabalho. O silêncio se estende confortavelmente.",
+      "texto": "O chiado suave do óleo na chapa. O tamborilar distante da chuva.\n\nYuki observa você trabalhar. Depois de um tempo, ela quebra o silêncio:\n\n\"Esse lugar... é tranquilo. Como uma fotografia parada no tempo.\"",
+      "e_pista": true,
+      "pista_id": "tempo_parado",
+      "opcoes": [
+        {
+          "texto": "Fotografias congelam momentos. Você fotografa o quê?",
+          "dica": "curioso",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "fotografa_oque"
+        },
+        {
+          "texto": "O tempo passa diferente de madrugada. Mais devagar.",
+          "dica": "filosófico",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "tempo_madrugada"
+        },
+        {
+          "texto": "[Sorrir levemente e continuar trabalhando]",
+          "dica": "gentil",
+          "impacto": 10,
+          "tipo": "silencio",
+          "proximo": "sorrir_trabalhar"
+        }
+      ]
+    },
+
+    "tempo_madrugada": {
+      "id": "tempo_madrugada",
+      "contexto": "Yuki considera suas palavras.",
+      "texto": "\"É verdade.\"\n\nEla olha para a câmera no pescoço.\n\n\"Eu costumava amar fotografar de madrugada. Tudo parece diferente. Mais honesto.\" Uma pausa. \"Mas depois... depois de uma certa noite... parei.\"\n\nOs dedos dela vão para a bolsa. Tocam algo lá dentro.",
+      "e_pista": true,
+      "pista_id": "certa_noite",
+      "opcoes": [
+        {
+          "texto": "O que aconteceu nessa noite?",
+          "dica": "direto",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "noite_aconteceu"
+        },
+        {
+          "texto": "Parece que você carrega algo dessa noite ainda.",
+          "dica": "observador",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "carrega_noite"
+        },
+        {
+          "texto": "Não precisa falar se não quiser. Posso preparar algo para você?",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "sorrir_trabalhar": {
+      "id": "sorrir_trabalhar",
+      "contexto": "Você sorri levemente e continua seu trabalho.",
+      "texto": "Yuki observa você por um momento. Há algo reconfortante no ritmo da cozinha.\n\n\"Você gosta do que faz, não é?\"\n\nNão é realmente uma pergunta.\n\n\"Dá para ver. No jeito que você corta. No cuidado.\"\n\nEla toca a câmera.\n\n\"Eu também gostava. Do meu trabalho.\"",
+      "e_pista": false,
+      "opcoes": [
+        {
+          "texto": "Gostava? Não gosta mais?",
+          "dica": "curioso",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "nao_gosta_mais"
+        },
+        {
+          "texto": "Fazer algo com as mãos tem seu próprio tipo de paz.",
+          "dica": "filosófico",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "paz_maos"
+        },
+        {
+          "texto": "Posso preparar algo para você, se quiser.",
+          "dica": "oferecendo",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "nao_gosta_mais": {
+      "id": "nao_gosta_mais",
+      "contexto": "Yuki fica em silêncio por um momento.",
+      "texto": "\"É complicado.\"\n\nEla olha para a câmera.\n\n\"Eu ainda fotografo. Mas é... diferente agora. Mais distante. Paisagens. Prédios.\" Ela pausa. \"Nada que mude enquanto eu olho.\"\n\nSua voz é quase um sussurro.\n\n\"Há dez anos, uma foto mudou tudo para mim.\"",
+      "e_pista": true,
+      "pista_id": "foto_mudou",
+      "opcoes": [
+        {
+          "texto": "Que foto foi essa?",
+          "dica": "direto",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "que_foto"
+        },
+        {
+          "texto": "Você ainda tem essa foto?",
+          "dica": "observador",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "ainda_tem_foto"
+        },
+        {
+          "texto": "Dez anos carregando isso...",
+          "dica": "empático",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "dez_anos_carregando"
+        }
+      ]
+    },
+
+    "quer_comer": {
+      "id": "quer_comer",
+      "contexto": "Yuki considera a oferta.",
+      "texto": "\"Comer...\"\n\nEla pensa por um momento.\n\n\"Faz tempo que não como de verdade. Algo feito por outra pessoa, com calma.\"\n\nSeus olhos se perdem em alguma memória.\n\n\"Minha mãe fazia... um prato simples. Ovo sobre arroz quente. Tamago gohan.\"\n\nEla sorri triste.\n\n\"Acho que nunca comi de novo desde que saí de casa.\"",
+      "e_pista": true,
+      "pista_id": "tamago_mae",
+      "pensamento_master": "Tamago gohan. Memória de família.",
+      "revelacao_prato": "tamago_gohan",
+      "opcoes": [
+        {
+          "texto": "Posso fazer tamago gohan. É um dos meus favoritos.",
+          "dica": "",
+          "impacto": 20,
+          "tipo": "cozinha",
+          "proximo": "preparar_tamago"
+        },
+        {
+          "texto": "Conta mais sobre esse prato. O que ele significa para você?",
+          "dica": "curioso",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "significado_tamago"
+        }
+      ]
+    },
+
+    "significado_tamago": {
+      "id": "significado_tamago",
+      "contexto": "Yuki fecha os olhos por um momento.",
+      "texto": "\"Domingos de manhã.\"\n\nEla sorri, um sorriso pequeno mas genuíno.\n\n\"Minha mãe acordava cedo. Fazia arroz fresco. Quebrava o ovo na hora.\"\n\nA voz dela suaviza.\n\n\"Era... era amor. Simples assim. Até que tudo mudou.\"\n\nEla abre os olhos.\n\n\"Se você souber fazer... eu gostaria muito de comer.\"",
+      "e_pista": false,
+      "revelacao_prato": "tamago_gohan",
+      "opcoes": [
+        {
+          "texto": "Deixa comigo.",
+          "dica": "",
+          "impacto": 20,
+          "tipo": "cozinha",
+          "proximo": "preparar_tamago"
+        }
+      ]
+    },
+
+    "testemunhar": {
+      "id": "testemunhar",
+      "contexto": "Algo muda no olhar de Yuki. A guarda baixa, só um pouco.",
+      "texto": "\"Testemunhar...\"\n\nEla repete a palavra como se a estivesse experimentando.\n\n\"É exatamente isso. Eu estava lá. Eu vi. Eu capturei. Mas não pude...\" Ela para. Respira.\n\n\"Não fotografo mais pessoas. Só paisagens agora. Edifícios. Coisas que não... que não mudam enquanto você olha para elas.\"",
+      "e_pista": true,
+      "pista_id": "nao_fotografa_pessoas",
+      "opcoes": [
+        {
+          "texto": "Pessoas mudam rápido demais?",
+          "dica": "cauteloso",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "pessoas_mudam"
+        },
+        {
+          "texto": "Edifícios também têm histórias. Só contam de forma diferente.",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "edificios_historias"
+        },
+        {
+          "texto": "[Deixar o silêncio fazer seu trabalho]",
+          "dica": "paciente",
+          "impacto": 12,
+          "tipo": "silencio",
+          "proximo": "silencio_profundo"
+        }
+      ]
+    },
+
+    "pessoas_mudam": {
+      "id": "pessoas_mudam",
+      "contexto": "Yuki acena lentamente.",
+      "texto": "\"Sim. Às vezes... muito rápido.\"\n\nSua voz é quase um sussurro.\n\n\"Uma fração de segundo. Um disparo. E tudo muda.\"\n\nEla olha para a bolsa.\n\n\"Eu tenho fotos de uma noite. Uma noite há dez anos.\" Ela engole. \"Fotos de algo terrível. E de algo... corajoso.\"",
+      "e_pista": true,
+      "pista_id": "fotos_noite",
+      "opcoes": [
+        {
+          "texto": "O que aconteceu nessa noite?",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "noite_aconteceu"
+        },
+        {
+          "texto": "Você carrega essas fotos ainda?",
+          "dica": "observador",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "carrega_fotos"
+        },
+        {
+          "texto": "Talvez comer algo ajude. Posso preparar alguma coisa?",
+          "dica": "acolhedor",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "edificios_historias": {
+      "id": "edificios_historias",
+      "contexto": "Yuki parece surpresa com suas palavras.",
+      "texto": "\"É... é verdade.\"\n\nEla olha ao redor do pequeno restaurante.\n\n\"Este lugar também. Deve ter histórias.\" Uma pausa. \"Você está aqui há quanto tempo?\"\n\nHá algo em sua pergunta — uma conexão que ela está tentando fazer.",
+      "e_pista": false,
+      "opcoes": [
+        {
+          "texto": "Dez anos. Desde o incêndio.",
+          "dica": "honesto",
+          "impacto": 18,
+          "tipo": "dialogo_longo",
+          "proximo": "desde_incendio"
+        },
+        {
+          "texto": "O suficiente para ver muita coisa passar por essa cortina.",
+          "dica": "evasivo",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "muita_coisa_passar"
+        }
+      ]
+    },
+
+    "desde_incendio": {
+      "id": "desde_incendio",
+      "contexto": "Yuki congela por um momento.",
+      "texto": "\"Incêndio?\"\n\nA palavra sai como se tivesse vida própria.\n\nEla te olha — realmente olha — pela primeira vez.\n\n\"Há dez anos... eu...\" A voz dela treme. \"Eu estava fotografando a cidade. E vi um incêndio. Um restaurante.\"\n\nEla toca a bolsa.\n\n\"Eu fotografei tudo. Um homem que entrou no fogo para salvar pessoas...\"",
+      "e_pista": true,
+      "pista_id": "reconhecimento_incendio",
+      "pensamento_master": "O ar parece mais pesado. A cicatriz no seu rosto formiga.",
+      "opcoes": [
+        {
+          "texto": "[Tocar levemente a cicatriz no rosto]",
+          "dica": "silencioso",
+          "impacto": 20,
+          "tipo": "silencio",
+          "proximo": "tocar_cicatriz"
+        },
+        {
+          "texto": "Continue. Estou ouvindo.",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "continue_ouvindo"
+        }
+      ]
+    },
+
+    "silencio_profundo": {
+      "id": "silencio_profundo",
+      "contexto": "O silêncio se estende. Yuki olha para as próprias mãos.",
+      "texto": "O tempo passa. A chuva lá fora. O chiado da chapa.\n\nYuki olha para a bolsa. Para o envelope amarelado que mal aparece.\n\n\"Eu estava fotografando a cidade naquela noite. Tinha acabado de comprar essa câmera.\" Ela engole. \"E então vi o fogo.\"",
+      "e_pista": true,
+      "pista_id": "incendio",
+      "opcoes": [
+        {
+          "texto": "Um incêndio?",
+          "dica": "cuidadoso",
+          "impacto": 12,
+          "tipo": "dialogo_curto",
+          "proximo": "confirma_incendio"
+        },
+        {
+          "texto": "[Suas mãos param por um instante, mas você mantém o rosto neutro]",
+          "dica": "contido",
+          "impacto": 15,
+          "tipo": "silencio",
+          "proximo": "reacao_contida"
+        }
+      ]
+    },
+
+    "confirma_incendio": {
+      "id": "confirma_incendio",
+      "contexto": "Yuki confirma com um aceno lento.",
+      "texto": "\"Um restaurante. Não muito diferente deste.\"\n\nEla olha ao redor, como se visse fantasmas nas paredes.\n\n\"Eu fotografei tudo. O fogo. As pessoas correndo. Um homem que entrou para ajudar...\" A voz dela falha. \"Ele salvou uma criança. Mas o teto... o teto desabou.\"\n\nEla toca a cicatriz invisível que carrega por dentro.\n\n\"Eu tenho as fotos. Nunca tive coragem de olhar direito.\"",
+      "e_pista": true,
+      "pista_id": "fotos_incendio",
+      "pensamento_master": "A cicatriz no seu rosto pulsa. Você lembra do calor. Do peso. Da criança nos seus braços.",
+      "opcoes": [
+        {
+          "texto": "Você capturou algo que ninguém mais viu. Isso pesa.",
+          "dica": "empático",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "capturou_peso"
+        },
+        {
+          "texto": "Esse envelope na sua bolsa... são as fotos?",
+          "dica": "direto",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "envelope_fotos"
+        },
+        {
+          "texto": "Às vezes carregamos testemunhos que não pedimos.",
+          "dica": "filosófico",
+          "impacto": 18,
+          "tipo": "dialogo_longo",
+          "proximo": "testemunhos_nao_pedidos"
+        }
+      ]
+    },
+
+    "capturou_peso": {
+      "id": "capturou_peso",
+      "contexto": "Yuki acena, os olhos molhados.",
+      "texto": "\"Pesa. Muito.\"\n\nEla tira o envelope da bolsa. Coloca no balcão entre vocês.\n\n\"Dez anos carregando isso. Sem mostrar para ninguém. Sem olhar direito.\"\n\nEla olha para você.\n\n\"Eu vim andando esta noite. Sem destino. E acabei aqui.\" Ela ri baixinho. \"Talvez... talvez fosse para eu vir.\"",
+      "e_pista": false,
+      "gatilho_prato": true,
+      "opcoes": [
+        {
+          "texto": "Talvez você precisasse de um lugar para descansar esse peso.",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "descansar_peso"
+        },
+        {
+          "texto": "Posso preparar algo para você? Às vezes comida ajuda.",
+          "dica": "prático",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "envelope_fotos": {
+      "id": "envelope_fotos",
+      "contexto": "Yuki olha para a bolsa.",
+      "texto": "\"Sim.\"\n\nEla hesita, depois tira o envelope. É amarelado pelo tempo.\n\n\"Dez anos. Eu carrego isso há dez anos.\"\n\nEla coloca o envelope no balcão, mas não abre.\n\n\"Sabe o que é mais estranho? O homem que entrou no fogo — ele sobreviveu. Com uma cicatriz grande no rosto. Mas nunca soube quem ele era.\"",
+      "e_pista": true,
+      "pista_id": "homem_cicatriz",
+      "pensamento_master": "Você sente a cicatriz no seu rosto como se fosse feita de fogo outra vez.",
+      "opcoes": [
+        {
+          "texto": "[Ficar em silêncio, processando]",
+          "dica": "contido",
+          "impacto": 18,
+          "tipo": "silencio",
+          "proximo": "processando"
+        },
+        {
+          "texto": "Talvez ele também carregue algo daquela noite.",
+          "dica": "reflexivo",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "ele_tambem_carrega"
+        }
+      ]
+    },
+
+    "testemunhos_nao_pedidos": {
+      "id": "testemunhos_nao_pedidos",
+      "contexto": "Yuki olha para você com olhos cansados.",
+      "texto": "\"Testemunhos que não pedimos...\"\n\nEla repete baixinho.\n\n\"É isso. Exatamente isso.\" Ela pega o envelope da bolsa. \"Eu não pedi para ver aquilo. Mas vi. E agora carrego.\"\n\nEla coloca o envelope no balcão.\n\n\"Talvez esse seja o lugar certo para finalmente... deixar ir.\"",
+      "e_pista": false,
+      "gatilho_prato": true,
+      "opcoes": [
+        {
+          "texto": "Antes de abrir isso... deixa eu preparar algo. Você parece precisar de conforto.",
+          "dica": "acolhedor",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        },
+        {
+          "texto": "Você está pronta para abrir?",
+          "dica": "direto",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "pronta_abrir"
+        }
+      ]
+    },
+
+    "descansar_peso": {
+      "id": "descansar_peso",
+      "contexto": "Yuki olha ao redor do restaurante.",
+      "texto": "\"Descansar...\"\n\nEla respira fundo.\n\n\"Faz tanto tempo que não descanso. Não de verdade.\" Ela olha para você. \"Sabe o que eu gostaria?\"\n\nEla sorri, um sorriso triste mas esperançoso.\n\n\"Algo simples. Como minha mãe fazia. Tamago gohan — ovo sobre arroz quente.\"",
+      "e_pista": false,
+      "revelacao_prato": "tamago_gohan",
+      "opcoes": [
+        {
+          "texto": "Posso fazer isso. É um prato de amor.",
+          "dica": "",
+          "impacto": 20,
+          "tipo": "cozinha",
+          "proximo": "preparar_tamago"
+        }
+      ]
+    },
+
+    "processando": {
+      "id": "processando",
+      "contexto": "O silêncio se estende. Yuki observa seu rosto.",
+      "texto": "Ela para. Olha para você — realmente olha.\n\n\"Você...\" A voz dela treme. \"Você tem uma cicatriz.\"\n\nO mundo parece parar por um momento.\n\n\"O restaurante que pegou fogo... era aqui perto?\" Ela está quase sussurrando. \"O homem que entrou no fogo... era você?\"",
+      "e_pista": true,
+      "pista_id": "revelacao_master",
+      "pensamento_master": "O passado e o presente colidem. Dez anos desaparecem num instante.",
+      "opcoes": [
+        {
+          "texto": "[Acenar lentamente]",
+          "dica": "honesto",
+          "impacto": 25,
+          "tipo": "silencio",
+          "proximo": "acenar_sim"
+        },
+        {
+          "texto": "Essa é uma longa história. Deixa eu preparar algo primeiro.",
+          "dica": "evasivo mas gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "acenar_sim": {
+      "id": "acenar_sim",
+      "contexto": "O ar parece mais denso. Yuki absorve a revelação.",
+      "texto": "Yuki fica em silêncio por um longo momento. Lágrimas escorrem pelo seu rosto.\n\n\"Dez anos.\" Ela sussurra. \"Dez anos carregando suas fotos. E você estava aqui o tempo todo.\"\n\nEla empurra o envelope para você.\n\n\"Elas são suas. Sempre foram.\"",
+      "e_pista": false,
+      "pensamento_master": "As fotos. Do incêndio. De você entrando nas chamas. A história que você tentou esquecer.",
+      "opcoes": [
+        {
+          "texto": "Guarda essas fotos. São suas também agora.",
+          "dica": "generoso",
+          "impacto": 20,
+          "tipo": "dialogo_medio",
+          "proximo": "fotos_dela"
+        },
+        {
+          "texto": "Deixa eu preparar algo para nós dois. Tamago gohan.",
+          "dica": "acolhedor",
+          "impacto": 25,
+          "tipo": "dialogo_medio",
+          "proximo": "tamago_para_dois"
+        }
+      ]
+    },
+
+    "tamago_para_dois": {
+      "id": "tamago_para_dois",
+      "contexto": "Yuki assente, emocionada.",
+      "texto": "\"Tamago gohan...\"\n\nEla sorri através das lágrimas.\n\n\"Minha mãe fazia. Cada domingo.\" Ela olha para você. \"É um prato de amor, não é?\"\n\nO passado e o presente se encontram neste pequeno restaurante.\n\n\"Sim. Eu gostaria muito.\"",
+      "e_pista": false,
+      "revelacao_prato": "tamago_gohan",
+      "opcoes": [
+        {
+          "texto": "Deixa comigo.",
+          "dica": "",
+          "impacto": 25,
+          "tipo": "cozinha",
+          "proximo": "preparar_tamago"
+        }
+      ]
+    },
+
+    "fotos_dela": {
+      "id": "fotos_dela",
+      "contexto": "Yuki olha para o envelope, surpresa.",
+      "texto": "\"Minhas?\"\n\nEla hesita.\n\n\"Você... você não quer ver?\"\n\nVocê balança a cabeça.\n\n\"Eu já vivi aquilo. Não preciso ver fotos.\" Você pausa. \"Mas você carregou isso por dez anos. Talvez seja hora de deixar ir.\"\n\nEla respira fundo.\n\n\"Talvez... talvez comendo algo. Como fazíamos em família.\"",
+      "e_pista": false,
+      "revelacao_prato": "tamago_gohan",
+      "opcoes": [
+        {
+          "texto": "Tamago gohan?",
+          "dica": "",
+          "impacto": 20,
+          "tipo": "cozinha",
+          "proximo": "preparar_tamago"
+        }
+      ]
+    },
+
+    "reacao_contida": {
+      "id": "reacao_contida",
+      "contexto": "Yuki nota sua reação sutil, mas não comenta.",
+      "texto": "\"Um restaurante pequeno. Familiar.\" Ela continua, quase para si mesma.\n\n\"Eu era jovem. Achei que estava documentando história. Não sabia que estava...\" Ela para.\n\n\"O homem que entrou para salvar as pessoas. Ele sobreviveu, mas... a cicatriz que ele carrega...\"\n\nSeus olhos encontram os seus por um momento.\n\n\"As fotos estão aqui.\" Ela toca a bolsa. \"Dez anos carregando isso.\"",
+      "e_pista": true,
+      "pista_id": "reconhecimento",
+      "pensamento_master": "A palavra 'incêndio' ecoa em algum lugar que você tentou trancar há dez anos.",
+      "opcoes": [
+        {
+          "texto": "Dez anos é muito tempo para carregar sozinha.",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "muito_tempo"
+        },
+        {
+          "texto": "Por que veio aqui esta noite? De todos os lugares...",
+          "dica": "curioso",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "porque_aqui"
+        }
+      ]
+    },
+
+    "muito_tempo": {
+      "id": "muito_tempo",
+      "contexto": "Yuki olha para você com olhos cansados, mas algo neles está mais leve.",
+      "texto": "\"É. Muito tempo.\"\n\nEla abre a bolsa. Tira o envelope amarelado. Coloca na borda do balcão, entre vocês dois.\n\n\"Eu vim andando esta noite. Sem destino. E vi seu restaurante. A lanterna. O noren.\"\n\nEla ri baixinho.\n\n\"Talvez eu estivesse procurando um lugar para... deixar isso ir.\"",
+      "e_pista": false,
+      "gatilho_prato": true,
+      "opcoes": [
+        {
+          "texto": "Você parece precisar de algo que traga conforto. Posso preparar algo?",
+          "dica": "acolhedor",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        },
+        {
+          "texto": "Esse envelope... você quer olhar para as fotos?",
+          "dica": "direto",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "olhar_fotos"
+        }
+      ]
+    },
+
+    "porque_aqui": {
+      "id": "porque_aqui",
+      "contexto": "Yuki considera a pergunta.",
+      "texto": "\"Não sei.\"\n\nEla é honesta.\n\n\"Estava andando. Pensando. E vi a lanterna. O noren balançando.\"\n\nEla olha ao redor.\n\n\"Talvez... talvez parte de mim soubesse que precisava de um lugar assim. Quieto. Para pensar no que fazer com essas fotos.\"",
+      "e_pista": false,
+      "opcoes": [
+        {
+          "texto": "Talvez comer algo ajude a decidir.",
+          "dica": "prático",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        },
+        {
+          "texto": "O que você quer fazer com elas?",
+          "dica": "direto",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "fazer_com_fotos"
+        }
+      ]
+    },
+
+    "olhar_fotos": {
+      "id": "olhar_fotos",
+      "contexto": "Yuki olha para o envelope.",
+      "texto": "\"Olhar?\"\n\nEla hesita.\n\n\"Eu... eu não olho direito há anos. Só... carrego.\"\n\nSua mão treme levemente.\n\n\"Mas talvez... talvez aqui seja o lugar certo. Com alguém. Com comida.\"\n\nEla olha para você.\n\n\"Você poderia fazer algo enquanto eu junto coragem?\"",
+      "e_pista": false,
+      "opcoes": [
+        {
+          "texto": "O que você gostaria de comer?",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "preparar_tamago": {
+      "id": "preparar_tamago",
+      "contexto": "Você começa a preparar o tamago gohan. O ritual da cozinha preenche o espaço.",
+      "texto": "",
+      "tipo_cena": "cozinha",
+      "prato": "tamago_gohan"
+    },
+
+    "fotografa_oque": {
+      "id": "fotografa_oque",
+      "contexto": "Yuki considera a pergunta.",
+      "texto": "\"Paisagens agora. Arquitetura. Coisas que ficam paradas.\"\n\nEla faz uma pausa.\n\n\"Antes eu fotografava de tudo. Pessoas, momentos, vida. Mas...\" Os dedos dela encontram a câmera novamente. \"Algumas fotos mudam você para sempre.\"",
+      "e_pista": true,
+      "pista_id": "fotos_mudam",
+      "opcoes": [
+        {
+          "texto": "Que tipo de foto muda uma pessoa?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "tipo_foto"
+        },
+        {
+          "texto": "Você carrega essas fotos ainda?",
+          "dica": "perceptivo",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "carrega_fotos"
+        },
+        {
+          "texto": "[Preparar algo quente enquanto ela fala]",
+          "dica": "acolhedor",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "preparar_algo"
+        }
+      ]
+    },
+
+    "tipo_foto": {
+      "id": "tipo_foto",
+      "contexto": "Yuki fica em silêncio por um momento.",
+      "texto": "\"Uma foto de algo terrível.\"\n\nSua voz é quase um sussurro.\n\n\"Algo que você viu. Que capturou. Que carrega.\"\n\nEla toca a bolsa.\n\n\"Uma foto assim não é só uma imagem. É um testemunho. E testemunhos pesam.\"",
+      "e_pista": true,
+      "pista_id": "testemunho_peso",
+      "opcoes": [
+        {
+          "texto": "Você carrega esse testemunho há quanto tempo?",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "quanto_tempo_carrega"
+        },
+        {
+          "texto": "Posso fazer algo enquanto você fala? Às vezes comida ajuda.",
+          "dica": "prático",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "quanto_tempo_carrega": {
+      "id": "quanto_tempo_carrega",
+      "contexto": "Yuki olha para suas mãos.",
+      "texto": "\"Dez anos.\"\n\nA resposta sai pesada.\n\n\"Dez anos desde aquela noite. Desde o incêndio.\" Ela pausa. \"Desde que vi um homem entrar no fogo para salvar pessoas.\"\n\nEla toca a bolsa.\n\n\"Eu fotografei tudo. E desde então... não consigo deixar ir.\"",
+      "e_pista": true,
+      "pista_id": "dez_anos_incendio",
+      "pensamento_master": "Incêndio. Dez anos. A cicatriz no seu rosto pulsa.",
+      "opcoes": [
+        {
+          "texto": "Às vezes precisamos de ajuda para deixar ir.",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "ajuda_deixar_ir"
+        },
+        {
+          "texto": "Esse homem... o que aconteceu com ele?",
+          "dica": "curioso",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "homem_incendio"
+        }
+      ]
+    },
+
+    "ajuda_deixar_ir": {
+      "id": "ajuda_deixar_ir",
+      "contexto": "Yuki olha para você, os olhos brilhando.",
+      "texto": "\"É. Talvez.\"\n\nEla tira o envelope da bolsa.\n\n\"Talvez seja por isso que vim aqui. Sem saber.\"\n\nEla coloca o envelope no balcão.\n\n\"Mas antes de olhar para isso... eu precisava de algo. Algo familiar.\" Ela sorri triste. \"Minha mãe fazia tamago gohan. Quando eu era pequena.\"",
+      "e_pista": false,
+      "revelacao_prato": "tamago_gohan",
+      "opcoes": [
+        {
+          "texto": "Posso fazer tamago gohan para você.",
+          "dica": "",
+          "impacto": 20,
+          "tipo": "cozinha",
+          "proximo": "preparar_tamago"
+        }
+      ]
+    },
+
+    "homem_incendio": {
+      "id": "homem_incendio",
+      "contexto": "Yuki olha para as fotos na bolsa.",
+      "texto": "\"Ele sobreviveu. Pelo que sei.\"\n\nEla pausa.\n\n\"Mas ficou com uma cicatriz. Grande. No rosto.\"\n\nOs olhos dela encontram os seus por um momento. Param na sua cicatriz.\n\n\"Nunca soube o nome dele. Mas nunca esqueci o que ele fez.\"",
+      "e_pista": true,
+      "pista_id": "cicatriz_homem",
+      "pensamento_master": "Ela está olhando para sua cicatriz. O passado e o presente se aproximam.",
+      "opcoes": [
+        {
+          "texto": "[Deixar o momento se estender em silêncio]",
+          "dica": "silencioso",
+          "impacto": 18,
+          "tipo": "silencio",
+          "proximo": "momento_silencio"
+        },
+        {
+          "texto": "Deixa eu preparar algo para nós dois.",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "momento_silencio": {
+      "id": "momento_silencio",
+      "contexto": "O silêncio se estende. Yuki observa seu rosto.",
+      "texto": "\"Você...\" Ela começa, para, começa de novo. \"Você tem uma cicatriz também.\"\n\nNão é uma pergunta.\n\n\"E esse restaurante existe há dez anos.\"\n\nAs peças estão se encaixando na mente dela.\n\n\"Era você? No incêndio?\"",
+      "e_pista": true,
+      "pista_id": "descoberta",
+      "opcoes": [
+        {
+          "texto": "[Acenar lentamente]",
+          "dica": "honesto",
+          "impacto": 25,
+          "tipo": "silencio",
+          "proximo": "acenar_sim"
+        },
+        {
+          "texto": "Deixa eu preparar algo primeiro. Tamago gohan.",
+          "dica": "gentil",
+          "impacto": 20,
+          "tipo": "dialogo_medio",
+          "proximo": "tamago_para_dois"
+        }
+      ]
+    },
+
+    "carrega_fotos": {
+      "id": "carrega_fotos",
+      "contexto": "A mão de Yuki vai instintivamente para a bolsa.",
+      "texto": "\"Sim.\"\n\nA palavra sai pequena, quase um sussurro.\n\n\"Dez anos. Eu carrego esse envelope há dez anos.\" Ela ri, mas não há humor. \"É pesado para algumas fotos, não é?\"\n\nEla olha para você.\n\n\"Você já carregou algo assim? Algo que não consegue largar, mas também não consegue olhar?\"",
+      "e_pista": true,
+      "pista_id": "envelope_peso",
+      "pensamento_master": "A cicatriz no seu rosto parece formigar. Você conhece bem esse peso.",
+      "opcoes": [
+        {
+          "texto": "Todo mundo carrega algo. O truque é encontrar onde deixar.",
+          "dica": "sábio",
+          "impacto": 18,
+          "tipo": "dialogo_longo",
+          "proximo": "encontrar_onde_deixar"
+        },
+        {
+          "texto": "Talvez este seja o lugar certo para finalmente olhar.",
+          "dica": "direto",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "lugar_certo"
+        },
+        {
+          "texto": "[Apenas acenar, reconhecendo o peso]",
+          "dica": "silencioso",
+          "impacto": 15,
+          "tipo": "silencio",
+          "proximo": "acenar_peso"
+        }
+      ]
+    },
+
+    "encontrar_onde_deixar": {
+      "id": "encontrar_onde_deixar",
+      "contexto": "Algo nas suas palavras ressoa em Yuki.",
+      "texto": "\"Encontrar onde deixar...\"\n\nEla repete, olhando ao redor do pequeno restaurante.\n\n\"Talvez seja por isso que entrei aqui.\"\n\nEla abre a bolsa. Tira o envelope. Coloca no balcão.\n\n\"Eu nunca mostrei essas fotos para ninguém. Mas... se você tiver tempo...\"",
+      "e_pista": false,
+      "gatilho_prato": true,
+      "opcoes": [
+        {
+          "texto": "Antes das fotos... deixa eu preparar algo. Você parece precisar de conforto.",
+          "dica": "cuidadoso",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        },
+        {
+          "texto": "Estou aqui. Pode mostrar quando estiver pronta.",
+          "dica": "paciente",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "quando_pronta"
+        }
+      ]
+    },
+
+    "lugar_certo": {
+      "id": "lugar_certo",
+      "contexto": "Yuki olha ao redor do restaurante.",
+      "texto": "\"O lugar certo...\"\n\nEla parece considerar isso.\n\n\"Talvez. É quieto aqui. Seguro.\" Ela pausa. \"E você... você parece alguém que entende de carregar coisas.\"\n\nEla olha para sua cicatriz por um momento.\n\n\"Mas primeiro... eu preciso de algo para comer. Algo que me lembre de casa.\"",
+      "e_pista": false,
+      "opcoes": [
+        {
+          "texto": "O que te lembraria de casa?",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "lembrar_casa"
+        }
+      ]
+    },
+
+    "lembrar_casa": {
+      "id": "lembrar_casa",
+      "contexto": "Yuki fecha os olhos por um momento.",
+      "texto": "\"Tamago gohan.\"\n\nA resposta vem quase automática.\n\n\"Minha mãe fazia. Ovo cru sobre arroz quente. Simples.\" Ela abre os olhos. \"Mas cheio de amor.\"\n\nEla sorri triste.\n\n\"Se você souber fazer...\"",
+      "e_pista": false,
+      "revelacao_prato": "tamago_gohan",
+      "opcoes": [
+        {
+          "texto": "Eu sei. É um dos meus favoritos.",
+          "dica": "",
+          "impacto": 20,
+          "tipo": "cozinha",
+          "proximo": "preparar_tamago"
+        }
+      ]
+    },
+
+    "acenar_peso": {
+      "id": "acenar_peso",
+      "contexto": "Você acena, reconhecendo o peso que ela carrega.",
+      "texto": "Yuki respira fundo. O reconhecimento silencioso parece confortá-la.\n\n\"Você também carrega algo, não é?\" Ela olha para sua cicatriz. \"Dá para ver.\"\n\nO silêncio entre vocês é confortável agora.\n\n\"Sabe o que eu queria agora? Algo simples. Como minha mãe fazia. Tamago gohan.\"",
+      "e_pista": false,
+      "revelacao_prato": "tamago_gohan",
+      "opcoes": [
+        {
+          "texto": "Posso fazer isso. É um prato de conforto.",
+          "dica": "",
+          "impacto": 20,
+          "tipo": "cozinha",
+          "proximo": "preparar_tamago"
+        }
+      ]
+    },
+
+    "quando_pronta": {
+      "id": "quando_pronta",
+      "contexto": "Yuki assente, aliviada.",
+      "texto": "\"Obrigada.\"\n\nEla olha para o envelope, depois para você.\n\n\"Sabe... faz tempo que não como de verdade. Algo feito por outra pessoa.\"\n\nEla hesita.\n\n\"Minha mãe fazia um prato quando eu era pequena. Tamago gohan. Simples, mas...\" A voz dela suaviza. \"Cheio de amor.\"",
+      "e_pista": false,
+      "revelacao_prato": "tamago_gohan",
+      "opcoes": [
+        {
+          "texto": "Deixa eu preparar isso para você.",
+          "dica": "",
+          "impacto": 20,
+          "tipo": "cozinha",
+          "proximo": "preparar_tamago"
+        }
+      ]
+    },
+
+    "preparar_algo": {
+      "id": "preparar_algo",
+      "contexto": "Você se move para a cozinha enquanto ela fala.",
+      "texto": "O movimento na cozinha parece relaxá-la. O chiado familiar, os aromas.\n\n\"É reconfortante.\" Ela observa você trabalhar. \"Ter alguém cuidando.\"\n\nEla fica em silêncio por um momento.\n\n\"Sabe o que eu gostaria de comer? Algo simples. Tamago gohan. Como minha mãe fazia.\"",
+      "e_pista": false,
+      "revelacao_prato": "tamago_gohan",
+      "opcoes": [
+        {
+          "texto": "Tamago gohan? Perfeito. Deixa comigo.",
+          "dica": "",
+          "impacto": 20,
+          "tipo": "cozinha",
+          "proximo": "preparar_tamago"
+        }
+      ]
+    },
+
+    "fotografava_antes": {
+      "id": "fotografava_antes",
+      "contexto": "Yuki olha para a câmera.",
+      "texto": "\"Tudo. Fotografava tudo.\"\n\nEla acaricia a câmera.\n\n\"Ruas, pessoas, momentos. Eu queria capturar a cidade à noite.\" Uma pausa pesada. \"E numa dessas noites... eu capturei algo que não devia.\"\n\nSeus olhos vão para a bolsa.\n\n\"Um incêndio. Um restaurante. Um homem que entrou no fogo.\"",
+      "e_pista": true,
+      "pista_id": "fotografou_incendio",
+      "pensamento_master": "A cicatriz no seu rosto queima como se fosse nova.",
+      "opcoes": [
+        {
+          "texto": "E desde então? Você parou de fotografar pessoas?",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "parou_pessoas"
+        },
+        {
+          "texto": "Deixa eu preparar algo enquanto você fala.",
+          "dica": "acolhedor",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "parou_pessoas": {
+      "id": "parou_pessoas",
+      "contexto": "Yuki acena.",
+      "texto": "\"Sim. Depois daquela noite.\"\n\nEla respira fundo.\n\n\"Pessoas mudam. Sofrem. Desaparecem. E eu... eu não quero mais capturar isso.\"\n\nEla olha para a bolsa.\n\n\"Mas essas fotos... eu não consigo jogar fora. Nem olhar. Só carregar.\"",
+      "e_pista": false,
+      "opcoes": [
+        {
+          "texto": "Talvez este seja o lugar para finalmente olhar.",
+          "dica": "encorajador",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "lugar_olhar"
+        },
+        {
+          "texto": "Posso fazer algo para você enquanto decide?",
+          "dica": "prático",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "lugar_olhar": {
+      "id": "lugar_olhar",
+      "contexto": "Yuki olha ao redor do restaurante.",
+      "texto": "\"Talvez.\"\n\nEla tira o envelope da bolsa.\n\n\"Mas primeiro... eu precisava de algo. Algo familiar.\"\n\nEla coloca o envelope no balcão.\n\n\"Minha mãe fazia tamago gohan. Quando eu era pequena. Era... era amor.\"",
+      "e_pista": false,
+      "revelacao_prato": "tamago_gohan",
+      "opcoes": [
+        {
+          "texto": "Posso fazer isso para você.",
+          "dica": "",
+          "impacto": 20,
+          "tipo": "cozinha",
+          "proximo": "preparar_tamago"
+        }
+      ]
+    },
+
+    "lugar_descansar": {
+      "id": "lugar_descansar",
+      "contexto": "Yuki considera suas palavras.",
+      "texto": "\"Um lugar para descansar...\"\n\nEla olha ao redor do pequeno restaurante.\n\n\"Talvez seja isso que eu estava procurando. Sem saber.\"\n\nEla tira o envelope da bolsa.\n\n\"Dez anos carregando isso. Talvez seja hora de deixar descansar.\"\n\nEla olha para você.\n\n\"Mas primeiro... eu queria comer algo. Algo de casa.\"",
+      "e_pista": false,
+      "opcoes": [
+        {
+          "texto": "O que te lembraria de casa?",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "lembrar_casa"
+        }
+      ]
+    },
+
+    "compartilhar_peso": {
+      "id": "compartilhar_peso",
+      "contexto": "Yuki considera suas palavras.",
+      "texto": "\"Compartilhar...\"\n\nEla olha para a bolsa, para o envelope que mal se vê.\n\n\"Eu nunca consegui. Dividir isso com alguém.\" Ela pausa. \"Faz dez anos que carrego sozinha.\"\n\nOs olhos dela encontram os seus.\n\n\"Mas talvez... talvez aqui seja diferente. Este lugar tem algo.\"",
+      "e_pista": false,
+      "opcoes": [
+        {
+          "texto": "Às vezes o lugar certo aparece quando a gente precisa.",
+          "dica": "filosófico",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "lugar_quieto"
+        },
+        {
+          "texto": "O que você carrega há tanto tempo?",
+          "dica": "direto",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "carrega_fotos"
+        },
+        {
+          "texto": "Posso preparar algo enquanto você decide se quer contar.",
+          "dica": "acolhedor",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "o_que_mudou": {
+      "id": "o_que_mudou",
+      "contexto": "O olhar de Yuki escurece.",
+      "texto": "\"Muita coisa.\"\n\nEla mexe na alça da câmera.\n\n\"Meu pai foi embora. Minha mãe parou de cozinhar aquele prato especial.\" Uma pausa. \"E eu... eu vi algo que não devia ter visto.\"\n\nSeus dedos vão para a bolsa.\n\n\"Uma noite. Há dez anos. Mudou tudo.\"",
+      "e_pista": true,
+      "pista_id": "familia_desfeita",
+      "opcoes": [
+        {
+          "texto": "O que você viu nessa noite?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "noite_aconteceu"
+        },
+        {
+          "texto": "Sua mãe fazia um prato especial?",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "sabor_cuidado"
+        },
+        {
+          "texto": "Dez anos é muito tempo para carregar algo.",
+          "dica": "empático",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "dez_anos_carregando"
+        }
+      ]
+    },
+
+    "guardam_memorias": {
+      "id": "guardam_memorias",
+      "contexto": "Yuki concorda lentamente.",
+      "texto": "\"É verdade. Guardam.\"\n\nEla olha ao redor do restaurante.\n\n\"Este lugar também deve ter as suas.\" Ela pausa. \"Cada risco na madeira, cada marca no balcão.\"\n\nSeus olhos se perdem por um momento.\n\n\"O restaurante que minha família frequentava... queimou. Há dez anos.\"",
+      "e_pista": true,
+      "pista_id": "restaurante_queimou",
+      "pensamento_master": "Queimou. A palavra ecoa em algum lugar dentro de você.",
+      "opcoes": [
+        {
+          "texto": "Queimou? O que aconteceu?",
+          "dica": "curioso",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "confirma_incendio"
+        },
+        {
+          "texto": "Sinto muito. Perder um lugar assim dói.",
+          "dica": "empático",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "muito_tempo"
+        },
+        {
+          "texto": "Posso preparar algo que te lembre de bons momentos?",
+          "dica": "acolhedor",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "familia_agora": {
+      "id": "familia_agora",
+      "contexto": "Yuki fica em silêncio por um momento.",
+      "texto": "\"Não.\"\n\nA palavra sai pequena.\n\n\"Minha mãe... depois que meu pai foi embora, ela se fechou. E eu...\" Ela engole. \"Eu saí de casa. Nunca mais voltamos a um lugar assim juntas.\"\n\nEla toca a câmera.\n\n\"Faz dez anos que não como tamago gohan. O prato que ela fazia.\"",
+      "e_pista": true,
+      "pista_id": "tamago_familia",
+      "opcoes": [
+        {
+          "texto": "Tamago gohan? Posso fazer para você.",
+          "dica": "oferecendo",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_tamago_direto"
+        },
+        {
+          "texto": "Dez anos é muito tempo sem esse conforto.",
+          "dica": "empático",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        },
+        {
+          "texto": "O que aconteceu há dez anos para você sair de casa?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "dez_anos_atras"
+        }
+      ]
+    },
+
+    "pes_sabem": {
+      "id": "pes_sabem",
+      "contexto": "Yuki sorri levemente — o primeiro sorriso genuíno.",
+      "texto": "\"Talvez.\"\n\nEla olha para os próprios pés.\n\n\"Eu estava andando sem rumo. Pensando em coisas que não penso há anos.\" Ela pausa. \"E de repente estava aqui.\"\n\nSeus olhos vão para a bolsa.\n\n\"Talvez meus pés soubessem que eu precisava de um lugar para... deixar algo ir.\"",
+      "e_pista": false,
+      "opcoes": [
+        {
+          "texto": "O que você precisa deixar ir?",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "carrega_fotos"
+        },
+        {
+          "texto": "Às vezes é mais fácil deixar ir com comida.",
+          "dica": "acolhedor",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        },
+        {
+          "texto": "[Deixar o silêncio fazer seu trabalho]",
+          "dica": "paciente",
+          "impacto": 10,
+          "tipo": "silencio",
+          "proximo": "silencio_profundo"
+        }
+      ]
+    },
+
+    "acenar_concordando": {
+      "id": "acenar_concordando",
+      "contexto": "Você acena, deixando o momento se estender.",
+      "texto": "O silêncio entre vocês é confortável. Yuki parece relaxar um pouco.\n\nDepois de um tempo, ela fala:\n\n\"Sabe... eu carrego algo há muito tempo. Fotos. De uma noite que mudou tudo.\"\n\nEla toca a bolsa.\n\n\"Nunca mostrei para ninguém. Mas aqui... aqui parece seguro.\"",
+      "e_pista": true,
+      "pista_id": "fotos_segredo",
+      "opcoes": [
+        {
+          "texto": "Você pode mostrar quando estiver pronta.",
+          "dica": "paciente",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "quando_pronta"
+        },
+        {
+          "texto": "O que aconteceu nessa noite?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "noite_aconteceu"
+        },
+        {
+          "texto": "Posso preparar algo enquanto você decide.",
+          "dica": "acolhedor",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "dez_anos_atras": {
+      "id": "dez_anos_atras",
+      "contexto": "Yuki respira fundo.",
+      "texto": "\"Dez anos atrás...\"\n\nEla fecha os olhos por um momento.\n\n\"Eu tinha acabado de comprar minha primeira câmera de verdade. Estava aprendendo a fotografar a cidade à noite.\"\n\nEla abre os olhos.\n\n\"E numa dessas noites... eu vi um incêndio. Um restaurante pegando fogo.\"",
+      "e_pista": true,
+      "pista_id": "inicio_historia",
+      "pensamento_master": "Incêndio. A palavra atravessa você como uma faca de cozinha fria.",
+      "opcoes": [
+        {
+          "texto": "O que você fez?",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "confirma_incendio"
+        },
+        {
+          "texto": "Um incêndio... há dez anos...",
+          "dica": "reflexivo",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "desde_incendio"
+        },
+        {
+          "texto": "[Suas mãos param por um instante sobre o balcão]",
+          "dica": "contido",
+          "impacto": 18,
+          "tipo": "silencio",
+          "proximo": "reacao_contida"
+        }
+      ]
+    },
+
+    "mais_solitario": {
+      "id": "mais_solitario",
+      "contexto": "Yuki concorda lentamente.",
+      "texto": "\"Mais solitário. Sim.\"\n\nEla olha para a tigela vazia.\n\n\"Às vezes acho que escolhi a solidão porque era mais fácil do que...\" Ela para. \"Do que lidar com o que aconteceu.\"\n\nSeus olhos vão para a bolsa.\n\n\"Tenho fotos de uma noite. Uma noite que mudou tudo. E nunca mostrei para ninguém.\"",
+      "e_pista": false,
+      "opcoes": [
+        {
+          "texto": "Talvez seja hora de não estar mais sozinha com isso.",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "encontrar_onde_deixar"
+        },
+        {
+          "texto": "O que aconteceu nessa noite?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "noite_aconteceu"
+        },
+        {
+          "texto": "Posso preparar algo para você. Comida ajuda na solidão.",
+          "dica": "acolhedor",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "trabalho_sozinho": {
+      "id": "trabalho_sozinho",
+      "contexto": "Yuki olha para você com novo interesse.",
+      "texto": "\"Você também.\"\n\nNão é uma pergunta.\n\n\"Trabalhando sozinho, de madrugada, num restaurante vazio.\" Ela olha ao redor. \"Mas é diferente. Você escolheu isso.\"\n\nEla toca a câmera.\n\n\"Eu... eu me afastei de tudo. Depois do que aconteceu. Há dez anos.\"",
+      "e_pista": false,
+      "opcoes": [
+        {
+          "texto": "O que aconteceu há dez anos?",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "dez_anos_atras"
+        },
+        {
+          "texto": "Escolher a solidão nem sempre é escolha.",
+          "dica": "empático",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "mais_solitario"
+        },
+        {
+          "texto": "Quer comer algo? A companhia ajuda.",
+          "dica": "acolhedor",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "pai_embora": {
+      "id": "pai_embora",
+      "contexto": "Yuki acena.",
+      "texto": "\"Eu tinha doze anos.\"\n\nEla olha para as próprias mãos.\n\n\"Depois disso, minha mãe nunca mais fez tamago gohan. Era o prato favorito do meu pai também, sabe?\" Ela engole. \"Acho que era doloroso demais para ela.\"\n\nEla olha para você.\n\n\"Faz quase vinte anos. E ainda lembro do sabor.\"",
+      "e_pista": true,
+      "pista_id": "memoria_pai",
+      "opcoes": [
+        {
+          "texto": "Posso fazer tamago gohan para você. Trazer essa memória de volta.",
+          "dica": "oferecendo",
+          "impacto": 20,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_tamago_direto"
+        },
+        {
+          "texto": "Algumas memórias ficam no sabor.",
+          "dica": "filosófico",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "pratos_simples"
+        },
+        {
+          "texto": "E sua mãe? Você ainda a vê?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "familia_agora"
+        }
+      ]
+    },
+
+    "comida_historias": {
+      "id": "comida_historias",
+      "contexto": "Yuki parece interessada.",
+      "texto": "\"Comida conta histórias...\"\n\nEla repete, pensativa.\n\n\"É verdade. Cada foto que eu tiro de um prato... tem uma história por trás.\" Ela pausa. \"Mas a história que mais me persegue não é de comida.\"\n\nSeus olhos vão para a bolsa.\n\n\"É de fogo.\"",
+      "e_pista": true,
+      "pista_id": "historia_fogo",
+      "opcoes": [
+        {
+          "texto": "Fogo?",
+          "dica": "cuidadoso",
+          "impacto": 12,
+          "tipo": "dialogo_curto",
+          "proximo": "confirma_incendio"
+        },
+        {
+          "texto": "Você quer contar essa história?",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "carrega_fotos"
+        },
+        {
+          "texto": "Histórias pesadas pedem comida leve. Posso fazer algo?",
+          "dica": "acolhedor",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "aconteceu_dez_anos": {
+      "id": "aconteceu_dez_anos",
+      "contexto": "Yuki respira fundo.",
+      "texto": "\"Eu estava fotografando a cidade à noite. Minha primeira saída séria como fotógrafa.\"\n\nEla toca a câmera.\n\n\"E vi um incêndio. Um restaurante pequeno, como este.\" A voz dela treme. \"Vi pessoas correndo. E um homem... um homem que entrou no fogo.\"\n\nEla olha para a bolsa.\n\n\"Eu fotografei tudo.\"",
+      "e_pista": true,
+      "pista_id": "noite_incendio",
+      "pensamento_master": "O calor do fogo. O peso da criança nos seus braços. A dor.",
+      "opcoes": [
+        {
+          "texto": "O que aconteceu com esse homem?",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "homem_incendio"
+        },
+        {
+          "texto": "Essas fotos... você ainda tem?",
+          "dica": "observador",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "envelope_fotos"
+        },
+        {
+          "texto": "[Tocar levemente sua cicatriz]",
+          "dica": "silencioso",
+          "impacto": 18,
+          "tipo": "silencio",
+          "proximo": "tocar_cicatriz"
+        }
+      ]
+    },
+
+    "envelope_dez_anos": {
+      "id": "envelope_dez_anos",
+      "contexto": "Yuki olha para a bolsa, surpresa.",
+      "texto": "\"Você percebeu o envelope.\"\n\nNão é uma pergunta. Ela tira o envelope amarelado da bolsa.\n\n\"Sim. Faz parte desses dez anos. São fotos.\" Ela coloca o envelope no balcão. \"De uma noite que eu nunca consegui esquecer.\"\n\nEla olha para você.\n\n\"De um incêndio. E de um homem que salvou vidas.\"",
+      "e_pista": true,
+      "pista_id": "envelope_revelado",
+      "pensamento_master": "As fotos. Daquela noite. Do fogo. De você.",
+      "opcoes": [
+        {
+          "texto": "Um incêndio... há dez anos...",
+          "dica": "reflexivo",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "desde_incendio"
+        },
+        {
+          "texto": "Você nunca mostrou essas fotos para ninguém?",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "encontrar_onde_deixar"
+        },
+        {
+          "texto": "Deixa eu preparar algo. Você parece precisar de conforto.",
+          "dica": "acolhedor",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "muita_coisa_mudar": {
+      "id": "muita_coisa_mudar",
+      "contexto": "Yuki acena.",
+      "texto": "\"É. Muita coisa.\"\n\nEla olha ao redor do restaurante.\n\n\"Eu era uma pessoa diferente há dez anos. Antes de ver o que vi.\" Ela pausa. \"Antes de fotografar o que fotografei.\"\n\nSeus olhos encontram os seus.\n\n\"Você também mudou nesses dez anos?\"",
+      "e_pista": false,
+      "opcoes": [
+        {
+          "texto": "Todo mundo muda. A questão é como.",
+          "dica": "filosófico",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "edificios_historias"
+        },
+        {
+          "texto": "O que você fotografou que te mudou tanto?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "que_foto"
+        },
+        {
+          "texto": "Mudanças pedem comida. Quer comer algo?",
+          "dica": "prático",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "tipo_fotos": {
+      "id": "tipo_fotos",
+      "contexto": "Yuki considera a pergunta.",
+      "texto": "\"Agora? Arquitetura. Paisagens.\" Ela faz uma pausa. \"Coisas que não mudam enquanto você olha.\"\n\nEla mexe na câmera.\n\n\"Antes... antes eu fotografava tudo. Momentos. Pessoas. Vida.\" Sua voz suaviza. \"Até que fotografei algo que me mudou.\"\n\nSeus olhos vão para a bolsa.\n\n\"Uma noite. Um incêndio. Um homem corajoso.\"",
+      "e_pista": true,
+      "pista_id": "tipos_foto",
+      "opcoes": [
+        {
+          "texto": "Conta mais sobre essa noite.",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "noite_aconteceu"
+        },
+        {
+          "texto": "Você ainda tem essas fotos?",
+          "dica": "observador",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "carrega_fotos"
+        },
+        {
+          "texto": "Histórias assim pedem algo reconfortante. Posso cozinhar algo?",
+          "dica": "acolhedor",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "foto_dificil": {
+      "id": "foto_dificil",
+      "contexto": "Yuki para por um momento. A pergunta tocou algo.",
+      "texto": "\"É.\"\n\nA palavra sai pesada.\n\n\"Há uma foto. Uma série de fotos.\" Ela toca a bolsa. \"De uma noite. Um incêndio.\"\n\nEla respira fundo.\n\n\"Eu vi um homem entrar no fogo. Para salvar pessoas. E fotografei tudo.\"\n\nSeus olhos estão úmidos.\n\n\"Nunca tive coragem de olhar direito.\"",
+      "e_pista": true,
+      "pista_id": "foto_incendio",
+      "pensamento_master": "Incêndio. A cicatriz no seu rosto formiga.",
+      "opcoes": [
+        {
+          "texto": "Talvez este seja o lugar certo para finalmente olhar.",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "encontrar_onde_deixar"
+        },
+        {
+          "texto": "Dez anos carregando isso sozinha...",
+          "dica": "empático",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "dez_anos_carregando"
+        },
+        {
+          "texto": "Deixa eu preparar algo primeiro. Você precisa de conforto.",
+          "dica": "acolhedor",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "noite_aconteceu": {
+      "id": "noite_aconteceu",
+      "contexto": "Yuki fecha os olhos por um momento.",
+      "texto": "\"Eu estava no Shinjuku. Fotografando a cidade à noite.\"\n\nEla abre os olhos.\n\n\"E vi fumaça. Depois fogo. Um restaurante pequeno estava pegando fogo.\"\n\nA voz dela treme.\n\n\"Pessoas gritando. Correndo. E um homem... um homem entrou. No meio do fogo. Para salvar uma criança.\"\n\nEla toca a bolsa.\n\n\"Eu fotografei tudo. Até o teto desabar sobre ele.\"",
+      "e_pista": true,
+      "pista_id": "narrativa_incendio",
+      "pensamento_master": "O peso da criança. O calor. A dor. Tudo volta num instante.",
+      "opcoes": [
+        {
+          "texto": "Ele sobreviveu?",
+          "dica": "cuidadoso",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "homem_incendio"
+        },
+        {
+          "texto": "[Tocar levemente sua cicatriz]",
+          "dica": "silencioso",
+          "impacto": 20,
+          "tipo": "silencio",
+          "proximo": "tocar_cicatriz"
+        },
+        {
+          "texto": "E você carrega essas fotos desde então?",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "envelope_fotos"
+        }
+      ]
+    },
+
+    "mesma_epoca": {
+      "id": "mesma_epoca",
+      "contexto": "Algo passa pelo rosto de Yuki.",
+      "texto": "\"Mesma época?\"\n\nEla te olha com atenção nova.\n\n\"Você abriu este restaurante há dez anos?\" Ela pausa. \"O incêndio que eu fotografei... foi num restaurante não muito longe daqui.\"\n\nSeus olhos encontram sua cicatriz.\n\n\"Um homem salvou pessoas naquela noite. Ele ficou com uma cicatriz grande...\"",
+      "e_pista": true,
+      "pista_id": "conexao_tempo",
+      "pensamento_master": "Ela está juntando as peças. O passado alcança o presente.",
+      "opcoes": [
+        {
+          "texto": "[Ficar em silêncio, deixando ela processar]",
+          "dica": "paciente",
+          "impacto": 18,
+          "tipo": "silencio",
+          "proximo": "processando"
+        },
+        {
+          "texto": "Muita coincidência, não é?",
+          "dica": "evasivo",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "muita_coisa_mudar"
+        },
+        {
+          "texto": "Deixa eu preparar algo para nós dois.",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "ainda_fotografa": {
+      "id": "ainda_fotografa",
+      "contexto": "Yuki balança a cabeça levemente.",
+      "texto": "\"A cidade? Não mais. Não de noite.\"\n\nEla olha para a câmera.\n\n\"Agora fotografo prédios. Paisagens. Coisas que ficam paradas.\" Ela pausa. \"É mais fácil assim. Sem surpresas.\"\n\nSeus olhos escurecem.\n\n\"Naquela noite... eu tive surpresas demais.\"",
+      "e_pista": false,
+      "opcoes": [
+        {
+          "texto": "O que aconteceu naquela noite?",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "noite_aconteceu"
+        },
+        {
+          "texto": "Surpresas às vezes nos mudam para sempre.",
+          "dica": "empático",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "testemunhar"
+        },
+        {
+          "texto": "Quer comer algo enquanto conversamos?",
+          "dica": "acolhedor",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "encontrou_lugares": {
+      "id": "encontrou_lugares",
+      "contexto": "Yuki considera a pergunta.",
+      "texto": "\"Alguns. Poucos.\"\n\nEla olha ao redor do restaurante.\n\n\"Este é um deles, acho. Tem algo... familiar.\" Ela pausa. \"Talvez seja a luz. Ou o silêncio. Ou você.\"\n\nEla sorri levemente.\n\n\"O restaurante que minha família frequentava... era assim também. Pequeno. Acolhedor. Antes de tudo mudar.\"",
+      "e_pista": false,
+      "opcoes": [
+        {
+          "texto": "O que mudou?",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "o_que_mudou"
+        },
+        {
+          "texto": "Espero que este lugar possa te acolher também.",
+          "dica": "acolhedor",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "este_lugar"
+        },
+        {
+          "texto": "Quer comer algo? Como nos velhos tempos?",
+          "dica": "prático",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "este_lugar": {
+      "id": "este_lugar",
+      "contexto": "Yuki sorri — um sorriso pequeno mas genuíno.",
+      "texto": "\"Obrigada.\"\n\nEla olha ao redor, absorvendo o ambiente.\n\n\"Sabe... eu entrei aqui por acaso. Estava andando, pensando em coisas antigas.\"\n\nSua mão vai para a bolsa.\n\n\"E vi a lanterna acesa. O noren. E algo me fez entrar.\"\n\nEla olha para você.\n\n\"Talvez fosse para eu estar aqui esta noite.\"",
+      "e_pista": false,
+      "opcoes": [
+        {
+          "texto": "Às vezes os acasos são mais do que parecem.",
+          "dica": "filosófico",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "pes_sabem"
+        },
+        {
+          "texto": "O que você estava pensando quando entrou?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "carrega_fotos"
+        },
+        {
+          "texto": "Já que está aqui, deixa eu preparar algo especial.",
+          "dica": "acolhedor",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "porque_nao_noite": {
+      "id": "porque_nao_noite",
+      "contexto": "Yuki fica em silêncio por um momento.",
+      "texto": "\"Porque a noite guarda coisas.\"\n\nEla fala devagar, escolhendo as palavras.\n\n\"Há dez anos, numa noite, eu vi algo que não devia. Fotografei algo que me persegue.\" Ela engole. \"Um incêndio. Pessoas gritando. Um homem entrando no fogo.\"\n\nSeus olhos estão distantes.\n\n\"Desde então... a noite tem peso demais para mim.\"",
+      "e_pista": true,
+      "pista_id": "medo_noite",
+      "opcoes": [
+        {
+          "texto": "Você ainda carrega as fotos dessa noite?",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "carrega_fotos"
+        },
+        {
+          "texto": "Mas você está aqui agora. De madrugada.",
+          "dica": "observador",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "porque_aqui"
+        },
+        {
+          "texto": "Posso preparar algo que alivie esse peso.",
+          "dica": "acolhedor",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "diferente_pessoas": {
+      "id": "diferente_pessoas",
+      "contexto": "Yuki acena lentamente.",
+      "texto": "\"Exatamente.\"\n\nEla acaricia a câmera.\n\n\"Pessoas mudam. Sofrem. Desaparecem.\" A voz dela suaviza. \"Prédios ficam. Paisagens esperam.\"\n\nEla olha para a bolsa.\n\n\"Mas eu ainda carrego fotos de pessoas. De uma noite. Fotos que não consigo jogar fora nem olhar.\"",
+      "e_pista": false,
+      "opcoes": [
+        {
+          "texto": "Talvez seja hora de finalmente olhar.",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "encontrar_onde_deixar"
+        },
+        {
+          "texto": "Que fotos são essas?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "que_foto"
+        },
+        {
+          "texto": "Carregar sozinha é pesado. Posso fazer algo para você?",
+          "dica": "acolhedor",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "seu_caminho": {
+      "id": "seu_caminho",
+      "contexto": "Yuki concorda.",
+      "texto": "\"É. Cada um encontra.\"\n\nEla olha para a câmera.\n\n\"O meu caminho... foi mais uma fuga do que uma escolha.\" Ela pausa. \"Fugi do que vi. Do que fotografei. Do que carrego.\"\n\nSua mão vai para a bolsa.\n\n\"Mas talvez... talvez esta noite seja para parar de fugir.\"",
+      "e_pista": false,
+      "opcoes": [
+        {
+          "texto": "O que você carrega?",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "carrega_fotos"
+        },
+        {
+          "texto": "Parar de fugir pede coragem. E talvez comida.",
+          "dica": "acolhedor",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        },
+        {
+          "texto": "[Deixar o silêncio acolher]",
+          "dica": "paciente",
+          "impacto": 10,
+          "tipo": "silencio",
+          "proximo": "silencio_profundo"
+        }
+      ]
+    },
+
+    "sem_procurar": {
+      "id": "sem_procurar",
+      "contexto": "Yuki sorri levemente.",
+      "texto": "\"Talvez.\"\n\nEla olha ao redor do restaurante.\n\n\"Eu não estava procurando nada específico. Só andando. Pensando.\" Ela pausa. \"Pensando em coisas que carrego há dez anos.\"\n\nSua mão toca a bolsa.\n\n\"E de repente estava aqui. Num lugar que parece... seguro. Para deixar ir.\"",
+      "e_pista": false,
+      "opcoes": [
+        {
+          "texto": "O que você carrega há dez anos?",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "carrega_fotos"
+        },
+        {
+          "texto": "Este lugar é para isso. Para deixar coisas repousarem.",
+          "dica": "acolhedor",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "lugar_descansar"
+        },
+        {
+          "texto": "Quer comer algo enquanto decide?",
+          "dica": "prático",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "estava_procurando": {
+      "id": "estava_procurando",
+      "contexto": "Yuki considera a pergunta.",
+      "texto": "\"Não sei.\"\n\nEla é honesta.\n\n\"Paz, talvez? Um lugar para pensar.\" Ela olha para a bolsa. \"Ou talvez... alguém que pudesse entender.\"\n\nEla toca o envelope dentro da bolsa.\n\n\"Eu carrego algo há dez anos. Algo que nunca mostrei para ninguém. E esta noite... algo me trouxe aqui.\"",
+      "e_pista": false,
+      "opcoes": [
+        {
+          "texto": "Você pode mostrar quando estiver pronta. Estou aqui.",
+          "dica": "paciente",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "encontrar_onde_deixar"
+        },
+        {
+          "texto": "O que você carrega?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "carrega_fotos"
+        },
+        {
+          "texto": "Enquanto você pensa, deixa eu fazer algo para comer.",
+          "dica": "acolhedor",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "carrega_noite": {
+      "id": "carrega_noite",
+      "contexto": "Yuki acena lentamente.",
+      "texto": "\"Carrego. Sim.\"\n\nEla tira o envelope da bolsa.\n\n\"Fotos. De uma noite há dez anos. De um incêndio. De um homem que salvou vidas.\"\n\nEla coloca o envelope no balcão.\n\n\"Nunca tive coragem de olhar direito. Nem de mostrar para ninguém.\" Ela olha para você. \"Até agora, talvez.\"",
+      "e_pista": true,
+      "pista_id": "envelope_noite",
+      "pensamento_master": "As fotos. Daquela noite. O passado está ali, num envelope amarelado.",
+      "opcoes": [
+        {
+          "texto": "Você pode olhar quando estiver pronta. Vou estar aqui.",
+          "dica": "paciente",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "quando_pronta"
+        },
+        {
+          "texto": "Um incêndio... há dez anos...",
+          "dica": "reflexivo",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "desde_incendio"
+        },
+        {
+          "texto": "Antes de abrir isso, deixa eu fazer algo para você.",
+          "dica": "acolhedor",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "paz_maos": {
+      "id": "paz_maos",
+      "contexto": "Yuki concorda.",
+      "texto": "\"Paz. É uma boa palavra.\"\n\nEla olha para suas próprias mãos.\n\n\"Eu também encontrava paz na fotografia. No clique do obturador. No momento capturado.\" Ela pausa. \"Até que capturei algo que tirou minha paz.\"\n\nSeus olhos vão para a bolsa.\n\n\"Há dez anos. Uma noite. Um incêndio.\"",
+      "e_pista": false,
+      "opcoes": [
+        {
+          "texto": "O que você capturou?",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "carrega_fotos"
+        },
+        {
+          "texto": "Talvez este seja o lugar para encontrar a paz de novo.",
+          "dica": "acolhedor",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "lugar_descansar"
+        },
+        {
+          "texto": "Paz às vezes vem com comida. Posso fazer algo?",
+          "dica": "prático",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "que_foto": {
+      "id": "que_foto",
+      "contexto": "Yuki hesita.",
+      "texto": "\"Fotos de um incêndio.\"\n\nEla fala devagar.\n\n\"Um restaurante pegando fogo. Pessoas correndo. E um homem...\" A voz dela falha. \"Um homem que entrou no fogo para salvar uma criança.\"\n\nEla toca a bolsa.\n\n\"Eu fotografei o momento em que o teto desabou sobre ele. E nunca consegui esquecer.\"",
+      "e_pista": true,
+      "pista_id": "foto_heroi",
+      "pensamento_master": "O teto. O peso. A criança nos seus braços. A dor.",
+      "opcoes": [
+        {
+          "texto": "Ele sobreviveu?",
+          "dica": "cuidadoso",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "homem_incendio"
+        },
+        {
+          "texto": "Você ainda tem essas fotos?",
+          "dica": "observador",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "ainda_tem_foto"
+        },
+        {
+          "texto": "[Tocar levemente sua cicatriz]",
+          "dica": "silencioso",
+          "impacto": 20,
+          "tipo": "silencio",
+          "proximo": "tocar_cicatriz"
+        }
+      ]
+    },
+
+    "ainda_tem_foto": {
+      "id": "ainda_tem_foto",
+      "contexto": "Yuki toca a bolsa.",
+      "texto": "\"Tenho.\"\n\nEla tira o envelope amarelado.\n\n\"Dez anos. Carrego isso há dez anos.\" Ela coloca no balcão. \"Nunca tive coragem de olhar direito. Nem de jogar fora.\"\n\nEla olha para você.\n\n\"É como se... como se eu devesse algo a esse homem. Mas não sei o quê.\"",
+      "e_pista": true,
+      "pista_id": "devendo_algo",
+      "opcoes": [
+        {
+          "texto": "Talvez você só precisasse encontrar alguém para compartilhar.",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "encontrar_onde_deixar"
+        },
+        {
+          "texto": "Esse homem... você sabe o que aconteceu com ele?",
+          "dica": "curioso",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "homem_incendio"
+        },
+        {
+          "texto": "Antes de olhar isso, deixa eu fazer algo para você comer.",
+          "dica": "acolhedor",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "dez_anos_carregando": {
+      "id": "dez_anos_carregando",
+      "contexto": "Yuki acena, os olhos úmidos.",
+      "texto": "\"Dez anos.\"\n\nEla repete como se o peso estivesse na própria palavra.\n\n\"Dez anos sem mostrar para ninguém. Dez anos sem olhar direito.\" Ela pausa. \"Dez anos me perguntando o que aconteceu com ele.\"\n\nEla olha para sua cicatriz.\n\n\"O homem que entrou no fogo. Que salvou aquela criança. Será que ele ainda...\"",
+      "e_pista": true,
+      "pista_id": "pergunta_heroi",
+      "pensamento_master": "Ela está olhando para sua cicatriz. Ela quase sabe.",
+      "opcoes": [
+        {
+          "texto": "[Deixar o silêncio responder]",
+          "dica": "silencioso",
+          "impacto": 20,
+          "tipo": "silencio",
+          "proximo": "processando"
+        },
+        {
+          "texto": "Algumas pessoas encontram formas de continuar.",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "edificios_historias"
+        },
+        {
+          "texto": "Dez anos é muito tempo. Você precisa comer algo.",
+          "dica": "acolhedor",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        }
+      ]
+    },
+
+    "tocar_cicatriz": {
+      "id": "tocar_cicatriz",
+      "contexto": "Você toca sua cicatriz. Yuki observa o gesto.",
+      "texto": "O silêncio se estende. Yuki olha para sua cicatriz, depois para o envelope, depois para você novamente.\n\n\"Essa cicatriz...\" Ela começa, para, começa de novo. \"É de queimadura, não é?\"\n\nO ar parece mais pesado.\n\n\"O restaurante que pegou fogo... era perto daqui?\"",
+      "e_pista": true,
+      "pista_id": "reconhecimento_cicatriz",
+      "pensamento_master": "O momento da verdade se aproxima. Dez anos convergem para este instante.",
+      "opcoes": [
+        {
+          "texto": "[Acenar lentamente]",
+          "dica": "honesto",
+          "impacto": 25,
+          "tipo": "silencio",
+          "proximo": "acenar_sim"
+        },
+        {
+          "texto": "Isso é uma longa história. Deixa eu preparar algo primeiro.",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "tamago_para_dois"
+        }
+      ]
+    },
+
+    "continue_ouvindo": {
+      "id": "continue_ouvindo",
+      "contexto": "Yuki respira fundo, reunindo coragem.",
+      "texto": "\"O fogo era enorme. E esse homem... ele simplesmente entrou.\"\n\nA voz dela treme.\n\n\"Havia uma criança presa lá dentro. Ele não pensou duas vezes.\" Ela pausa. \"O teto desabou. Eu pensei que ele tinha morrido.\"\n\nEla olha para sua cicatriz.\n\n\"Mas ele saiu. Com a criança. Com metade do rosto queimado.\"",
+      "e_pista": true,
+      "pista_id": "historia_completa",
+      "pensamento_master": "A criança. Você ainda se lembra dos olhos dela. Do peso dela nos seus braços.",
+      "opcoes": [
+        {
+          "texto": "[Tocar sua cicatriz]",
+          "dica": "silencioso",
+          "impacto": 20,
+          "tipo": "silencio",
+          "proximo": "tocar_cicatriz"
+        },
+        {
+          "texto": "Ele fez o que precisava ser feito.",
+          "dica": "simples",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "processando"
+        }
+      ]
+    },
+
+    "muita_coisa_passar": {
+      "id": "muita_coisa_passar",
+      "contexto": "Yuki concorda.",
+      "texto": "\"Muita coisa.\"\n\nEla olha ao redor do restaurante.\n\n\"Pessoas vêm e vão. Histórias entram e saem.\" Ela pausa. \"Você deve ter visto de tudo nesses dez anos.\"\n\nEla toca a bolsa.\n\n\"Eu também carrego histórias. Uma em especial. De dez anos atrás.\"",
+      "e_pista": false,
+      "opcoes": [
+        {
+          "texto": "Que história é essa?",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "carrega_fotos"
+        },
+        {
+          "texto": "Histórias pedem comida. Quer comer algo?",
+          "dica": "acolhedor",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        },
+        {
+          "texto": "Dez anos atrás... muita coisa aconteceu nessa época.",
+          "dica": "reflexivo",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "dez_anos_aqui"
+        }
+      ]
+    },
+
+    "fazer_com_fotos": {
+      "id": "fazer_com_fotos",
+      "contexto": "Yuki olha para o envelope.",
+      "texto": "\"Não sei.\"\n\nEla é honesta.\n\n\"Parte de mim quer jogar fora. Outra parte sente que devo algo a elas.\" Ela pausa. \"Ao homem nelas.\"\n\nEla olha para você.\n\n\"Talvez eu só precise de alguém para dividir. Alguém que entenda o peso.\"",
+      "e_pista": false,
+      "opcoes": [
+        {
+          "texto": "Estou aqui. Você pode dividir quando estiver pronta.",
+          "dica": "paciente",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "encontrar_onde_deixar"
+        },
+        {
+          "texto": "Às vezes dividir fica mais fácil com comida.",
+          "dica": "acolhedor",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "quer_comer"
+        },
+        {
+          "texto": "Quem é o homem nas fotos?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "homem_incendio"
+        }
+      ]
+    },
+
+    "pronta_abrir": {
+      "id": "pronta_abrir",
+      "contexto": "Yuki olha para o envelope.",
+      "texto": "\"Pronta?\"\n\nEla hesita.\n\n\"Não sei se algum dia vou estar pronta.\" Ela pausa. \"Mas talvez... talvez eu precise de algo primeiro. Algo familiar.\"\n\nEla olha para você.\n\n\"Minha mãe fazia um prato. Simples. Tamago gohan. Eu comia quando tinha medo.\"",
+      "e_pista": false,
+      "revelacao_prato": "tamago_gohan",
+      "opcoes": [
+        {
+          "texto": "Deixa eu fazer isso para você. Tamago gohan.",
+          "dica": "",
+          "impacto": 20,
+          "tipo": "cozinha",
+          "proximo": "preparar_tamago"
+        },
+        {
+          "texto": "Coragem às vezes vem de lugares inesperados.",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "significado_tamago"
+        }
+      ]
+    },
+
+    "ele_tambem_carrega": {
+      "id": "ele_tambem_carrega",
+      "contexto": "Yuki considera suas palavras.",
+      "texto": "\"Você acha?\"\n\nEla olha para sua cicatriz — realmente olha.\n\n\"Ele salvou vidas. Ele deveria ser um herói.\" Ela pausa. \"Mas heróis também carregam coisas, não é?\"\n\nO silêncio se estende.\n\n\"Você... você parece alguém que entende de carregar coisas.\"",
+      "e_pista": true,
+      "pista_id": "reconhecimento_peso",
+      "pensamento_master": "Ela está vendo você. Não só a cicatriz. Você.",
+      "opcoes": [
+        {
+          "texto": "Todo mundo carrega algo.",
+          "dica": "simples",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "acenar_peso"
+        },
+        {
+          "texto": "[Deixar o silêncio falar]",
+          "dica": "paciente",
+          "impacto": 18,
+          "tipo": "silencio",
+          "proximo": "momento_silencio"
+        },
+        {
+          "texto": "Deixa eu fazer algo para nós dois. Tamago gohan.",
+          "dica": "acolhedor",
+          "impacto": 20,
+          "tipo": "dialogo_medio",
+          "proximo": "tamago_para_dois"
+        }
+      ]
+    }
+  },
+
+  "nos_genericos": {
+    "tempo_esgotando": {
+      "texto": "Yuki olha para o relógio na parede. Algo muda em seu rosto — o tempo a alcançou.",
+      "opcoes": [
+        {
+          "texto": "A noite ainda é longa. Não precisa ter pressa.",
+          "impacto": 5,
+          "tipo": "dialogo_curto"
+        }
+      ]
+    },
+    "confianca_baixa": {
+      "texto": "Yuki se fecha novamente. Os ombros sobem, a guarda volta.",
+      "opcoes": [
+        {
+          "texto": "[Dar espaço em silêncio]",
+          "impacto": 3,
+          "tipo": "silencio"
+        }
+      ]
+    }
+  }
+}

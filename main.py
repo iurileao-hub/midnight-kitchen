@@ -1,260 +1,172 @@
-import json
-from pathlib import Path
+#!/usr/bin/env python3
+"""
+Midnight Kitchen v2.0 — Ponto de Entrada Principal.
 
-from models.cliente import Cliente
-from models.jogo import Jogo
-from sistemas.dialogo import SistemaDialogo
-from sistemas.cozinha import SistemaCozinha
+Uma história de culpa, memória e perdão.
+Dez anos antes de Midnight Diner.
+"""
+
+from typing import Optional
+
+from ui.renderer import Renderer
+from core.game import Game
+from core.menu import Menu, AcaoMenu
+from core.noite import Noite, ResultadoNoiteCompleto
 from sistemas.reflexao import SistemaReflexao
+from contracts import ResultadoNoite
 
 
-# ============================================================
-# ARTE ASCII
-# ============================================================
-
-LOGO = """
-                            ░░░░░░░░░░░░░░░░░░░░░
-                        ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-                      ░░░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░
-                     ░░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░
-                    ░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░
-                   ░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░
-                  ░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░
-                  ░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░
-                 ░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░
-                 ░░░▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░▓▓▓▓▓▓▓░░░
-                 ░░░▓▓▓▓▓░░░░  深 夜 キッチン  ░░░░▓▓▓▓▓░░░
-                 ░░░▓▓▓▓▓░░░░                  ░░░░▓▓▓▓▓░░░
-                 ░░░▓▓▓▓▓░░░░  MIDNIGHT        ░░░░▓▓▓▓▓░░░
-                 ░░░▓▓▓▓▓░░░░    KITCHEN       ░░░░▓▓▓▓▓░░░
-                 ░░░▓▓▓▓▓░░░░                  ░░░░▓▓▓▓▓░░░
-                 ░░░▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░▓▓▓▓▓▓▓░░░
-                 ░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░
-                  ░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░
-                   ░░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░
-                    ░░░░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░
-                      ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-                        ░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-                            ░░░░░░░░░░░░░░░░░░░░░
-                                   ║║║║║
-                                   ║║║║║
-                                   ║║║║║
-                              ═════╩╩╩╩╩═════
-
-        ╔═══════════════════════════════════════════════════════╗
-        ║                                                       ║
-        ║   "O que voce quer comer? Se eu tiver os              ║
-        ║    ingredientes, eu faco."                            ║
-        ║                                                       ║
-        ║   Uma historia de culpa, memoria e perdao.            ║
-        ║                                                       ║
-        ║   Este jogo se passa 10 anos antes dos eventos        ║
-        ║   de "Midnight Diner" (Shinya Shokudo).               ║
-        ║                                                       ║
-        ╚═══════════════════════════════════════════════════════╝
-"""
-
-ABERTURA = """
-═══════════════════════════════════════════════════════════════
-
-    Toquio, 2:00 da manha.
-
-    Um beco silencioso no bairro de Shinjuku.
-    Uma cortina de noren balanca suavemente.
-
-    Atras dela, um pequeno restaurante.
-    Apenas seis lugares no balcao.
-    Um homem trabalha sozinho na cozinha.
-
-    Ele tem uma cicatriz no rosto.
-    Nunca fala sobre ela.
-
-    Ha dez anos, algo aconteceu.
-    Algo que ele tenta esquecer toda noite.
-    Mas esta semana... sera diferente.
-
-═══════════════════════════════════════════════════════════════
-"""
-
-
-def limpar_tela():
-    """Limpa a tela do terminal."""
-    print("\033[H\033[J", end="")
-
-
-def pausar():
-    """Aguarda o jogador pressionar ENTER."""
-    input("\n[Pressione ENTER para continuar...]")
-
-
-def carregar_clientes() -> list:
-    """
-    Carrega os clientes do arquivo JSON.
-    Retorna uma lista de objetos Cliente.
-    """
-    caminho = Path(__file__).parent / "dados" / "clientes.json"
-
-    with open(caminho, "r", encoding="utf-8") as f:
-        dados = json.load(f)
-
-    clientes = []
-    for c in dados["clientes"]:
-        cliente = Cliente(
-            nome=c["nome"],
-            idade=c["idade"],
-            profissao=c["profissao"],
-            descricao=c["descricao"],
-            genero_masculino=c["genero_masculino"],
-            prato_favorito=c["prato_favorito"],
-            memoria=c["memoria"]
-        )
-        clientes.append(cliente)
-
-    return clientes
-
-
-def mostrar_menu_pratos(cozinha: SistemaCozinha) -> str:
-    """
-    Mostra o menu de pratos e retorna a escolha do jogador.
-    """
-    pratos = cozinha.listar_pratos()
-
-    print("\n=== CARDAPIO ===")
-    for i, prato in enumerate(pratos, 1):
-        print(f"  {i}. {prato}")
-
-    while True:
-        try:
-            escolha = int(input("\nQual prato preparar? "))
-            if 1 <= escolha <= len(pratos):
-                return pratos[escolha - 1]
-            print("Opcao invalida.")
-        except ValueError:
-            print("Digite um numero.")
-
-
-def executar_noite(
-    jogo: Jogo,
-    cliente: Cliente,
-    dialogo: SistemaDialogo,
-    cozinha: SistemaCozinha
-) -> bool:
-    """
-    Executa uma noite completa com um cliente.
-    Retorna True se a memoria foi revelada, False caso contrario.
-    """
-    limpar_tela()
-
-    print("=" * 50)
-    print(f"NOITE {jogo.dia_atual}")
-    print("=" * 50)
-
-    print(f"\n{cliente.apresentar()}")
-    pausar()
-
-    # Loop de dialogo
-    while True:
-        limpar_tela()
-
-        print(f"\n[{cliente.nome} - Estado: {cliente.estado}]")
-        print("-" * 40)
-
-        # Mostrar opcoes de dialogo
-        opcoes = dialogo.obter_opcoes(cliente)
-        for i, opcao in enumerate(opcoes, 1):
-            print(f"  {i}. {opcao}")
-        print(f"  0. [Encerrar noite]")
-
-        try:
-            escolha = int(input("\nO que dizer? "))
-        except ValueError:
-            continue
-
-        if escolha == 0:
-            break
-
-        if 1 <= escolha <= len(opcoes):
-            resposta = dialogo.processar_escolha(cliente, escolha - 1)
-            print(f"\n{resposta}")
-            pausar()
-
-            # Verificar se pode descobrir prato
-            if cliente.esta_aberto() and not cliente.prato_descoberto:
-                prato = cliente.descobrir_prato()
-                if prato:
-                    print(f"\n[Voce percebe que {cliente.nome} gostaria de {prato}]")
-                    pausar()
-
-            # Se prato foi descoberto, oferecer menu
-            if cliente.prato_descoberto and not cliente.memoria_revelada:
-                print("\n[O cliente parece esperar algo...]")
-                prato_escolhido = mostrar_menu_pratos(cozinha)
-
-                # Preparar prato
-                narrativa = cozinha.preparar_prato(prato_escolhido)
-                print(f"\n{narrativa}")
-                pausar()
-
-                # Servir prato
-                resultado = cozinha.servir_prato(prato_escolhido, cliente)
-                if resultado:
-                    print(f"\n{cliente.nome} olha para o prato...")
-                    pausar()
-                    print(f"\n\"{resultado}\"")
-                    pausar()
-                    return True
-                else:
-                    print(f"\n{cliente.nome} agradece educadamente.")
-                    pausar()
-
-    return cliente.foi_sucesso()
+# Ordem dos clientes por noite
+CLIENTES = ["yuki", "tanaka", "ryo", "midori", "sachiko", "hiroto"]
 
 
 def executar_jogo():
     """
-    Loop principal do jogo.
-    Coordena as 7 noites e os sistemas.
+    Loop principal do Midnight Kitchen.
+
+    Coordena menu, noites, e sistema de save.
     """
-    limpar_tela()
-    print(LOGO)
-    pausar()
+    renderer = Renderer()
+    game = Game()
 
-    limpar_tela()
-    print(ABERTURA)
-    pausar()
+    # Menu inicial
+    menu = Menu(renderer)
+    acao = menu.executar()
 
-    # Criar instancias
-    jogo = Jogo()
-    dialogo = SistemaDialogo()
-    cozinha = SistemaCozinha()
-    clientes = carregar_clientes()
+    if acao == AcaoMenu.SAIR:
+        mostrar_despedida(renderer)
+        return
 
-    # Loop das 6 noites
-    for cliente in clientes:
-        jogo.iniciar_dia()
+    # Carrega save se estiver continuando
+    if acao == AcaoMenu.CONTINUAR:
+        game.carregar()
+        noite_inicial = game.noite_atual
+    else:
+        noite_inicial = 0
 
-        sucesso = executar_noite(jogo, cliente, dialogo, cozinha)
+    # Loop das noites
+    for i, cliente_id in enumerate(CLIENTES):
+        noite_num = i + 1
 
-        if sucesso:
-            jogo.registrar_sucesso(cliente.nome, cliente.memoria)
-            print(f"\n[{cliente.nome} deixa o restaurante em paz.]")
+        # Pula noites já completadas
+        if noite_num <= noite_inicial:
+            continue
+
+        # Executa a noite
+        resultado = executar_noite(game, renderer, cliente_id)
+
+        # Processa resultado
+        if resultado.resultado == ResultadoNoite.SUCESSO:
+            game.registrar_sucesso(resultado.cliente_nome, resultado.memoria or "")
+            mostrar_sucesso(renderer, resultado)
+        elif resultado.resultado == ResultadoNoite.FALHA_TEMPO:
+            game.registrar_falha(ResultadoNoite.FALHA_TEMPO)
+            mostrar_falha_tempo(renderer, resultado)
         else:
-            jogo.registrar_falha()
-            print(f"\n[{cliente.nome} vai embora... algo ficou por dizer.]")
+            game.registrar_falha(resultado.resultado)
+            mostrar_falha(renderer, resultado)
 
-        pausar()
+        # Salva progresso
+        game.salvar()
 
-    # Dia 7 - Reflexao
-    jogo.iniciar_dia()
-    reflexao = SistemaReflexao(jogo)
+        # Transição entre noites
+        if noite_num < len(CLIENTES):
+            mostrar_transicao(renderer, noite_num)
 
-    limpar_tela()
-    resultado_final = reflexao.executar_dia_reflexao()
-    print(resultado_final)
-    pausar()
+    # Dia 7 - Reflexão (inclui final e créditos)
+    if game.noite_atual >= len(CLIENTES):
+        executar_reflexao(game, renderer)
+    else:
+        # Se saiu antes de completar todas as noites, mostra despedida simples
+        mostrar_despedida(renderer)
 
-    print("\n\nObrigado por jogar Midnight Kitchen.")
-    print("深夜キッチン\n")
+
+def executar_noite(
+    game: Game,
+    renderer: Renderer,
+    cliente_id: str
+) -> ResultadoNoiteCompleto:
+    """Executa uma noite com um cliente."""
+    noite = Noite(game, renderer, cliente_id)
+
+    if not noite.iniciar():
+        # Fallback se cliente não carregar
+        renderer.mostrar_erro(f"Erro ao carregar cliente: {cliente_id}")
+        return ResultadoNoiteCompleto(
+            resultado=ResultadoNoite.FALHA_CONFIANCA,
+            cliente_nome=cliente_id,
+        )
+
+    return noite.executar()
+
+
+def mostrar_sucesso(renderer: Renderer, resultado: ResultadoNoiteCompleto):
+    """Mostra mensagem de sucesso após uma noite."""
+    renderer.espaco()
+    renderer.console.print(
+        f"[sucesso]✦ Uma conexão foi feita com {resultado.cliente_nome}.[/sucesso]"
+    )
+    renderer.espaco()
+
+
+def mostrar_falha_tempo(renderer: Renderer, resultado: ResultadoNoiteCompleto):
+    """Mostra mensagem quando o tempo esgota."""
+    renderer.espaco()
+    renderer.console.print(
+        f"[sutil]{resultado.cliente_nome} foi embora. O tempo não esperou.[/sutil]"
+    )
+    renderer.espaco()
+
+
+def mostrar_falha(renderer: Renderer, resultado: ResultadoNoiteCompleto):
+    """Mostra mensagem de falha genérica."""
+    renderer.espaco()
+    renderer.console.print(
+        f"[sutil]A noite termina. Algo ficou por dizer.[/sutil]"
+    )
+    renderer.espaco()
+
+
+def mostrar_transicao(renderer: Renderer, noite_atual: int):
+    """Mostra transição entre noites."""
+    renderer.transicao()
+
+    textos = [
+        "O sol nasce e se põe. Outra noite começa.",
+        "As horas passam. O restaurante espera.",
+        "Mais uma noite. Mais uma história.",
+        "O neon de Shinjuku pulsa. A cortina balança.",
+        "A madrugada chama. Alguém vem chegando.",
+    ]
+
+    texto = textos[min(noite_atual - 1, len(textos) - 1)]
+
+    renderer.mostrar_narrativa(
+        texto,
+        titulo=f"Noite {noite_atual + 1}",
+        digitar=True,
+    )
+    renderer.pausar()
+
+
+def executar_reflexao(game: Game, renderer: Renderer):
+    """Executa o Dia 7 - Reflexão completa."""
+    reflexao = SistemaReflexao(renderer)
+
+    reflexao.executar(
+        memorias=game.memorias,
+        tem_envelope=game.tem_envelope,
+        tipo_final=game.determinar_final(),
+    )
+
+
+def mostrar_despedida(renderer: Renderer):
+    """Mostra a despedida final."""
+    renderer.transicao()
+    renderer.console.print("\n")
+    renderer.console.print("[titulo]Obrigado por jogar Midnight Kitchen.[/titulo]", justify="center")
+    renderer.console.print("[sutil]深夜キッチン[/sutil]", justify="center")
+    renderer.console.print("\n")
 
 
 # ============================================================

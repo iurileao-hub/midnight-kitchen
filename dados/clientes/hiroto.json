@@ -1,0 +1,35 @@
+{
+  "id": "hiroto",
+  "nome": "Hiroto",
+  "idade": 18,
+  "profissao": "Estudante universitário",
+  "genero_masculino": true,
+  "hora_chegada": [2, 0],
+  "prato_favorito": "Omurice",
+  "memoria": "Foi salvo por Master quando criança no incêndio. Passou 10 anos procurando seu salvador.",
+
+  "descricao_chegada": "A porta se abre com energia.\n\nUm jovem entra, olhos brilhantes vasculhando cada canto do restaurante. Magro, cabelos despenteados, um caderninho na mão.\n\nEle se senta no banco central, de frente para você, e imediatamente começa a olhar ao redor como quem procura algo.\n\n\"Boa noite! Esse lugar é antigo, né? Parece que tem muita história.\"\n\nA perna balança sob o balcão. Energia contida esperando para explodir.",
+
+  "maneirismos": [
+    "Energia contida, perna sempre balançando",
+    "Faz perguntas diretas demais",
+    "Anota coisas no caderninho constantemente",
+    "Olha ao redor como quem procura algo",
+    "Fala com as mãos"
+  ],
+
+  "pistas": [
+    "Pesquisando sobre o bairro há anos",
+    "Aconteceu um incêndio aqui perto há dez anos",
+    "Estava lá quando criança, alguém o salvou",
+    "O homem tinha uma cicatriz"
+  ],
+
+  "gatilho_prato": "Quando Hiroto mencionar 'aquela noite' ou 'promessa', você perceberá que Omurice pode revelar a verdade.",
+
+  "despedida_sucesso": "Hiroto olha para você — realmente olha — e as lágrimas começam a cair.\n\n\"Era você. Esse tempo todo... era você.\"\n\nEle se levanta, as mãos tremendo.\n\n\"Eu passei dez anos procurando. Pra dizer obrigado. Pra dizer que a vida que você salvou...\"\n\nEle engole o choro.\n\n\"Eu estou vivendo ela. Estou bem. Você fez a coisa certa naquela noite.\"\n\nAntes de sair, ele deixa uma foto antiga no balcão — uma criança sorrindo num restaurante. A foto que ele carregou por dez anos.",
+
+  "despedida_tempo": "Hiroto olha para o relógio e sua energia muda.\n\n\"Preciso ir... amanhã cedo tenho aula.\"\n\nEle guarda o caderninho, mas hesita na porta.\n\n\"Eu vou voltar. Tem... tem algo aqui. Eu sinto.\"\n\nA porta se fecha. A busca continua.",
+
+  "despedida_falha": "Hiroto se levanta, frustrado.\n\n\"Desculpa. Eu... achei que encontraria algo aqui. Estava errado.\"\n\nEle sai rápido, o caderninho apertado contra o peito.\n\nA foto antiga continua no bolso dele. A busca não terminou. Mas esta noite, sim."
+}

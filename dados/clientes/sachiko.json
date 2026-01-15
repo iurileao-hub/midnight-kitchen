@@ -1,0 +1,35 @@
+{
+  "id": "sachiko",
+  "nome": "Sachiko",
+  "idade": 32,
+  "profissao": "Contadora em grande empresa",
+  "genero_masculino": false,
+  "hora_chegada": [23, 58],
+  "prato_favorito": "Nikujaga",
+  "memoria": "Filha de Takeshi. Brigou com o pai antes do incêndio e nunca pediu desculpas. Encontrou o caderno dele anos depois.",
+
+  "descricao_chegada": "A porta se abre com precisão. Nem rápido, nem devagar.\n\nUma mulher entra ainda vestida para o escritório. Terninho impecável, mas olhos exaustos. Pasta de trabalho numa mão, celular na outra.\n\nEla guarda o celular com um suspiro irritado e se senta no banco mais afastado.\n\n\"Qualquer coisa rápida. Sem conversa, por favor.\"\n\nOs ombros estão tensos como cordas de violão.",
+
+  "maneirismos": [
+    "Postura rígida, ombros sempre tensos",
+    "Checa o celular compulsivamente",
+    "Evita dizer 'pai' - usa 'ele' ou 'Takeshi'",
+    "Organiza tudo à sua frente",
+    "Limpa os óculos quando precisa de pausa"
+  ],
+
+  "pistas": [
+    "O pai era cozinheiro, restaurante pequeno",
+    "Ele morreu há dez anos num incêndio",
+    "Brigaram antes de ele morrer",
+    "Encontrou um caderno anos depois"
+  ],
+
+  "gatilho_prato": "Quando Sachiko mencionar 'família' ou 'domingo', você perceberá que Nikujaga pode quebrar suas defesas.",
+
+  "despedida_sucesso": "Sachiko olha para a tigela vazia de nikujaga. Os olhos estão úmidos, mas ela não chora.\n\n\"Ele nunca soube que eu tinha orgulho dele. Do jeito dele de cuidar das pessoas.\"\n\nEla tira algo da pasta — um caderno surrado.\n\n\"Ele escreveu sobre um aprendiz. Um 'menino' que ele queria bem.\" Ela olha para você. \"Espero que esse menino esteja bem. Onde quer que esteja.\"\n\nPela primeira vez esta noite, ela sorri de verdade.",
+
+  "despedida_tempo": "Sachiko olha o relógio e suspira.\n\n\"Reunião às sete. Preciso dormir pelo menos algumas horas.\"\n\nEla paga rapidamente, já de pé.\n\n\"Desculpa por... por ser difícil. Não é pessoal.\"\n\nA porta se fecha com a mesma precisão com que abriu.",
+
+  "despedida_falha": "Sachiko se levanta, os ombros ainda mais tensos.\n\n\"Obrigada pela comida.\"\n\nAs palavras são educadas, mas vazias. Ela sai sem olhar para trás, o caderno do pai ainda escondido na pasta, a história ainda não contada."
+}

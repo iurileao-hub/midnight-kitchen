@@ -1,0 +1,450 @@
+{
+  "cliente_id": "midori",
+  "no_inicial": "chegada",
+
+  "nos": {
+    "chegada": {
+      "id": "chegada",
+      "contexto": "Midori entrou sorrindo, como se já conhecesse o lugar. Sentou no centro do balcão.",
+      "texto": "",
+      "opcoes": [
+        {
+          "texto": "Boa noite. O que posso fazer por você?",
+          "dica": "educado",
+          "impacto": 8,
+          "tipo": "dialogo_curto",
+          "proximo": "boa_noite"
+        },
+        {
+          "texto": "Parece feliz em estar aqui.",
+          "dica": "observador",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "feliz_aqui"
+        },
+        {
+          "texto": "Broche bonito. Uma flor de cerejeira?",
+          "dica": "atento aos detalhes",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "broche_flor"
+        }
+      ]
+    },
+
+    "feliz_aqui": {
+      "id": "feliz_aqui",
+      "contexto": "O sorriso de Midori se amplia.",
+      "texto": "\"Este lugar me traz lembranças boas.\"\n\nEla olha ao redor com olhos de quem está vendo algo além das paredes.\n\n\"Eu tinha uma floricultura perto daqui. Faz... faz bastante tempo.\"",
+      "e_pista": true,
+      "pista_id": "floricultura",
+      "opcoes": [
+        {
+          "texto": "Floricultura? Deve ter sido um trabalho bonito.",
+          "dica": "interessado",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "trabalho_bonito"
+        },
+        {
+          "texto": "Por que fechou?",
+          "dica": "direto",
+          "impacto": 8,
+          "tipo": "dialogo_curto",
+          "proximo": "porque_fechou"
+        }
+      ]
+    },
+
+    "broche_flor": {
+      "id": "broche_flor",
+      "contexto": "Midori toca o broche com carinho.",
+      "texto": "\"Sakura, sim. Minha flor favorita.\"\n\nEla sorri com os olhos primeiro, depois com os lábios.\n\n\"Eu era florista. Quarenta anos no ofício. Conheço cada flor pelo nome.\"",
+      "e_pista": true,
+      "pista_id": "florista",
+      "opcoes": [
+        {
+          "texto": "Quarenta anos? Você deve ter histórias incríveis.",
+          "dica": "admiração",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "historias_incriveis"
+        },
+        {
+          "texto": "Aposentada agora?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "aposentada"
+        }
+      ]
+    },
+
+    "trabalho_bonito": {
+      "id": "trabalho_bonito",
+      "contexto": "Midori acena, os olhos brilhando.",
+      "texto": "\"Era. Cada dia diferente. Cada arranjo uma pequena história.\"\n\nEla arruma distraidamente o guardanapo à sua frente.\n\n\"A loja ficava ao lado de um restaurante. O dono... Takeshi-san... ele comprava flores toda semana para as mesas.\"",
+      "e_pista": true,
+      "pista_id": "takeshi",
+      "pensamento_master": "Takeshi. O nome ecoa em você como um sino distante.",
+      "opcoes": [
+        {
+          "texto": "Takeshi-san? Vocês eram próximos?",
+          "dica": "interessado",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "eram_proximos"
+        },
+        {
+          "texto": "O restaurante ainda existe?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "restaurante_existe"
+        }
+      ]
+    },
+
+    "eram_proximos": {
+      "id": "eram_proximos",
+      "contexto": "O sorriso de Midori fica mais suave, mais triste.",
+      "texto": "\"Vinte anos como vizinhos. Ele me mandava sopa nos dias frios. Eu decorava as mesas para ocasiões especiais.\"\n\nEla para.\n\n\"Ele era um bom homem. Cuidava de todos ao redor.\"",
+      "opcoes": [
+        {
+          "texto": "Era?",
+          "dica": "notou o tempo verbal",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "era_passado"
+        },
+        {
+          "texto": "Parece que vocês tinham uma amizade especial.",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "amizade_especial"
+        }
+      ]
+    },
+
+    "era_passado": {
+      "id": "era_passado",
+      "contexto": "Midori toca o broche suavemente.",
+      "texto": "\"Ele faleceu. Há dez anos.\"\n\nUma pausa.\n\n\"Um incêndio. O restaurante pegou fogo numa noite de inverno. Takeshi-san... não conseguiu sair.\"",
+      "e_pista": true,
+      "pista_id": "incendio",
+      "pensamento_master": "As palavras atravessam você como vento gelado. Dez anos. O mesmo incêndio.",
+      "opcoes": [
+        {
+          "texto": "Sinto muito. Perder um amigo assim...",
+          "dica": "empático",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "perder_amigo"
+        },
+        {
+          "texto": "O incêndio também afetou sua loja?",
+          "dica": "atento",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "afetou_loja"
+        }
+      ]
+    },
+
+    "afetou_loja": {
+      "id": "afetou_loja",
+      "contexto": "Midori acena lentamente.",
+      "texto": "\"Sim. O fogo se espalhou. Minha loja foi... danificada.\"\n\nEla olha para as mãos.\n\n\"Mas não foi só o fogo que me fez fechar. Foi...\" Ela para.\n\n\"Uma semana antes do incêndio, eu vi algo.\"",
+      "e_pista": true,
+      "pista_id": "viu_algo",
+      "gatilho_prato": true,
+      "opcoes": [
+        {
+          "texto": "O que você viu?",
+          "dica": "curioso",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "oque_viu"
+        },
+        {
+          "texto": "Quer tomar algo quente enquanto conversamos? Missoshiru, talvez?",
+          "dica": "acolhedor",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "oferecer_miso": {
+      "id": "oferecer_miso",
+      "contexto": "Os olhos de Midori se iluminam.",
+      "texto": "\"Missoshiru?\"\n\nO sorriso dela vacila, mas de um jeito bom.\n\n\"Takeshi-san me mandava missoshiru nos dias frios. Dizia que florista não podia ter mãos geladas.\"\n\nEla ri baixinho.\n\n\"Faz anos que não tomo.\"",
+      "revelacao_prato": "missoshiru",
+      "opcoes": [
+        {
+          "texto": "Então está na hora. Vou preparar.",
+          "dica": "",
+          "impacto": 20,
+          "tipo": "cozinha",
+          "proximo": "preparar_miso"
+        }
+      ]
+    },
+
+    "preparar_miso": {
+      "id": "preparar_miso",
+      "contexto": "Você começa a preparar o missoshiru.",
+      "texto": "",
+      "tipo_cena": "cozinha",
+      "prato": "missoshiru"
+    },
+
+    "oque_viu": {
+      "id": "oque_viu",
+      "contexto": "Midori hesita. É claramente difícil.",
+      "texto": "\"Faíscas. No quadro elétrico do restaurante.\"\n\nEla engole.\n\n\"Eu estava fechando a loja, já tarde. Vi faíscas saindo da caixa de luz externa do Takeshi-san. Fiquei preocupada.\"\n\nPausa.\n\n\"Fui falar com ele. Ele agradeceu, disse que ia resolver.\"",
+      "e_pista": true,
+      "pista_id": "faiscas",
+      "pensamento_master": "Quadro elétrico. A informação entra devagar, como água penetrando rocha.",
+      "opcoes": [
+        {
+          "texto": "Você avisou. Fez a coisa certa.",
+          "dica": "reconfortante",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "fez_certo"
+        },
+        {
+          "texto": "E depois veio o incêndio...",
+          "dica": "conectando",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "depois_incendio"
+        }
+      ]
+    },
+
+    "fez_certo": {
+      "id": "fez_certo",
+      "contexto": "Midori sacode a cabeça lentamente.",
+      "texto": "\"Será que avisei direito? Com a urgência certa?\"\n\nOs olhos dela estão úmidos.\n\n\"Ou só mencionei de passagem, como quem fala do tempo? 'Ah, vi faíscas, cuidado.'\"\n\nEla limpa os olhos com o lenço bordado.\n\n\"Às vezes penso que se eu tivesse insistido mais...\"",
+      "opcoes": [
+        {
+          "texto": "Você não pode se culpar. Você avisou. Ele sabia.",
+          "dica": "firme",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "ele_sabia"
+        },
+        {
+          "texto": "Quer algo quente? Às vezes comida ajuda a pensar.",
+          "dica": "prático",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "ele_sabia": {
+      "id": "ele_sabia",
+      "contexto": "Midori olha para você com esperança frágil.",
+      "texto": "\"Ele sabia?\"\n\nA pergunta é quase uma súplica.\n\n\"Espero que sim. Espero que ele não tenha... ignorado por minha causa.\"",
+      "opcoes": [
+        {
+          "texto": "Deixa eu preparar algo para você. Missoshiru, como ele fazia.",
+          "dica": "cuidadoso",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "porque_fechou": {
+      "id": "porque_fechou",
+      "contexto": "O sorriso de Midori vacila.",
+      "texto": "\"Um incêndio. Não na minha loja, mas... ao lado.\"\n\nEla olha para as próprias mãos.\n\n\"O restaurante vizinho. O fogo se espalhou. Minha loja foi danificada. Mas não foi só isso...\"",
+      "e_pista": true,
+      "pista_id": "incendio",
+      "opcoes": [
+        {
+          "texto": "O que mais aconteceu?",
+          "dica": "gentil",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "afetou_loja"
+        }
+      ]
+    },
+
+    "boa_noite": {
+      "id": "boa_noite",
+      "contexto": "Midori sorri calorosa mente.",
+      "texto": "\"Algo quente seria ótimo. Está frio esta noite.\"\n\nEla olha ao redor com carinho.\n\n\"Este lugar me lembra de outro. Um restaurante que ficava perto da minha loja, anos atrás.\"",
+      "opcoes": [
+        {
+          "texto": "Você tinha uma loja por aqui?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "feliz_aqui"
+        },
+        {
+          "texto": "Chá verde para começar? Ou prefere algo mais substancial?",
+          "dica": "prático",
+          "impacto": 8,
+          "tipo": "dialogo_curto",
+          "proximo": "cha_ou_comida"
+        }
+      ]
+    },
+
+    "cha_ou_comida": {
+      "id": "cha_ou_comida",
+      "contexto": "Midori considera.",
+      "texto": "\"Chá está bom por agora. Obrigada, querido.\"\n\nEnquanto você prepara, ela continua olhando ao redor.\n\n\"Sabe... eu tinha uma floricultura aqui perto. Quarenta anos no mesmo lugar.\"",
+      "e_pista": true,
+      "pista_id": "floricultura",
+      "opcoes": [
+        {
+          "texto": "Quarenta anos é uma vida inteira.",
+          "dica": "respeitoso",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "trabalho_bonito"
+        }
+      ]
+    },
+
+    "historias_incriveis": {
+      "id": "historias_incriveis",
+      "contexto": "Midori ri suavemente.",
+      "texto": "\"Algumas.\"\n\nEla aceita o chá que você oferece.\n\n\"A melhor era sobre meu vizinho. O dono do restaurante ao lado. Takeshi-san.\"",
+      "e_pista": true,
+      "pista_id": "takeshi",
+      "opcoes": [
+        {
+          "texto": "Conte-me sobre ele.",
+          "dica": "interessado",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "eram_proximos"
+        }
+      ]
+    },
+
+    "aposentada": {
+      "id": "aposentada",
+      "contexto": "Midori acena.",
+      "texto": "\"Há dez anos. A loja... não sobreviveu a um incêndio no bairro.\"\n\nO sorriso vacila por um segundo.\n\n\"Mas não é isso que me traz aqui tão tarde. É...\" Ela hesita. \"É outra coisa.\"",
+      "e_pista": true,
+      "pista_id": "incendio",
+      "opcoes": [
+        {
+          "texto": "O que a trouxe aqui esta noite?",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "trouxe_aqui"
+        }
+      ]
+    },
+
+    "trouxe_aqui": {
+      "id": "trouxe_aqui",
+      "contexto": "Midori olha para o chá, pensativa.",
+      "texto": "\"Lembranças, acho. Esse lugar me lembra do restaurante do Takeshi-san.\"\n\nEla toca o broche.\n\n\"Ele morreu no incêndio. E eu... eu carreguei algo desde então.\"",
+      "opcoes": [
+        {
+          "texto": "Quer me contar?",
+          "dica": "aberto",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "afetou_loja"
+        }
+      ]
+    },
+
+    "restaurante_existe": {
+      "id": "restaurante_existe",
+      "contexto": "O rosto de Midori se fecha.",
+      "texto": "\"Não. Pegou fogo há dez anos.\"\n\nEla olha para o chá esfriando.\n\n\"Takeshi-san morreu naquela noite. E eu... eu carreguei algo desde então.\"",
+      "e_pista": true,
+      "pista_id": "incendio",
+      "opcoes": [
+        {
+          "texto": "O que você carrega?",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "afetou_loja"
+        }
+      ]
+    },
+
+    "amizade_especial": {
+      "id": "amizade_especial",
+      "contexto": "Midori sorri com tristeza.",
+      "texto": "\"Era. Vinte anos ao lado dele. Vendo o restaurante crescer, os clientes virarem amigos.\"\n\nEla suspira.\n\n\"E então, uma noite, o fogo levou tudo. Ele, o restaurante, parte da minha loja...\"\n\nEla para.\n\n\"E uma semana antes, eu tinha visto algo.\"",
+      "e_pista": true,
+      "pista_id": "viu_algo",
+      "opcoes": [
+        {
+          "texto": "O que você viu?",
+          "dica": "curioso",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "oque_viu"
+        }
+      ]
+    },
+
+    "perder_amigo": {
+      "id": "perder_amigo",
+      "contexto": "Midori limpa os olhos.",
+      "texto": "\"Foi difícil. Ainda é, às vezes.\"\n\nEla endireita os ombros.\n\n\"Mas não vim aqui para chorar. Vim porque... há algo que carrego desde então. Algo que nunca contei a ninguém.\"",
+      "gatilho_prato": true,
+      "opcoes": [
+        {
+          "texto": "Quer me contar?",
+          "dica": "aberto",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "oque_viu"
+        },
+        {
+          "texto": "Deixa eu preparar algo quente primeiro. Missoshiru?",
+          "dica": "cuidadoso",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "depois_incendio": {
+      "id": "depois_incendio",
+      "contexto": "Midori acena, os olhos distantes.",
+      "texto": "\"Uma semana depois. O fogo começou à noite.\"\n\nEla engole.\n\n\"E eu nunca soube... nunca soube se ele tentou resolver. Se ele sabia que era grave. Se a minha forma de avisar foi... suficiente.\"\n\nAs lágrimas caem agora.\n\n\"Será que se eu tivesse insistido mais, ele ainda estaria aqui?\"",
+      "opcoes": [
+        {
+          "texto": "Você avisou. A decisão de agir era dele. Você fez o certo.",
+          "dica": "firme",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "ele_sabia"
+        },
+        {
+          "texto": "Vem. Vou fazer missoshiru. Como ele fazia para você.",
+          "dica": "acolhedor",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    }
+  }
+}

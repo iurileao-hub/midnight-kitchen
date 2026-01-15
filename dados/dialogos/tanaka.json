@@ -1,0 +1,1044 @@
+{
+  "cliente_id": "tanaka",
+  "no_inicial": "chegada",
+
+  "nos": {
+    "chegada": {
+      "id": "chegada",
+      "contexto": "Tanaka se sentou pesadamente, os ombros curvados. Pediu sake.",
+      "texto": "",
+      "opcoes": [
+        {
+          "texto": "Sake quente ou frio?",
+          "dica": "neutro",
+          "impacto": 5,
+          "tipo": "dialogo_curto",
+          "proximo": "sake_tipo"
+        },
+        {
+          "texto": "Noite longa?",
+          "dica": "observador",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "noite_longa"
+        },
+        {
+          "texto": "Mãos calejadas. Trabalho pesado?",
+          "dica": "perceptivo",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "maos_calejadas"
+        },
+        {
+          "texto": "[Servir o sake em silêncio]",
+          "dica": "respeitoso",
+          "impacto": 8,
+          "tipo": "silencio",
+          "proximo": "silencio_sake"
+        }
+      ]
+    },
+
+    "noite_longa": {
+      "id": "noite_longa",
+      "contexto": "Tanaka aceita o sake e bebe um gole pequeno.",
+      "texto": "\"Todas as noites são longas quando você chega na minha idade.\"\n\nEle gira o copo nas mãos grandes.\n\n\"Trinta anos no corpo de bombeiros. A gente não dorme direito depois.\"",
+      "e_pista": true,
+      "pista_id": "bombeiro",
+      "opcoes": [
+        {
+          "texto": "Bombeiro por trinta anos. Deve ter visto muita coisa.",
+          "dica": "respeitoso",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "visto_muito"
+        },
+        {
+          "texto": "O que tira o sono? O que você viu ou o que não conseguiu fazer?",
+          "dica": "direto",
+          "impacto": 8,
+          "tipo": "dialogo_medio",
+          "proximo": "tira_sono"
+        },
+        {
+          "texto": "[Apenas reabastecer o copo]",
+          "dica": "paciente",
+          "impacto": 10,
+          "tipo": "silencio",
+          "proximo": "reabastecer"
+        }
+      ]
+    },
+
+    "maos_calejadas": {
+      "id": "maos_calejadas",
+      "contexto": "Tanaka olha para as próprias mãos, surpreso.",
+      "texto": "\"Você repara nas coisas, hein?\"\n\nEle esfrega as palmas uma na outra — um hábito antigo.\n\n\"Bombeiro. Aposentado. As mãos lembram mesmo quando a gente quer esquecer.\"",
+      "e_pista": true,
+      "pista_id": "bombeiro",
+      "opcoes": [
+        {
+          "texto": "As mãos guardam memórias. As boas e as ruins.",
+          "dica": "filosófico",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "maos_memorias"
+        },
+        {
+          "texto": "Por que aposentou? Parece ainda ter força.",
+          "dica": "curioso",
+          "impacto": 8,
+          "tipo": "dialogo_medio",
+          "proximo": "aposentadoria"
+        }
+      ]
+    },
+
+    "visto_muito": {
+      "id": "visto_muito",
+      "contexto": "Tanaka olha para o sake, o reflexo tremendo.",
+      "texto": "\"Demais, talvez.\"\n\nEle bebe outro gole. Não termina o copo.\n\n\"Tem incêndio que a gente não esquece. Por mais que tente.\"",
+      "e_pista": true,
+      "pista_id": "incendio_especifico",
+      "opcoes": [
+        {
+          "texto": "Qual incêndio você não consegue esquecer?",
+          "dica": "direto",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "qual_incendio"
+        },
+        {
+          "texto": "Às vezes as memórias ficam porque têm algo a dizer.",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "memorias_dizer"
+        },
+        {
+          "texto": "Quer comer algo? Estômago vazio e sake não combinam.",
+          "dica": "prático",
+          "impacto": 8,
+          "tipo": "dialogo_curto",
+          "proximo": "oferecer_comida"
+        }
+      ]
+    },
+
+    "memorias_dizer": {
+      "id": "memorias_dizer",
+      "contexto": "Tanaka para de girar o copo. Olha para você.",
+      "texto": "\"Algo a dizer...\"\n\nEle repete as palavras, testando-as.\n\n\"Tinha um restaurante que eu gostava. Aqui perto, na verdade. O dono fazia o melhor katsudon que já comi.\"\n\nUma pausa longa.\n\n\"O lugar pegou fogo. O dono morreu. Eu estava lá quando aconteceu.\"",
+      "e_pista": true,
+      "pista_id": "restaurante_fogo",
+      "pensamento_master": "A palavra 'incêndio' ecoa. Suas mãos continuam o trabalho, mas algo dentro treme.",
+      "opcoes": [
+        {
+          "texto": "Você estava lá como bombeiro?",
+          "dica": "cuidadoso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "como_bombeiro"
+        },
+        {
+          "texto": "O dono... você tentou salvá-lo?",
+          "dica": "direto",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "tentou_salvar"
+        }
+      ]
+    },
+
+    "tentou_salvar": {
+      "id": "tentou_salvar",
+      "contexto": "O rosto de Tanaka se fecha. A dor antiga visível.",
+      "texto": "\"Tentei.\"\n\nA palavra sai pesada, carregada de dez anos.\n\n\"Entrei no fogo. Encontrei ele inconsciente perto da cozinha. Tentei arrastar... mas o teto...\"\n\nEle para. Esfrega as mãos.\n\n\"O teto desabou entre nós. Eu saí. Ele não.\"",
+      "e_pista": true,
+      "pista_id": "tentou_salvar",
+      "opcoes": [
+        {
+          "texto": "Você entrou no fogo para salvar alguém. Isso é coragem.",
+          "dica": "empático",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "coragem"
+        },
+        {
+          "texto": "Não é culpa sua. Você fez o que podia.",
+          "dica": "consolador",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "nao_culpa"
+        }
+      ]
+    },
+
+    "nao_culpa": {
+      "id": "nao_culpa",
+      "contexto": "Tanaka ri amargamente.",
+      "texto": "\"É o que todo mundo diz.\"\n\nEle finalmente bebe o resto do sake.\n\n\"Mas tem uma coisa que me incomoda há dez anos. O fogo... a origem dele.\"\n\nEle olha para você, os olhos sérios.\n\n\"Não parecia vir da cozinha. Parecia mais... lateral. Externo, talvez. Mas o laudo disse cozinha, então...\"\n\nEle dá de ombros.\n\n\"Às vezes acho que inventei isso pra me sentir melhor.\"",
+      "e_pista": true,
+      "pista_id": "origem_fogo",
+      "gatilho_prato": true,
+      "opcoes": [
+        {
+          "texto": "Você disse que ele fazia bom katsudon. Posso fazer um para você.",
+          "dica": "acolhedor",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_katsudon"
+        },
+        {
+          "texto": "Trinta anos de experiência. Você sabe reconhecer origem de fogo.",
+          "dica": "validador",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "experiencia_fogo"
+        }
+      ]
+    },
+
+    "oferecer_katsudon": {
+      "id": "oferecer_katsudon",
+      "contexto": "Tanaka hesita, depois acena.",
+      "texto": "\"Katsudon, hein?\"\n\nEle olha para o copo vazio.\n\n\"Comida de vitória, chamam. Irônico, não?\"\n\nUma pausa.\n\n\"Por que não. Faz tempo que não como.\"",
+      "revelacao_prato": "katsudon",
+      "opcoes": [
+        {
+          "texto": "Katsudon. Vou preparar.",
+          "dica": "",
+          "impacto": 20,
+          "tipo": "cozinha",
+          "proximo": "preparar_katsudon"
+        }
+      ]
+    },
+
+    "preparar_katsudon": {
+      "id": "preparar_katsudon",
+      "contexto": "Você começa a preparar o katsudon.",
+      "texto": "",
+      "tipo_cena": "cozinha",
+      "prato": "katsudon"
+    },
+
+    "sake_tipo": {
+      "id": "sake_tipo",
+      "contexto": "Tanaka pensa por um momento.",
+      "texto": "\"Quente. O frio me lembra de coisas.\"\n\nEle aceita a xícara com as duas mãos. Não bebe imediatamente.\n\n\"Você abre tarde. É bom ter lugar assim.\"",
+      "opcoes": [
+        {
+          "texto": "As pessoas que vêm de madrugada geralmente precisam de silêncio.",
+          "dica": "entendedor",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "precisam_silencio"
+        },
+        {
+          "texto": "Madrugada é um bom horário para pensar.",
+          "dica": "filosófico",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "bom_pensar"
+        }
+      ]
+    },
+
+    "precisam_silencio": {
+      "id": "precisam_silencio",
+      "contexto": "Tanaka acena lentamente.",
+      "texto": "\"Silêncio. É. Faz tempo que não tenho.\"\n\nEle bebe um gole pequeno.\n\n\"Trinta anos apagando fogo. O barulho fica na cabeça.\"",
+      "e_pista": true,
+      "pista_id": "bombeiro",
+      "opcoes": [
+        {
+          "texto": "Bombeiro? Trabalho difícil.",
+          "dica": "respeitoso",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "visto_muito"
+        },
+        {
+          "texto": "Aqui o único barulho é o da chapa. Pode ficar o tempo que precisar.",
+          "dica": "acolhedor",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "ficar_tempo"
+        }
+      ]
+    },
+
+    "ficar_tempo": {
+      "id": "ficar_tempo",
+      "contexto": "Algo no rosto de Tanaka suaviza.",
+      "texto": "\"Obrigado.\"\n\nEle bebe mais um gole. O silêncio se estende confortavelmente.\n\n\"Sabe... tem um incêndio que eu não consigo esquecer. Mesmo depois de todos esses anos.\"",
+      "e_pista": true,
+      "pista_id": "incendio_especifico",
+      "opcoes": [
+        {
+          "texto": "Quer falar sobre isso?",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "memorias_dizer"
+        },
+        {
+          "texto": "[Deixar o silêncio fazer seu trabalho]",
+          "dica": "paciente",
+          "impacto": 10,
+          "tipo": "silencio",
+          "proximo": "silencio_trabalho"
+        }
+      ]
+    },
+
+    "silencio_trabalho": {
+      "id": "silencio_trabalho",
+      "contexto": "O silêncio se estende. Tanaka olha para as próprias mãos.",
+      "texto": "Minutos passam. Tanaka gira o copo vazio.\n\n\"Era um restaurante pequeno. O dono era um bom homem. Fazia katsudon pros bombeiros do bairro.\"\n\nEle para.\n\n\"O lugar pegou fogo. Ele morreu tentando salvar as pessoas de dentro.\"",
+      "e_pista": true,
+      "pista_id": "restaurante_fogo",
+      "opcoes": [
+        {
+          "texto": "Você estava lá.",
+          "dica": "afirmação",
+          "impacto": 12,
+          "tipo": "dialogo_curto",
+          "proximo": "tentou_salvar"
+        }
+      ]
+    },
+
+    "silencio_sake": {
+      "id": "silencio_sake",
+      "contexto": "Você serve o sake em silêncio. Tanaka aceita com um aceno.",
+      "texto": "O silêncio se estende. Não é desconfortável.\n\nTanaka bebe devagar, olhando para o nada em particular.\n\n\"Lugar tranquilo. Bom pra pensar.\"",
+      "opcoes": [
+        {
+          "texto": "Pensar sobre o quê?",
+          "dica": "curioso",
+          "impacto": 8,
+          "tipo": "dialogo_curto",
+          "proximo": "pensar_oque"
+        },
+        {
+          "texto": "[Continuar trabalhando em silêncio]",
+          "dica": "respeitoso",
+          "impacto": 10,
+          "tipo": "silencio",
+          "proximo": "ficar_tempo"
+        }
+      ]
+    },
+
+    "pensar_oque": {
+      "id": "pensar_oque",
+      "contexto": "Tanaka hesita.",
+      "texto": "\"Sobre o passado. Sobre coisas que não dá pra mudar.\"\n\nEle esfrega as mãos.\n\n\"Fui bombeiro por trinta anos. Salvei muita gente.\" Pausa. \"Mas não todos.\"",
+      "e_pista": true,
+      "pista_id": "nao_salvou_todos",
+      "opcoes": [
+        {
+          "texto": "Ninguém salva todos.",
+          "dica": "realista",
+          "impacto": 8,
+          "tipo": "dialogo_curto",
+          "proximo": "ninguem_salva"
+        },
+        {
+          "texto": "Quem você não conseguiu salvar?",
+          "dica": "direto",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "memorias_dizer"
+        }
+      ]
+    },
+
+    "ninguem_salva": {
+      "id": "ninguem_salva",
+      "contexto": "Tanaka acena amargamente.",
+      "texto": "\"É o que dizem. Mas tem um... um que me persegue.\"\n\nEle termina o sake de uma vez.\n\n\"Um cozinheiro. Dono de restaurante. Bom homem.\"",
+      "e_pista": true,
+      "pista_id": "cozinheiro",
+      "opcoes": [
+        {
+          "texto": "Conte-me sobre ele.",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "memorias_dizer"
+        }
+      ]
+    },
+
+    "tira_sono": {
+      "id": "tira_sono",
+      "contexto": "Tanaka congela com a pergunta. O copo para no meio do caminho.",
+      "texto": "\"Direto ao ponto, hein?\"\n\nEle coloca o copo na bancada com cuidado.\n\n\"Os dois. Mas principalmente... o que não consegui fazer.\"\n\nUm suspiro longo.\n\n\"Tinha um incêndio. Dez anos atrás. Um restaurante pequeno aqui perto. O dono era um bom homem.\"",
+      "e_pista": true,
+      "pista_id": "incendio_especifico",
+      "opcoes": [
+        {
+          "texto": "O que aconteceu nesse incêndio?",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "memorias_dizer"
+        },
+        {
+          "texto": "Você conhecia o dono?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "conhecia_dono"
+        },
+        {
+          "texto": "[Servir mais sake em silêncio]",
+          "dica": "paciente",
+          "impacto": 8,
+          "tipo": "silencio",
+          "proximo": "reabastecer"
+        }
+      ]
+    },
+
+    "reabastecer": {
+      "id": "reabastecer",
+      "contexto": "Você enche o copo novamente. Tanaka observa o líquido.",
+      "texto": "O sake fumega suavemente. Tanaka segura o copo mas não bebe.\n\n\"Sabe... faz dez anos que venho a lugares assim de madrugada.\"\n\nEle finalmente bebe um gole.\n\n\"Procurando algo. Não sei bem o quê. Talvez um lugar que me lembre dele.\"",
+      "e_pista": true,
+      "pista_id": "procurando_lugar",
+      "opcoes": [
+        {
+          "texto": "Dele quem?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "memorias_dizer"
+        },
+        {
+          "texto": "O que esse lugar tinha de especial?",
+          "dica": "interessado",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "lugar_especial"
+        },
+        {
+          "texto": "Espero que encontre o que procura aqui.",
+          "dica": "acolhedor",
+          "impacto": 15,
+          "tipo": "dialogo_curto",
+          "proximo": "ficar_tempo"
+        }
+      ]
+    },
+
+    "lugar_especial": {
+      "id": "lugar_especial",
+      "contexto": "Os olhos de Tanaka ficam distantes.",
+      "texto": "\"Era simples. Pequeno. O dono ficava ali, atrás do balcão, como você.\"\n\nEle aponta para a cozinha.\n\n\"Fazia comida reconfortante. O tipo que aquece por dentro quando tudo parece frio.\"\n\nUma pausa.\n\n\"Ochazuke. Ele fazia o melhor ochazuke que já comi. Arroz, chá quente, umeboshi por cima.\"",
+      "e_pista": true,
+      "pista_id": "ochazuke",
+      "gatilho_prato": true,
+      "opcoes": [
+        {
+          "texto": "Posso fazer ochazuke para você.",
+          "dica": "generoso",
+          "impacto": 18,
+          "tipo": "dialogo_curto",
+          "proximo": "aceitar_ochazuke"
+        },
+        {
+          "texto": "O que aconteceu com esse lugar?",
+          "dica": "cuidadoso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "memorias_dizer"
+        }
+      ]
+    },
+
+    "aceitar_ochazuke": {
+      "id": "aceitar_ochazuke",
+      "contexto": "Tanaka para. A surpresa clara no rosto.",
+      "texto": "\"Ochazuke?\"\n\nEle repete a palavra como se testasse o som.\n\n\"Faz... faz muito tempo que não como.\"\n\nUm silêncio. Depois, um aceno quase imperceptível.\n\n\"Tudo bem. Pode fazer.\"",
+      "revelacao_prato": "ochazuke",
+      "opcoes": [
+        {
+          "texto": "Ochazuke. Vou preparar.",
+          "dica": "",
+          "impacto": 20,
+          "tipo": "cozinha",
+          "proximo": "preparar_ochazuke"
+        }
+      ]
+    },
+
+    "preparar_ochazuke": {
+      "id": "preparar_ochazuke",
+      "contexto": "Você começa a preparar o ochazuke.",
+      "texto": "",
+      "tipo_cena": "cozinha",
+      "prato": "ochazuke"
+    },
+
+    "conhecia_dono": {
+      "id": "conhecia_dono",
+      "contexto": "Tanaka acena lentamente.",
+      "texto": "\"Conhecia. Íamos lá depois dos turnos. Ele fazia comida pros bombeiros do bairro.\"\n\nUm sorriso triste.\n\n\"Nunca cobrava a mais. Dizia que era o mínimo que podia fazer por quem arriscava a vida pelos outros.\"",
+      "e_pista": true,
+      "pista_id": "dono_generoso",
+      "opcoes": [
+        {
+          "texto": "Parece que era um bom homem.",
+          "dica": "respeitoso",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "bom_homem"
+        },
+        {
+          "texto": "O que aconteceu com ele?",
+          "dica": "direto",
+          "impacto": 8,
+          "tipo": "dialogo_medio",
+          "proximo": "memorias_dizer"
+        }
+      ]
+    },
+
+    "bom_homem": {
+      "id": "bom_homem",
+      "contexto": "Tanaka olha para o copo vazio.",
+      "texto": "\"Era. O tipo de pessoa que faz o mundo parecer menos ruim.\"\n\nEle esfrega as mãos.\n\n\"Por isso dói tanto. Gente boa não deveria morrer assim.\"",
+      "e_pista": true,
+      "pista_id": "morte_injusta",
+      "opcoes": [
+        {
+          "texto": "Como ele morreu?",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "memorias_dizer"
+        },
+        {
+          "texto": "[Reabastecer o sake]",
+          "dica": "paciente",
+          "impacto": 10,
+          "tipo": "silencio",
+          "proximo": "reabastecer"
+        }
+      ]
+    },
+
+    "maos_memorias": {
+      "id": "maos_memorias",
+      "contexto": "Tanaka olha para as próprias mãos com uma expressão distante.",
+      "texto": "\"Memorias...\"\n\nEle vira as palmas para cima, examinando as cicatrizes antigas.\n\n\"Essas mãos puxaram muita gente pra fora do fogo. Mas tem uma pessoa que elas não conseguiram salvar.\"\n\nUm silêncio pesado.\n\n\"Era um cozinheiro. Dono de um restaurante pequeno. Fazia ochazuke pros bombeiros depois do turno.\"",
+      "e_pista": true,
+      "pista_id": "ochazuke",
+      "gatilho_prato": true,
+      "opcoes": [
+        {
+          "texto": "Ochazuke? Posso preparar um para você.",
+          "dica": "acolhedor",
+          "impacto": 18,
+          "tipo": "dialogo_curto",
+          "proximo": "aceitar_ochazuke"
+        },
+        {
+          "texto": "O que aconteceu com esse cozinheiro?",
+          "dica": "cuidadoso",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "memorias_dizer"
+        },
+        {
+          "texto": "Suas mãos salvaram muitas vidas. Isso importa.",
+          "dica": "consolador",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "vidas_salvas"
+        }
+      ]
+    },
+
+    "vidas_salvas": {
+      "id": "vidas_salvas",
+      "contexto": "Tanaka fecha os punhos lentamente, depois relaxa.",
+      "texto": "\"Talvez. Mas a gente não conta as vitórias, né? Só as derrotas.\"\n\nEle bebe o resto do sake.\n\n\"Esse cozinheiro... o restaurante dele pegou fogo. Eu estava no turno aquela noite. Entrei pra tirar ele de lá.\"\n\nA voz falha.\n\n\"O teto desabou. Eu saí. Ele não.\"",
+      "e_pista": true,
+      "pista_id": "tentou_salvar",
+      "opcoes": [
+        {
+          "texto": "Você arriscou sua vida por ele. Isso é tudo que alguém pode fazer.",
+          "dica": "empático",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "coragem"
+        },
+        {
+          "texto": "Como era o ochazuke que ele fazia?",
+          "dica": "mudando assunto",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "lugar_especial"
+        }
+      ]
+    },
+
+    "aposentadoria": {
+      "id": "aposentadoria",
+      "contexto": "Tanaka hesita antes de responder.",
+      "texto": "\"Força no corpo, talvez. Na cabeça...\"\n\nEle bate de leve na têmpora.\n\n\"Depois de trinta anos, certas imagens não saem. E quando você congela no momento errado porque lembrou de algo...\"\n\nUm suspiro.\n\n\"Melhor parar antes de colocar alguém em risco.\"",
+      "e_pista": true,
+      "pista_id": "trauma",
+      "opcoes": [
+        {
+          "texto": "O que faz você congelar?",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "tira_sono"
+        },
+        {
+          "texto": "Saber a hora de parar é sabedoria, não fraqueza.",
+          "dica": "respeitoso",
+          "impacto": 15,
+          "tipo": "dialogo_curto",
+          "proximo": "sabedoria"
+        },
+        {
+          "texto": "Quer comer algo? Ajuda a clarear a cabeça.",
+          "dica": "prático",
+          "impacto": 8,
+          "tipo": "dialogo_curto",
+          "proximo": "oferecer_comida"
+        }
+      ]
+    },
+
+    "sabedoria": {
+      "id": "sabedoria",
+      "contexto": "Tanaka considera as palavras.",
+      "texto": "\"Sabedoria...\"\n\nEle ri baixinho, sem humor.\n\n\"Ou covardia. Depende do dia.\"\n\nUm silêncio.\n\n\"Tinha um cozinheiro que eu conhecia. Ele dizia que sabedoria é saber quando o arroz está no ponto. Simples assim.\"\n\nOs olhos ficam distantes.\n\n\"Fazia o melhor ochazuke que já comi.\"",
+      "e_pista": true,
+      "pista_id": "ochazuke",
+      "gatilho_prato": true,
+      "opcoes": [
+        {
+          "texto": "Ochazuke? Posso fazer um agora.",
+          "dica": "acolhedor",
+          "impacto": 18,
+          "tipo": "dialogo_curto",
+          "proximo": "aceitar_ochazuke"
+        },
+        {
+          "texto": "O que aconteceu com esse cozinheiro?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "memorias_dizer"
+        }
+      ]
+    },
+
+    "qual_incendio": {
+      "id": "qual_incendio",
+      "contexto": "Tanaka fecha os olhos por um momento.",
+      "texto": "\"Um restaurante. Pequeno, aqui perto. Faz dez anos.\"\n\nEle abre os olhos, mas não olha para você.\n\n\"O dono era um bom homem. Fazia comida pros bombeiros do bairro. Ochazuke, principalmente. Simples, mas reconfortante.\"\n\nA voz fica mais baixa.\n\n\"Morreu no incêndio. Eu estava lá. Tentei tirar ele.\"",
+      "e_pista": true,
+      "pista_id": "restaurante_fogo",
+      "pensamento_master": "Dez anos. Um restaurante. A cicatriz no seu rosto parece queimar.",
+      "opcoes": [
+        {
+          "texto": "Você fez o que pôde.",
+          "dica": "consolador",
+          "impacto": 12,
+          "tipo": "dialogo_curto",
+          "proximo": "nao_culpa"
+        },
+        {
+          "texto": "Ochazuke... eu posso fazer um para você.",
+          "dica": "gentil",
+          "impacto": 18,
+          "tipo": "dialogo_curto",
+          "proximo": "aceitar_ochazuke"
+        },
+        {
+          "texto": "Como começou o fogo?",
+          "dica": "investigativo",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "origem_fogo_pergunta"
+        }
+      ]
+    },
+
+    "origem_fogo_pergunta": {
+      "id": "origem_fogo_pergunta",
+      "contexto": "Tanaka franze a testa.",
+      "texto": "\"O laudo disse cozinha. Mas...\"\n\nEle hesita.\n\n\"Trinta anos apagando fogo. Você aprende a ler as chamas. E aquele fogo... não parecia começar de dentro.\"\n\nUm olhar distante.\n\n\"Parecia vir de fora. Lateral. Mas quem sou eu pra questionar o laudo oficial?\"",
+      "e_pista": true,
+      "pista_id": "origem_fogo",
+      "opcoes": [
+        {
+          "texto": "Você confia nos seus instintos ou no laudo?",
+          "dica": "provocador",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "experiencia_fogo"
+        },
+        {
+          "texto": "Às vezes a verdade oficial não é a verdade.",
+          "dica": "misterioso",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "verdade_oficial"
+        }
+      ]
+    },
+
+    "verdade_oficial": {
+      "id": "verdade_oficial",
+      "contexto": "Tanaka olha para você com atenção renovada.",
+      "texto": "\"É o que eu penso às vezes.\"\n\nEle estuda seu rosto por um momento.\n\n\"Você fala como alguém que sabe disso.\"\n\nUm silêncio.\n\n\"Bom. Pelo menos não sou o único que duvida.\"",
+      "opcoes": [
+        {
+          "texto": "Todo mundo tem suas dúvidas.",
+          "dica": "evasivo",
+          "impacto": 8,
+          "tipo": "dialogo_curto",
+          "proximo": "oferecer_comida"
+        },
+        {
+          "texto": "O que você faria se descobrisse a verdade?",
+          "dica": "direto",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "descobrir_verdade"
+        }
+      ]
+    },
+
+    "descobrir_verdade": {
+      "id": "descobrir_verdade",
+      "contexto": "Tanaka pensa por um longo momento.",
+      "texto": "\"Não sei. Talvez nada. O homem morreu. Saber como não vai trazer ele de volta.\"\n\nEle esfrega as mãos.\n\n\"Mas talvez... talvez eu pudesse dormir melhor.\"\n\nUm suspiro.\n\n\"Esse restaurante de vocês... me lembra o dele. O cheiro, a sensação. Até o jeito que você fica aí atrás do balcão.\"",
+      "opcoes": [
+        {
+          "texto": "Posso fazer algo pra você comer. O que ele costumava preparar?",
+          "dica": "acolhedor",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "lugar_especial"
+        },
+        {
+          "texto": "[Deixar o silêncio trabalhar]",
+          "dica": "paciente",
+          "impacto": 10,
+          "tipo": "silencio",
+          "proximo": "silencio_trabalho"
+        }
+      ]
+    },
+
+    "oferecer_comida": {
+      "id": "oferecer_comida",
+      "contexto": "Tanaka olha para o copo vazio, depois para você.",
+      "texto": "\"Comer...\"\n\nEle parece considerar a ideia como se fosse nova.\n\n\"Faz tempo que não tenho apetite de verdade. Mas talvez... algo leve.\"\n\nUma pausa.\n\n\"Tinha um prato que eu comia muito. No restaurante do homem que morreu. Ochazuke. Chá sobre arroz. Simples.\"",
+      "e_pista": true,
+      "pista_id": "ochazuke",
+      "gatilho_prato": true,
+      "opcoes": [
+        {
+          "texto": "Ochazuke eu sei fazer. Quer experimentar o meu?",
+          "dica": "convidativo",
+          "impacto": 18,
+          "tipo": "dialogo_curto",
+          "proximo": "aceitar_ochazuke"
+        },
+        {
+          "texto": "O que tinha de especial no ochazuke dele?",
+          "dica": "curioso",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "ochazuke_especial"
+        }
+      ]
+    },
+
+    "ochazuke_especial": {
+      "id": "ochazuke_especial",
+      "contexto": "Os olhos de Tanaka ficam suaves com a memória.",
+      "texto": "\"Nada complicado. Arroz, chá verde quente, umeboshi, um pouco de nori.\"\n\nEle quase sorri.\n\n\"Mas ele fazia com... atenção, sabe? Como se cada tigela fosse importante.\"\n\nUm silêncio.\n\n\"Dizia que ochazuke era pra quando a alma precisa de algo simples e verdadeiro.\"",
+      "revelacao_prato": "ochazuke",
+      "opcoes": [
+        {
+          "texto": "Vou fazer um ochazuke para você. Do jeito simples.",
+          "dica": "decidido",
+          "impacto": 20,
+          "tipo": "cozinha",
+          "proximo": "preparar_ochazuke"
+        }
+      ]
+    },
+
+    "como_bombeiro": {
+      "id": "como_bombeiro",
+      "contexto": "Tanaka acena.",
+      "texto": "\"Era meu turno. Chegamos rápido, mas o fogo já tinha tomado conta.\"\n\nEle olha para as mãos.\n\n\"Entrei sem pensar. Encontrei ele perto da cozinha, inconsciente. Tentei puxar...\"\n\nA voz falha.\n\n\"O teto veio abaixo. Tive que soltar ele pra não morrer também.\"",
+      "e_pista": true,
+      "pista_id": "tentou_salvar",
+      "opcoes": [
+        {
+          "texto": "Você quase morreu tentando salvá-lo.",
+          "dica": "sério",
+          "impacto": 15,
+          "tipo": "dialogo_curto",
+          "proximo": "coragem"
+        },
+        {
+          "texto": "Soltar foi a decisão certa. Você não tinha escolha.",
+          "dica": "consolador",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "nao_culpa"
+        }
+      ]
+    },
+
+    "coragem": {
+      "id": "coragem",
+      "contexto": "Tanaka balança a cabeça lentamente.",
+      "texto": "\"Coragem...\"\n\nEle olha para as mãos, as cicatrizes antigas.\n\n\"Não me sinto corajoso. Me sinto... incompleto. Como se tivesse deixado uma parte de mim naquele fogo.\"\n\nUm silêncio longo.\n\n\"Ele fazia ochazuke, sabe? Depois dos turnos difíceis, a gente ia lá. Arroz quente, chá verde, umeboshi. Simples. Reconfortante.\"",
+      "e_pista": true,
+      "pista_id": "ochazuke",
+      "gatilho_prato": true,
+      "opcoes": [
+        {
+          "texto": "Posso fazer ochazuke para você. Talvez ajude a recuperar essa parte.",
+          "dica": "gentil",
+          "impacto": 18,
+          "tipo": "dialogo_curto",
+          "proximo": "aceitar_ochazuke"
+        },
+        {
+          "texto": "O fogo levou ele. Mas a memória do que ele fazia pode continuar.",
+          "dica": "filosófico",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "memoria_continua"
+        }
+      ]
+    },
+
+    "memoria_continua": {
+      "id": "memoria_continua",
+      "contexto": "Tanaka ergue os olhos, surpreso.",
+      "texto": "\"Continuar...\"\n\nEle repete a palavra, testando-a.\n\n\"Nunca pensei assim. Sempre achei que quando ele morreu, tudo morreu junto.\"\n\nUm olhar para a cozinha.\n\n\"Você faz ochazuke aqui?\"",
+      "opcoes": [
+        {
+          "texto": "Faço. Quer provar?",
+          "dica": "simples",
+          "impacto": 15,
+          "tipo": "dialogo_curto",
+          "proximo": "aceitar_ochazuke"
+        },
+        {
+          "texto": "Faço. Mas cada cozinheiro tem seu jeito. O meu não vai ser igual ao dele.",
+          "dica": "honesto",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "nao_igual"
+        }
+      ]
+    },
+
+    "nao_igual": {
+      "id": "nao_igual",
+      "contexto": "Tanaka acena, um meio sorriso no rosto.",
+      "texto": "\"Não precisa ser igual. Talvez seja melhor assim.\"\n\nEle olha para o copo vazio.\n\n\"Um ochazuke diferente. Uma memória nova em cima da antiga.\"\n\nUm suspiro.\n\n\"Pode fazer. Por favor.\"",
+      "revelacao_prato": "ochazuke",
+      "opcoes": [
+        {
+          "texto": "Ochazuke. Vou preparar.",
+          "dica": "",
+          "impacto": 20,
+          "tipo": "cozinha",
+          "proximo": "preparar_ochazuke"
+        }
+      ]
+    },
+
+    "experiencia_fogo": {
+      "id": "experiencia_fogo",
+      "contexto": "Tanaka endireita os ombros, um lampejo do bombeiro que foi.",
+      "texto": "\"Meus instintos.\"\n\nA resposta vem firme, sem hesitação.\n\n\"Trinta anos. Centenas de incêndios. Você aprende a ler o fogo como outros leem livros.\"\n\nEle franze a testa.\n\n\"Aquele fogo veio de fora. Tenho certeza. Mas não consegui provar nada.\"",
+      "e_pista": true,
+      "pista_id": "fogo_externo",
+      "pensamento_master": "Fogo de fora. As palavras ecoam. Você se lembra do cheiro de gasolina.",
+      "opcoes": [
+        {
+          "texto": "Se veio de fora... alguém colocou fogo.",
+          "dica": "direto",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "alguem_colocou"
+        },
+        {
+          "texto": "Alguns mistérios não têm resposta. Mas podemos honrar a memória.",
+          "dica": "filosófico",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "honrar_memoria"
+        }
+      ]
+    },
+
+    "alguem_colocou": {
+      "id": "alguem_colocou",
+      "contexto": "Tanaka acena, a expressão sombria.",
+      "texto": "\"É o que eu penso. Mas nunca encontraram ninguém. Caso arquivado como acidente.\"\n\nEle termina o sake.\n\n\"O dono tinha inimigos? Dívidas? Nunca soube. Era só um cozinheiro que fazia comida boa.\"\n\nUm silêncio pesado.\n\n\"Ochazuke. Era o que ele fazia de melhor. Simples, honesto. Como ele.\"",
+      "e_pista": true,
+      "pista_id": "ochazuke",
+      "gatilho_prato": true,
+      "opcoes": [
+        {
+          "texto": "Deixa eu fazer um ochazuke para você. Em memória dele.",
+          "dica": "respeitoso",
+          "impacto": 18,
+          "tipo": "dialogo_curto",
+          "proximo": "aceitar_ochazuke"
+        },
+        {
+          "texto": "Às vezes a justiça demora. Mas chega.",
+          "dica": "misterioso",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "justica_demora"
+        }
+      ]
+    },
+
+    "justica_demora": {
+      "id": "justica_demora",
+      "contexto": "Tanaka olha para você com atenção.",
+      "texto": "\"Você fala como se soubesse de algo.\"\n\nUm silêncio tenso.\n\n\"Mas não importa. Dez anos. O que quer que tenha acontecido, já passou.\"\n\nEle esfrega as mãos.\n\n\"Só queria poder comer o ochazuke dele mais uma vez. Sentir que nem tudo se perdeu.\"",
+      "revelacao_prato": "ochazuke",
+      "opcoes": [
+        {
+          "texto": "Vou fazer ochazuke. Não vai ser o mesmo, mas vai ser feito com respeito.",
+          "dica": "honesto",
+          "impacto": 18,
+          "tipo": "cozinha",
+          "proximo": "preparar_ochazuke"
+        }
+      ]
+    },
+
+    "honrar_memoria": {
+      "id": "honrar_memoria",
+      "contexto": "Algo no rosto de Tanaka suaviza.",
+      "texto": "\"Honrar a memória...\"\n\nEle considera as palavras.\n\n\"Talvez seja isso que eu esteja procurando todos esses anos. Não respostas. Apenas... uma forma de lembrar dele.\"\n\nUm olhar para você.\n\n\"Você faz ochazuke? Era o prato dele. O que ele fazia de melhor.\"",
+      "e_pista": true,
+      "pista_id": "ochazuke",
+      "gatilho_prato": true,
+      "opcoes": [
+        {
+          "texto": "Faço. Quer que eu prepare um?",
+          "dica": "simples",
+          "impacto": 15,
+          "tipo": "dialogo_curto",
+          "proximo": "aceitar_ochazuke"
+        },
+        {
+          "texto": "Vou fazer um ochazuke em homenagem a ele.",
+          "dica": "respeitoso",
+          "impacto": 18,
+          "tipo": "dialogo_curto",
+          "proximo": "aceitar_ochazuke"
+        }
+      ]
+    },
+
+    "bom_pensar": {
+      "id": "bom_pensar",
+      "contexto": "Tanaka acena devagar, segurando o sake.",
+      "texto": "\"É. Pensar.\"\n\nEle bebe um gole pequeno.\n\n\"Ou tentar não pensar. Depende da noite.\"\n\nUm silêncio.\n\n\"Hoje é noite de pensar. Aniversário de algo que preferia esquecer.\"",
+      "e_pista": true,
+      "pista_id": "aniversario",
+      "opcoes": [
+        {
+          "texto": "Aniversário de quê?",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "qual_incendio"
+        },
+        {
+          "texto": "Quer companhia ou prefere ficar sozinho com os pensamentos?",
+          "dica": "respeitoso",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "companhia"
+        },
+        {
+          "texto": "[Apenas reabastecer o sake]",
+          "dica": "paciente",
+          "impacto": 8,
+          "tipo": "silencio",
+          "proximo": "reabastecer"
+        }
+      ]
+    },
+
+    "companhia": {
+      "id": "companhia",
+      "contexto": "Tanaka pensa por um momento.",
+      "texto": "\"Companhia... faz tempo que não tenho.\"\n\nEle olha ao redor do restaurante vazio.\n\n\"Minha esposa foi embora há anos. Os filhos moram longe. Os colegas de trabalho... a maioria já se foi.\"\n\nUm suspiro.\n\n\"Fico aqui, se não se importar.\"",
+      "opcoes": [
+        {
+          "texto": "Fique o tempo que quiser. Posso fazer algo pra comer.",
+          "dica": "acolhedor",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_comida"
+        },
+        {
+          "texto": "A solidão pesa mais em certas noites.",
+          "dica": "compreensivo",
+          "impacto": 12,
+          "tipo": "dialogo_curto",
+          "proximo": "solidao_pesa"
+        }
+      ]
+    },
+
+    "solidao_pesa": {
+      "id": "solidao_pesa",
+      "contexto": "Tanaka acena, um reconhecimento silencioso.",
+      "texto": "\"Pesa. Principalmente quando você se lembra das pessoas que perdeu.\"\n\nEle gira o copo nas mãos.\n\n\"Tinha um amigo. Cozinheiro. Morreu num incêndio há dez anos.\"\n\nOs olhos ficam distantes.\n\n\"Fazia o melhor ochazuke que já comi.\"",
+      "e_pista": true,
+      "pista_id": "ochazuke",
+      "gatilho_prato": true,
+      "opcoes": [
+        {
+          "texto": "Posso fazer ochazuke. Em memória do seu amigo.",
+          "dica": "respeitoso",
+          "impacto": 18,
+          "tipo": "dialogo_curto",
+          "proximo": "aceitar_ochazuke"
+        },
+        {
+          "texto": "Conte-me sobre ele.",
+          "dica": "interessado",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "memorias_dizer"
+        }
+      ]
+    }
+  }
+}

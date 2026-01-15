@@ -1,0 +1,547 @@
+{
+  "cliente_id": "sachiko",
+  "no_inicial": "chegada",
+
+  "nos": {
+    "chegada": {
+      "id": "chegada",
+      "contexto": "Sachiko entrou com precisão de executiva. Quer algo rápido, sem conversa.",
+      "texto": "",
+      "opcoes": [
+        {
+          "texto": "Algo rápido? O que gostaria?",
+          "dica": "eficiente",
+          "impacto": 5,
+          "tipo": "dialogo_curto",
+          "proximo": "algo_rapido"
+        },
+        {
+          "texto": "Direto do trabalho? Parece cansada.",
+          "dica": "observador",
+          "impacto": 8,
+          "tipo": "dialogo_medio",
+          "proximo": "direto_trabalho"
+        },
+        {
+          "texto": "[Começar a preparar chá sem perguntar]",
+          "dica": "intuitivo",
+          "impacto": 12,
+          "tipo": "silencio",
+          "proximo": "cha_sem_perguntar"
+        }
+      ]
+    },
+
+    "direto_trabalho": {
+      "id": "direto_trabalho",
+      "contexto": "Sachiko toca o celular instintivamente.",
+      "texto": "\"Sempre.\"\n\nO tom é seco, mas não hostil.\n\n\"Trabalhando até tarde. Como sempre. Igual...\" Ela para. Muda de direção. \"Qualquer coisa está bom.\"",
+      "opcoes": [
+        {
+          "texto": "Igual a quem?",
+          "dica": "atento",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "igual_quem"
+        },
+        {
+          "texto": "Comida de verdade ajuda mais que qualquer coisa. O que você gostava de comer em casa?",
+          "dica": "cuidadoso",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "comer_casa"
+        }
+      ]
+    },
+
+    "igual_quem": {
+      "id": "igual_quem",
+      "contexto": "Sachiko hesita. Não esperava a pergunta.",
+      "texto": "\"Ninguém. Desculpa. Estou cansada.\"\n\nEla guarda o celular com mais força que o necessário.\n\n\"Meu pai era assim. Trabalhava todas as noites.\"",
+      "e_pista": true,
+      "pista_id": "pai",
+      "opcoes": [
+        {
+          "texto": "O que ele fazia?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "fazia_oque"
+        },
+        {
+          "texto": "E você virou igual a ele?",
+          "dica": "perceptivo",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "virou_igual"
+        }
+      ]
+    },
+
+    "fazia_oque": {
+      "id": "fazia_oque",
+      "contexto": "Sachiko olha para as próprias mãos.",
+      "texto": "\"Era cozinheiro. Tinha um restaurante pequeno.\"\n\nA voz dela muda, fica mais baixa.\n\n\"Não ficou rico com isso. Mas... ele gostava.\"",
+      "e_pista": true,
+      "pista_id": "cozinheiro",
+      "pensamento_master": "Cozinheiro. Restaurante pequeno. As palavras ecoam de um jeito familiar.",
+      "opcoes": [
+        {
+          "texto": "Você fala dele no passado.",
+          "dica": "cuidadoso",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "passado"
+        },
+        {
+          "texto": "Você herdou o amor pela comida?",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "herdou_amor"
+        }
+      ]
+    },
+
+    "passado": {
+      "id": "passado",
+      "contexto": "Sachiko acena lentamente.",
+      "texto": "\"Ele morreu. Há dez anos.\"\n\nEla não olha para você.\n\n\"Um incêndio. No restaurante dele.\"",
+      "e_pista": true,
+      "pista_id": "incendio",
+      "pensamento_master": "Dez anos. Incêndio. Restaurante. As palavras se conectam como peças de um quebra-cabeça.",
+      "opcoes": [
+        {
+          "texto": "Sinto muito.",
+          "dica": "empático",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "sinto_muito"
+        },
+        {
+          "texto": "Vocês eram próximos?",
+          "dica": "cuidadoso",
+          "impacto": 8,
+          "tipo": "dialogo_medio",
+          "proximo": "eram_proximos"
+        }
+      ]
+    },
+
+    "sinto_muito": {
+      "id": "sinto_muito",
+      "contexto": "Sachiko endurece os ombros.",
+      "texto": "\"Obrigada.\"\n\nUma pausa.\n\n\"A gente tinha brigado. Antes. Eu disse coisas... que não deviam ser as últimas.\"",
+      "e_pista": true,
+      "pista_id": "brigaram",
+      "opcoes": [
+        {
+          "texto": "A maioria das últimas conversas não são as que planejamos.",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "nao_planejamos"
+        },
+        {
+          "texto": "O que você disse?",
+          "dica": "direto",
+          "impacto": 8,
+          "tipo": "dialogo_medio",
+          "proximo": "disse_oque"
+        }
+      ]
+    },
+
+    "disse_oque": {
+      "id": "disse_oque",
+      "contexto": "Sachiko fecha os olhos por um momento.",
+      "texto": "\"Que o restaurante era um fracasso. Que eu tinha vergonha dele.\"\n\nQuando ela abre os olhos, estão úmidos.\n\n\"Era mentira. Eu tinha medo que ele nunca parasse. Que trabalhasse até morrer.\" Ela ri amargamente. \"E ele morreu mesmo. Só não do jeito que eu temia.\"",
+      "e_pista": true,
+      "pista_id": "vergonha",
+      "gatilho_prato": true,
+      "opcoes": [
+        {
+          "texto": "Ele sabia que você o amava. Pais sabem.",
+          "dica": "consolador",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "pais_sabem"
+        },
+        {
+          "texto": "O que ele costumava fazer para você? De especial.",
+          "dica": "redirecionando",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "fazia_especial"
+        }
+      ]
+    },
+
+    "fazia_especial": {
+      "id": "fazia_especial",
+      "contexto": "Algo no rosto de Sachiko suaviza.",
+      "texto": "\"Nikujaga.\"\n\nA palavra sai como um suspiro.\n\n\"Carne com batata. Simples. Mas ele fazia todo domingo, desde que eu era criança.\"\n\nOs olhos dela se perdem em algum lugar distante.\n\n\"Parei de comer depois que ele morreu. Não consigo.\"",
+      "revelacao_prato": "nikujaga",
+      "opcoes": [
+        {
+          "texto": "Posso fazer nikujaga. Se você quiser tentar.",
+          "dica": "oferecendo",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "fazer_nikujaga"
+        }
+      ]
+    },
+
+    "fazer_nikujaga": {
+      "id": "fazer_nikujaga",
+      "contexto": "Sachiko hesita. Algo nela luta contra a ideia.",
+      "texto": "\"Eu...\"\n\nEla olha para o celular. Depois para você. O celular fica onde está.\n\n\"Tá. Tá bom.\"",
+      "opcoes": [
+        {
+          "texto": "Nikujaga. Vou preparar.",
+          "dica": "",
+          "impacto": 20,
+          "tipo": "cozinha",
+          "proximo": "preparar_nikujaga"
+        }
+      ]
+    },
+
+    "preparar_nikujaga": {
+      "id": "preparar_nikujaga",
+      "contexto": "Você começa a preparar o nikujaga.",
+      "texto": "",
+      "tipo_cena": "cozinha",
+      "prato": "nikujaga"
+    },
+
+    "nao_planejamos": {
+      "id": "nao_planejamos",
+      "contexto": "Sachiko para de mexer no celular.",
+      "texto": "\"É.\"\n\nEla olha para você, realmente olha pela primeira vez.\n\n\"Eu queria que ele vendesse o restaurante. Descansasse. Mas ele recusou. A gente brigou.\" Pausa. \"Uma semana depois, o fogo.\"",
+      "e_pista": true,
+      "pista_id": "uma_semana",
+      "opcoes": [
+        {
+          "texto": "Você não sabia o que ia acontecer. Ninguém sabia.",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "ninguem_sabia"
+        },
+        {
+          "texto": "O que você queria ter dito a ele?",
+          "dica": "profundo",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "queria_dizer"
+        }
+      ]
+    },
+
+    "queria_dizer": {
+      "id": "queria_dizer",
+      "contexto": "Os olhos de Sachiko se enchem de lágrimas.",
+      "texto": "\"Que eu tinha orgulho dele. Do jeito dele de cuidar das pessoas.\"\n\nEla abre a pasta de trabalho e tira um caderno velho, surrado.\n\n\"Encontrei isso anos depois. O caderno dele.\"",
+      "e_pista": true,
+      "pista_id": "caderno",
+      "opcoes": [
+        {
+          "texto": "O que tem no caderno?",
+          "dica": "curioso",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "no_caderno"
+        },
+        {
+          "texto": "Você guarda com você.",
+          "dica": "observador",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "guarda_consigo"
+        }
+      ]
+    },
+
+    "no_caderno": {
+      "id": "no_caderno",
+      "contexto": "Sachiko abre o caderno com cuidado.",
+      "texto": "\"Receitas. Contas. Notas sobre o restaurante.\"\n\nEla passa as páginas devagar.\n\n\"E... uma parte sobre a fiação. Ele sabia que estava velha. Precisava trocar.\"\n\nEla para numa página específica.\n\n\"E ele escreve sobre um menino. Um aprendiz.\"",
+      "e_pista": true,
+      "pista_id": "menino",
+      "pensamento_master": "As palavras atravessam você. Menino. Aprendiz. Ele escreveu sobre você.",
+      "gatilho_prato": true,
+      "opcoes": [
+        {
+          "texto": "O que ele escreveu sobre o menino?",
+          "dica": "contido",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "sobre_menino"
+        }
+      ]
+    },
+
+    "sobre_menino": {
+      "id": "sobre_menino",
+      "contexto": "Sachiko lê do caderno.",
+      "texto": "\"'A fiação está velha. Preciso trocar, mas não posso fechar para reforma. O menino depende do emprego. Vou juntar dinheiro aos poucos.'\"\n\nEla olha para você.\n\n\"Ele se importava com esse menino. Escrevia sobre ele com carinho.\"\n\nUma pausa.\n\n\"Nunca conheci esse aprendiz. Espero que ele esteja bem. Espero que ele saiba que meu pai...\"",
+      "e_pista": true,
+      "pista_id": "aprendiz",
+      "opcoes": [
+        {
+          "texto": "Deixa eu fazer algo para você. O que seu pai costumava preparar?",
+          "dica": "redirecionando",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "fazia_especial"
+        }
+      ]
+    },
+
+    "algo_rapido": {
+      "id": "algo_rapido",
+      "contexto": "Sachiko olha o menu brevemente.",
+      "texto": "\"Qualquer coisa. Onigiri, talvez.\"\n\nEla checa o celular mais uma vez. Depois o guarda com um suspiro irritado.\n\n\"Desculpa. Dia longo.\"",
+      "opcoes": [
+        {
+          "texto": "Quer falar sobre isso?",
+          "dica": "aberto",
+          "impacto": 8,
+          "tipo": "dialogo_curto",
+          "proximo": "falar_sobre"
+        },
+        {
+          "texto": "[Preparar o onigiri em silêncio]",
+          "dica": "respeitoso",
+          "impacto": 10,
+          "tipo": "silencio",
+          "proximo": "preparar_silencio"
+        }
+      ]
+    },
+
+    "falar_sobre": {
+      "id": "falar_sobre",
+      "contexto": "Sachiko hesita.",
+      "texto": "\"Não. Sim. Não sei.\"\n\nEla ri sem humor.\n\n\"Trabalho demais. Igual meu pai. Que ironia.\"",
+      "e_pista": true,
+      "pista_id": "pai",
+      "opcoes": [
+        {
+          "texto": "O que seu pai fazia?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "fazia_oque"
+        }
+      ]
+    },
+
+    "preparar_silencio": {
+      "id": "preparar_silencio",
+      "contexto": "Você prepara em silêncio. Sachiko observa.",
+      "texto": "O silêncio se estende. Sachiko relaxa um pouco nos ombros.\n\n\"Meu pai trabalhava assim. Em silêncio, concentrado.\"",
+      "e_pista": true,
+      "pista_id": "pai",
+      "opcoes": [
+        {
+          "texto": "Ele também era cozinheiro?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "fazia_oque"
+        }
+      ]
+    },
+
+    "cha_sem_perguntar": {
+      "id": "cha_sem_perguntar",
+      "contexto": "Você coloca o chá diante dela sem dizer nada.",
+      "texto": "Sachiko olha para o chá, surpresa. Depois para você.\n\n\"Obrigada.\"\n\nEla segura a xícara com as duas mãos. Os ombros descem um pouco.\n\n\"Faz tempo que alguém não... não percebe o que preciso sem perguntar.\"",
+      "opcoes": [
+        {
+          "texto": "Às vezes o silêncio diz mais.",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "silencio_diz_mais"
+        }
+      ]
+    },
+
+    "silencio_diz_mais": {
+      "id": "silencio_diz_mais",
+      "contexto": "Sachiko bebe o chá devagar.",
+      "texto": "\"Meu pai dizia isso.\"\n\nAs palavras saem antes que ela possa segurá-las.\n\n\"Ele era cozinheiro. Tinha um restaurante pequeno. Morreu há dez anos.\"",
+      "e_pista": true,
+      "pista_id": "pai",
+      "opcoes": [
+        {
+          "texto": "O que aconteceu?",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "passado"
+        }
+      ]
+    },
+
+    "comer_casa": {
+      "id": "comer_casa",
+      "contexto": "Sachiko para de mexer no celular.",
+      "texto": "\"Em casa?\"\n\nA pergunta parece pegar ela desprevenida.\n\n\"Meu pai... ele fazia nikujaga. Todo domingo.\"\n\nOs olhos dela se distanciam por um momento.",
+      "e_pista": true,
+      "pista_id": "nikujaga",
+      "opcoes": [
+        {
+          "texto": "Seu pai cozinhava?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "fazia_oque"
+        },
+        {
+          "texto": "Posso fazer nikujaga. Se quiser lembrar.",
+          "dica": "oferecendo",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "fazer_nikujaga"
+        }
+      ]
+    },
+
+    "virou_igual": {
+      "id": "virou_igual",
+      "contexto": "Sachiko congela por um segundo.",
+      "texto": "\"Talvez.\"\n\nEla olha para o celular, depois o guarda.\n\n\"Ele trabalhava todas as noites. Eu disse que era obsessão. Agora olha pra mim.\"",
+      "opcoes": [
+        {
+          "texto": "Vocês conversavam sobre isso?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "conversavam"
+        }
+      ]
+    },
+
+    "conversavam": {
+      "id": "conversavam",
+      "contexto": "Sachiko desvia o olhar.",
+      "texto": "\"Uma vez. A última vez que falamos de verdade.\"\n\nA voz dela fica mais baixa.\n\n\"Eu disse coisas horríveis. Uma semana depois, ele morreu.\"",
+      "e_pista": true,
+      "pista_id": "brigaram",
+      "opcoes": [
+        {
+          "texto": "O que aconteceu com ele?",
+          "dica": "cuidadoso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "passado"
+        }
+      ]
+    },
+
+    "eram_proximos": {
+      "id": "eram_proximos",
+      "contexto": "Sachiko hesita.",
+      "texto": "\"Éramos. Quando eu era criança.\"\n\nEla mexe na xícara vazia.\n\n\"Depois... depois eu cresci, fui trabalhar em empresa grande. Achava que ele devia fazer igual. Vender o restaurante. Parar.\"\n\nPausa.\n\n\"A gente brigou por isso. Uma semana antes do incêndio.\"",
+      "e_pista": true,
+      "pista_id": "brigaram",
+      "opcoes": [
+        {
+          "texto": "E você nunca teve chance de resolver.",
+          "dica": "empático",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "nunca_resolver"
+        }
+      ]
+    },
+
+    "nunca_resolver": {
+      "id": "nunca_resolver",
+      "contexto": "Os olhos de Sachiko se enchem de lágrimas.",
+      "texto": "\"Não.\"\n\nEla limpa os olhos com as costas da mão.\n\n\"Mas anos depois, encontrei um caderno dele. E nele...\" Ela abre a pasta de trabalho. \"Nele, ele escreveu algumas coisas.\"",
+      "e_pista": true,
+      "pista_id": "caderno",
+      "opcoes": [
+        {
+          "texto": "Posso ver?",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "no_caderno"
+        }
+      ]
+    },
+
+    "pais_sabem": {
+      "id": "pais_sabem",
+      "contexto": "Sachiko quer acreditar.",
+      "texto": "\"Será?\"\n\nEla abre a pasta e tira o caderno surrado.\n\n\"Encontrei isso anos depois. As anotações dele. E tem uma parte...\" Ela hesita. \"Uma parte sobre um aprendiz. Um menino que trabalhava com ele.\"",
+      "e_pista": true,
+      "pista_id": "caderno",
+      "opcoes": [
+        {
+          "texto": "O que ele escreveu?",
+          "dica": "curioso",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "sobre_menino"
+        }
+      ]
+    },
+
+    "herdou_amor": {
+      "id": "herdou_amor",
+      "contexto": "Sachiko considera a pergunta.",
+      "texto": "\"Não como ele queria.\"\n\nEla mexe no guardanapo.\n\n\"Eu virei contadora. Números, planilhas. O oposto do que ele fazia.\"\n\nPausa.\n\n\"Ele ficou... decepcionado, acho. Nunca disse, mas eu sentia.\"",
+      "opcoes": [
+        {
+          "texto": "Vocês conversavam sobre isso?",
+          "dica": "gentil",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "conversavam"
+        }
+      ]
+    },
+
+    "guarda_consigo": {
+      "id": "guarda_consigo",
+      "contexto": "Sachiko olha para o caderno.",
+      "texto": "\"Sempre. É o que me resta dele.\"\n\nEla abre numa página específica.\n\n\"Ele escrevia sobre o restaurante. Sobre as pessoas. Sobre um menino que trabalhava com ele.\"\n\nEla olha para você.\n\n\"Um aprendiz. Ele gostava muito desse menino.\"",
+      "e_pista": true,
+      "pista_id": "aprendiz",
+      "opcoes": [
+        {
+          "texto": "O que ele escreveu?",
+          "dica": "contido",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "sobre_menino"
+        }
+      ]
+    },
+
+    "ninguem_sabia": {
+      "id": "ninguem_sabia",
+      "contexto": "Sachiko acena devagar.",
+      "texto": "\"Ele sabia. De uma coisa, pelo menos.\"\n\nEla abre a pasta e tira o caderno.\n\n\"A fiação. Estava velha. Ele escreveu sobre isso.\"",
+      "e_pista": true,
+      "pista_id": "fiacao",
+      "opcoes": [
+        {
+          "texto": "Posso ver?",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "no_caderno"
+        }
+      ]
+    }
+  }
+}

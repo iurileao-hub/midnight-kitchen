@@ -1,0 +1,35 @@
+{
+  "id": "ryo",
+  "nome": "Ryo",
+  "idade": 35,
+  "profissao": "Motorista de táxi noturno",
+  "genero_masculino": true,
+  "hora_chegada": [3, 15],
+  "prato_favorito": "Ochazuke",
+  "memoria": "Fugiu do incêndio enquanto outros ficaram. Carrega a vergonha há dez anos.",
+
+  "descricao_chegada": "A porta se abre com um solavanco.\n\nUm homem magro entra apressado, olhando para trás como se esperasse ser seguido. Uniforme de taxista amarrotado, olheiras profundas.\n\nEle avalia o restaurante rapidamente — as saídas, os cantos — antes de se sentar no banco mais próximo da porta.\n\n\"Algo rápido. Para viagem, se puder.\"\n\nOs dedos tamborilam na perna. Inquietação em cada gesto.",
+
+  "maneirismos": [
+    "Olha para os lados constantemente",
+    "Fala rápido, atropelando palavras",
+    "Nunca tira o casaco, mesmo com calor",
+    "Evita sentar de costas para a porta",
+    "Checa o celular compulsivamente"
+  ],
+
+  "pistas": [
+    "Trabalhou em restaurante antes",
+    "Mudou de área de repente",
+    "O chefe era bom homem, morreu num acidente",
+    "Tinha outro funcionário, mais novo"
+  ],
+
+  "gatilho_prato": "Quando Ryo mencionar 'trabalho antigo' ou 'fim de turno', você perceberá que Ochazuke pode abrir portas trancadas.",
+
+  "despedida_sucesso": "Ryo termina o ochazuke devagar, muito diferente da pressa com que entrou.\n\n\"Eu nunca contei isso pra ninguém. A vergonha, sabe?\"\n\nEle se levanta, finalmente tirando o casaco.\n\n\"O cara mais novo... ele ficou. Pra ajudar. E eu corri.\" Uma pausa. \"Espero que ele esteja bem. Onde quer que esteja.\"\n\nPela primeira vez esta noite, ele não olha para a porta ao sair.",
+
+  "despedida_tempo": "Ryo olha o celular — uma corrida chamando.\n\n\"Preciso ir. O trabalho...\"\n\nEle deixa o pagamento e sai apressado, o casaco ainda vestido, a história ainda dentro.\n\nO ochazuke esfria, intocado.",
+
+  "despedida_falha": "Ryo se levanta de repente, como se o banco queimasse.\n\n\"Foi um erro ter parado aqui.\"\n\nEle sai quase correndo, a porta batendo atrás dele.\n\nO restaurante fica mais vazio do que antes."
+}

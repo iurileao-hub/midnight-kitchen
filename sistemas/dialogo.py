@@ -1,176 +1,303 @@
 """
-SistemaDialogo - Gerencia as conversas com clientes.
+Sistema de Diálogo v2 — Midnight Kitchen.
 
-CONCEITO:
-- O jogador ve opcoes de dialogo na tela (ex: "Boa noite", "Dia dificil?")
-- Cada opcao tem um EFEITO: +1 (abre), 0 (neutro), -1 (fecha)
-- Conforme o cliente muda de estado, as opcoes mudam tambem
-- Quando o cliente esta "aberto", o jogador pode descobrir o prato favorito
-
-FLUXO DO JOGO:
-1. Cliente entra (estado: "fechado")
-2. Jogador escolhe opcoes de dialogo
-3. Cliente muda de estado: fechado -> cauteloso -> aberto -> vulneravel
-4. Quando "aberto", jogador pode perguntar sobre o prato favorito
-5. Sistema retorna o nome do prato para a cozinha preparar
-
-ESTRUTURA DE DADOS:
-- Opcoes sao dicionarios: {"texto": "Boa noite!", "efeito": +1}
-- Cada estado tem suas proprias opcoes
-- Use um dicionario OPCOES onde a chave e o estado
+Gerencia a navegação pela árvore de diálogos,
+sistema de confiança, e detecção de pistas.
 """
 
-import sys
+import json
 from pathlib import Path
+from dataclasses import dataclass, field
+from typing import Optional
 
-# Adiciona o diretorio raiz do projeto ao path
-# Isso permite importar 'models' mesmo rodando de dentro de 'sistemas/'
-sys.path.insert(0, str(Path(__file__).parent.parent))
+from config import (
+    DIALOGOS_DIR,
+    CLIENTES_DIR,
+    CONFIANCA_INICIAL,
+)
+from contracts import (
+    TipoInteracao,
+    EstadoEmocional,
+    DadosCliente,
+    NoDialogo,
+    OpcaoDialogo,
+)
 
-from models.cliente import Cliente
+
+@dataclass
+class OpcaoFormatada:
+    """Uma opção de diálogo formatada para exibição."""
+    indice: int
+    texto: str
+    dica: str
+    disponivel: bool = True
+
+
+@dataclass
+class ResultadoDialogo:
+    """Resultado de uma escolha de diálogo."""
+    texto_resposta: str
+    impacto_confianca: int
+    tipo_interacao: TipoInteracao
+    proximo_no: Optional[str]
+    e_pista: bool = False
+    pista_id: Optional[str] = None
+    pensamento_master: Optional[str] = None
+    gatilho_prato: bool = False
+    revelacao_prato: Optional[str] = None
+    tipo_cena: Optional[str] = None
 
 
 class SistemaDialogo:
-    """Sistema que gerencia conversas com clientes."""
+    """
+    Sistema de diálogo baseado em árvore JSON.
 
-    OPCOES = {
-        "fechado": [
-            {"texto": "Boa noite. O que posso servir?", "efeito": 0},
-            {"texto": "Parece cansado. Dia difícil?", "efeito": +1},
-            {"texto": "Primeira vez aqui?", "efeito": 0},
-            {"texto": "Apenas sorri e serve um chá fresco", "efeito": +1},
-        ],
-        "cauteloso": [
-            {"texto": "O que gosta de fazer nas horas vagas?", "efeito": +1},
-            {"texto": "Ja visitou outros restaurantes por aqui?", "efeito": 0},
-            {"texto": "Prefere ficar sozinho?", "efeito": -1},
-            {"texto": "Conte-me sobre seu trabalho.", "efeito": +1},
-        ],
-        "aberto": [
-            {"texto": "Qual seu prato favorito?", "efeito": +1},
-            {"texto": "Gostaria de ouvir mais sobre voce.", "efeito": 0},
-            {"texto": "Nao confia em estranhos?", "efeito": -1},
-        ],
-        "vulneravel": [
-            {"texto": "Posso ajudar em algo?", "efeito": 0},
-            {"texto": "Quer conversar sobre o que aconteceu?", "efeito": -1},
-            {"texto": "Fique a vontade para pedir o que quiser.", "efeito": 0},
-        ],
-    }
-
-    RESPOSTAS = {
-        "fechado": "O cliente permanece em silêncio.",
-        "cauteloso": "O cliente parece mais relaxado.",
-        "aberto": "O cliente sorri e começa a conversar.",
-        "vulneravel": "O cliente parece confiar em você agora.",
-    }
+    Cada cliente tem sua própria árvore de diálogos,
+    com nós, opções, e consequências únicas.
+    """
 
     def __init__(self):
+        self._dados_dialogos: dict = {}
+        self._dados_clientes: dict = {}
+        self._no_atual: Optional[str] = None
+        self._cliente_atual: Optional[str] = None
+        self._confianca: int = CONFIANCA_INICIAL
+        self._pistas_captadas: list[str] = []
+        self._historico: list[str] = []
+
+    def carregar_cliente(self, cliente_id: str) -> bool:
         """
-        Inicializa o sistema de dialogo.
+        Carrega os dados de diálogo de um cliente.
 
-        Este sistema e reutilizavel para multiplos clientes.
-        O cliente e passado como parametro nos metodos.
+        Returns:
+            True se carregou com sucesso.
         """
-        pass
+        try:
+            # Carrega diálogos
+            dialogo_path = DIALOGOS_DIR / f"{cliente_id}.json"
+            with open(dialogo_path, "r", encoding="utf-8") as f:
+                self._dados_dialogos = json.load(f)
 
-    def obter_opcoes(self, cliente: Cliente) -> list:
+            # Carrega dados do cliente
+            cliente_path = CLIENTES_DIR / f"{cliente_id}.json"
+            with open(cliente_path, "r", encoding="utf-8") as f:
+                self._dados_clientes = json.load(f)
+
+            # Inicializa estado
+            self._cliente_atual = cliente_id
+            self._no_atual = self._dados_dialogos.get("no_inicial", "chegada")
+            self._confianca = CONFIANCA_INICIAL
+            self._pistas_captadas = []
+            self._historico = []
+
+            return True
+
+        except (FileNotFoundError, json.JSONDecodeError) as e:
+            print(f"Erro ao carregar cliente {cliente_id}: {e}")
+            return False
+
+    def obter_no_atual(self) -> Optional[dict]:
+        """Retorna os dados do nó atual."""
+        if not self._dados_dialogos or not self._no_atual:
+            return None
+
+        nos = self._dados_dialogos.get("nos", {})
+        return nos.get(self._no_atual)
+
+    def obter_contexto(self) -> str:
+        """Retorna o contexto narrativo do nó atual."""
+        no = self.obter_no_atual()
+        if no:
+            return no.get("contexto", "")
+        return ""
+
+    def obter_texto(self) -> str:
+        """Retorna o texto de diálogo do nó atual (o que o cliente diz)."""
+        no = self.obter_no_atual()
+        if no:
+            return no.get("texto", "")
+        return ""
+
+    def obter_opcoes(self) -> list[OpcaoFormatada]:
         """
-        Retorna as opcoes de dialogo disponiveis para o estado ATUAL do cliente.
+        Retorna as opções disponíveis no nó atual.
 
-        Exemplo de retorno quando cliente esta "fechado":
-        [
-            "Boa noite. O que posso servir?",
-            "Parece cansado. Dia dificil?",
-            "Primeira vez aqui?",
-        ]
-
-        Retorna apenas os textos das opcoes (para exibir ao jogador).
+        Filtra opções que requerem confiança mínima ou pistas específicas.
         """
-        opcoes = self.OPCOES.get(cliente.estado, [])
-        return [op["texto"] for op in opcoes]
+        no = self.obter_no_atual()
+        if not no:
+            return []
 
-    def processar_escolha(self, cliente: Cliente, indice: int) -> str:
+        opcoes = no.get("opcoes", [])
+        resultado = []
+
+        for i, opcao in enumerate(opcoes, 1):
+            # Verifica confiança mínima
+            confianca_min = opcao.get("confianca_minima", 0)
+            disponivel = self._confianca >= confianca_min
+
+            # Verifica se requer pista
+            pista_requerida = opcao.get("requer_pista")
+            if pista_requerida and pista_requerida not in self._pistas_captadas:
+                disponivel = False
+
+            resultado.append(OpcaoFormatada(
+                indice=i,
+                texto=opcao.get("texto", ""),
+                dica=opcao.get("dica", ""),
+                disponivel=disponivel,
+            ))
+
+        return resultado
+
+    def processar_escolha(self, indice: int) -> Optional[ResultadoDialogo]:
         """
-        Processa a escolha do jogador e retorna a resposta do cliente.
+        Processa a escolha do jogador.
 
-        Parametros:
-            cliente: o cliente com quem estamos conversando
-            indice: qual opcao o jogador escolheu (0, 1, 2, ...)
+        Args:
+            indice: Índice da opção escolhida (1-based)
 
-        Retorna:
-            A resposta do cliente (string do dicionario RESPOSTAS)
+        Returns:
+            ResultadoDialogo com os efeitos da escolha.
         """
-        opcoes = self.OPCOES.get(cliente.estado, [])
-        if 0 <= indice < len(opcoes):
-            opcao = opcoes[indice]
-            efeito = opcao["efeito"]
-            if efeito != 0:
-                cliente.mudar_estado(efeito)
-            return self.RESPOSTAS[cliente.estado]
+        no = self.obter_no_atual()
+        if not no:
+            return None
+
+        opcoes = no.get("opcoes", [])
+        if indice < 1 or indice > len(opcoes):
+            return None
+
+        opcao = opcoes[indice - 1]
+
+        # Aplica impacto de confiança
+        impacto = opcao.get("impacto", 0)
+        self._confianca = max(0, min(100, self._confianca + impacto))
+
+        # Registra pista se o nó atual é uma pista
+        if no.get("e_pista"):
+            pista_id = no.get("pista_id", self._no_atual)
+            if pista_id not in self._pistas_captadas:
+                self._pistas_captadas.append(pista_id)
+
+        # Determina tipo de interação
+        tipo_str = opcao.get("tipo", "dialogo_medio")
+        try:
+            tipo = TipoInteracao(tipo_str)
+        except ValueError:
+            tipo = TipoInteracao.DIALOGO_MEDIO
+
+        # Obtém próximo nó
+        proximo = opcao.get("proximo")
+        proximo_no = self._dados_dialogos.get("nos", {}).get(proximo, {})
+
+        # Adiciona ao histórico
+        self._historico.append(self._no_atual)
+
+        # Atualiza nó atual
+        if proximo:
+            self._no_atual = proximo
+
+        return ResultadoDialogo(
+            texto_resposta=proximo_no.get("texto", ""),
+            impacto_confianca=impacto,
+            tipo_interacao=tipo,
+            proximo_no=proximo,
+            e_pista=proximo_no.get("e_pista", False),
+            pista_id=proximo_no.get("pista_id"),
+            pensamento_master=proximo_no.get("pensamento_master"),
+            gatilho_prato=proximo_no.get("gatilho_prato", False),
+            revelacao_prato=proximo_no.get("revelacao_prato"),
+            tipo_cena=proximo_no.get("tipo_cena"),
+        )
+
+    def obter_estado_emocional(self) -> EstadoEmocional:
+        """Retorna o estado emocional baseado na confiança."""
+        if self._confianca <= 20:
+            return EstadoEmocional.FECHADO
+        elif self._confianca <= 40:
+            return EstadoEmocional.CAUTELOSO
+        elif self._confianca <= 60:
+            return EstadoEmocional.CURIOSO
+        elif self._confianca <= 80:
+            return EstadoEmocional.ABERTO
         else:
-            return "Opcao invalida."
+            return EstadoEmocional.VULNERAVEL
 
-    def tentar_descobrir_prato(self, cliente: Cliente) -> str:
+    @property
+    def confianca(self) -> int:
+        """Retorna o nível atual de confiança."""
+        return self._confianca
+
+    @property
+    def pistas_captadas(self) -> list[str]:
+        """Retorna as pistas captadas."""
+        return self._pistas_captadas.copy()
+
+    @property
+    def cliente_dados(self) -> dict:
+        """Retorna os dados do cliente atual."""
+        return self._dados_clientes
+
+    def obter_descricao_chegada(self) -> str:
+        """Retorna a descrição de chegada do cliente."""
+        return self._dados_clientes.get("descricao_chegada", "")
+
+    def obter_despedida(self, tipo: str) -> str:
         """
-        Tenta descobrir o prato favorito do cliente.
+        Retorna o texto de despedida apropriado.
 
-        Esta funcao so deve funcionar se o cliente estiver "aberto".
-
-        Retorna:
-            Nome do prato (str) se cliente esta aberto
-            None se cliente ainda nao esta pronto
+        Args:
+            tipo: "sucesso", "tempo" ou "falha"
         """
-        return cliente.descobrir_prato()
+        chaves = {
+            "sucesso": "despedida_sucesso",
+            "tempo": "despedida_tempo",
+            "falha": "despedida_falha",
+        }
+        chave = chaves.get(tipo, "despedida_falha")
+        return self._dados_clientes.get(chave, "O cliente vai embora.")
 
-    def obter_estado_cliente(self, cliente: Cliente) -> str:
-        """
-        Retorna o estado emocional atual do cliente.
-        """
-        return cliente.estado
+    def prato_foi_revelado(self) -> bool:
+        """Verifica se o prato ideal foi revelado."""
+        no = self.obter_no_atual()
+        return no.get("revelacao_prato") is not None if no else False
+
+    def obter_prato_revelado(self) -> Optional[str]:
+        """Retorna o ID do prato revelado, se houver."""
+        no = self.obter_no_atual()
+        return no.get("revelacao_prato") if no else None
 
 
-# =============================================================================
-# TESTES
-# =============================================================================
+# Teste rápido
 if __name__ == "__main__":
-    print("=" * 50)
-    print("TESTE - SISTEMA DIALOGO")
-    print("=" * 50)
+    print("=== TESTE SISTEMA DIÁLOGO V2 ===\n")
 
-    # Criar cliente de teste
-    yuki = Cliente(
-        nome="Yuki Tanabe",
-        idade=28,
-        profissao="Fotografa",
-        descricao="Uma jovem com camera antiga",
-        genero_masculino=False,
-        prato_favorito="Tamago Gohan",
-        memoria="Fotos do incendio"
-    )
+    sistema = SistemaDialogo()
 
-    dialogo = SistemaDialogo()
+    if sistema.carregar_cliente("yuki"):
+        print(f"Cliente carregado: Yuki")
+        print(f"Confiança inicial: {sistema.confianca}")
+        print(f"Estado: {sistema.obter_estado_emocional().value}")
+        print(f"\n--- Descrição de chegada ---")
+        print(sistema.obter_descricao_chegada()[:200] + "...")
 
-    # Teste 1: Estado inicial
-    print(f"\n1. Estado inicial: {dialogo.obter_estado_cliente(yuki)}")
+        print(f"\n--- Contexto ---")
+        print(sistema.obter_contexto())
 
-    # Teste 2: Ver opcoes disponiveis
-    opcoes = dialogo.obter_opcoes(yuki)
-    print(f"2. Opcoes disponiveis:")
-    for i, texto in enumerate(opcoes):
-        print(f"   [{i}] {texto}")
+        print(f"\n--- Opções ---")
+        for opcao in sistema.obter_opcoes():
+            status = "✓" if opcao.disponivel else "✗"
+            print(f"  {status} {opcao.indice}. {opcao.texto} [{opcao.dica}]")
 
-    # Teste 3: Escolher uma opcao positiva
-    resposta = dialogo.processar_escolha(yuki, 1)  # "Parece cansado. Dia dificil?" (+1)
-    print(f"\n3. Resposta do cliente: {resposta}")
-    print(f"4. Novo estado: {dialogo.obter_estado_cliente(yuki)}")
-
-    # Teste 4: Continuar conversando ate "aberto"
-    dialogo.processar_escolha(yuki, 0)  # Mais uma opcao positiva
-    print(f"\n5. Estado apos mais conversa: {dialogo.obter_estado_cliente(yuki)}")
-
-    # Teste 5: Tentar descobrir prato
-    prato = dialogo.tentar_descobrir_prato(yuki)
-    print(f"6. Prato descoberto: {prato}")
-
-    print("\n" + "=" * 50)
+        # Simula uma escolha
+        print(f"\n--- Escolhendo opção 2 ---")
+        resultado = sistema.processar_escolha(2)
+        if resultado:
+            print(f"Impacto: {resultado.impacto_confianca:+d}")
+            print(f"Tipo: {resultado.tipo_interacao.value}")
+            print(f"Resposta: {resultado.texto_resposta[:150]}...")
+            print(f"\nNova confiança: {sistema.confianca}")
+            print(f"Estado: {sistema.obter_estado_emocional().value}")
+    else:
+        print("Erro ao carregar cliente")

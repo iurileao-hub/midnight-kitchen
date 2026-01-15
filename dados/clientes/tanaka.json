@@ -1,0 +1,35 @@
+{
+  "id": "tanaka",
+  "nome": "Tanaka",
+  "idade": 58,
+  "profissao": "Ex-bombeiro aposentado",
+  "genero_masculino": true,
+  "hora_chegada": [2, 23],
+  "prato_favorito": "Katsudon",
+  "memoria": "Tentou salvar Takeshi no incêndio, mas falhou. Carrega a dúvida sobre a origem do fogo.",
+
+  "descricao_chegada": "A porta range suavemente.\n\nUm homem de meia-idade entra, os ombros curvados pelo peso de anos. Cabelos grisalhos, mãos grandes e calejadas. Cheira levemente a sake.\n\nEle se senta pesadamente no banco mais próximo da porta. Seus olhos percorrem o restaurante sem realmente ver nada.\n\n\"Sake, por favor.\"\n\nA voz é rouca, cansada. O tipo de cansaço que não se cura com sono.",
+
+  "maneirismos": [
+    "Esfrega as mãos constantemente",
+    "Fala devagar, cada palavra carregando peso",
+    "Pede sake mas nunca termina o copo",
+    "Olha para as próprias mãos quando fala do passado",
+    "Mexe no isqueiro no bolso mas nunca acende"
+  ],
+
+  "pistas": [
+    "Trinta anos no corpo de bombeiros",
+    "Tem incêndio que a gente não esquece",
+    "O fogo não parecia vir da cozinha",
+    "Ele disse um nome antes de morrer"
+  ],
+
+  "gatilho_prato": "Quando Tanaka mencionar 'vitória' ou 'derrota', você perceberá que Katsudon pode trazer verdades à tona.",
+
+  "despedida_sucesso": "Tanaka termina o katsudon em silêncio. Quando olha para você, algo mudou em seus olhos.\n\n\"Sabe... faz tempo que não falo sobre aquela noite. Obrigado por ouvir.\"\n\nEle deixa o pagamento no balcão, mais do que o necessário.\n\n\"Cuide-se, rapaz. Nem toda cicatriz é sua culpa.\"\n\nA porta range quando ele sai. O silêncio que fica é mais leve.",
+
+  "despedida_tempo": "Tanaka olha para o relógio e suspira.\n\n\"Preciso ir. A esposa... ela se preocupa.\"\n\nEle deixa o sake pela metade, como sempre. Algumas notas no balcão.\n\n\"Desculpa ter ocupado seu tempo com um velho cansado.\"\n\nA porta range. O silêncio volta.",
+
+  "despedida_falha": "Tanaka se levanta abruptamente, o banco rangendo.\n\n\"Preciso ir.\"\n\nNem olha para você ao sair. A garrafa de sake continua lá, mal tocada.\n\nAlgumas histórias não estão prontas para serem contadas."
+}

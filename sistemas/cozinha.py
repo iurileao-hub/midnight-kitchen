@@ -1,142 +1,179 @@
 """
-SistemaCozinha - Gerencia a preparacao de pratos.
+Sistema de Cozinha v2 — Midnight Kitchen.
 
-O jogador pode preparar pratos e servi-los aos clientes.
-Servir o prato favorito desbloqueia a memoria do cliente.
+Gerencia a preparação de pratos, narrativas de cozinha,
+e a conexão emocional entre prato e cliente.
 """
-import sys
+
+import json
 from pathlib import Path
+from dataclasses import dataclass
+from typing import Optional
 
-# Adiciona o diretorio raiz do projeto ao path
-# Isso permite importar 'models' mesmo rodando de dentro de 'sistemas/'
+from config import DADOS_DIR
+from contracts import TipoInteracao
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
-from models.prato import Prato
-from models.cliente import Cliente
+
+@dataclass
+class Prato:
+    """Representa um prato do cardápio."""
+    id: str
+    nome: str
+    nome_japones: str
+    descricao: str
+    tempo_preparo: int
+    cliente_ideal: Optional[str]
+    narrativa_preparo: str
+    narrativa_servir: str
+    reacao_correta: str
+    reacao_errada: str
+
+
+@dataclass
+class ResultadoPrato:
+    """Resultado de servir um prato."""
+    sucesso: bool
+    narrativa_preparo: str
+    narrativa_servir: str
+    reacao: str
+    memoria_revelada: Optional[str] = None
 
 
 class SistemaCozinha:
-    """Sistema que gerencia a cozinha do restaurante."""
+    """
+    Sistema de cozinha do Midnight Kitchen v2.
+
+    Gerencia o cardápio, preparação de pratos,
+    e as reações dos clientes.
+    """
 
     def __init__(self):
-        """Inicializa a cozinha com os pratos disponiveis."""
-        self.pratos = {
-      "Tamago Gohan": Prato(
-          nome="Tamago Gohan",
-          ingredientes=["arroz", "ovo", "shoyu"],
-          tempo_preparo=5,
-          descricao_preparo="O ovo cru e quebrado sobre o arroz quente. O shoyu escorre devagar."
-      ),
-      "Ochazuke": Prato(
-          nome="Ochazuke",
-          ingredientes=["arroz", "cha verde", "umeboshi", "nori"],
-          tempo_preparo=3,
-          descricao_preparo="O cha quente e despejado sobre o arroz. O aroma sobe suavemente."
-      ),
-      "Onigiri": Prato(
-          nome="Onigiri",
-          ingredientes=["arroz", "sal", "nori", "atum"],
-          tempo_preparo=10,
-          descricao_preparo="O arroz e moldado com cuidado. Cada bolinho carrega dedicacao."
-      ),
-      "Miso Shiru": Prato(
-          nome="Miso Shiru",
-          ingredientes=["miso", "tofu", "wakame", "cebolinha"],
-          tempo_preparo=8,
-          descricao_preparo="O miso se dissolve lentamente. O tofu flutua em silencio."
-      ),
-      "Yakisoba": Prato(
-          nome="Yakisoba",
-          ingredientes=["macarrao", "repolho", "carne", "molho"],
-          tempo_preparo=12,
-          descricao_preparo="O macarrao estala na chapa quente. O aroma invade o restaurante."
-      ),
-      "Tamagoyaki": Prato(
-          nome="Tamagoyaki",
-          ingredientes=["ovos", "acucar", "shoyu", "dashi"],
-          tempo_preparo=7,
-          descricao_preparo="Camada por camada, a omelete se forma. Doce e delicada."
-      ),
-      "Katsudon": Prato(
-          nome="Katsudon",
-          ingredientes=["arroz", "porco empanado", "ovo", "cebola", "dashi"],
-          tempo_preparo=15,
-          descricao_preparo="O tonkatsu crepita no oleo. O ovo abraca a carne. Comida de vitoria, ou de consolo."
-      ),
-      "Nikujaga": Prato(
-          nome="Nikujaga",
-          ingredientes=["carne", "batata", "cenoura", "shoyu", "acucar"],
-          tempo_preparo=25,
-          descricao_preparo="A carne cozinha lentamente com os legumes. O cheiro preenche o restaurante como um abraco."
-      ),
-      "Omurice": Prato(
-          nome="Omurice",
-          ingredientes=["arroz", "frango", "ketchup", "ovos", "manteiga"],
-          tempo_preparo=12,
-          descricao_preparo="O arroz frito e coberto pelo manto dourado do ovo. Com ketchup, desenha-se uma mensagem."
-      ),
-  }
+        self._pratos: dict[str, Prato] = {}
+        self._carregar_pratos()
 
-    def listar_pratos(self) -> list:
-        """Retorna os nomes dos pratos disponiveis."""
-        return list(self.pratos.keys())
-        
-    def obter_prato(self, nome: str) -> Prato:
-        """Retorna um prato pelo nome, ou None se nao existir."""
-        return self.pratos.get(nome, None)
+    def _carregar_pratos(self) -> None:
+        """Carrega os pratos do arquivo JSON."""
+        pratos_path = DADOS_DIR / "pratos.json"
 
-    def preparar_prato(self, nome: str) -> str:
-        """
-        Prepara um prato e retorna a narrativa do preparo.
-        Retorna None se o prato nao existir.
-        """
-        return self.pratos[nome].preparar() if nome in self.pratos else None
+        try:
+            with open(pratos_path, "r", encoding="utf-8") as f:
+                dados = json.load(f)
 
-    def servir_prato(self, nome: str, cliente: Cliente) -> str:
+            for id_prato, info in dados.get("pratos", {}).items():
+                self._pratos[id_prato] = Prato(
+                    id=id_prato,
+                    nome=info.get("nome", ""),
+                    nome_japones=info.get("nome_japones", ""),
+                    descricao=info.get("descricao", ""),
+                    tempo_preparo=info.get("tempo_preparo", 10),
+                    cliente_ideal=info.get("cliente_ideal"),
+                    narrativa_preparo=info.get("narrativa_preparo", ""),
+                    narrativa_servir=info.get("narrativa_servir", ""),
+                    reacao_correta=info.get("reacao_correta", ""),
+                    reacao_errada=info.get("reacao_errada", info.get("reacao_generica", "")),
+                )
+
+        except (FileNotFoundError, json.JSONDecodeError) as e:
+            print(f"Erro ao carregar pratos: {e}")
+
+    def listar_pratos(self) -> list[tuple[str, str, str]]:
         """
-        Serve um prato ao cliente.
-        Se for o prato favorito, retorna a memoria revelada.
-        Caso contrario, retorna uma reacao generica.
+        Lista todos os pratos disponíveis.
+
+        Returns:
+            Lista de tuplas (id, nome, descricao)
         """
-        if nome in self.pratos:
-            return cliente.receber_prato(nome)
+        return [
+            (p.id, p.nome, p.descricao)
+            for p in self._pratos.values()
+        ]
+
+    def obter_prato(self, prato_id: str) -> Optional[Prato]:
+        """Retorna um prato pelo ID."""
+        return self._pratos.get(prato_id)
+
+    def preparar_prato(self, prato_id: str) -> Optional[str]:
+        """
+        Retorna a narrativa de preparação de um prato.
+
+        Returns:
+            Texto narrativo da preparação.
+        """
+        prato = self._pratos.get(prato_id)
+        if prato:
+            return prato.narrativa_preparo
+        return None
+
+    def servir_prato(
+        self,
+        prato_id: str,
+        cliente_id: str
+    ) -> ResultadoPrato:
+        """
+        Serve um prato para um cliente.
+
+        Args:
+            prato_id: ID do prato a servir
+            cliente_id: ID do cliente
+
+        Returns:
+            ResultadoPrato com narrativas e resultado
+        """
+        prato = self._pratos.get(prato_id)
+        if not prato:
+            return ResultadoPrato(
+                sucesso=False,
+                narrativa_preparo="",
+                narrativa_servir="",
+                reacao="Prato não encontrado.",
+            )
+
+        # Verifica se é o prato ideal
+        sucesso = prato.cliente_ideal == cliente_id
+
+        if sucesso:
+            reacao = prato.reacao_correta
+            # Extrai memória do texto de reação (para o sistema de jogo)
+            memoria = f"Revelou sua história através de {prato.nome}"
         else:
-            return "Prato nao disponivel."
+            reacao = prato.reacao_errada
+            memoria = None
+
+        return ResultadoPrato(
+            sucesso=sucesso,
+            narrativa_preparo=prato.narrativa_preparo,
+            narrativa_servir=prato.narrativa_servir,
+            reacao=reacao,
+            memoria_revelada=memoria,
+        )
+
+    def obter_tempo_preparo(self, prato_id: str) -> int:
+        """Retorna o tempo de preparo em minutos de jogo."""
+        prato = self._pratos.get(prato_id)
+        return prato.tempo_preparo if prato else 10
 
 
-# Testes
+# Teste rápido
 if __name__ == "__main__":
-    print("=" * 50)
-    print("TESTE - SISTEMA COZINHA")
-    print("=" * 50)
+    print("=== TESTE SISTEMA COZINHA V2 ===\n")
 
     cozinha = SistemaCozinha()
 
-    # Listar pratos
-    print(f"\n1. Pratos disponiveis: {cozinha.listar_pratos()}")
+    print("Cardápio:")
+    for id_prato, nome, desc in cozinha.listar_pratos():
+        print(f"  • {nome}: {desc[:50]}...")
 
-    # Preparar um prato
-    narrativa = cozinha.preparar_prato("Tamago Gohan")
-    print(f"\n2. Preparo:\n{narrativa}")
+    print("\n--- Preparando Tamago Gohan ---")
+    narrativa = cozinha.preparar_prato("tamago_gohan")
+    if narrativa:
+        print(narrativa[:200] + "...")
 
-    # Criar cliente para teste
-    yuki = Cliente(
-        nome="Yuki Tanabe",
-        idade=28,
-        profissao="Fotografa",
-        descricao="Uma jovem com camera antiga",
-        genero_masculino=False,
-        prato_favorito="Tamago Gohan",
-        memoria="Fotos do incendio"
-    )
+    print("\n--- Servindo para Yuki ---")
+    resultado = cozinha.servir_prato("tamago_gohan", "yuki")
+    print(f"Sucesso: {resultado.sucesso}")
+    print(f"Reação: {resultado.reacao[:150]}...")
 
-    # Simular descoberta do prato (necessario para servir funcionar)
-    yuki.mudar_estado(+1)  # cauteloso
-    yuki.mudar_estado(+1)  # aberto
-    yuki.descobrir_prato()
-
-    # Servir prato
-    resultado = cozinha.servir_prato("Tamago Gohan", yuki)
-    print(f"\n3. Resultado ao servir: {resultado}")
-
-    print("\n" + "=" * 50)
+    print("\n--- Servindo prato errado ---")
+    resultado = cozinha.servir_prato("onigiri", "yuki")
+    print(f"Sucesso: {resultado.sucesso}")
+    print(f"Reação: {resultado.reacao[:100]}...")

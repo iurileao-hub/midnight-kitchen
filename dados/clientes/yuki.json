@@ -1,0 +1,36 @@
+{
+  "id": "yuki",
+  "nome": "Yuki",
+  "idade": 28,
+  "profissao": "Fotógrafa freelancer",
+  "genero_masculino": false,
+  "hora_chegada": [1, 47],
+  "prato_favorito": "Tamago Gohan",
+  "memoria": "Fotografou o incêndio há 10 anos. Carrega o peso de ter capturado a tragédia sem poder ajudar.",
+
+  "descricao_chegada": "O sino da porta tilinta suavemente.\n\nUma jovem aparece na fresta da cortina de noren, hesitante. Veste um casaco cinza desbotado, e no pescoço carrega uma câmera antiga — uma Pentax K1000, com a alça de couro gasta pelo tempo.\n\nEla percorre o restaurante com os olhos antes de entrar. Conta os lugares. Avalia as saídas. Só então se aproxima do balcão, escolhendo o banco mais distante de você.\n\nNo silêncio que se instala, você nota: ela segura a bolsa com força, como se protegesse algo precioso — ou perigoso.",
+
+  "maneirismos": [
+    "Toca a câmera quando nervosa",
+    "Olha para a porta com frequência",
+    "Fala em frases curtas, como legendas de foto",
+    "Evita contato visual direto",
+    "Segura a bolsa protetoramente"
+  ],
+
+  "pistas": [
+    "Não fotografa mais pessoas",
+    "Menciona 'coisas que não mudam enquanto você olha'",
+    "Fala de um incêndio de passagem",
+    "A câmera era nova 'naquela noite'",
+    "Carrega um envelope amarelado na bolsa"
+  ],
+
+  "gatilho_prato": "Quando Yuki mencionar algo sobre sua mãe ou infância, você perceberá que Tamago Gohan pode trazer conforto.",
+
+  "despedida_sucesso": "Yuki olha para o envelope que deixou no balcão. Respira fundo.\n\n\"Talvez... talvez seja hora de olhar para essas fotos de verdade. Obrigada por ouvir.\"\n\nEla se levanta, ajusta a câmera no pescoço, e pela primeira vez nesta noite, seus ombros parecem mais leves.\n\n\"Seu restaurante... é um lugar bom para pensar.\"\n\nA cortina de noren balança suavemente enquanto ela sai.",
+
+  "despedida_tempo": "Yuki olha para o relógio na parede e se sobressalta.\n\n\"É tão tarde... Eu preciso ir.\"\n\nEla pega a bolsa — o envelope ainda dentro — e se levanta apressada. Deixa algumas notas no balcão.\n\n\"Desculpa. Por... por ocupar seu tempo.\"\n\nAntes que você possa responder, ela já passou pela cortina de noren. O sino tilinta, e o silêncio volta a preencher o restaurante.\n\nVocê olha para o lugar onde ela estava sentada. Algo ficou por dizer.",
+
+  "despedida_falha": "Yuki se levanta abruptamente. Seus olhos estão distantes, fechados novamente.\n\n\"Eu... acho que escolhi o lugar errado para parar.\"\n\nEla não olha para você ao sair. A bolsa — e o envelope dentro dela — vai junto. O sino da porta parece mais frio desta vez.\n\nVocê seca um copo que já estava seco. Algumas noites são assim."
+}

@@ -1,0 +1,35 @@
+{
+  "id": "midori",
+  "nome": "Midori",
+  "idade": 67,
+  "profissao": "Aposentada, ex-florista",
+  "genero_masculino": false,
+  "hora_chegada": [0, 30],
+  "prato_favorito": "Missoshiru",
+  "memoria": "Viu faíscas no quadro elétrico uma semana antes do incêndio. Avisou Takeshi, mas carrega a dúvida se avisou direito.",
+
+  "descricao_chegada": "O sino da porta tilinta suavemente.\n\nUma senhora pequena entra, sorrindo antes mesmo de ver o interior. Um broche de flor no casaco, um lenço bordado nas mãos.\n\nEla olha ao redor com olhos que já viram muita coisa, mas ainda encontram beleza.\n\n\"Que lugar aconchegante. Parece... familiar, de algum jeito.\"\n\nSenta-se no meio do balcão, como quem não tem pressa.",
+
+  "maneirismos": [
+    "Sorri com os olhos antes dos lábios",
+    "Arruma coisas que não precisam ser arrumadas",
+    "Fala do passado no presente",
+    "Toca o broche quando pensa em algo triste",
+    "Oferece ajuda mesmo sendo cliente"
+  ],
+
+  "pistas": [
+    "Tinha uma floricultura no bairro",
+    "Conhecia o dono do restaurante vizinho",
+    "A loja foi danificada no incêndio",
+    "Viu algo estranho uma semana antes"
+  ],
+
+  "gatilho_prato": "Quando Midori mencionar 'Takeshi-san' ou 'inverno', você perceberá que Missoshiru pode trazer memórias importantes.",
+
+  "despedida_sucesso": "Midori termina a sopa em silêncio, as mãos envolvendo a tigela ainda quente.\n\n\"Faz bem falar dessas coisas. Carrego isso há tanto tempo...\"\n\nEla ajeita o broche no casaco e sorri — um sorriso mais leve.\n\n\"Takeshi-san era um bom homem. Tenho certeza que ele entenderia.\"\n\nAntes de sair, ela olha para você com carinho maternal.\n\n\"Cuide deste lugar. Ele tem alma.\"",
+
+  "despedida_tempo": "Midori olha para o relógio antigo na parede.\n\n\"Oh, já é tão tarde? O tempo voa quando a companhia é boa.\"\n\nEla se levanta devagar, ajeitando o casaco.\n\n\"Volto outro dia. Talvez a gente termine essa conversa.\"\n\nO sino tilinta suavemente quando ela sai.",
+
+  "despedida_falha": "Midori se levanta, o sorriso um pouco mais triste.\n\n\"Devo estar cansando você com histórias antigas.\"\n\nEla deixa o pagamento com cuidado, arrumando as notas.\n\n\"Tenha uma boa noite, querido.\"\n\nO sino tilinta. O restaurante fica mais silencioso."
+}

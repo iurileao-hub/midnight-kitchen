@@ -1,0 +1,537 @@
+{
+  "cliente_id": "hiroto",
+  "no_inicial": "chegada",
+
+  "nos": {
+    "chegada": {
+      "id": "chegada",
+      "contexto": "Hiroto entrou com energia, olhando tudo com curiosidade intensa. Sentou de frente para você.",
+      "texto": "",
+      "opcoes": [
+        {
+          "texto": "Boa noite. O que vai ser?",
+          "dica": "casual",
+          "impacto": 5,
+          "tipo": "dialogo_curto",
+          "proximo": "boa_noite"
+        },
+        {
+          "texto": "Você parece estar procurando algo.",
+          "dica": "observador",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "procurando"
+        },
+        {
+          "texto": "Esse caderninho... está fazendo pesquisa?",
+          "dica": "notou detalhe",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "pesquisa"
+        }
+      ]
+    },
+
+    "procurando": {
+      "id": "procurando",
+      "contexto": "Hiroto para de olhar ao redor por um segundo.",
+      "texto": "\"É tão óbvio assim?\"\n\nEle ri, um pouco constrangido.\n\n\"Estou procurando alguém. Há... há muito tempo.\"",
+      "e_pista": true,
+      "pista_id": "procurando_alguem",
+      "opcoes": [
+        {
+          "texto": "Quem você está procurando?",
+          "dica": "direto",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "quem_procurando"
+        },
+        {
+          "texto": "Muito tempo? Quanto tempo?",
+          "dica": "curioso",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "quanto_tempo"
+        }
+      ]
+    },
+
+    "quanto_tempo": {
+      "id": "quanto_tempo",
+      "contexto": "Hiroto olha para o caderninho nas mãos.",
+      "texto": "\"Dez anos.\"\n\nEle diz isso como se fosse normal.\n\n\"Desde que eu tinha oito. É basicamente minha vida inteira.\"",
+      "e_pista": true,
+      "pista_id": "dez_anos",
+      "pensamento_master": "Dez anos. Oito anos de idade. Os números se encaixam de um jeito estranho.",
+      "opcoes": [
+        {
+          "texto": "O que aconteceu quando você tinha oito anos?",
+          "dica": "cuidadoso",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "oito_anos"
+        },
+        {
+          "texto": "Isso é muito tempo procurando uma pessoa. Deve ser importante.",
+          "dica": "empático",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "importante"
+        }
+      ]
+    },
+
+    "oito_anos": {
+      "id": "oito_anos",
+      "contexto": "Hiroto olha para você com intensidade.",
+      "texto": "\"Um incêndio.\"\n\nA palavra sai simples, mas carregada.\n\n\"Eu estava num restaurante com minha mãe. A gente foi buscar uma encomenda. E então o fogo começou.\"\n\nEle engole.\n\n\"Eu me perdi dela no caos. E alguém... alguém me tirou de lá.\"",
+      "e_pista": true,
+      "pista_id": "incendio",
+      "pensamento_master": "Um frio percorre sua espinha. Restaurante. Incêndio. Criança.",
+      "opcoes": [
+        {
+          "texto": "Alguém te salvou.",
+          "dica": "entendendo",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "alguem_salvou"
+        },
+        {
+          "texto": "E você está procurando essa pessoa há dez anos?",
+          "dica": "conectando",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "procurando_dez"
+        }
+      ]
+    },
+
+    "alguem_salvou": {
+      "id": "alguem_salvou",
+      "contexto": "Hiroto acena, os olhos brilhando.",
+      "texto": "\"Um homem. Jovem, minha mãe disse. Trabalhava no restaurante.\"\n\nEle fecha os olhos por um segundo.\n\n\"Eu lembro de ser carregado. Através da fumaça. Uma voz dizendo que ia ficar tudo bem.\"\n\nEle abre os olhos e olha para você.\n\n\"Ele se machucou me tirando de lá. Minha mãe disse que ele tinha...\" Pausa. \"Que ele ficou com uma cicatriz.\"",
+      "e_pista": true,
+      "pista_id": "cicatriz",
+      "pensamento_master": "Cicatriz. Sua mão vai instintivamente ao rosto. Você se força a parar.",
+      "gatilho_prato": true,
+      "opcoes": [
+        {
+          "texto": "E você nunca soube quem era?",
+          "dica": "contido",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "nunca_soube"
+        },
+        {
+          "texto": "O que você vai fazer quando encontrar essa pessoa?",
+          "dica": "curioso",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "vai_fazer"
+        }
+      ]
+    },
+
+    "vai_fazer": {
+      "id": "vai_fazer",
+      "contexto": "Hiroto endireita os ombros.",
+      "texto": "\"Agradecer.\"\n\nA palavra sai firme.\n\n\"Quero dizer que valeu a pena. Que a vida que ele salvou... eu estou vivendo ela. Estou bem.\"\n\nOs olhos dele se enchem de lágrimas que ele não deixa cair.\n\n\"Quero que ele saiba que fez a coisa certa. Que ele não se machucou em vão.\"",
+      "e_pista": true,
+      "pista_id": "agradecer",
+      "opcoes": [
+        {
+          "texto": "Você ia comer algo naquela noite? No restaurante.",
+          "dica": "redirecionando",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "ia_comer"
+        },
+        {
+          "texto": "Acho que essa pessoa saberia, se te visse agora.",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "saberia"
+        }
+      ]
+    },
+
+    "ia_comer": {
+      "id": "ia_comer",
+      "contexto": "Hiroto pisca, surpreso com a pergunta.",
+      "texto": "\"Omurice.\"\n\nA memória vem rápida.\n\n\"Minha mãe tinha prometido como recompensa por uma nota boa. Era uma tradição.\"\n\nEle olha para a cozinha.\n\n\"Eu nunca cheguei a comer. O fogo interrompeu.\"",
+      "revelacao_prato": "omurice",
+      "opcoes": [
+        {
+          "texto": "Posso fazer omurice para você. Dez anos depois.",
+          "dica": "oferecendo",
+          "impacto": 20,
+          "tipo": "dialogo_medio",
+          "proximo": "fazer_omurice"
+        }
+      ]
+    },
+
+    "fazer_omurice": {
+      "id": "fazer_omurice",
+      "contexto": "Hiroto olha para você com olhos arregalados.",
+      "texto": "\"Você... faria isso?\"\n\nA voz dele falha por um segundo.\n\n\"Sim. Por favor.\"",
+      "opcoes": [
+        {
+          "texto": "Omurice. Vou preparar.",
+          "dica": "",
+          "impacto": 20,
+          "tipo": "cozinha",
+          "proximo": "preparar_omurice"
+        }
+      ]
+    },
+
+    "preparar_omurice": {
+      "id": "preparar_omurice",
+      "contexto": "Você começa a preparar o omurice.",
+      "texto": "",
+      "tipo_cena": "cozinha",
+      "prato": "omurice"
+    },
+
+    "pesquisa": {
+      "id": "pesquisa",
+      "contexto": "Hiroto olha para o caderninho.",
+      "texto": "\"Mais ou menos. É uma pesquisa pessoal.\"\n\nEle sorri, meio constrangido.\n\n\"Estou procurando alguém. Alguém que estava aqui perto há dez anos.\"",
+      "e_pista": true,
+      "pista_id": "procurando_alguem",
+      "opcoes": [
+        {
+          "texto": "Dez anos é muito tempo. O que aconteceu?",
+          "dica": "curioso",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "oito_anos"
+        },
+        {
+          "texto": "Alguém especial?",
+          "dica": "gentil",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "alguem_especial"
+        }
+      ]
+    },
+
+    "alguem_especial": {
+      "id": "alguem_especial",
+      "contexto": "Hiroto acena com intensidade.",
+      "texto": "\"Muito especial. Alguém que salvou minha vida.\"\n\nEle diz isso sem drama, como um fato.\n\n\"Eu tinha oito anos. Houve um incêndio. Essa pessoa me tirou de lá.\"",
+      "e_pista": true,
+      "pista_id": "salvou_vida",
+      "opcoes": [
+        {
+          "texto": "E você nunca conheceu essa pessoa?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "nunca_conheceu"
+        }
+      ]
+    },
+
+    "nunca_conheceu": {
+      "id": "nunca_conheceu",
+      "contexto": "Hiroto sacode a cabeça.",
+      "texto": "\"Não conscientemente. Eu estava em choque, não lembro o rosto.\"\n\nEle mexe no caderninho.\n\n\"Só lembro da voz. E do que minha mãe contou depois.\"",
+      "opcoes": [
+        {
+          "texto": "O que sua mãe contou?",
+          "dica": "interessado",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "mae_contou"
+        }
+      ]
+    },
+
+    "mae_contou": {
+      "id": "mae_contou",
+      "contexto": "Hiroto olha para você enquanto fala.",
+      "texto": "\"Que era um homem jovem. Que trabalhava no restaurante. Que entrou no fogo para tirar as pessoas.\"\n\nEle faz uma pausa.\n\n\"E que ele se machucou. Ficou com uma cicatriz. No rosto.\"",
+      "e_pista": true,
+      "pista_id": "cicatriz",
+      "pensamento_master": "O ar fica mais denso. Você continua trabalhando, mas suas mãos tremem levemente.",
+      "opcoes": [
+        {
+          "texto": "E é isso que você procura? Alguém com uma cicatriz?",
+          "dica": "neutro",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "procura_cicatriz"
+        }
+      ]
+    },
+
+    "procura_cicatriz": {
+      "id": "procura_cicatriz",
+      "contexto": "Hiroto olha diretamente para você.",
+      "texto": "\"Entre outras coisas.\"\n\nOs olhos dele percorrem seu rosto. Param na sua cicatriz.\n\n\"Você... trabalhou em algum restaurante há dez anos?\"",
+      "e_pista": true,
+      "pista_id": "pergunta_direta",
+      "pensamento_master": "O mundo para por um segundo. Você sente o peso do olhar dele.",
+      "opcoes": [
+        {
+          "texto": "Por que pergunta?",
+          "dica": "neutro",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "porque_pergunta"
+        },
+        {
+          "texto": "[Continuar trabalhando em silêncio]",
+          "dica": "evasivo",
+          "impacto": 10,
+          "tipo": "silencio",
+          "proximo": "silencio_trabalho"
+        }
+      ]
+    },
+
+    "porque_pergunta": {
+      "id": "porque_pergunta",
+      "contexto": "Hiroto não desvia o olhar.",
+      "texto": "\"O incêndio foi aqui perto. Num restaurante pequeno. Como este.\"\n\nEle engole.\n\n\"E você... você tem uma cicatriz. No mesmo lugar que minha mãe descreveu.\"\n\nA voz dele está tremendo agora.\n\n\"Eu ia comer omurice naquela noite. Minha mãe tinha prometido.\"",
+      "e_pista": true,
+      "pista_id": "conexao",
+      "opcoes": [
+        {
+          "texto": "Omurice. Posso fazer para você.",
+          "dica": "oferecendo",
+          "impacto": 20,
+          "tipo": "dialogo_medio",
+          "proximo": "fazer_omurice"
+        }
+      ]
+    },
+
+    "silencio_trabalho": {
+      "id": "silencio_trabalho",
+      "contexto": "Você continua trabalhando. Hiroto não para de olhar.",
+      "texto": "O silêncio se estende. Hiroto não desvia os olhos.\n\n\"Você não respondeu.\"\n\nA voz dele está mais baixa agora.\n\n\"O restaurante. Há dez anos. Você estava lá?\"",
+      "opcoes": [
+        {
+          "texto": "O que você faria se eu estivesse?",
+          "dica": "neutro",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "se_estivesse"
+        }
+      ]
+    },
+
+    "se_estivesse": {
+      "id": "se_estivesse",
+      "contexto": "Hiroto para de respirar por um segundo.",
+      "texto": "\"Eu...\"\n\nEle engole.\n\n\"Eu diria obrigado. Diria que passei dez anos procurando. Diria que a vida que você salvou... ela valeu a pena.\"\n\nAs lágrimas finalmente caem.\n\n\"Eu diria que você não se machucou em vão. Que eu estou aqui. Vivo. Por sua causa.\"",
+      "e_pista": true,
+      "pista_id": "revelacao",
+      "opcoes": [
+        {
+          "texto": "Eu ia fazer omurice para você naquela noite.",
+          "dica": "revelando",
+          "impacto": 20,
+          "tipo": "dialogo_longo",
+          "proximo": "revelacao_final"
+        }
+      ]
+    },
+
+    "revelacao_final": {
+      "id": "revelacao_final",
+      "contexto": "Hiroto congela.",
+      "texto": "\"Era você.\"\n\nNão é uma pergunta.\n\n\"Esse tempo todo... era você.\"\n\nEle se levanta do banco, as mãos tremendo.\n\n\"Eu procurei em tantos lugares. E você estava aqui. Fazendo o que sempre fez. Cuidando das pessoas.\"",
+      "revelacao_prato": "omurice",
+      "opcoes": [
+        {
+          "texto": "Deixa eu fazer aquele omurice agora. Dez anos atrasado.",
+          "dica": "",
+          "impacto": 20,
+          "tipo": "cozinha",
+          "proximo": "preparar_omurice"
+        }
+      ]
+    },
+
+    "boa_noite": {
+      "id": "boa_noite",
+      "contexto": "Hiroto olha o menu rapidamente.",
+      "texto": "\"Qualquer coisa. Estou mais aqui pela conversa, na verdade.\"\n\nEle sorri.\n\n\"Esse lugar é antigo, né? Parece que tem história.\"",
+      "opcoes": [
+        {
+          "texto": "Alguma história em particular que você procura?",
+          "dica": "atento",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "procurando"
+        },
+        {
+          "texto": "Todo lugar de madrugada tem histórias.",
+          "dica": "casual",
+          "impacto": 8,
+          "tipo": "dialogo_curto",
+          "proximo": "lugar_madrugada"
+        }
+      ]
+    },
+
+    "lugar_madrugada": {
+      "id": "lugar_madrugada",
+      "contexto": "Hiroto acena com entusiasmo.",
+      "texto": "\"É! E é por isso que estou aqui.\"\n\nEle abre o caderninho.\n\n\"Estou procurando algo. Alguém, na verdade. Há dez anos.\"",
+      "e_pista": true,
+      "pista_id": "procurando_alguem",
+      "opcoes": [
+        {
+          "texto": "Dez anos é muito tempo.",
+          "dica": "impressionado",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "quanto_tempo"
+        }
+      ]
+    },
+
+    "quem_procurando": {
+      "id": "quem_procurando",
+      "contexto": "Hiroto endireita os ombros.",
+      "texto": "\"Um homem. Alguém que salvou minha vida quando eu era criança.\"\n\nEle diz com seriedade.\n\n\"Houve um incêndio. Num restaurante. Eu estava lá com minha mãe.\"",
+      "e_pista": true,
+      "pista_id": "incendio",
+      "opcoes": [
+        {
+          "texto": "O que aconteceu?",
+          "dica": "interessado",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "oito_anos"
+        }
+      ]
+    },
+
+    "importante": {
+      "id": "importante",
+      "contexto": "Hiroto acena com firmeza.",
+      "texto": "\"A pessoa mais importante da minha vida. E eu nunca conheci.\"\n\nEle fecha o caderninho.\n\n\"Alguém que salvou minha vida. Alguém que se machucou por minha causa. E eu nem sei o nome.\"",
+      "e_pista": true,
+      "pista_id": "salvou_vida",
+      "opcoes": [
+        {
+          "texto": "Conta como aconteceu.",
+          "dica": "aberto",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "oito_anos"
+        }
+      ]
+    },
+
+    "procurando_dez": {
+      "id": "procurando_dez",
+      "contexto": "Hiroto acena com determinação.",
+      "texto": "\"Sim. Toda vez que vejo um restaurante de madrugada, eu entro. Pergunto.\"\n\nEle sorri, mas há algo triste ali.\n\n\"Às vezes acho que estou perseguindo um fantasma. Mas não consigo parar.\"",
+      "opcoes": [
+        {
+          "texto": "O que você vai fazer quando encontrar?",
+          "dica": "curioso",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "vai_fazer"
+        }
+      ]
+    },
+
+    "nunca_soube": {
+      "id": "nunca_soube",
+      "contexto": "Hiroto sacode a cabeça.",
+      "texto": "\"Não. Quando eu acordei no hospital, ele já tinha ido.\"\n\nEle mexe no caderninho.\n\n\"Tentei achar através dos registros do incêndio. Dos funcionários do restaurante. Mas nada.\"\n\nEle olha para você.\n\n\"É como se ele tivesse... desaparecido.\"",
+      "opcoes": [
+        {
+          "texto": "Talvez ele também estivesse se recuperando.",
+          "dica": "sugerindo",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "recuperando"
+        }
+      ]
+    },
+
+    "recuperando": {
+      "id": "recuperando",
+      "contexto": "Hiroto considera isso.",
+      "texto": "\"Talvez. Minha mãe disse que ele se machucou feio.\"\n\nEle olha para a cozinha, depois para você.\n\n\"Você tem... você tem uma cicatriz.\"",
+      "e_pista": true,
+      "pista_id": "notou_cicatriz",
+      "pensamento_master": "O coração dispara. Você mantém as mãos ocupadas.",
+      "opcoes": [
+        {
+          "texto": "Muita gente tem cicatrizes.",
+          "dica": "evasivo",
+          "impacto": 8,
+          "tipo": "dialogo_curto",
+          "proximo": "muita_gente"
+        },
+        {
+          "texto": "Você quer algo para comer enquanto conversa?",
+          "dica": "redirecionando",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "algo_comer"
+        }
+      ]
+    },
+
+    "muita_gente": {
+      "id": "muita_gente",
+      "contexto": "Hiroto não desvia o olhar.",
+      "texto": "\"É verdade.\"\n\nMas ele não para de olhar.\n\n\"Você trabalhou em algum restaurante há dez anos? Nessa área?\"",
+      "opcoes": [
+        {
+          "texto": "Por que você quer saber?",
+          "dica": "neutro",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "porque_pergunta"
+        }
+      ]
+    },
+
+    "algo_comer": {
+      "id": "algo_comer",
+      "contexto": "Hiroto hesita, depois acena.",
+      "texto": "\"Claro. Desculpa, eu às vezes fico... intenso demais.\"\n\nEle olha o menu.\n\n\"Sabe o que eu ia comer naquela noite? No incêndio?\"\n\nPausa.\n\n\"Omurice. Minha mãe tinha prometido.\"",
+      "revelacao_prato": "omurice",
+      "opcoes": [
+        {
+          "texto": "Posso fazer omurice para você.",
+          "dica": "",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "fazer_omurice"
+        }
+      ]
+    },
+
+    "saberia": {
+      "id": "saberia",
+      "contexto": "Hiroto olha para você com esperança.",
+      "texto": "\"Você acha?\"\n\nEle olha ao redor do restaurante.\n\n\"Às vezes penso que se eu o encontrasse... ele nem se lembraria de mim. Era uma criança entre várias.\"\n\nPausa.\n\n\"Mas pra mim, ele é... tudo.\"",
+      "gatilho_prato": true,
+      "opcoes": [
+        {
+          "texto": "O que você ia comer naquela noite?",
+          "dica": "redirecionando",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "ia_comer"
+        }
+      ]
+    }
+  }
+}
