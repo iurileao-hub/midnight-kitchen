@@ -2,6 +2,7 @@
 
 > **STATUS: COMPLETO** ✓
 > Implementacao finalizada em 15/01/2026.
+> Dialogos expandidos para ~100 nos por personagem (592 total).
 > Todos os modulos funcionais e testados.
 
 ## Visao Geral
@@ -194,14 +195,24 @@ midnight-kitchen/
 ### Modulo 3: Dialogos (dados/dialogos/)
 
 **Arquivos:** 6 JSONs
-**Linhas estimadas:** ~2000 (total)
+**Linhas estimadas:** ~8000 (total)
 
-Cada JSON contem:
-- 20-30 nos de dialogo
+Cada JSON contem (EXPANDIDO em 15/01/2026):
+- **86-111 nos de dialogo** por personagem
 - 3-4 opcoes por no
 - Respostas variadas por nivel de confianca
 - Pistas progressivas
 - Gatilhos e consequencias
+- Multiplos caminhos narrativos
+
+| Personagem | Nos | Temas Principais |
+|------------|-----|------------------|
+| Yuki | 99 | Fotografia, culpa, envelope |
+| Tanaka | 99 | Bombeiro, investigacao, laudo |
+| Ryo | 95 | Fuga, culpa, Mika |
+| Midori | 102 | Florista, faiscas, vizinhanca |
+| Sachiko | 111 | Filha, briga, caderno do pai |
+| Hiroto | 86 | Busca, 10 anos, reconhecimento |
 
 ### Modulo 4: Core (core/)
 
@@ -347,10 +358,10 @@ Voce pode:
 - [ ] Transicoes fluidas
 
 ### Checkpoint 4: Dialogos Completos
-- [ ] 6 JSONs de clientes
-- [ ] 6 JSONs de dialogos
-- [ ] Sistema de confianca
-- [ ] Pistas funcionando
+- [x] 6 JSONs de clientes
+- [x] 6 JSONs de dialogos (592 nos total)
+- [x] Sistema de confianca
+- [x] Pistas funcionando
 
 ### Checkpoint 5: Jogo Jogavel
 - [ ] Loop principal funciona
@@ -381,4 +392,5 @@ Ao final da sessao, voce tera:
 ---
 
 *Plano criado em 14/01/2026*
-*Pronto para execucao*
+*Dialogos expandidos em 15/01/2026 (253 → 592 nos)*
+*Implementacao completa*

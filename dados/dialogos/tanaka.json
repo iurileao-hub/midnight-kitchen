@@ -90,6 +90,929 @@
           "impacto": 8,
           "tipo": "dialogo_medio",
           "proximo": "aposentadoria"
+        },
+        {
+          "texto": "Quantas pessoas essas mãos salvaram?",
+          "dica": "admirador",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "quantas_salvou"
+        }
+      ]
+    },
+
+    "quantas_salvou": {
+      "id": "quantas_salvou",
+      "contexto": "Tanaka olha para as mãos, virando-as lentamente.",
+      "texto": "\"Parei de contar depois das primeiras cem.\"\n\nUm meio sorriso sem alegria.\n\n\"Trinta anos. Centenas de chamadas. Prédios em chamas, acidentes de carro, explosões de gás.\"\n\nEle fecha os punhos.\n\n\"Mas a gente não lembra dos salvamentos. Só das perdas.\"",
+      "e_pista": true,
+      "pista_id": "foco_perdas",
+      "opcoes": [
+        {
+          "texto": "Por que as perdas pesam mais?",
+          "dica": "curioso",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "perdas_pesam"
+        },
+        {
+          "texto": "Centenas de vidas. Isso deveria contar mais.",
+          "dica": "encorajador",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "vidas_salvas"
+        },
+        {
+          "texto": "Houve uma perda em particular?",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "perda_especifica"
+        }
+      ]
+    },
+
+    "perdas_pesam": {
+      "id": "perdas_pesam",
+      "contexto": "Tanaka bebe outro gole, pensativo.",
+      "texto": "\"Porque quando você salva alguém, eles vão pra casa. Você não vê o depois.\"\n\nEle coloca o copo na bancada.\n\n\"Mas quando você perde... você vê tudo. O corpo. A família chegando. Os gritos.\"\n\nUm silêncio pesado.\n\n\"E você carrega aquela última imagem pra sempre.\"",
+      "e_pista": true,
+      "pista_id": "ultima_imagem",
+      "opcoes": [
+        {
+          "texto": "Qual é a última imagem que você carrega?",
+          "dica": "direto",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "memorias_dizer"
+        },
+        {
+          "texto": "[Deixar o silêncio falar]",
+          "dica": "respeitoso",
+          "impacto": 12,
+          "tipo": "silencio",
+          "proximo": "silencio_trabalho"
+        }
+      ]
+    },
+
+    "perda_especifica": {
+      "id": "perda_especifica",
+      "contexto": "Os ombros de Tanaka se curvam mais.",
+      "texto": "\"Houve.\"\n\nA palavra sai como um suspiro.\n\n\"Um restaurante. Dez anos atrás. O dono era... era alguém que eu conhecia.\"\n\nEle olha para as mãos.\n\n\"Entrei no fogo pra tirar ele. Quase consegui.\"",
+      "e_pista": true,
+      "pista_id": "restaurante_fogo",
+      "pensamento_master": "Um restaurante. Dez anos. Seu peito aperta.",
+      "opcoes": [
+        {
+          "texto": "O que aconteceu?",
+          "dica": "cuidadoso",
+          "impacto": 12,
+          "tipo": "dialogo_curto",
+          "proximo": "tentou_salvar"
+        },
+        {
+          "texto": "Você o conhecia pessoalmente?",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "conhecia_pessoalmente"
+        }
+      ]
+    },
+
+    "conhecia_pessoalmente": {
+      "id": "conhecia_pessoalmente",
+      "contexto": "Tanaka acena, a dor visível no rosto.",
+      "texto": "\"Conhecia. Takeshi.\"\n\nO nome sai devagar, carregado de peso.\n\n\"Dono de um restaurante pequeno aqui perto. A gente ia lá depois dos turnos.\"\n\nEle esfrega as mãos.\n\n\"Ele fazia comida de alma. Ochazuke, principalmente. Simples, mas perfeito.\"",
+      "e_pista": true,
+      "pista_id": "nome_takeshi",
+      "pensamento_master": "Takeshi. O nome ecoa. Você conhecia esse nome.",
+      "opcoes": [
+        {
+          "texto": "Takeshi parece ter sido importante pra você.",
+          "dica": "empático",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "takeshi_importante"
+        },
+        {
+          "texto": "Ochazuke... posso fazer um para você.",
+          "dica": "acolhedor",
+          "impacto": 18,
+          "tipo": "dialogo_curto",
+          "proximo": "aceitar_ochazuke"
+        },
+        {
+          "texto": "Como foi o incêndio?",
+          "dica": "investigativo",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "como_foi_incendio"
+        }
+      ]
+    },
+
+    "takeshi_importante": {
+      "id": "takeshi_importante",
+      "contexto": "Tanaka respira fundo.",
+      "texto": "\"Era. Não só pra mim. Pra todos os bombeiros do bairro.\"\n\nUm sorriso triste.\n\n\"Ele dizia que cozinhar pra gente que salva vidas era a forma dele de retribuir.\"\n\nA voz falha.\n\n\"Nunca cobrava o preço cheio. Sempre dava um extra. Um homem bom.\"",
+      "e_pista": true,
+      "pista_id": "takeshi_generoso",
+      "opcoes": [
+        {
+          "texto": "E você tentou salvá-lo.",
+          "dica": "afirmação",
+          "impacto": 12,
+          "tipo": "dialogo_curto",
+          "proximo": "tentou_salvar"
+        },
+        {
+          "texto": "Pessoas assim não deveriam morrer daquele jeito.",
+          "dica": "empático",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "nao_deveria_morrer"
+        }
+      ]
+    },
+
+    "nao_deveria_morrer": {
+      "id": "nao_deveria_morrer",
+      "contexto": "Tanaka aperta o copo com força.",
+      "texto": "\"Não. Não deveria.\"\n\nA raiva antiga aflora por um momento.\n\n\"E talvez não precisasse. Se o laudo tivesse sido honesto.\"\n\nEle percebe o que disse e para.\n\n\"Desculpe. É o sake falando.\"",
+      "e_pista": true,
+      "pista_id": "laudo_desonesto",
+      "opcoes": [
+        {
+          "texto": "O laudo não foi honesto?",
+          "dica": "atento",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "laudo_problema"
+        },
+        {
+          "texto": "Não precisa se desculpar. Continue.",
+          "dica": "encorajador",
+          "impacto": 12,
+          "tipo": "dialogo_curto",
+          "proximo": "laudo_problema"
+        }
+      ]
+    },
+
+    "laudo_problema": {
+      "id": "laudo_problema",
+      "contexto": "Tanaka hesita, depois decide continuar.",
+      "texto": "\"O laudo oficial disse que o fogo começou na cozinha. Óleo quente, descuido.\"\n\nEle balança a cabeça.\n\n\"Mas eu estava lá. Vi o fogo. O padrão de queima.\"\n\nOs olhos encontram os seus.\n\n\"Aquele fogo não veio de dentro. Veio de fora. Lateral. Como se...\"\n\nUma pausa.\n\n\"Como se alguém tivesse jogado algo inflamável.\"",
+      "e_pista": true,
+      "pista_id": "fogo_proposital",
+      "pensamento_master": "Gasolina. Você lembra do cheiro. Da origem externa.",
+      "opcoes": [
+        {
+          "texto": "Você acha que foi intencional?",
+          "dica": "sério",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "fogo_intencional"
+        },
+        {
+          "texto": "Por que o laudo diria outra coisa?",
+          "dica": "investigativo",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "laudo_mentiu"
+        },
+        {
+          "texto": "Trinta anos de experiência. Você saberia reconhecer.",
+          "dica": "validador",
+          "impacto": 15,
+          "tipo": "dialogo_curto",
+          "proximo": "experiencia_fogo"
+        }
+      ]
+    },
+
+    "fogo_intencional": {
+      "id": "fogo_intencional",
+      "contexto": "Tanaka fecha os olhos por um momento.",
+      "texto": "\"Acho. Sempre achei.\"\n\nEle abre os olhos, cansados.\n\n\"Mas quem sou eu? Um bombeiro traumatizado tentando encontrar culpados onde não há.\"\n\nUm riso amargo.\n\n\"É o que disseram quando tentei levantar questões.\"",
+      "e_pista": true,
+      "pista_id": "questoes_ignoradas",
+      "opcoes": [
+        {
+          "texto": "Quem disse isso?",
+          "dica": "curioso",
+          "impacto": 12,
+          "tipo": "dialogo_curto",
+          "proximo": "quem_disse"
+        },
+        {
+          "texto": "Seus instintos valem mais que papéis.",
+          "dica": "apoiador",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "instintos_valem"
+        },
+        {
+          "texto": "Takeshi tinha inimigos?",
+          "dica": "investigativo",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "takeshi_inimigos"
+        }
+      ]
+    },
+
+    "quem_disse": {
+      "id": "quem_disse",
+      "contexto": "Tanaka aperta os lábios.",
+      "texto": "\"Meus superiores. O investigador de incêndios.\"\n\nEle bebe mais sake.\n\n\"Disseram que eu estava emocionalmente comprometido. Que a fumaça tinha afetado minha percepção.\"\n\nA mão treme levemente.\n\n\"Me mandaram pra terapia. Dois anos depois, me aposentei.\"",
+      "e_pista": true,
+      "pista_id": "forçado_silencio",
+      "opcoes": [
+        {
+          "texto": "Eles queriam que você ficasse quieto.",
+          "dica": "perceptivo",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "silenciar_verdade"
+        },
+        {
+          "texto": "Você desistiu ou foi forçado a desistir?",
+          "dica": "direto",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "forcado_desistir"
+        }
+      ]
+    },
+
+    "silenciar_verdade": {
+      "id": "silenciar_verdade",
+      "contexto": "Tanaka acena devagar.",
+      "texto": "\"Sim. Agora vejo isso claramente.\"\n\nEle olha para o copo vazio.\n\n\"Na época, achei que estavam me protegendo. Me ajudando a processar o trauma.\"\n\nUm suspiro amargo.\n\n\"Mas estavam protegendo o laudo. A narrativa oficial.\"",
+      "e_pista": true,
+      "pista_id": "narrativa_oficial",
+      "opcoes": [
+        {
+          "texto": "Por que protegeriam uma mentira?",
+          "dica": "investigativo",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "porque_mentira"
+        },
+        {
+          "texto": "A verdade ainda pode vir à tona.",
+          "dica": "esperançoso",
+          "impacto": 12,
+          "tipo": "dialogo_curto",
+          "proximo": "verdade_vir"
+        }
+      ]
+    },
+
+    "porque_mentira": {
+      "id": "porque_mentira",
+      "contexto": "Tanaka dá de ombros, derrotado.",
+      "texto": "\"Não sei. Às vezes penso... talvez houvesse algo mais.\"\n\nEle esfrega o rosto com as mãos.\n\n\"Takeshi era só um cozinheiro. Mas talvez alguém quisesse o terreno. Ou tinha dívida com gente errada.\"\n\nUma pausa.\n\n\"Ou talvez eu só esteja inventando teorias pra dar sentido ao sem sentido.\"",
+      "opcoes": [
+        {
+          "texto": "Seu instinto diz o quê?",
+          "dica": "direto",
+          "impacto": 15,
+          "tipo": "dialogo_curto",
+          "proximo": "instinto_diz"
+        },
+        {
+          "texto": "Posso fazer algo pra comer. Ajuda a clarear a mente.",
+          "dica": "prático",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_comida"
+        }
+      ]
+    },
+
+    "instinto_diz": {
+      "id": "instinto_diz",
+      "contexto": "Tanaka endireita os ombros, firme.",
+      "texto": "\"Que algo estava errado. Que o fogo foi colocado.\"\n\nA certeza volta à voz.\n\n\"E que Takeshi não era culpado de sua própria morte.\"",
+      "e_pista": true,
+      "pista_id": "takeshi_inocente",
+      "opcoes": [
+        {
+          "texto": "Você honra a memória dele ao acreditar nisso.",
+          "dica": "respeitoso",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "honrar_memoria"
+        },
+        {
+          "texto": "Quer que eu faça o ochazuke dele? Em memória.",
+          "dica": "gentil",
+          "impacto": 18,
+          "tipo": "dialogo_curto",
+          "proximo": "aceitar_ochazuke"
+        }
+      ]
+    },
+
+    "verdade_vir": {
+      "id": "verdade_vir",
+      "contexto": "Tanaka olha para você com curiosidade.",
+      "texto": "\"Você fala como se soubesse de algo.\"\n\nEle inclina a cabeça.\n\n\"Esse lugar... há quanto tempo está aberto?\"",
+      "pensamento_master": "A pergunta paira. Você desvia o olhar.",
+      "opcoes": [
+        {
+          "texto": "Algum tempo. Por que pergunta?",
+          "dica": "evasivo",
+          "impacto": 8,
+          "tipo": "dialogo_curto",
+          "proximo": "porque_pergunta"
+        },
+        {
+          "texto": "O passado tem formas de se revelar.",
+          "dica": "misterioso",
+          "impacto": 12,
+          "tipo": "dialogo_curto",
+          "proximo": "passado_revela"
+        }
+      ]
+    },
+
+    "porque_pergunta": {
+      "id": "porque_pergunta",
+      "contexto": "Tanaka estuda seu rosto.",
+      "texto": "\"Só curiosidade. O jeito que você cozinha... me lembra dele.\"\n\nUm olhar distante.\n\n\"Takeshi tinha esse mesmo jeito. Atento. Como se cada prato importasse.\"",
+      "opcoes": [
+        {
+          "texto": "Cada prato importa. Pode mudar a noite de alguém.",
+          "dica": "filosófico",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "prato_importa"
+        },
+        {
+          "texto": "Quer que eu faça um ochazuke?",
+          "dica": "prático",
+          "impacto": 12,
+          "tipo": "dialogo_curto",
+          "proximo": "aceitar_ochazuke"
+        }
+      ]
+    },
+
+    "prato_importa": {
+      "id": "prato_importa",
+      "contexto": "Algo no rosto de Tanaka suaviza.",
+      "texto": "\"Exatamente o que ele dizia.\"\n\nUm sorriso triste.\n\n\"Você o teria gostado dele. Ou ele de você.\"",
+      "opcoes": [
+        {
+          "texto": "Deixa eu fazer um ochazuke em homenagem a ele.",
+          "dica": "respeitoso",
+          "impacto": 18,
+          "tipo": "dialogo_curto",
+          "proximo": "aceitar_ochazuke"
+        }
+      ]
+    },
+
+    "passado_revela": {
+      "id": "passado_revela",
+      "contexto": "Tanaka acena pensativo.",
+      "texto": "\"Talvez. Mas dez anos é muito tempo.\"\n\nEle termina o sake.\n\n\"Às vezes acho que só quero paz. Poder comer um ochazuke sem sentir o peso.\"",
+      "e_pista": true,
+      "pista_id": "ochazuke",
+      "gatilho_prato": true,
+      "opcoes": [
+        {
+          "texto": "Posso fazer isso por você. Paz por uma tigela.",
+          "dica": "gentil",
+          "impacto": 18,
+          "tipo": "dialogo_curto",
+          "proximo": "aceitar_ochazuke"
+        }
+      ]
+    },
+
+    "forcado_desistir": {
+      "id": "forcado_desistir",
+      "contexto": "A expressão de Tanaka endurece.",
+      "texto": "\"Forçado. Não com palavras diretas, mas...\"\n\nEle esfrega as mãos.\n\n\"Começaram a me dar os turnos piores. Me excluir das operações importantes.\"\n\nA voz baixa.\n\n\"Até que entendi a mensagem. Parar de fazer perguntas ou sair.\"",
+      "e_pista": true,
+      "pista_id": "pressao_institucional",
+      "opcoes": [
+        {
+          "texto": "Eles tinham algo a esconder.",
+          "dica": "afirmação",
+          "impacto": 15,
+          "tipo": "dialogo_curto",
+          "proximo": "algo_esconder"
+        },
+        {
+          "texto": "E você escolheu sair.",
+          "dica": "compreensivo",
+          "impacto": 12,
+          "tipo": "dialogo_curto",
+          "proximo": "escolheu_sair"
+        }
+      ]
+    },
+
+    "algo_esconder": {
+      "id": "algo_esconder",
+      "contexto": "Tanaka acena com amargura.",
+      "texto": "\"Sim. Mas o quê? Nunca descobri.\"\n\nEle olha para as mãos.\n\n\"Só sei que Takeshi merecia melhor. Merecia a verdade.\"",
+      "opcoes": [
+        {
+          "texto": "A memória dele vive em você.",
+          "dica": "consolador",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "memoria_vive"
+        },
+        {
+          "texto": "Posso fazer o ochazuke dele. Manter viva a lembrança.",
+          "dica": "ativo",
+          "impacto": 18,
+          "tipo": "dialogo_curto",
+          "proximo": "aceitar_ochazuke"
+        }
+      ]
+    },
+
+    "memoria_vive": {
+      "id": "memoria_vive",
+      "contexto": "Tanaka respira fundo.",
+      "texto": "\"Vive. Carrego ele comigo todos os dias.\"\n\nUm olhar para a cozinha.\n\n\"No cheiro de arroz cozinhando. No vapor do chá. No gosto de umeboshi.\"",
+      "e_pista": true,
+      "pista_id": "ochazuke",
+      "gatilho_prato": true,
+      "opcoes": [
+        {
+          "texto": "Ochazuke. Deixa eu fazer um.",
+          "dica": "decidido",
+          "impacto": 18,
+          "tipo": "dialogo_curto",
+          "proximo": "aceitar_ochazuke"
+        }
+      ]
+    },
+
+    "escolheu_sair": {
+      "id": "escolheu_sair",
+      "contexto": "Tanaka dá de ombros, cansado.",
+      "texto": "\"Escolhi. Ou fui escolhido. Difícil dizer.\"\n\nEle olha para o copo vazio.\n\n\"De qualquer forma, saí. E desde então... venho a lugares como este.\"\n\nUm olhar ao redor.\n\n\"Procurando um gosto. Uma memória. Algo que me faça lembrar dele sem a dor.\"",
+      "opcoes": [
+        {
+          "texto": "O que você procura especificamente?",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "procura_especifico"
+        },
+        {
+          "texto": "Talvez eu possa ajudar com isso.",
+          "dica": "acolhedor",
+          "impacto": 15,
+          "tipo": "dialogo_curto",
+          "proximo": "oferecer_comida"
+        }
+      ]
+    },
+
+    "procura_especifico": {
+      "id": "procura_especifico",
+      "contexto": "Os olhos de Tanaka ficam distantes.",
+      "texto": "\"Ochazuke. O jeito que ele fazia.\"\n\nA voz fica suave.\n\n\"Arroz quente. Chá verde fumegante. Umeboshi no centro. Alga nori nas bordas.\"\n\nEle quase sorri.\n\n\"Simples. Honesto. Como ele.\"",
+      "e_pista": true,
+      "pista_id": "ochazuke",
+      "gatilho_prato": true,
+      "opcoes": [
+        {
+          "texto": "Posso fazer isso. Pode não ser igual, mas será honesto.",
+          "dica": "honesto",
+          "impacto": 18,
+          "tipo": "dialogo_curto",
+          "proximo": "aceitar_ochazuke"
+        }
+      ]
+    },
+
+    "instintos_valem": {
+      "id": "instintos_valem",
+      "contexto": "Tanaka ergue os olhos, surpreso.",
+      "texto": "\"Você acha?\"\n\nUm lampejo de esperança.\n\n\"Faz tempo que ninguém me diz isso.\"",
+      "opcoes": [
+        {
+          "texto": "Trinta anos. Centenas de fogos. Você sabe o que viu.",
+          "dica": "afirmador",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "sabe_o_que_viu"
+        }
+      ]
+    },
+
+    "sabe_o_que_viu": {
+      "id": "sabe_o_que_viu",
+      "contexto": "Tanaka endireita os ombros.",
+      "texto": "\"Sei. Vi fogo externo. Vi padrão de acelerante.\"\n\nA voz ganha força.\n\n\"E vi um homem bom morrer por algo que não foi culpa dele.\"",
+      "e_pista": true,
+      "pista_id": "acelerante",
+      "pensamento_master": "Acelerante. Gasolina. Você fecha os olhos.",
+      "opcoes": [
+        {
+          "texto": "Esse homem bom... conte mais sobre ele.",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "conte_takeshi"
+        },
+        {
+          "texto": "Posso honrar a memória dele com comida. Ochazuke?",
+          "dica": "ativo",
+          "impacto": 18,
+          "tipo": "dialogo_curto",
+          "proximo": "aceitar_ochazuke"
+        }
+      ]
+    },
+
+    "conte_takeshi": {
+      "id": "conte_takeshi",
+      "contexto": "O rosto de Tanaka suaviza com a memória.",
+      "texto": "\"Takeshi. Dono de restaurante pequeno.\"\n\nUm sorriso triste.\n\n\"Sempre de avental branco. Sempre sorrindo. Sempre com uma palavra gentil.\"\n\nEle para.\n\n\"Fazia a melhor comida reconfortante que já comi. Ochazuke que aquecia a alma.\"",
+      "e_pista": true,
+      "pista_id": "takeshi_descricao",
+      "opcoes": [
+        {
+          "texto": "Vou fazer ochazuke. Por Takeshi.",
+          "dica": "respeitoso",
+          "impacto": 18,
+          "tipo": "dialogo_curto",
+          "proximo": "aceitar_ochazuke"
+        }
+      ]
+    },
+
+    "takeshi_inimigos": {
+      "id": "takeshi_inimigos",
+      "contexto": "Tanaka franze a testa.",
+      "texto": "\"Inimigos? Takeshi?\"\n\nEle quase ri.\n\n\"O homem não tinha um osso ruim no corpo. Todo mundo gostava dele.\"\n\nUma pausa.\n\n\"Mas... houve um incidente. Semanas antes do fogo.\"",
+      "e_pista": true,
+      "pista_id": "incidente_antes",
+      "opcoes": [
+        {
+          "texto": "Que incidente?",
+          "dica": "atento",
+          "impacto": 15,
+          "tipo": "dialogo_curto",
+          "proximo": "incidente_detalhes"
+        },
+        {
+          "texto": "Continue. Pode ser importante.",
+          "dica": "encorajador",
+          "impacto": 12,
+          "tipo": "dialogo_curto",
+          "proximo": "incidente_detalhes"
+        }
+      ]
+    },
+
+    "incidente_detalhes": {
+      "id": "incidente_detalhes",
+      "contexto": "Tanaka hesita, procurando a memória.",
+      "texto": "\"Um cara apareceu. Bêbado. Começou a fazer escândalo.\"\n\nEle esfrega o rosto.\n\n\"Gritava algo sobre dívida. Sobre o que Takeshi 'devia' a alguém.\"\n\nUm olhar distante.\n\n\"Takeshi ficou pálido. Mandou o cara embora. Disse que era um mal-entendido.\"",
+      "e_pista": true,
+      "pista_id": "divida_misteriosa",
+      "opcoes": [
+        {
+          "texto": "Você acredita que era mal-entendido?",
+          "dica": "investigativo",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "acredita_mal_entendido"
+        },
+        {
+          "texto": "Lembra como era esse homem?",
+          "dica": "detalhista",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "descricao_homem"
+        }
+      ]
+    },
+
+    "acredita_mal_entendido": {
+      "id": "acredita_mal_entendido",
+      "contexto": "Tanaka balança a cabeça lentamente.",
+      "texto": "\"Na época, sim. Takeshi era honesto.\"\n\nUma pausa.\n\n\"Mas depois do fogo... comecei a me perguntar.\"\n\nEle aperta os lábios.\n\n\"E se não fosse mal-entendido? E se houvesse algo que eu não sabia?\"",
+      "opcoes": [
+        {
+          "texto": "Pode ter sido coincidência.",
+          "dica": "calmo",
+          "impacto": 8,
+          "tipo": "dialogo_curto",
+          "proximo": "coincidencia_demais"
+        },
+        {
+          "texto": "Ou pode ter sido o motivo do fogo.",
+          "dica": "direto",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "motivo_fogo"
+        }
+      ]
+    },
+
+    "coincidencia_demais": {
+      "id": "coincidencia_demais",
+      "contexto": "Tanaka dá um riso sem humor.",
+      "texto": "\"Coincidência. É o que todo mundo disse.\"\n\nEle termina o sake.\n\n\"Mas trinta anos como bombeiro me ensinaram: não existe coincidência em incêndio criminoso.\"",
+      "opcoes": [
+        {
+          "texto": "Então você acredita que foi proposital.",
+          "dica": "afirmação",
+          "impacto": 12,
+          "tipo": "dialogo_curto",
+          "proximo": "acredita_proposital"
+        }
+      ]
+    },
+
+    "acredita_proposital": {
+      "id": "acredita_proposital",
+      "contexto": "Tanaka acena, pesado.",
+      "texto": "\"Acredito. Sempre acreditei.\"\n\nEle olha para as mãos.\n\n\"Mas não consegui provar. E agora é tarde demais.\"",
+      "opcoes": [
+        {
+          "texto": "Nunca é tarde para a verdade.",
+          "dica": "esperançoso",
+          "impacto": 12,
+          "tipo": "dialogo_curto",
+          "proximo": "nunca_tarde"
+        },
+        {
+          "texto": "Pode honrar a memória dele de outras formas.",
+          "dica": "prático",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "honrar_memoria"
+        }
+      ]
+    },
+
+    "nunca_tarde": {
+      "id": "nunca_tarde",
+      "contexto": "Tanaka olha para você longamente.",
+      "texto": "\"Talvez.\"\n\nUm suspiro.\n\n\"Mas por enquanto... só queria lembrar dele sem dor. Comer um ochazuke e sentir paz.\"",
+      "e_pista": true,
+      "pista_id": "ochazuke",
+      "gatilho_prato": true,
+      "opcoes": [
+        {
+          "texto": "Isso eu posso fazer. Ochazuke está saindo.",
+          "dica": "decidido",
+          "impacto": 18,
+          "tipo": "dialogo_curto",
+          "proximo": "aceitar_ochazuke"
+        }
+      ]
+    },
+
+    "motivo_fogo": {
+      "id": "motivo_fogo",
+      "contexto": "Os olhos de Tanaka se arregalam levemente.",
+      "texto": "\"É o que penso. Dívida não paga. Vingança. Intimidação que saiu do controle.\"\n\nEle esfrega as mãos nervosamente.\n\n\"Mas sem provas... é só teoria.\"",
+      "opcoes": [
+        {
+          "texto": "Sua experiência é prova suficiente.",
+          "dica": "validador",
+          "impacto": 15,
+          "tipo": "dialogo_curto",
+          "proximo": "experiencia_prova"
+        },
+        {
+          "texto": "Deixa eu fazer algo pra você comer. Precisa de energia.",
+          "dica": "cuidadoso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_comida"
+        }
+      ]
+    },
+
+    "experiencia_prova": {
+      "id": "experiencia_prova",
+      "contexto": "Tanaka endireita os ombros.",
+      "texto": "\"Obrigado por dizer isso.\"\n\nUm momento de silêncio.\n\n\"Faz bem ouvir que eu não estava louco.\"",
+      "opcoes": [
+        {
+          "texto": "Você não estava. Posso fazer um ochazuke para você?",
+          "dica": "gentil",
+          "impacto": 18,
+          "tipo": "dialogo_curto",
+          "proximo": "aceitar_ochazuke"
+        }
+      ]
+    },
+
+    "descricao_homem": {
+      "id": "descricao_homem",
+      "contexto": "Tanaka franze a testa, lembrando.",
+      "texto": "\"Não muito bem. Foi rápido. Mas...\"\n\nEle para.\n\n\"Cabelo curto. Jaqueta de couro. Tatuagem no pescoço.\"\n\nUm estremecimento.\n\n\"E olhos frios. Como se não houvesse nada humano ali.\"",
+      "e_pista": true,
+      "pista_id": "homem_tatuagem",
+      "opcoes": [
+        {
+          "texto": "Você o viu de novo depois?",
+          "dica": "investigativo",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "viu_depois"
+        },
+        {
+          "texto": "Esse tipo de pessoa... pode ser perigoso.",
+          "dica": "preocupado",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "pessoa_perigosa"
+        }
+      ]
+    },
+
+    "viu_depois": {
+      "id": "viu_depois",
+      "contexto": "Tanaka balança a cabeça.",
+      "texto": "\"Não. Nunca mais.\"\n\nUma pausa.\n\n\"Mas na noite do fogo... achei que vi uma sombra. Saindo pelos fundos.\"\n\nEle esfrega os olhos.\n\n\"Mas estava tudo cheio de fumaça. Posso ter imaginado.\"",
+      "e_pista": true,
+      "pista_id": "sombra_fugindo",
+      "opcoes": [
+        {
+          "texto": "Ou pode ter sido real.",
+          "dica": "validador",
+          "impacto": 15,
+          "tipo": "dialogo_curto",
+          "proximo": "sombra_real"
+        },
+        {
+          "texto": "Você contou isso pra alguém?",
+          "dica": "prático",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "contou_sombra"
+        }
+      ]
+    },
+
+    "sombra_real": {
+      "id": "sombra_real",
+      "contexto": "Tanaka olha para você com gratidão.",
+      "texto": "\"Talvez. Gosto de pensar que sim.\"\n\nEle respira fundo.\n\n\"Que eu não estava louco. Que havia alguém lá. Que Takeshi foi assassinado.\"",
+      "opcoes": [
+        {
+          "texto": "Seus instintos não mentem.",
+          "dica": "apoiador",
+          "impacto": 15,
+          "tipo": "dialogo_curto",
+          "proximo": "instintos_nao_mentem"
+        }
+      ]
+    },
+
+    "instintos_nao_mentem": {
+      "id": "instintos_nao_mentem",
+      "contexto": "Tanaka acena, cansado mas grato.",
+      "texto": "\"Não. Trinta anos me ensinaram isso.\"\n\nUm suspiro longo.\n\n\"Obrigado. Por ouvir. Por acreditar.\"\n\nEle olha para a cozinha.\n\n\"Posso... posso pedir um ochazuke? Como o de Takeshi?\"",
+      "e_pista": true,
+      "pista_id": "ochazuke",
+      "gatilho_prato": true,
+      "opcoes": [
+        {
+          "texto": "Claro. Com todo respeito.",
+          "dica": "honrado",
+          "impacto": 18,
+          "tipo": "dialogo_curto",
+          "proximo": "aceitar_ochazuke"
+        }
+      ]
+    },
+
+    "contou_sombra": {
+      "id": "contou_sombra",
+      "contexto": "Tanaka ri amargamente.",
+      "texto": "\"Tentei. Coloquei no meu relatório.\"\n\nEle aperta os punhos.\n\n\"Foi ignorado. Chalaram como 'alucinação induzida por fumaça'.\"\n\nUm olhar distante.\n\n\"Mais uma razão pra me empurrarem pra aposentadoria.\"",
+      "opcoes": [
+        {
+          "texto": "Eles não queriam investigar de verdade.",
+          "dica": "perceptivo",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "nao_investigar"
+        },
+        {
+          "texto": "A verdade oficial nem sempre é verdade.",
+          "dica": "filosófico",
+          "impacto": 15,
+          "tipo": "dialogo_curto",
+          "proximo": "verdade_oficial"
+        }
+      ]
+    },
+
+    "nao_investigar": {
+      "id": "nao_investigar",
+      "contexto": "Tanaka acena pesadamente.",
+      "texto": "\"Não. Queriam fechar o caso rápido.\"\n\nEle olha para o copo vazio.\n\n\"Acidente de cozinha. Negligência do dono. Fim da história.\"\n\nA voz treme de raiva contida.\n\n\"E Takeshi ficou com a culpa da própria morte.\"",
+      "opcoes": [
+        {
+          "texto": "Mas você sabe a verdade. Isso importa.",
+          "dica": "consolador",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "sabe_verdade"
+        },
+        {
+          "texto": "Posso fazer um ochazuke. Honrar a memória real dele.",
+          "dica": "ativo",
+          "impacto": 18,
+          "tipo": "dialogo_curto",
+          "proximo": "aceitar_ochazuke"
+        }
+      ]
+    },
+
+    "sabe_verdade": {
+      "id": "sabe_verdade",
+      "contexto": "Tanaka respira fundo.",
+      "texto": "\"Sei. E vou carregar ela até morrer.\"\n\nUm olhar para você.\n\n\"Takeshi era inocente. Era bom. Fazia ochazuke que aquecia a alma.\"",
+      "e_pista": true,
+      "pista_id": "ochazuke",
+      "gatilho_prato": true,
+      "opcoes": [
+        {
+          "texto": "Deixa eu fazer esse ochazuke. Por ele.",
+          "dica": "respeitoso",
+          "impacto": 18,
+          "tipo": "dialogo_curto",
+          "proximo": "aceitar_ochazuke"
+        }
+      ]
+    },
+
+    "pessoa_perigosa": {
+      "id": "pessoa_perigosa",
+      "contexto": "Tanaka acena sombriamente.",
+      "texto": "\"Era. Dava pra sentir.\"\n\nEle esfrega os braços.\n\n\"O tipo de pessoa que você não quer cruzar.\"\n\nUma pausa.\n\n\"E Takeshi cruzou. De alguma forma.\"",
+      "opcoes": [
+        {
+          "texto": "Takeshi pode não ter tido escolha.",
+          "dica": "empático",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "sem_escolha"
+        },
+        {
+          "texto": "Quer falar de algo mais leve? Comida ajuda.",
+          "dica": "mudando assunto",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "oferecer_comida"
+        }
+      ]
+    },
+
+    "sem_escolha": {
+      "id": "sem_escolha",
+      "contexto": "Os olhos de Tanaka ficam úmidos.",
+      "texto": "\"Talvez não. Takeshi era gentil demais.\"\n\nA voz falha.\n\n\"Provavelmente tentou ajudar. Ou recusou fazer algo errado.\"\n\nUm silêncio.\n\n\"E pagou com a vida.\"",
+      "opcoes": [
+        {
+          "texto": "Morreu como viveu. Com honra.",
+          "dica": "respeitoso",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "morreu_honra"
+        }
+      ]
+    },
+
+    "morreu_honra": {
+      "id": "morreu_honra",
+      "contexto": "Tanaka limpa os olhos discretamente.",
+      "texto": "\"Sim. Com honra.\"\n\nEle respira fundo.\n\n\"Obrigado. Por isso.\"\n\nUm olhar para a cozinha.\n\n\"Pode... pode fazer um ochazuke? Como ele fazia?\"",
+      "e_pista": true,
+      "pista_id": "ochazuke",
+      "gatilho_prato": true,
+      "opcoes": [
+        {
+          "texto": "Com toda honra. Ochazuke saindo.",
+          "dica": "decidido",
+          "impacto": 18,
+          "tipo": "dialogo_curto",
+          "proximo": "aceitar_ochazuke"
         }
       ]
     },
@@ -170,6 +1093,215 @@
           "impacto": 12,
           "tipo": "dialogo_medio",
           "proximo": "nao_culpa"
+        },
+        {
+          "texto": "Ele disse algo? Antes de...",
+          "dica": "cuidadoso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "ultimas_palavras"
+        }
+      ]
+    },
+
+    "ultimas_palavras": {
+      "id": "ultimas_palavras",
+      "contexto": "Tanaka congela. A memória claramente dolorosa.",
+      "texto": "\"Disse. Estava inconsciente, mas murmurou algo quando tentei puxá-lo.\"\n\nEle fecha os olhos.\n\n\"Um nome. Não era o meu. Não era de ninguém da equipe.\"\n\nA voz fica quase inaudível.\n\n\"Nunca descobri de quem era.\"",
+      "e_pista": true,
+      "pista_id": "nome_misterioso",
+      "pensamento_master": "Um nome. Seu coração acelera. Que nome seria?",
+      "opcoes": [
+        {
+          "texto": "Lembra que nome era?",
+          "dica": "cuidadoso",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "que_nome"
+        },
+        {
+          "texto": "Talvez fosse de alguém importante pra ele.",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_curto",
+          "proximo": "alguem_importante"
+        }
+      ]
+    },
+
+    "que_nome": {
+      "id": "que_nome",
+      "contexto": "Tanaka abre os olhos devagar.",
+      "texto": "\"Lembro. É o tipo de coisa que não esquece.\"\n\nEle olha diretamente para você.\n\n\"Mas não sei se devo dizer. Parece... traição. Contar o último momento dele.\"",
+      "opcoes": [
+        {
+          "texto": "Às vezes falar é honrar, não trair.",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "falar_honrar"
+        },
+        {
+          "texto": "Não precisa dizer se não quiser. Respeito isso.",
+          "dica": "respeitoso",
+          "impacto": 12,
+          "tipo": "dialogo_curto",
+          "proximo": "respeito_silencio"
+        }
+      ]
+    },
+
+    "falar_honrar": {
+      "id": "falar_honrar",
+      "contexto": "Tanaka considera por um longo momento.",
+      "texto": "\"Talvez você tenha razão.\"\n\nEle respira fundo.\n\n\"Era um nome de mulher. Suave. Como se fosse precioso pra ele.\"\n\nUma pausa.\n\n\"Mas nunca encontrei ninguém com esse nome nos registros dele.\"",
+      "e_pista": true,
+      "pista_id": "nome_mulher",
+      "opcoes": [
+        {
+          "texto": "Talvez fosse de muito tempo atrás.",
+          "dica": "pensativo",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "tempo_atras"
+        },
+        {
+          "texto": "Todos temos nomes que guardamos no coração.",
+          "dica": "filosófico",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "nomes_coracao"
+        }
+      ]
+    },
+
+    "tempo_atras": {
+      "id": "tempo_atras",
+      "contexto": "Tanaka acena lentamente.",
+      "texto": "\"Deve ser. Um primeiro amor. Uma amiga de infância.\"\n\nEle olha para o sake.\n\n\"Seja lá quem fosse... era importante. O suficiente pra ser o último pensamento dele.\"",
+      "opcoes": [
+        {
+          "texto": "Isso é bonito. De certa forma.",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_curto",
+          "proximo": "bonito_forma"
+        },
+        {
+          "texto": "Posso fazer algo pra você? Comida ajuda.",
+          "dica": "prático",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_comida"
+        }
+      ]
+    },
+
+    "bonito_forma": {
+      "id": "bonito_forma",
+      "contexto": "Tanaka quase sorri.",
+      "texto": "\"É. Nunca pensei assim.\"\n\nUm suspiro.\n\n\"Obrigado por isso. Por me ajudar a ver diferente.\"\n\nEle olha para a cozinha.\n\n\"Pode fazer um ochazuke? Takeshi fazia o melhor.\"",
+      "e_pista": true,
+      "pista_id": "ochazuke",
+      "gatilho_prato": true,
+      "opcoes": [
+        {
+          "texto": "Claro. Com todo cuidado.",
+          "dica": "gentil",
+          "impacto": 18,
+          "tipo": "dialogo_curto",
+          "proximo": "aceitar_ochazuke"
+        }
+      ]
+    },
+
+    "nomes_coracao": {
+      "id": "nomes_coracao",
+      "contexto": "Algo no rosto de Tanaka suaviza.",
+      "texto": "\"Verdade. Cada um tem os seus.\"\n\nEle olha para as mãos.\n\n\"Takeshi tinha esse nome. Eu tenho o nome dele.\"\n\nUm silêncio.\n\n\"E o ochazuke que ele fazia. Isso também guardo.\"",
+      "e_pista": true,
+      "pista_id": "ochazuke",
+      "gatilho_prato": true,
+      "opcoes": [
+        {
+          "texto": "Posso fazer ochazuke. Manter viva essa memória.",
+          "dica": "respeitoso",
+          "impacto": 18,
+          "tipo": "dialogo_curto",
+          "proximo": "aceitar_ochazuke"
+        }
+      ]
+    },
+
+    "respeito_silencio": {
+      "id": "respeito_silencio",
+      "contexto": "Tanaka acena, grato.",
+      "texto": "\"Obrigado. Por entender.\"\n\nUm momento de silêncio confortável.\n\n\"Sabe o que eu gostaria? Um ochazuke. Como Takeshi fazia.\"",
+      "e_pista": true,
+      "pista_id": "ochazuke",
+      "gatilho_prato": true,
+      "opcoes": [
+        {
+          "texto": "Posso fazer. Será uma honra.",
+          "dica": "respeitoso",
+          "impacto": 18,
+          "tipo": "dialogo_curto",
+          "proximo": "aceitar_ochazuke"
+        }
+      ]
+    },
+
+    "alguem_importante": {
+      "id": "alguem_importante",
+      "contexto": "Tanaka acena pensativo.",
+      "texto": "\"Devia ser. O jeito que ele disse...\"\n\nEle olha para o nada.\n\n\"Com carinho. Com saudade. Com algo que parecia arrependimento.\"",
+      "opcoes": [
+        {
+          "texto": "Arrependimento de quê?",
+          "dica": "curioso",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "arrependimento_que"
+        },
+        {
+          "texto": "Todos carregamos arrependimentos.",
+          "dica": "filosófico",
+          "impacto": 15,
+          "tipo": "dialogo_curto",
+          "proximo": "todos_arrependimentos"
+        }
+      ]
+    },
+
+    "arrependimento_que": {
+      "id": "arrependimento_que",
+      "contexto": "Tanaka dá de ombros.",
+      "texto": "\"Não sei. Nunca soube.\"\n\nEle bebe o resto do sake.\n\n\"Mas todos temos, não? Coisas que deixamos pra depois. Palavras não ditas.\"",
+      "opcoes": [
+        {
+          "texto": "Verdade. O importante é honrar quem se foi.",
+          "dica": "consolador",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "honrar_memoria"
+        }
+      ]
+    },
+
+    "todos_arrependimentos": {
+      "id": "todos_arrependimentos",
+      "contexto": "Tanaka acena pesadamente.",
+      "texto": "\"Carregamos. E os de Takeshi morreram com ele.\"\n\nUm silêncio.\n\n\"Mas as coisas boas... como o ochazuke dele... essas podem continuar.\"",
+      "e_pista": true,
+      "pista_id": "ochazuke",
+      "gatilho_prato": true,
+      "opcoes": [
+        {
+          "texto": "Posso fazer isso. Ochazuke em memória dele.",
+          "dica": "respeitoso",
+          "impacto": 18,
+          "tipo": "dialogo_curto",
+          "proximo": "aceitar_ochazuke"
         }
       ]
     },
@@ -805,6 +1937,56 @@
           "impacto": 12,
           "tipo": "dialogo_medio",
           "proximo": "nao_culpa"
+        }
+      ]
+    },
+
+    "como_foi_incendio": {
+      "id": "como_foi_incendio",
+      "contexto": "Tanaka fecha os olhos, revivendo.",
+      "texto": "\"Violento. Rápido demais.\"\n\nEle abre os olhos.\n\n\"Quando chegamos, as chamas já tomavam todo o prédio. Não era normal.\"\n\nUma pausa.\n\n\"Fogo assim... com acelerante. Proposital.\"",
+      "e_pista": true,
+      "pista_id": "fogo_proposital",
+      "opcoes": [
+        {
+          "texto": "Você tem certeza?",
+          "dica": "sério",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "certeza_proposital"
+        }
+      ]
+    },
+
+    "certeza_proposital": {
+      "id": "certeza_proposital",
+      "contexto": "Tanaka acena firme.",
+      "texto": "\"Trinta anos. Sei reconhecer.\"\n\nEle aperta os punhos.\n\n\"Mas ninguém me ouviu. O laudo fechou como acidente.\"\n\nUm olhar distante.\n\n\"E Takeshi ficou com a culpa.\"",
+      "opcoes": [
+        {
+          "texto": "Takeshi. Era esse o nome dele?",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_curto",
+          "proximo": "sim_takeshi"
+        }
+      ]
+    },
+
+    "sim_takeshi": {
+      "id": "sim_takeshi",
+      "contexto": "Tanaka acena, os olhos úmidos.",
+      "texto": "\"Sim. Takeshi.\"\n\nO nome sai suave.\n\n\"Bom homem. Cozinheiro honesto. Fazia ochazuke que aquecia a alma.\"",
+      "e_pista": true,
+      "pista_id": "ochazuke",
+      "gatilho_prato": true,
+      "opcoes": [
+        {
+          "texto": "Posso fazer ochazuke. Por Takeshi.",
+          "dica": "respeitoso",
+          "impacto": 18,
+          "tipo": "dialogo_curto",
+          "proximo": "aceitar_ochazuke"
         }
       ]
     },

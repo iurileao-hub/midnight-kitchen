@@ -103,12 +103,17 @@ midnight-kitchen/
 
 ## Clientes
 
-1. **Yuki** - Fotografa, carrega envelope misterioso
-2. **Tanaka** - Bombeiro aposentado, tentou salvar Takeshi
-3. **Ryo** - Taxista, fugiu do incendio
-4. **Midori** - Vizinha, viu algo estranho
-5. **Sachiko** - Filha de Takeshi, carta do pai
-6. **Hiroto** - Crianca que Master salvou (adulto agora)
+| Cliente | Descricao | Prato Gatilho | Nos de Dialogo |
+|---------|-----------|---------------|----------------|
+| **Yuki** | Fotografa, carrega envelope misterioso | Tamago Gohan | 99 |
+| **Tanaka** | Bombeiro aposentado, tentou salvar Takeshi | Katsudon | 99 |
+| **Ryo** | Taxista, fugiu do incendio | Ochazuke | 95 |
+| **Midori** | Vizinha florista, viu faiscas | Missoshiru | 102 |
+| **Sachiko** | Filha de Takeshi, caderno do pai | Nikujaga | 111 |
+| **Hiroto** | Crianca que Master salvou (adulto agora) | Omurice | 86 |
+
+**Total: 592 nos de dialogo** — cada personagem tem arvore narrativa profunda
+com multiplos caminhos, pistas progressivas e gatilhos emocionais.
 
 ---
 
@@ -139,4 +144,4 @@ explicando a origem da cicatriz de Master.
 
 ---
 
-*Atualizado: 15/01/2026 — v2.0 completa*
+*Atualizado: 15/01/2026 — v2.0 completa + dialogos expandidos (592 nos)*

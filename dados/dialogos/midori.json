@@ -28,6 +28,551 @@
           "impacto": 15,
           "tipo": "dialogo_medio",
           "proximo": "broche_flor"
+        },
+        {
+          "texto": "[Apenas sorrir de volta]",
+          "dica": "silêncio acolhedor",
+          "impacto": 10,
+          "tipo": "silencio",
+          "proximo": "sorrir_silencio"
+        }
+      ]
+    },
+
+    "sorrir_silencio": {
+      "id": "sorrir_silencio",
+      "contexto": "Midori sorri mais ainda, claramente confortável com o silêncio.",
+      "texto": "\"Lugares assim são raros. Onde não precisa preencher cada segundo com palavras.\"\n\nEla arruma suavemente o guardanapo à sua frente.\n\n\"Minha loja era assim. Silenciosa. As flores falavam mais que eu.\"",
+      "e_pista": true,
+      "pista_id": "floricultura",
+      "opcoes": [
+        {
+          "texto": "Você tinha uma loja de flores?",
+          "dica": "interessado",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "tinha_loja"
+        },
+        {
+          "texto": "As flores falam?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "flores_falam"
+        }
+      ]
+    },
+
+    "flores_falam": {
+      "id": "flores_falam",
+      "contexto": "Midori ri suavemente.",
+      "texto": "\"De um jeito, sim. Cada flor tem um significado. Uma história.\"\n\nEla toca o broche de cerejeira.\n\n\"Sakura significa renovação. Beleza efêmera. A vida que floresce e depois vai embora.\"\n\nSua voz fica mais baixa.\n\n\"Eu passei quarenta anos ouvindo flores. Cada arranjo era uma conversa.\"",
+      "opcoes": [
+        {
+          "texto": "Quarenta anos é muito tempo. Você deve ter amado esse trabalho.",
+          "dica": "admiração",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "amava_trabalho"
+        },
+        {
+          "texto": "E o que as flores dizem sobre você?",
+          "dica": "observador",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "flores_sobre_ela"
+        }
+      ]
+    },
+
+    "flores_sobre_ela": {
+      "id": "flores_sobre_ela",
+      "contexto": "Midori olha para as próprias mãos.",
+      "texto": "\"Que eu cuido. Que eu vejo os detalhes.\"\n\nPausa.\n\n\"Mas às vezes... às vezes ver não é suficiente. Precisa agir com a urgência certa.\"\n\nEla suspira.\n\n\"Aprendi isso tarde demais.\"",
+      "opcoes": [
+        {
+          "texto": "O que aconteceu?",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "oque_aconteceu_flores"
+        },
+        {
+          "texto": "Todos aprendemos coisas tarde demais às vezes.",
+          "dica": "empático",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "tarde_demais"
+        }
+      ]
+    },
+
+    "tarde_demais": {
+      "id": "tarde_demais",
+      "contexto": "Midori olha para você com gratidão.",
+      "texto": "\"É verdade. Mas alguns erros custam mais que outros.\"\n\nEla endireita os ombros.\n\n\"Eu tinha um vizinho. Takeshi-san. Ele tinha um restaurante ao lado da minha loja.\"\n\nPausa.\n\n\"Eu vi algo errado. Avisei. Mas não insisti. E então...\"",
+      "e_pista": true,
+      "pista_id": "takeshi",
+      "opcoes": [
+        {
+          "texto": "O que aconteceu com ele?",
+          "dica": "preocupado",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "era_passado"
+        }
+      ]
+    },
+
+    "oque_aconteceu_flores": {
+      "id": "oque_aconteceu_flores",
+      "contexto": "Midori respira fundo.",
+      "texto": "\"Tinha um restaurante ao lado da minha loja. Eu e o dono éramos amigos. Vizinhos por vinte anos.\"\n\nEla olha para as mãos.\n\n\"Uma noite... um incêndio. O restaurante pegou fogo. E ele... Takeshi-san não saiu.\"",
+      "e_pista": true,
+      "pista_id": "incendio",
+      "pensamento_master": "O nome ressoa em você como um eco distante.",
+      "opcoes": [
+        {
+          "texto": "Sinto muito pela sua perda.",
+          "dica": "empático",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "perder_amigo"
+        },
+        {
+          "texto": "O incêndio também afetou sua loja?",
+          "dica": "atento",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "afetou_loja"
+        }
+      ]
+    },
+
+    "amava_trabalho": {
+      "id": "amava_trabalho",
+      "contexto": "O rosto de Midori se ilumina.",
+      "texto": "\"Amava. Cada dia era diferente. Nunca sabia quem ia entrar pela porta.\"\n\nEla sorri com os olhos.\n\n\"Casamentos, funerais, pedidos de desculpa, declarações de amor. Tudo passava pelas flores.\"\n\n\"Eu era parte das histórias das pessoas. Isso me fazia feliz.\"",
+      "opcoes": [
+        {
+          "texto": "Qual foi o arranjo mais memorável que você fez?",
+          "dica": "curioso",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "arranjo_memoravel"
+        },
+        {
+          "texto": "Por que fechou a loja?",
+          "dica": "direto",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "porque_fechou"
+        }
+      ]
+    },
+
+    "arranjo_memoravel": {
+      "id": "arranjo_memoravel",
+      "contexto": "Midori pensa por um momento.",
+      "texto": "\"Teve um senhor que entrou uma vez. Cabelos grisalhos, mãos de quem trabalha muito.\"\n\nEla sorri.\n\n\"Pediu lírios brancos. Para a esposa que acabara de falecer. Queria que fossem perfeitos.\"\n\n\"Ele voltou toda semana por um ano. Sempre lírios brancos. Depois parou de vir.\"\n\nPausa.\n\n\"Espero que ele tenha encontrado paz.\"",
+      "opcoes": [
+        {
+          "texto": "Você lembra de todos os seus clientes assim?",
+          "dica": "impressionado",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "lembra_clientes"
+        },
+        {
+          "texto": "Parece que a loja era importante para o bairro.",
+          "dica": "observador",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "importante_bairro"
+        }
+      ]
+    },
+
+    "lembra_clientes": {
+      "id": "lembra_clientes",
+      "contexto": "Midori acena.",
+      "texto": "\"Dos importantes, sim. E tinha um que era especial.\"\n\nO sorriso fica mais suave.\n\n\"Meu vizinho. Takeshi-san. Ele tinha um restaurante ao lado. Todo mês comprava flores para as mesas.\"\n\n\"Sempre escolhia com cuidado. Dizia que flores faziam os clientes se sentirem em casa.\"",
+      "e_pista": true,
+      "pista_id": "takeshi",
+      "pensamento_master": "Takeshi. O nome atravessa você como uma lâmina.",
+      "opcoes": [
+        {
+          "texto": "Ele ainda tem o restaurante?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "restaurante_existe"
+        },
+        {
+          "texto": "Vocês eram próximos?",
+          "dica": "interessado",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "eram_proximos"
+        }
+      ]
+    },
+
+    "importante_bairro": {
+      "id": "importante_bairro",
+      "contexto": "Midori olha para longe, nostálgica.",
+      "texto": "\"Era. Todos se conheciam. O padeiro, o sapateiro, o dono do restaurante...\"\n\nEla para.\n\n\"Takeshi-san tinha o melhor restaurante. Pequeno, mas acolhedor. As pessoas iam lá não só pela comida.\"\n\n\"Iam porque ele escutava. Porque ele cuidava.\"",
+      "e_pista": true,
+      "pista_id": "takeshi",
+      "opcoes": [
+        {
+          "texto": "Vocês eram amigos?",
+          "dica": "interessado",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "eram_proximos"
+        },
+        {
+          "texto": "O bairro ainda é assim?",
+          "dica": "curioso",
+          "impacto": 8,
+          "tipo": "dialogo_curto",
+          "proximo": "bairro_mudou"
+        }
+      ]
+    },
+
+    "bairro_mudou": {
+      "id": "bairro_mudou",
+      "contexto": "Midori sacode a cabeça.",
+      "texto": "\"Mudou muito. Depois do incêndio, muita gente se mudou.\"\n\nEla toca o broche.\n\n\"O fogo levou mais que prédios. Levou a alma do lugar.\"",
+      "e_pista": true,
+      "pista_id": "incendio",
+      "opcoes": [
+        {
+          "texto": "Que incêndio foi esse?",
+          "dica": "preocupado",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "incendio_grande"
+        }
+      ]
+    },
+
+    "incendio_grande": {
+      "id": "incendio_grande",
+      "contexto": "O rosto de Midori fica sério.",
+      "texto": "\"Há dez anos. O restaurante do Takeshi-san pegou fogo durante a noite.\"\n\nEla engole em seco.\n\n\"O fogo se espalhou. Minha loja, a padaria, tudo foi atingido.\"\n\n\"Mas o pior foi... Takeshi-san não conseguiu sair.\"",
+      "e_pista": true,
+      "pista_id": "incendio",
+      "pensamento_master": "As palavras atravessam você. Dez anos. O mesmo incêndio.",
+      "opcoes": [
+        {
+          "texto": "Foi um acidente?",
+          "dica": "investigativo",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "foi_acidente"
+        },
+        {
+          "texto": "Sinto muito. Deve ter sido terrível.",
+          "dica": "empático",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "foi_terrivel"
+        }
+      ]
+    },
+
+    "foi_acidente": {
+      "id": "foi_acidente",
+      "contexto": "Midori hesita.",
+      "texto": "\"Disseram que foi o quadro elétrico. Fiação antiga.\"\n\nEla olha para baixo.\n\n\"Mas eu... eu tinha visto algo. Uma semana antes. E não fiz o suficiente.\"",
+      "e_pista": true,
+      "pista_id": "viu_algo",
+      "opcoes": [
+        {
+          "texto": "O que você viu?",
+          "dica": "curioso",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "oque_viu"
+        }
+      ]
+    },
+
+    "foi_terrivel": {
+      "id": "foi_terrivel",
+      "contexto": "Midori limpa os olhos discretamente.",
+      "texto": "\"Foi. Perder um amigo assim... alguém que estava ali todo dia.\"\n\nEla respira fundo.\n\n\"Mas o pior é saber que talvez... talvez eu pudesse ter evitado.\"",
+      "opcoes": [
+        {
+          "texto": "Como assim?",
+          "dica": "confuso",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "como_assim_evitar"
+        },
+        {
+          "texto": "Você não pode se culpar por um acidente.",
+          "dica": "reconfortante",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "nao_culpe"
+        }
+      ]
+    },
+
+    "como_assim_evitar": {
+      "id": "como_assim_evitar",
+      "contexto": "Midori olha para as mãos.",
+      "texto": "\"Uma semana antes do incêndio, eu estava fechando a loja. Já era tarde.\"\n\nPausa.\n\n\"Vi faíscas. Saindo do quadro elétrico do restaurante.\"\n\n\"Fui avisar o Takeshi-san. Ele agradeceu, disse que ia resolver.\"\n\nAs lágrimas começam a cair.\n\n\"Mas será que avisei direito? Com a urgência certa?\"",
+      "e_pista": true,
+      "pista_id": "faiscas",
+      "pensamento_master": "Quadro elétrico. As peças começam a se encaixar.",
+      "opcoes": [
+        {
+          "texto": "Você avisou. Isso é o que importa.",
+          "dica": "firme",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "voce_avisou"
+        },
+        {
+          "texto": "Deixa eu preparar algo quente. Missoshiru?",
+          "dica": "cuidadoso",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "nao_culpe": {
+      "id": "nao_culpe",
+      "contexto": "Midori sacode a cabeça.",
+      "texto": "\"Mas eu vi os sinais. Uma semana antes.\"\n\nEla conta sobre as faíscas, sobre o aviso que deu.\n\n\"E se eu tivesse sido mais clara? Mais insistente?\"\n\n\"Será que ele teria dado mais importância?\"",
+      "e_pista": true,
+      "pista_id": "faiscas",
+      "opcoes": [
+        {
+          "texto": "Ele era adulto. A decisão era dele.",
+          "dica": "racional",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "decisao_dele"
+        },
+        {
+          "texto": "Vem. Vou fazer missoshiru para você. Para aquecer.",
+          "dica": "acolhedor",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "voce_avisou": {
+      "id": "voce_avisou",
+      "contexto": "Midori quer acreditar.",
+      "texto": "\"Avisei. Mas da forma certa?\"\n\nEla se lembra da conversa.\n\n\"Eu disse algo como 'Vi umas faíscas ali, melhor dar uma olhada'. Tão casual.\"\n\n\"Como se fosse só mais um lembrete. Não uma emergência.\"",
+      "opcoes": [
+        {
+          "texto": "Você não podia saber que era tão grave.",
+          "dica": "empático",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "nao_podia_saber"
+        },
+        {
+          "texto": "O que ele respondeu?",
+          "dica": "curioso",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "resposta_takeshi"
+        }
+      ]
+    },
+
+    "nao_podia_saber": {
+      "id": "nao_podia_saber",
+      "contexto": "Midori respira fundo.",
+      "texto": "\"Mas eu deveria ter sentido. Deveria ter insistido.\"\n\nPausa.\n\n\"Ele era tão bom comigo. Me mandava sopa nos dias frios. Missoshiru.\"\n\nO sorriso é triste.\n\n\"Dizia que florista não podia ter mãos geladas.\"",
+      "revelacao_prato": "missoshiru",
+      "opcoes": [
+        {
+          "texto": "Vou fazer missoshiru para você. Como ele fazia.",
+          "dica": "cuidadoso",
+          "impacto": 20,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        },
+        {
+          "texto": "Ele cuidava de você. Tenho certeza que ele sabia do aviso.",
+          "dica": "reconfortante",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "ele_sabia"
+        }
+      ]
+    },
+
+    "resposta_takeshi": {
+      "id": "resposta_takeshi",
+      "contexto": "Midori fecha os olhos, lembrando.",
+      "texto": "\"Ele sorriu. Aquele sorriso gentil dele.\"\n\n\"Disse 'Obrigado por avisar, Midori-san. Vou chamar alguém para ver isso.'\"\n\nPausa.\n\n\"E me mandou para casa. Me deu uma tigela de missoshiru para levar. Disse que estava frio.\"",
+      "revelacao_prato": "missoshiru",
+      "opcoes": [
+        {
+          "texto": "Ele estava cuidando de você até o fim.",
+          "dica": "suave",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "cuidando_ate_fim"
+        },
+        {
+          "texto": "Deixa eu fazer missoshiru para você agora.",
+          "dica": "prático",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "cuidando_ate_fim": {
+      "id": "cuidando_ate_fim",
+      "contexto": "As lágrimas caem livremente agora.",
+      "texto": "\"Era o jeito dele. Sempre cuidando dos outros.\"\n\nEla limpa o rosto com o lenço bordado.\n\n\"Fazia a melhor sopa. Missoshiru simples, mas perfeito.\"\n\n\"Aquecia não só o corpo. Aquecia a alma.\"",
+      "opcoes": [
+        {
+          "texto": "Posso fazer para você. Não será igual, mas...",
+          "dica": "humilde",
+          "impacto": 20,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "decisao_dele": {
+      "id": "decisao_dele",
+      "contexto": "Midori considera suas palavras.",
+      "texto": "\"Você está certo. A decisão era dele.\"\n\nMas a dúvida ainda está lá.\n\n\"Mas e se a forma como avisei influenciou a decisão? Se eu tivesse sido mais dramática, mais urgente?\"\n\n\"Ele era orgulhoso. Não gostava de fazer drama. Talvez por isso não deu importância.\"",
+      "opcoes": [
+        {
+          "texto": "Você conhecia bem ele?",
+          "dica": "curioso",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "conhecia_bem"
+        },
+        {
+          "texto": "Deixa eu preparar algo. Missoshiru, talvez ajude a pensar.",
+          "dica": "prático",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "conhecia_bem": {
+      "id": "conhecia_bem",
+      "contexto": "Midori sorri com tristeza.",
+      "texto": "\"Vinte anos de vizinhança. Conhecia.\"\n\n\"Ele era viúvo. Perdera a esposa jovem. O restaurante era tudo para ele.\"\n\n\"Trabalhava demais. Eu sempre dizia para ele descansar.\"\n\nPausa.\n\n\"Ele ria. Dizia 'Quando você fechar a loja, eu fecho o restaurante'.\"\n\n\"Nenhum de nós fechou. Até o fogo fechar para nós.\"",
+      "opcoes": [
+        {
+          "texto": "Vocês eram a família um do outro.",
+          "dica": "observador",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "eram_familia"
+        },
+        {
+          "texto": "O que ele cozinhava para você?",
+          "dica": "curioso",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "cozinhava_para_ela"
+        }
+      ]
+    },
+
+    "eram_familia": {
+      "id": "eram_familia",
+      "contexto": "Midori acena.",
+      "texto": "\"Éramos. Ele não tinha ninguém. Eu também não.\"\n\n\"Mas tínhamos um ao outro. E o bairro.\"\n\n\"Todo dia ele passava na loja. Às vezes só para dizer oi. Às vezes para comprar flores.\"\n\n\"E nos dias frios, me mandava sopa. Sempre missoshiru.\"",
+      "revelacao_prato": "missoshiru",
+      "opcoes": [
+        {
+          "texto": "Posso fazer missoshiru para você. Seria uma honra.",
+          "dica": "respeitoso",
+          "impacto": 20,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "cozinhava_para_ela": {
+      "id": "cozinhava_para_ela",
+      "contexto": "O rosto de Midori se ilumina.",
+      "texto": "\"Missoshiru. Sempre missoshiru.\"\n\n\"Dizia que florista trabalhava com as mãos. Mãos geladas não servem flores bonitas.\"\n\nEla ri suavemente.\n\n\"Então toda vez que esfriava, lá vinha ele com uma tigela fumegante.\"\n\n\"Simples. Perfeito. Feito com carinho.\"",
+      "revelacao_prato": "missoshiru",
+      "opcoes": [
+        {
+          "texto": "Deixa eu fazer para você. Em homenagem a ele.",
+          "dica": "honrar memória",
+          "impacto": 20,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "tinha_loja": {
+      "id": "tinha_loja",
+      "contexto": "Midori acena.",
+      "texto": "\"Quarenta anos no mesmo lugar. Era minha vida.\"\n\nEla sorri.\n\n\"Pequena. Mas cheia de cor. Cheia de histórias.\"\n\n\"Ficava entre uma padaria e um restaurante. O cheiro de pão e comida se misturava com o perfume das flores.\"\n\n\"Era perfeito.\"",
+      "opcoes": [
+        {
+          "texto": "Por que não tem mais?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "porque_fechou"
+        },
+        {
+          "texto": "Você sente falta?",
+          "dica": "empático",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "sente_falta"
+        }
+      ]
+    },
+
+    "sente_falta": {
+      "id": "sente_falta",
+      "contexto": "Midori olha para as mãos.",
+      "texto": "\"Todo dia. As flores, os clientes... meu vizinho.\"\n\nEla toca o broche.\n\n\"Takeshi-san tinha o restaurante ao lado. Éramos muito próximos.\"\n\n\"Até a noite do incêndio.\"",
+      "e_pista": true,
+      "pista_id": "takeshi",
+      "opcoes": [
+        {
+          "texto": "Conte-me sobre ele.",
+          "dica": "interessado",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "eram_proximos"
+        },
+        {
+          "texto": "Qual foi a última vez que conversaram?",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "ultima_conversa"
         }
       ]
     },
@@ -52,6 +597,45 @@
           "impacto": 8,
           "tipo": "dialogo_curto",
           "proximo": "porque_fechou"
+        },
+        {
+          "texto": "Este lugar lembra sua loja?",
+          "dica": "observador",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "lembra_loja"
+        },
+        {
+          "texto": "Como era sua loja?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "detalhes_loja_1"
+        }
+      ]
+    },
+
+    "lembra_loja": {
+      "id": "lembra_loja",
+      "contexto": "Midori olha ao redor pensativa.",
+      "texto": "\"Não a loja. Mas o sentimento.\"\n\nEla sorri.\n\n\"Minha loja ficava ao lado de um restaurante. Pequeno, aconchegante. Como este.\"\n\n\"O dono... Takeshi-san... cozinhava com alma. As pessoas iam lá para se sentirem em casa.\"",
+      "e_pista": true,
+      "pista_id": "takeshi",
+      "pensamento_master": "Takeshi. O nome ecoa.",
+      "opcoes": [
+        {
+          "texto": "Ele ainda tem o restaurante?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "restaurante_existe"
+        },
+        {
+          "texto": "Vocês eram próximos?",
+          "dica": "interessado",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "eram_proximos"
         }
       ]
     },
@@ -76,6 +660,129 @@
           "impacto": 10,
           "tipo": "dialogo_curto",
           "proximo": "aposentada"
+        },
+        {
+          "texto": "Por que sakura?",
+          "dica": "interessado",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "porque_sakura"
+        }
+      ]
+    },
+
+    "porque_sakura": {
+      "id": "porque_sakura",
+      "contexto": "Midori olha para o broche.",
+      "texto": "\"Porque ela é honesta.\"\n\nEla toca as pétalas delicadamente.\n\n\"Floresce linda. Por tão pouco tempo. E depois vai embora.\"\n\n\"Nos lembra que tudo é passageiro. Que precisamos apreciar enquanto está aqui.\"\n\nSua voz fica mais baixa.\n\n\"Aprendi isso tarde. Quando já era tarde demais.\"",
+      "opcoes": [
+        {
+          "texto": "O que você quer dizer?",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "oque_quer_dizer"
+        },
+        {
+          "texto": "Nunca é tarde para aprender.",
+          "dica": "encorajador",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "nunca_tarde"
+        }
+      ]
+    },
+
+    "oque_quer_dizer": {
+      "id": "oque_quer_dizer",
+      "contexto": "Midori respira fundo.",
+      "texto": "\"Eu tinha um amigo. Vizinho por vinte anos. Takeshi-san.\"\n\n\"Todo dia estava lá. Sorrindo, trabalhando, cuidando do restaurante dele.\"\n\n\"E eu achava que ele sempre estaria lá. Como as sakuras que voltam todo ano.\"\n\nPausa.\n\n\"Mas ele não voltou. O fogo levou ele numa noite.\"",
+      "e_pista": true,
+      "pista_id": "incendio",
+      "opcoes": [
+        {
+          "texto": "Sinto muito.",
+          "dica": "empático",
+          "impacto": 12,
+          "tipo": "dialogo_curto",
+          "proximo": "perder_amigo"
+        }
+      ]
+    },
+
+    "nunca_tarde": {
+      "id": "nunca_tarde",
+      "contexto": "Midori sorri triste.",
+      "texto": "\"Para aprender, não. Para agir... às vezes é.\"\n\nEla conta sobre Takeshi, sobre as faíscas que viu.\n\n\"Se eu tivesse sido mais insistente naquele dia...\"\n\n\"Se eu tivesse apreciado mais enquanto ele estava aqui...\"\n\n\"As sakuras me ensinaram. Mas tarde demais.\"",
+      "e_pista": true,
+      "pista_id": "faiscas",
+      "opcoes": [
+        {
+          "texto": "Você fez o que podia na época.",
+          "dica": "reconfortante",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "fez_oque_podia"
+        },
+        {
+          "texto": "Deixa eu fazer algo quente para você.",
+          "dica": "prático",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "fez_oque_podia": {
+      "id": "fez_oque_podia",
+      "contexto": "Midori quer acreditar.",
+      "texto": "\"Será? Ou fiz o mínimo?\"\n\nEla olha para você.\n\n\"Vi perigo. Avisei. Mas como avisei? Com que tom?\"\n\n\"'Ah, Takeshi-san, vi umas faíscas ali.' Tão casual.\"\n\n\"Como se fosse só mais uma conversa de vizinhos.\"",
+      "opcoes": [
+        {
+          "texto": "Mas você avisou. Isso conta.",
+          "dica": "firme",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "isso_conta"
+        },
+        {
+          "texto": "Vem. Missoshiru vai ajudar.",
+          "dica": "cuidadoso",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "isso_conta": {
+      "id": "isso_conta",
+      "contexto": "Midori limpa as lágrimas.",
+      "texto": "\"Obrigada por dizer isso.\"\n\nEla sorri fracamente.\n\n\"Takeshi-san sempre dizia que eu me preocupava demais. Que cuidava demais dos outros.\"\n\n\"Irônico, não é? Quando realmente importava, não cuidei o suficiente.\"",
+      "opcoes": [
+        {
+          "texto": "Ele cuidava de você também?",
+          "dica": "curioso",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "ele_cuidava"
+        }
+      ]
+    },
+
+    "ele_cuidava": {
+      "id": "ele_cuidava",
+      "contexto": "O rosto de Midori se suaviza.",
+      "texto": "\"Cuidava. Todo dia frio, me mandava sopa.\"\n\n\"Missoshiru. Simples, mas feito com carinho.\"\n\n\"Dizia que florista precisa de mãos quentes. E de coração aquecido.\"\n\nEla ri através das lágrimas.\n\n\"Era o jeito dele de dizer que se importava.\"",
+      "revelacao_prato": "missoshiru",
+      "opcoes": [
+        {
+          "texto": "Deixa eu fazer missoshiru para você agora.",
+          "dica": "honrar memória",
+          "impacto": 20,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
         }
       ]
     },
@@ -101,6 +808,113 @@
           "impacto": 10,
           "tipo": "dialogo_medio",
           "proximo": "restaurante_existe"
+        },
+        {
+          "texto": "Que tipo de flores ele escolhia?",
+          "dica": "atento aos detalhes",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "flores_escolhidas"
+        }
+      ]
+    },
+
+    "flores_escolhidas": {
+      "id": "flores_escolhidas",
+      "contexto": "Midori sorri com carinho.",
+      "texto": "\"Dependia da estação. Ele respeitava o ciclo natural.\"\n\n\"Na primavera, sakuras. No verão, girassóis. No outono, crisântemos.\"\n\n\"E no inverno... sempre camélia branca. Dizia que trazia calor ao ambiente.\"",
+      "opcoes": [
+        {
+          "texto": "Ele entendia de flores.",
+          "dica": "admirado",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "entendia_flores"
+        },
+        {
+          "texto": "Vocês eram mais que vizinhos, não eram?",
+          "dica": "observador",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "mais_que_vizinhos"
+        }
+      ]
+    },
+
+    "entendia_flores": {
+      "id": "entendia_flores",
+      "contexto": "Midori acena.",
+      "texto": "\"Entendia. Dizia que flores e comida tinham algo em comum.\"\n\n\"Ambas nutrem. Uma o corpo, outra a alma.\"\n\nEla sorri.\n\n\"Ele era assim. Sempre pensando nos outros.\"\n\n\"Até demais, às vezes.\"",
+      "opcoes": [
+        {
+          "texto": "Até demais?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "ate_demais"
+        }
+      ]
+    },
+
+    "ate_demais": {
+      "id": "ate_demais",
+      "contexto": "O sorriso de Midori vacila.",
+      "texto": "\"Ele trabalhava sem parar. Nunca descansava.\"\n\n\"Eu sempre dizia 'Takeshi-san, você vai se matar de trabalhar assim.'\"\n\nPausa dolorosa.\n\n\"No final, não foi o trabalho que o matou. Foi o fogo.\"\n\n\"E talvez... talvez se ele tivesse descansado mais, tivesse dado atenção ao aviso que dei...\"",
+      "e_pista": true,
+      "pista_id": "viu_algo",
+      "opcoes": [
+        {
+          "texto": "Que aviso?",
+          "dica": "atento",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "oque_viu"
+        }
+      ]
+    },
+
+    "mais_que_vizinhos": {
+      "id": "mais_que_vizinhos",
+      "contexto": "Midori acena suavemente.",
+      "texto": "\"Éramos família. Não de sangue, mas de escolha.\"\n\n\"Vinte anos lado a lado. Nos bons e maus momentos.\"\n\n\"Quando meu marido faleceu, Takeshi-san me trouxe comida todo dia por um mês.\"\n\n\"Quando a esposa dele morreu, eu decorei o funeral inteiro. Sem cobrar nada.\"\n\n\"Era assim. Cuidávamos um do outro.\"",
+      "opcoes": [
+        {
+          "texto": "Deve ser difícil perder alguém assim.",
+          "dica": "empático",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "dificil_perder"
+        },
+        {
+          "texto": "O que aconteceu com ele?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "era_passado"
+        }
+      ]
+    },
+
+    "dificil_perder": {
+      "id": "dificil_perder",
+      "contexto": "Midori limpa os olhos.",
+      "texto": "\"É. Principalmente quando você sente que podia ter evitado.\"\n\nEla conta sobre o incêndio, sobre as faíscas.\n\n\"Eu vi os sinais. Avisei. Mas não com força suficiente.\"\n\n\"E agora ele se foi. E eu continuo aqui. Com essa pergunta.\"\n\n\"Será que fiz o suficiente?\"",
+      "e_pista": true,
+      "pista_id": "faiscas",
+      "opcoes": [
+        {
+          "texto": "Você fez o que podia.",
+          "dica": "reconfortante",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "fez_oque_podia"
+        },
+        {
+          "texto": "Deixa eu fazer missoshiru. Como ele fazia para você.",
+          "dica": "honrar memória",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
         }
       ]
     },
@@ -123,6 +937,61 @@
           "impacto": 15,
           "tipo": "dialogo_medio",
           "proximo": "amizade_especial"
+        },
+        {
+          "texto": "Que tipo de sopa ele mandava?",
+          "dica": "curioso",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "tipo_sopa"
+        },
+        {
+          "texto": "Tem alguma lembrança especial dele?",
+          "dica": "interessado",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "memoria_especifica_1"
+        }
+      ]
+    },
+
+    "tipo_sopa": {
+      "id": "tipo_sopa",
+      "contexto": "O rosto de Midori se ilumina.",
+      "texto": "\"Missoshiru. Sempre missoshiru.\"\n\n\"Nada elaborado. Simples. Tofu, alga, cebolinha.\"\n\n\"Mas tinha algo especial. O cuidado. A intenção.\"\n\nEla sorri.\n\n\"Ele dizia 'Midori-san, florista não pode ter mãos geladas. Toma isso.'\"\n\n\"E eu tomava. E ficava aquecida o dia inteiro.\"",
+      "revelacao_prato": "missoshiru",
+      "opcoes": [
+        {
+          "texto": "Posso fazer missoshiru para você agora.",
+          "dica": "oferecer",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        },
+        {
+          "texto": "Ele ainda faz?",
+          "dica": "curioso",
+          "impacto": 8,
+          "tipo": "dialogo_curto",
+          "proximo": "ele_ainda_faz"
+        }
+      ]
+    },
+
+    "ele_ainda_faz": {
+      "id": "ele_ainda_faz",
+      "contexto": "O sorriso some.",
+      "texto": "\"Não. Takeshi-san faleceu há dez anos.\"\n\nMidori toca o broche.\n\n\"No incêndio do restaurante. Ele... não conseguiu sair.\"",
+      "e_pista": true,
+      "pista_id": "incendio",
+      "pensamento_master": "Dez anos. O mesmo incêndio.",
+      "opcoes": [
+        {
+          "texto": "Sinto muito pela sua perda.",
+          "dica": "empático",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "perder_amigo"
         }
       ]
     },
@@ -148,6 +1017,13 @@
           "impacto": 10,
           "tipo": "dialogo_medio",
           "proximo": "afetou_loja"
+        },
+        {
+          "texto": "Foi um acidente?",
+          "dica": "investigativo",
+          "impacto": 8,
+          "tipo": "dialogo_curto",
+          "proximo": "foi_acidente"
         }
       ]
     },
@@ -282,7 +1158,7 @@
 
     "boa_noite": {
       "id": "boa_noite",
-      "contexto": "Midori sorri calorosa mente.",
+      "contexto": "Midori sorri calorosamente.",
       "texto": "\"Algo quente seria ótimo. Está frio esta noite.\"\n\nEla olha ao redor com carinho.\n\n\"Este lugar me lembra de outro. Um restaurante que ficava perto da minha loja, anos atrás.\"",
       "opcoes": [
         {
@@ -421,6 +1297,13 @@
           "impacto": 18,
           "tipo": "dialogo_medio",
           "proximo": "oferecer_miso"
+        },
+        {
+          "texto": "Carregar em silêncio é um peso diferente.",
+          "dica": "compreensivo",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "peso_silencio"
         }
       ]
     },
@@ -441,6 +1324,858 @@
           "texto": "Vem. Vou fazer missoshiru. Como ele fazia para você.",
           "dica": "acolhedor",
           "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        },
+        {
+          "texto": "Você lembra da noite do incêndio?",
+          "dica": "investigativo",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "noite_incendio"
+        }
+      ]
+    },
+
+    "noite_incendio": {
+      "id": "noite_incendio",
+      "contexto": "Midori fecha os olhos, voltando no tempo.",
+      "texto": "\"Lembro como se fosse ontem.\"\n\n\"Acordei com o cheiro de fumaça. Era inverno. Três da manhã.\"\n\n\"Abri a janela e vi. Chamas alaranjadas subindo do restaurante.\"\n\nEla treme.\n\n\"Liguei para os bombeiros. Tentei acordar os vizinhos. Mas era tarde.\"",
+      "opcoes": [
+        {
+          "texto": "Você tentou ajudar.",
+          "dica": "reconfortante",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "tentou_ajudar"
+        },
+        {
+          "texto": "Takeshi estava lá dentro?",
+          "dica": "direto",
+          "impacto": 10,
+          "tipo": "dialogo_curto",
+          "proximo": "takeshi_dentro"
+        }
+      ]
+    },
+
+    "tentou_ajudar": {
+      "id": "tentou_ajudar",
+      "contexto": "Midori sacode a cabeça.",
+      "texto": "\"Tentei. Mas não foi suficiente.\"\n\n\"Se eu tivesse tentado uma semana antes... quando vi as faíscas...\"\n\n\"Talvez tivesse feito diferença.\"",
+      "opcoes": [
+        {
+          "texto": "Você não podia prever o futuro.",
+          "dica": "empático",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "nao_prever"
+        },
+        {
+          "texto": "Deixa eu fazer missoshiru. Para aquecer o coração.",
+          "dica": "cuidadoso",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "nao_prever": {
+      "id": "nao_prever",
+      "contexto": "Midori olha para você.",
+      "texto": "\"Não podia. Mas vi os sinais.\"\n\n\"Trabalhei quarenta anos com flores. Aprendi a observar. A ver detalhes.\"\n\n\"E eu vi. E avisei. Mas não da forma certa.\"\n\nPausa.\n\n\"Essa é a parte que me persegue.\"",
+      "opcoes": [
+        {
+          "texto": "O que você gostaria de ter dito?",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "gostaria_dito"
+        },
+        {
+          "texto": "Vem. Missoshiru vai ajudar.",
+          "dica": "prático",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "gostaria_dito": {
+      "id": "gostaria_dito",
+      "contexto": "Midori respira fundo.",
+      "texto": "\"'Takeshi-san, isso é perigoso. Você precisa chamar alguém AGORA.'\"\n\n\"Com urgência. Com medo na voz.\"\n\n\"Não só 'Ah, vi umas faíscas ali'.\"\n\nEla limpa as lágrimas.\n\n\"Talvez ele tivesse ouvido. Talvez tivesse agido.\"",
+      "opcoes": [
+        {
+          "texto": "Ele te conhecia. Sabia quando você estava preocupada.",
+          "dica": "reconfortante",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "ele_conhecia"
+        },
+        {
+          "texto": "Deixa eu preparar missoshiru para você.",
+          "dica": "cuidadoso",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "ele_conhecia": {
+      "id": "ele_conhecia",
+      "contexto": "Midori considera.",
+      "texto": "\"Conhecia. Vinte anos, ele me conhecia bem.\"\n\n\"Sabia quando eu estava triste, cansada, feliz...\"\n\n\"Talvez por isso eu tenha sido casual. Achei que ele ia entender a gravidade.\"\n\nPausa.\n\n\"Mas ele estava ocupado. Sempre ocupado. Talvez tenha só ouvido e esquecido.\"",
+      "opcoes": [
+        {
+          "texto": "Você fez sua parte. O resto não estava em suas mãos.",
+          "dica": "firme",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "fez_sua_parte"
+        },
+        {
+          "texto": "Missoshiru. Como ele fazia nos dias difíceis.",
+          "dica": "honrar memória",
+          "impacto": 20,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "fez_sua_parte": {
+      "id": "fez_sua_parte",
+      "contexto": "Midori quer acreditar.",
+      "texto": "\"Obrigada por dizer isso.\"\n\n\"Mas ainda é difícil. Toda noite de inverno, eu lembro.\"\n\n\"O cheiro da fumaça. As chamas. O silêncio depois.\"\n\nEla toca o broche.\n\n\"E o missoshiru que ele me deu naquela última vez que conversamos.\"",
+      "revelacao_prato": "missoshiru",
+      "opcoes": [
+        {
+          "texto": "Posso fazer para você. Seria uma honra.",
+          "dica": "respeitoso",
+          "impacto": 20,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "takeshi_dentro": {
+      "id": "takeshi_dentro",
+      "contexto": "Midori acena lentamente.",
+      "texto": "\"Estava. Ele morava no andar de cima do restaurante.\"\n\n\"Sozinho. Desde que a esposa morreu.\"\n\n\"Disseram que a fumaça... que ele não sofreu.\"\n\nPausa dolorosa.\n\n\"Mas eu não sei. Não estava lá.\"",
+      "opcoes": [
+        {
+          "texto": "Você fez o que podia.",
+          "dica": "empático",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "fez_oque_podia_incendio"
+        },
+        {
+          "texto": "Deixa eu fazer algo quente. Missoshiru?",
+          "dica": "cuidadoso",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "fez_oque_podia_incendio": {
+      "id": "fez_oque_podia_incendio",
+      "contexto": "Midori limpa os olhos.",
+      "texto": "\"Na noite do incêndio, sim. Fiz.\"\n\n\"Mas uma semana antes... quando vi as faíscas...\"\n\n\"Ali eu não fiz o suficiente.\"\n\nEla olha para você.\n\n\"E agora carrego isso. Todo dia. Por dez anos.\"",
+      "opcoes": [
+        {
+          "texto": "Dez anos é muito tempo para carregar culpa.",
+          "dica": "gentil",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "dez_anos_culpa"
+        },
+        {
+          "texto": "Vem. Missoshiru. Como nos velhos tempos.",
+          "dica": "acolhedor",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "dez_anos_culpa": {
+      "id": "dez_anos_culpa",
+      "contexto": "Midori acena.",
+      "texto": "\"É. E sabe o que é pior?\"\n\n\"Ninguém sabe. Nunca contei a ninguém sobre as faíscas.\"\n\n\"Fechei a loja. Me mudei. Tentei esquecer.\"\n\nPausa.\n\n\"Mas não dá para esquecer. Não quando você sabe que podia ter salvado alguém.\"",
+      "opcoes": [
+        {
+          "texto": "Você está contando agora. Isso já é algo.",
+          "dica": "encorajador",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "contando_agora"
+        },
+        {
+          "texto": "Deixa eu fazer missoshiru. Para homenagear ele.",
+          "dica": "respeitoso",
+          "impacto": 20,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "contando_agora": {
+      "id": "contando_agora",
+      "contexto": "Midori sorri fracamente.",
+      "texto": "\"Sim. Primeira vez em dez anos.\"\n\n\"Não sei por que. Talvez porque este lugar me lembre dele.\"\n\n\"Ou talvez porque... porque eu preciso ouvir que não foi minha culpa.\"\n\nEla olha para você com esperança.\n\n\"Mesmo que eu não acredite totalmente.\"",
+      "opcoes": [
+        {
+          "texto": "Não foi sua culpa. Você avisou. Ele era responsável por agir.",
+          "dica": "firme",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "nao_foi_culpa"
+        },
+        {
+          "texto": "Deixa eu fazer missoshiru. Talvez ajude.",
+          "dica": "prático",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "nao_foi_culpa": {
+      "id": "nao_foi_culpa",
+      "contexto": "Midori quer acreditar.",
+      "texto": "\"Obrigada. De coração.\"\n\n\"É bom ouvir isso de alguém.\"\n\nEla respira fundo.\n\n\"Takeshi-san faria missoshiru para mim agora. Diria que preciso de algo quente.\"\n\nEla ri através das lágrimas.\n\n\"Ele sempre sabia o que eu precisava.\"",
+      "revelacao_prato": "missoshiru",
+      "opcoes": [
+        {
+          "texto": "Posso fazer para você. Em memória dele.",
+          "dica": "honrar memória",
+          "impacto": 20,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "memoria_especifica_1": {
+      "id": "memoria_especifica_1",
+      "contexto": "Midori sorri ao lembrar.",
+      "texto": "\"Uma vez, no Ano Novo, ele fechou o restaurante cedo.\"\n\n\"Bateu na porta da loja com uma caixa. 'Midori-san, vem ver.'\"\n\n\"Eram lâmpadas. Para iluminar a vitrine da loja.\"\n\nEla ri suavemente.\n\n\"Disse que as flores mereciam brilhar à noite também.\"",
+      "opcoes": [
+        {
+          "texto": "Ele cuidava de você de formas práticas.",
+          "dica": "observador",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "cuidava_pratico"
+        },
+        {
+          "texto": "Vocês eram sortudos de terem um ao outro.",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "sortudos"
+        }
+      ]
+    },
+
+    "cuidava_pratico": {
+      "id": "cuidava_pratico",
+      "contexto": "Midori acena.",
+      "texto": "\"Era o jeito dele. Sempre prático.\"\n\n\"Não falava muito. Mas fazia.\"\n\n\"Consertava coisas, trazia comida, ficava presente.\"\n\nPausa.\n\n\"Por isso dói tanto. Quando eu precisava fazer, não fiz direito.\"",
+      "opcoes": [
+        {
+          "texto": "Você fez. Só não do jeito que gostaria em retrospecto.",
+          "dica": "empático",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "fez_retrospecto"
+        },
+        {
+          "texto": "Deixa eu ser prático agora. Missoshiru?",
+          "dica": "prático",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "fez_retrospecto": {
+      "id": "fez_retrospecto",
+      "contexto": "Midori considera.",
+      "texto": "\"Retrospecto. Essa palavra carrega tanta coisa.\"\n\n\"Se eu pudesse voltar, seria diferente. Mais urgente.\"\n\n\"Mas não dá para voltar. Só para frente.\"\n\nEla toca o lenço bordado.\n\n\"Carregando o peso do que poderia ter sido.\"",
+      "opcoes": [
+        {
+          "texto": "Ou você pode deixar o peso aqui. Compartilhar ele.",
+          "dica": "oferecendo alívio",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "deixar_peso"
+        },
+        {
+          "texto": "Missoshiru ajuda. Takeshi sabia disso.",
+          "dica": "prático",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "deixar_peso": {
+      "id": "deixar_peso",
+      "contexto": "Os olhos de Midori se enchem de lágrimas.",
+      "texto": "\"Compartilhar?\"\n\n\"Carreguei isso sozinha por tanto tempo...\"\n\n\"Não sei se sei como deixar ir.\"\n\nMas há esperança na voz dela.\n\n\"Mas talvez... talvez um passo de cada vez.\"",
+      "opcoes": [
+        {
+          "texto": "Primeiro passo: missoshiru. Como ele fazia.",
+          "dica": "gentil",
+          "impacto": 20,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "sortudos": {
+      "id": "sortudos",
+      "contexto": "Midori sorri com tristeza.",
+      "texto": "\"Éramos. Eu sei disso.\"\n\n\"Vinte anos de amizade verdadeira. Não é pouco.\"\n\n\"Mas sabe o que é estranho? No final, foram sete dias.\"\n\nEla conta nos dedos.\n\n\"Sete dias entre ver as faíscas e perder ele. E eu desperdicei esses dias.\"",
+      "opcoes": [
+        {
+          "texto": "Você não desperdiçou. Você viveu como sempre viveu.",
+          "dica": "reconfortante",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "viveu_sempre"
+        },
+        {
+          "texto": "Vem. Missoshiru. Para honrar esses vinte anos.",
+          "dica": "honrar memória",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "viveu_sempre": {
+      "id": "viveu_sempre",
+      "contexto": "Midori pensa nisso.",
+      "texto": "\"Vivi. Trabalhei, conversei com ele, comprei flores...\"\n\n\"Vida normal. Como sempre.\"\n\n\"Mas normal não era suficiente. Não quando havia perigo.\"\n\nPausa.\n\n\"Eu deveria ter sido extraordinária naquele momento. E não fui.\"",
+      "opcoes": [
+        {
+          "texto": "Ninguém é extraordinário todo dia. Não é justo cobrar isso de si.",
+          "dica": "empático",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "ninguem_extraordinario"
+        },
+        {
+          "texto": "Deixa eu fazer missoshiru. Simples, mas feito com cuidado.",
+          "dica": "prático",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "ninguem_extraordinario": {
+      "id": "ninguem_extraordinario",
+      "contexto": "Midori limpa as lágrimas.",
+      "texto": "\"Você tem razão. Sei que tem.\"\n\n\"Mas o coração não ouve a razão tão facilmente.\"\n\n\"Ele só sente. E sente que falhei.\"\n\nEla olha para você.\n\n\"Takeshi-san faria missoshiru agora. Para aquecer o coração.\"\n\n\"Ele sempre soube quando eu precisava.\"",
+      "revelacao_prato": "missoshiru",
+      "opcoes": [
+        {
+          "texto": "Então vou fazer. Como ele faria.",
+          "dica": "honrar memória",
+          "impacto": 20,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "detalhes_loja_1": {
+      "id": "detalhes_loja_1",
+      "contexto": "Midori olha ao redor, nostálgica.",
+      "texto": "\"A loja tinha uma porta azul. Azul como céu de primavera.\"\n\n\"E dentro, sempre cheirava diferente. Dependia da estação.\"\n\n\"Na primavera, sakura. No verão, lavanda.\"\n\nEla fecha os olhos.\n\n\"No inverno, sempre pinho. Para lembrar que a vida continua mesmo no frio.\"",
+      "opcoes": [
+        {
+          "texto": "Você criava atmosferas inteiras com flores.",
+          "dica": "admirado",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "atmosferas_flores"
+        },
+        {
+          "texto": "Deve sentir muita falta disso.",
+          "dica": "empático",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "sente_falta_loja"
+        }
+      ]
+    },
+
+    "atmosferas_flores": {
+      "id": "atmosferas_flores",
+      "contexto": "Midori sorri.",
+      "texto": "\"Tentava. Flores são mais que decoração.\"\n\n\"São memórias. Sentimentos. Esperança.\"\n\n\"Takeshi-san entendia isso. Por isso comprava flores toda semana.\"\n\nPausa.\n\n\"Ele dizia que restaurante sem flores é casa sem alma.\"",
+      "e_pista": true,
+      "pista_id": "takeshi",
+      "opcoes": [
+        {
+          "texto": "Ele tinha sabedoria.",
+          "dica": "respeitoso",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "tinha_sabedoria"
+        },
+        {
+          "texto": "Vocês se complementavam.",
+          "dica": "observador",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "complementavam"
+        }
+      ]
+    },
+
+    "tinha_sabedoria": {
+      "id": "tinha_sabedoria",
+      "contexto": "Midori acena.",
+      "texto": "\"Tinha. Quieta, mas profunda.\"\n\n\"Ele via as pessoas. Entendia o que precisavam.\"\n\n\"Comida, conversa, silêncio... sempre a coisa certa.\"\n\nEla toca o broche.\n\n\"Exceto quando precisava ver o perigo. Ali ele não viu.\"",
+      "opcoes": [
+        {
+          "texto": "Ou viu e estava cansado demais para agir.",
+          "dica": "alternativa",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "cansado_agir"
+        },
+        {
+          "texto": "Missoshiru. Vou fazer para você.",
+          "dica": "prático",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "cansado_agir": {
+      "id": "cansado_agir",
+      "contexto": "Midori considera essa possibilidade.",
+      "texto": "\"Talvez. Ele trabalhava demais.\"\n\n\"Doze, catorze horas por dia. Todo dia.\"\n\n\"Eu dizia para ele descansar. Ele ria.\"\n\nPausa.\n\n\"Talvez o cansaço tenha feito ele subestimar o perigo. E eu... eu não forcei.\"",
+      "opcoes": [
+        {
+          "texto": "Você não podia forçar um adulto a agir.",
+          "dica": "racional",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "nao_podia_forcar"
+        },
+        {
+          "texto": "Vem. Missoshiru para aquecer.",
+          "dica": "cuidadoso",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "nao_podia_forcar": {
+      "id": "nao_podia_forcar",
+      "contexto": "Midori sabe disso racionalmente.",
+      "texto": "\"Não podia. Ele era orgulhoso. Independente.\"\n\n\"Mas eu o conhecia há vinte anos. Sabia como falar com ele.\"\n\n\"E escolhi a forma errada. A forma casual.\"\n\nEla suspira.\n\n\"Essa escolha custou a vida dele.\"",
+      "opcoes": [
+        {
+          "texto": "Ou custou a escolha dele de não agir imediatamente.",
+          "dica": "alternativa",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "escolha_dele"
+        },
+        {
+          "texto": "Missoshiru. Como ele fazia quando você estava triste.",
+          "dica": "cuidadoso",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "escolha_dele": {
+      "id": "escolha_dele",
+      "contexto": "Midori quer acreditar nisso.",
+      "texto": "\"Talvez. A escolha final era dele.\"\n\n\"Mas minhas palavras influenciam escolhas. Sempre influenciam.\"\n\n\"Quarenta anos vendendo flores, aprendi isso. Tom de voz importa.\"\n\nPausa.\n\n\"E eu usei o tom errado. O tom de 'não é urgente'.\"",
+      "opcoes": [
+        {
+          "texto": "Você está sendo muito dura consigo mesma.",
+          "dica": "empático",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "dura_consigo"
+        },
+        {
+          "texto": "Deixa eu fazer missoshiru. Talvez ajude a aliviar.",
+          "dica": "prático",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "dura_consigo": {
+      "id": "dura_consigo",
+      "contexto": "Midori sorri triste.",
+      "texto": "\"Talvez. Dez anos fazendo isso.\"\n\n\"Mas não sei como parar. Como perdoar a mim mesma.\"\n\n\"Takeshi-san perdoaria. Ele sempre perdoava.\"\n\nEla limpa os olhos.\n\n\"Mas ele não está aqui para dizer isso.\"",
+      "opcoes": [
+        {
+          "texto": "Então eu vou dizer. Você merece perdão.",
+          "dica": "firme",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "merece_perdao"
+        },
+        {
+          "texto": "Missoshiru. Como ele faria. Em nome dele.",
+          "dica": "honrar memória",
+          "impacto": 20,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "merece_perdao": {
+      "id": "merece_perdao",
+      "contexto": "Lágrimas caem livremente agora.",
+      "texto": "\"Obrigada. De coração.\"\n\n\"Precisava ouvir isso de alguém.\"\n\n\"Mesmo que ainda seja difícil acreditar.\"\n\nEla respira fundo.\n\n\"Takeshi-san faria missoshiru agora. Para selar o perdão.\"\n\n\"Ele sempre usava comida para marcar momentos importantes.\"",
+      "revelacao_prato": "missoshiru",
+      "opcoes": [
+        {
+          "texto": "Então vou fazer. Para marcar este momento.",
+          "dica": "honrar memória",
+          "impacto": 20,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "complementavam": {
+      "id": "complementavam",
+      "contexto": "Midori sorri com carinho.",
+      "texto": "\"Complementávamos. Ele com comida, eu com flores.\"\n\n\"Ambos alimentando as pessoas. De formas diferentes.\"\n\n\"Ele dizia que éramos os guardiões do bairro. Cuidávamos da alma do lugar.\"\n\nPausa.\n\n\"E depois do incêndio, o bairro nunca mais foi o mesmo.\"",
+      "opcoes": [
+        {
+          "texto": "Vocês criaram algo especial juntos.",
+          "dica": "honrar memória",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "criaram_especial"
+        },
+        {
+          "texto": "Deixa eu fazer missoshiru. Para continuar o legado.",
+          "dica": "respeitoso",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "criaram_especial": {
+      "id": "criaram_especial",
+      "contexto": "Midori acena.",
+      "texto": "\"Criamos. Sem planejar. Só vivendo.\"\n\n\"Ele cozinhando, eu cultivando. Lado a lado.\"\n\n\"Por vinte anos.\"\n\nEla toca o broche de sakura.\n\n\"E então, em uma semana, tudo acabou. Por um aviso dado errado.\"",
+      "opcoes": [
+        {
+          "texto": "Não foi por um aviso. Foi por um acidente.",
+          "dica": "firme",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "foi_acidente_nao_aviso"
+        },
+        {
+          "texto": "Vem. Missoshiru. Como nos velhos tempos.",
+          "dica": "acolhedor",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "foi_acidente_nao_aviso": {
+      "id": "foi_acidente_nao_aviso",
+      "contexto": "Midori quer acreditar.",
+      "texto": "\"Acidente. Sim. Foi um acidente.\"\n\n\"Causado por fiação antiga. Por anos de uso.\"\n\n\"Não por mim.\"\n\nMas a dúvida ainda está lá.\n\n\"Mesmo assim... eu poderia ter evitado.\"",
+      "opcoes": [
+        {
+          "texto": "Você fez o que podia com a informação que tinha.",
+          "dica": "empático",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "fez_com_informacao"
+        },
+        {
+          "texto": "Missoshiru. Para aquecer o coração.",
+          "dica": "prático",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "fez_com_informacao": {
+      "id": "fez_com_informacao",
+      "contexto": "Midori respira fundo.",
+      "texto": "\"Obrigada. Isso ajuda ouvir.\"\n\n\"Mais do que eu esperava.\"\n\nEla sorri fracamente.\n\n\"Takeshi-san teria gostado de você. Ele gostava de pessoas que escutam.\"\n\n\"E que fazem missoshiru quando alguém precisa.\"",
+      "revelacao_prato": "missoshiru",
+      "opcoes": [
+        {
+          "texto": "Então vou fazer. Para honrar ele e você.",
+          "dica": "respeitoso",
+          "impacto": 20,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "sente_falta_loja": {
+      "id": "sente_falta_loja",
+      "contexto": "Midori acena.",
+      "texto": "\"Todo dia. A loja era minha vida.\"\n\n\"Mas depois do incêndio... não consegui voltar.\"\n\n\"O cheiro da fumaça ainda estava lá. Na madeira. Nas paredes.\"\n\nPausa.\n\n\"E toda vez que olhava para o lado, via onde o restaurante costumava estar.\"",
+      "opcoes": [
+        {
+          "texto": "É difícil reconstruir quando há fantasmas.",
+          "dica": "empático",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "dificil_reconstruir"
+        },
+        {
+          "texto": "O que você fez depois?",
+          "dica": "curioso",
+          "impacto": 10,
+          "tipo": "dialogo_medio",
+          "proximo": "fez_depois"
+        }
+      ]
+    },
+
+    "dificil_reconstruir": {
+      "id": "dificil_reconstruir",
+      "contexto": "Midori concorda.",
+      "texto": "\"É. Impossível, às vezes.\"\n\n\"Então fechei. Vendi o que sobrou. Me mudei.\"\n\n\"Tentei esquecer.\"\n\nEla toca o lenço.\n\n\"Mas algumas coisas não se esquecem. Como o cheiro do missoshiru que Takeshi fazia.\"",
+      "revelacao_prato": "missoshiru",
+      "opcoes": [
+        {
+          "texto": "Posso fazer para você. Trazer essa memória de volta.",
+          "dica": "gentil",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "fez_depois": {
+      "id": "fez_depois",
+      "contexto": "Midori olha para baixo.",
+      "texto": "\"Me aposentei. Mudei para longe.\"\n\n\"Tentei não pensar no bairro. No fogo. Em Takeshi-san.\"\n\n\"Mas toda noite de inverno, quando esfria...\"\n\nPausa.\n\n\"Eu lembro. Do missoshiru. Do sorriso dele. Das faíscas que vi.\"",
+      "revelacao_prato": "missoshiru",
+      "opcoes": [
+        {
+          "texto": "As memórias não nos deixam, não é?",
+          "dica": "empático",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "memorias_nao_deixam"
+        },
+        {
+          "texto": "Deixa eu fazer missoshiru. Para fazer as pazes com as memórias.",
+          "dica": "cuidadoso",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "memorias_nao_deixam": {
+      "id": "memorias_nao_deixam",
+      "contexto": "Midori sacode a cabeça.",
+      "texto": "\"Não deixam. Principalmente as dolorosas.\"\n\n\"As boas memórias vêm também. Takeshi rindo. As flores na loja.\"\n\n\"Mas as dolorosas... essas ficam mais tempo.\"\n\nEla olha para você.\n\n\"Takeshi dizia que missoshiru curava tudo. Até memórias ruins.\"",
+      "revelacao_prato": "missoshiru",
+      "opcoes": [
+        {
+          "texto": "Então vou testar essa teoria. Vou preparar.",
+          "dica": "gentil",
+          "impacto": 20,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "ultima_conversa": {
+      "id": "ultima_conversa",
+      "contexto": "Midori olha para longe.",
+      "texto": "\"A última conversa que tivemos... foi sobre as faíscas.\"\n\n\"Ele estava lavando pratos. Eu entrei pela porta dos fundos.\"\n\n\"'Takeshi-san, vi umas faíscas no seu quadro de luz. Melhor dar uma olhada.'\"\n\nPausa longa.\n\n\"Ele sorriu, enxugou as mãos, me deu missoshiru e disse 'Obrigado, Midori-san. Vou ver isso amanhã.'\"\n\nLágrimas caem.\n\n\"Amanhã nunca veio.\"",
+      "revelacao_prato": "missoshiru",
+      "opcoes": [
+        {
+          "texto": "Você deu a ele uma última lembrança boa. Cuidado mútuo.",
+          "dica": "perspectiva diferente",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "lembranca_boa"
+        },
+        {
+          "texto": "Deixa eu fazer missoshiru. Para honrar essa última conversa.",
+          "dica": "honrar memória",
+          "impacto": 20,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "lembranca_boa": {
+      "id": "lembranca_boa",
+      "contexto": "Midori não tinha pensado nisso.",
+      "texto": "\"Cuidado mútuo?\"\n\nEla considera.\n\n\"Eu tentei avisá-lo. Ele me deu sopa.\"\n\n\"Mesmo no final... ainda estávamos cuidando um do outro.\"\n\nUm sorriso triste.\n\n\"Talvez... talvez isso conte para algo.\"",
+      "opcoes": [
+        {
+          "texto": "Conta para tudo. Vocês se amavam como família.",
+          "dica": "reconfortante",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "amavam_familia"
+        },
+        {
+          "texto": "Vou fazer missoshiru. Para celebrar esse amor.",
+          "dica": "honrar memória",
+          "impacto": 20,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "amavam_familia": {
+      "id": "amavam_familia",
+      "contexto": "Midori chora abertamente agora.",
+      "texto": "\"Amávamos. Sem dizer. Mas amávamos.\"\n\n\"Vinte anos de pequenos gestos. Flores e comida.\"\n\n\"Silêncio confortável. Presença constante.\"\n\nEla limpa as lágrimas com o lenço bordado.\n\n\"Takeshi-san sabia. Ele sempre soube.\"\n\n\"E eu preciso acreditar... que ele me perdoou. Antes mesmo de partir.\"",
+      "opcoes": [
+        {
+          "texto": "Ele perdoou. Tenho certeza. E agora é hora de você se perdoar.",
+          "dica": "firme e gentil",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "hora_perdoar"
+        },
+        {
+          "texto": "Missoshiru. Para selar esse perdão.",
+          "dica": "ritualístico",
+          "impacto": 20,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "hora_perdoar": {
+      "id": "hora_perdoar",
+      "contexto": "Midori respira profundamente.",
+      "texto": "\"Hora de me perdoar.\"\n\n\"Dez anos é tempo suficiente de penitência.\"\n\n\"Takeshi-san não ia querer isso. Ele ia querer que eu vivesse.\"\n\nEla olha para você com gratidão.\n\n\"Obrigada. Por escutar. Por não julgar.\"\n\n\"Por me lembrar que sou humana. Que errar é humano.\"\n\nPausa.\n\n\"Takeshi faria missoshiru agora. Para marcar esse recomeço.\"",
+      "revelacao_prato": "missoshiru",
+      "opcoes": [
+        {
+          "texto": "Então vou fazer. Para o recomeço de Midori-san.",
+          "dica": "honrar jornada",
+          "impacto": 20,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "peso_silencio": {
+      "id": "peso_silencio",
+      "contexto": "Midori olha para as mãos vazias.",
+      "texto": "\"Sabe o que é estranho?\"\n\n\"Não é só a culpa do que disse. É a culpa do que não disse.\"\n\n\"Eu nunca disse a ele o quanto ele importava. O quanto aqueles vinte anos significavam.\"\n\nPausa.\n\n\"Achei que tínhamos tempo. Sempre achei que tínhamos tempo.\"\n\nEla toca o broche de sakura.\n\n\"As sakuras me ensinaram. A beleza é efêmera. Mas eu só entendi depois que já era tarde.\"",
+      "opcoes": [
+        {
+          "texto": "Ele sabia. Ações falam mais que palavras.",
+          "dica": "reconfortante",
+          "impacto": 15,
+          "tipo": "dialogo_medio",
+          "proximo": "acoes_falam"
+        },
+        {
+          "texto": "Não é tarde. Você pode honrá-lo agora. Com missoshiru.",
+          "dica": "prático",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "acoes_falam": {
+      "id": "acoes_falam",
+      "contexto": "Midori considera isso.",
+      "texto": "\"Ações. Sim.\"\n\n\"Eu decorava o restaurante nas datas especiais. Sem cobrar.\"\n\n\"Ele me trazia sopa. Todo inverno.\"\n\n\"Ficávamos em silêncio confortável. Só existindo lado a lado.\"\n\nEla sorri através das lágrimas.\n\n\"Talvez ele tenha sabido. Mesmo sem eu dizer.\"\n\n\"E talvez... talvez o aviso que dei, mesmo casual, também foi amor.\"\n\n\"Cuidado. Do meu jeito imperfeito.\"",
+      "opcoes": [
+        {
+          "texto": "Exatamente. Era amor. Imperfeito, mas real.",
+          "dica": "validar",
+          "impacto": 18,
+          "tipo": "dialogo_medio",
+          "proximo": "amor_imperfeito"
+        },
+        {
+          "texto": "E agora eu vou cuidar de você. Com missoshiru.",
+          "dica": "prático",
+          "impacto": 20,
+          "tipo": "dialogo_medio",
+          "proximo": "oferecer_miso"
+        }
+      ]
+    },
+
+    "amor_imperfeito": {
+      "id": "amor_imperfeito",
+      "contexto": "Midori limpa o rosto.",
+      "texto": "\"Imperfeito mas real.\"\n\n\"Essa frase... ela me acalma.\"\n\n\"Não precisa ser perfeito. Só precisa ser real.\"\n\nEla respira fundo.\n\n\"Takeshi-san entenderia isso. Ele era assim.\"\n\n\"Simples. Real. Como o missoshiru que ele fazia.\"\n\n\"Nada elaborado. Mas feito com coração.\"",
+      "revelacao_prato": "missoshiru",
+      "opcoes": [
+        {
+          "texto": "Então vou fazer assim. Simples, mas com coração.",
+          "dica": "honrar filosofia",
+          "impacto": 20,
           "tipo": "dialogo_medio",
           "proximo": "oferecer_miso"
         }

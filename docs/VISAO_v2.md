@@ -80,11 +80,20 @@ com forca, como se protegesse algo precioso — ou perigoso.
 
 #### Estrutura de Dialogo por Personagem
 
-Cada cliente tera:
-- **20-30 trocas de dialogo unicas**
+Cada cliente tem (IMPLEMENTADO):
+- **86-111 nos de dialogo unicos** (592 total no jogo)
 - **3-4 opcoes por momento**, cada uma com consequencias diferentes
 - **Pistas sutis** que o jogador precisa perceber
 - **Respostas que variam** conforme o nivel de confianca
+
+| Cliente | Nos | Temas Principais |
+|---------|-----|------------------|
+| Yuki | 99 | Fotografia, culpa, envelope do incendio |
+| Tanaka | 99 | Bombeiro, investigacao, laudo fraudulento |
+| Ryo | 95 | Fuga, culpa de sobrevivente, Mika |
+| Midori | 102 | Florista, faiscas no quadro eletrico |
+| Sachiko | 111 | Filha de Takeshi, briga, caderno do pai |
+| Hiroto | 86 | Busca de 10 anos pelo salvador |
 
 #### Exemplo — Yuki, Momento Inicial
 
@@ -306,29 +315,29 @@ A biblioteca `rich` oferece:
 
 ## Fases da Refatoracao
 
-### Fase 1: Infraestrutura UI
-- [ ] Instalar e configurar `rich`
-- [ ] Criar sistema de renderizacao
-- [ ] Implementar componentes visuais
-- [ ] Criar arte ASCII elaborada
+### Fase 1: Infraestrutura UI ✓
+- [x] Instalar e configurar `rich`
+- [x] Criar sistema de renderizacao
+- [x] Implementar componentes visuais
+- [x] Criar arte ASCII elaborada
 
-### Fase 2: Narrativa Base
-- [ ] Reescrever descricoes de ambientacao
-- [ ] Criar monologos internos de Master
-- [ ] Expandir descricoes de personagens
-- [ ] Escrever transicoes entre cenas
+### Fase 2: Narrativa Base ✓
+- [x] Reescrever descricoes de ambientacao
+- [x] Criar monologos internos de Master
+- [x] Expandir descricoes de personagens
+- [x] Escrever transicoes entre cenas
 
-### Fase 3: Sistema de Dialogo
-- [ ] Estruturar dialogos por personagem em JSON
-- [ ] Implementar sistema de confianca granular
-- [ ] Criar ramificacoes de dialogo
-- [ ] Adicionar pistas e consequencias
+### Fase 3: Sistema de Dialogo ✓
+- [x] Estruturar dialogos por personagem em JSON
+- [x] Implementar sistema de confianca granular
+- [x] Criar ramificacoes de dialogo (592 nos total)
+- [x] Adicionar pistas e consequencias
 
-### Fase 4: Integracao e Polish
-- [ ] Conectar todos os sistemas
-- [ ] Balancear dificuldade
-- [ ] Testar fluxo completo
-- [ ] Revisar toda a escrita
+### Fase 4: Integracao e Polish ✓
+- [x] Conectar todos os sistemas
+- [x] Balancear dificuldade
+- [x] Testar fluxo completo
+- [x] Revisar toda a escrita
 
 ---
 
@@ -345,4 +354,5 @@ O jogo estara "pronto" quando:
 ---
 
 *Documento criado em 14/01/2026*
-*Versao 2.0 — A Jornada para a Excelencia*
+*Atualizado em 15/01/2026 — Dialogos expandidos para 592 nos*
+*Versao 2.0 — Implementacao Completa*
