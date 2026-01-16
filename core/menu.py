@@ -5,7 +5,7 @@ Gerencia o fluxo de início: título, continuar/novo,
 onboarding, e transição para o jogo.
 """
 
-from typing import Optional, Callable
+from typing import Optional
 from enum import Enum, auto
 
 from ui.renderer import Renderer

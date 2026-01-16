@@ -8,7 +8,6 @@ uma experiência visual coesa.
 from typing import Optional
 
 from rich.console import Console
-from rich.theme import Theme
 from rich.align import Align
 
 from config import LARGURA_PAINEL
@@ -16,7 +15,6 @@ from ui.styles import Tema
 from ui.components import Componentes
 from ui.effects import Efeitos
 from ui.ascii_art import AsciiArt
-from contracts import RenderContext, EstadoTempo, EstadoCliente
 
 
 class Renderer:

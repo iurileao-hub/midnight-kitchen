@@ -5,7 +5,7 @@ Coordena o fluxo entre diferentes telas e estados do jogo:
 título, menu, noites, diálogo, cozinha, reflexão, finais.
 """
 
-from enum import Enum, auto
+from enum import Enum
 from dataclasses import dataclass, field
 from typing import Optional, Callable, Any
 

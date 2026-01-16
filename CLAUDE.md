@@ -61,9 +61,8 @@ midnight-kitchen/
 │   └── renderer.py      # Renderizacao
 │
 └── docs/                # Documentacao
-    ├── VISAO_v2.md      # Visao do produto
-    ├── NARRATIVA.md     # Guia de escrita
-    └── PERSONAGENS.md   # Perfis dos clientes
+    ├── DESIGN.md        # Design consolidado
+    └── PROMPTS.md       # Prompts de analise
 ```
 
 ---
@@ -107,13 +106,30 @@ midnight-kitchen/
 |---------|-----------|---------------|----------------|
 | **Yuki** | Fotografa, carrega envelope misterioso | Tamago Gohan | 99 |
 | **Tanaka** | Bombeiro aposentado, tentou salvar Takeshi | Katsudon | 99 |
-| **Ryo** | Taxista, fugiu do incendio | Ochazuke | 95 |
+| **Ryo** | Taxista, fugiu do incendio | Ochazuke ou Curry Udon | 95 |
 | **Midori** | Vizinha florista, viu faiscas | Missoshiru | 102 |
 | **Sachiko** | Filha de Takeshi, caderno do pai | Nikujaga | 111 |
 | **Hiroto** | Crianca que Master salvou (adulto agora) | Omurice | 86 |
 
-**Total: 592 nos de dialogo** — cada personagem tem arvore narrativa profunda
+**Total: ~590 nos de dialogo** — cada personagem tem arvore narrativa profunda
 com multiplos caminhos, pistas progressivas e gatilhos emocionais.
+
+---
+
+## Pratos
+
+| Prato | Nome Japones | Cliente Ideal |
+|-------|--------------|---------------|
+| Tamago Gohan | 卵かけご飯 | Yuki |
+| Katsudon | カツ丼 | Tanaka |
+| Ochazuke | お茶漬け | Ryo |
+| Curry Udon | カレーうどん | Ryo |
+| Missoshiru | 味噌汁 | Midori |
+| Nikujaga | 肉じゃが | Sachiko |
+| Omurice | オムライス | Hiroto |
+| Onigiri | おにぎり | Generico |
+| Gyudon | 牛丼 | Generico |
+| Yakitori | 焼き鳥 | Generico |
 
 ---
 
@@ -144,4 +160,4 @@ explicando a origem da cicatriz de Master.
 
 ---
 
-*Atualizado: 16/01/2026 — v2.0 completa + novo logo ASCII (beco de Shinjuku)*
+*Atualizado: 16/01/2026 — v2.0 completa + otimizacoes de codigo*

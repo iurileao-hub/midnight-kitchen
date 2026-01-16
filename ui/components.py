@@ -7,12 +7,10 @@ reutilizáveis da interface.
 
 from typing import Optional
 
-from rich.console import Console, Group
+from rich.console import Console
 from rich.panel import Panel
 from rich.text import Text
 from rich.align import Align
-from rich.columns import Columns
-from rich.table import Table
 
 from config import LARGURA_PAINEL, CORES
 from ui.styles import Tema

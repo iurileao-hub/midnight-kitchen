@@ -261,6 +261,23 @@ class SistemaReflexao:
         self.renderer = renderer
         self.console = renderer.console
 
+    def _digitar_texto(self, texto: str, pausar_paragrafos: bool = False) -> None:
+        """
+        Digita texto linha por linha com efeito typewriter.
+
+        Args:
+            texto: Texto a ser digitado
+            pausar_paragrafos: Se True, pausa entre paragrafos
+        """
+        if pausar_paragrafos:
+            for paragrafo in texto.strip().split("\n\n"):
+                for linha in paragrafo.split("\n"):
+                    self.renderer.efeitos.digitar(f"  {linha.strip()}")
+                self.renderer.efeitos.pausar()
+        else:
+            for linha in texto.strip().split("\n"):
+                self.renderer.efeitos.digitar(f"  {linha.strip()}")
+
     def executar(
         self,
         memorias: list[tuple[str, str]],
@@ -301,11 +318,7 @@ class SistemaReflexao:
         self.console.print()
 
         # Narrativa de abertura com digitacao
-        paragrafos = ABERTURA_DIA7.strip().split("\n\n")
-        for paragrafo in paragrafos:
-            for linha in paragrafo.split("\n"):
-                self.renderer.efeitos.digitar(f"  {linha.strip()}")
-            self.renderer.efeitos.pausar()
+        self._digitar_texto(ABERTURA_DIA7, pausar_paragrafos=True)
 
         self.renderer.pausar()
 
@@ -321,8 +334,7 @@ class SistemaReflexao:
             return
 
         # Transicao para memorias
-        for linha in ABERTURA_MEMORIAS.strip().split("\n"):
-            self.renderer.efeitos.digitar(f"  {linha.strip()}")
+        self._digitar_texto(ABERTURA_MEMORIAS)
         self.renderer.efeitos.pausar()
 
         self.console.print()
@@ -392,11 +404,7 @@ O passado continua nebuloso.
 A verdade permanece enterrada
 sob dez anos de silencio."""
 
-        for linha in texto.strip().split("\n"):
-            self.renderer.efeitos.digitar(f"  {linha.strip()}")
-            if not linha.strip():
-                self.renderer.efeitos.pausar()
-
+        self._digitar_texto(texto, pausar_paragrafos=True)
         self.renderer.pausar()
 
     def _processar_envelope(self, tem_envelope: bool) -> None:
@@ -405,8 +413,7 @@ sob dez anos de silencio."""
 
         if tem_envelope:
             # Transicao para o envelope
-            for linha in TRANSICAO_ENVELOPE.strip().split("\n"):
-                self.renderer.efeitos.digitar(f"  {linha.strip()}")
+            self._digitar_texto(TRANSICAO_ENVELOPE)
 
             self.renderer.pausar()
             self.renderer.transicao()
@@ -422,8 +429,7 @@ sob dez anos de silencio."""
             self.console.print(painel)
         else:
             # Sem envelope
-            for linha in SEM_ENVELOPE.strip().split("\n"):
-                self.renderer.efeitos.digitar(f"  {linha.strip()}")
+            self._digitar_texto(SEM_ENVELOPE)
 
         self.renderer.pausar()
 
@@ -443,11 +449,7 @@ sob dez anos de silencio."""
         self.console.print()
 
         # Texto do final com digitacao
-        paragrafos = final["texto"].strip().split("\n\n")
-        for paragrafo in paragrafos:
-            for linha in paragrafo.split("\n"):
-                self.renderer.efeitos.digitar(f"  {linha.strip()}")
-            self.renderer.efeitos.pausar()
+        self._digitar_texto(final["texto"], pausar_paragrafos=True)
 
         self.renderer.pausar()
 
