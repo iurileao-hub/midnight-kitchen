@@ -32,6 +32,22 @@
       "reacao_errada": "Tanaka come mecanicamente. Educado, mas distante.\n\n\"Bom katsudon.\"\n\nMas não é o prato que ele precisava. Não esta noite."
     },
 
+    "curry_udon": {
+      "nome": "Curry Udon",
+      "nome_japones": "カレーうどん",
+      "descricao": "Udon grosso em caldo de curry quente. O abraço em forma de comida que Mika fazia para Ryo toda noite.",
+      "tempo_preparo": 15,
+      "cliente_ideal": "ryo",
+
+      "narrativa_preparo": "O curry borbulha devagar. O aroma é quente, acolhedor — especiarias que abraçam.\n\nO udon cozinha até ficar no ponto. Macio mas firme, do jeito certo.\n\nVocê monta a tigela com cuidado. O caldo dourado envolve os noodles. Vapor sobe em espirais.\n\nComida de quem espera alguém chegar em casa.",
+
+      "narrativa_servir": "A tigela fumega. Você a coloca diante de Ryo.\n\nO cheiro de curry preenche o espaço — abraço em forma de comida.",
+
+      "reacao_correta": "Ryo olha para o curry udon. O rosto dele desmorona por um instante.\n\n\"Mika fazia assim.\" A voz é quase inaudível. \"Toda noite. Não importava a hora que eu chegasse.\"\n\nEle pega os hashis com mãos trêmulas. O primeiro bocado é lento, reverente.\n\n\"Ela dizia que curry udon resolvia oitenta por cento dos problemas.\" Um sorriso molhado. \"Os outros vinte, a gente lidava depois de comer.\"\n\nEle come em silêncio por um momento. As defesas caindo.\n\n\"Eu trabalhava num restaurante antes. Faz tanto tempo.\" Ryo olha para você. \"Na noite do incêndio, eu corri. Enquanto outros ficavam, eu corri.\"\n\nOutro bocado.\n\n\"Tinha um garoto lá. Mais novo que eu. Ele ficou. Ajudou o chefe a tirar as pessoas.\" A voz treme. \"E eu? Eu corri feito covarde.\"\n\nRyo termina o curry udon.\n\n\"Mika nunca me julgou por isso. Ela só fazia curry udon e ficava comigo.\"\n\nEle olha para a tigela vazia.\n\n\"Obrigado. Por me fazer parar. Por me lembrar que às vezes parar é o mais difícil.\"",
+
+      "reacao_errada": "Ryo come rapidamente, como faz tudo.\n\n\"Bom. Obrigado.\"\n\nMas a pressa continua. A história permanece guardada."
+    },
+
     "ochazuke": {
       "nome": "Ochazuke",
       "nome_japones": "お茶漬け",
