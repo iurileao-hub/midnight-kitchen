@@ -3,7 +3,7 @@
     "tamago_gohan": {
       "nome": "Tamago Gohan",
       "nome_japones": "卵かけご飯",
-      "descricao": "Simplicidade que abraça: ovo cru sobre arroz quente, temperado apenas com shoyu. No Japão, é o prato que mães fazem para filhos doentes, avós preparam em manhãs frias, e adultos comem sozinhos quando precisam lembrar que foram amados.",
+      "descricao": "Ovo cru sobre arroz quente com shoyu. O prato que mães fazem quando você precisa lembrar que foi amado.",
       "tempo_preparo": 8,
       "cliente_ideal": "yuki",
 
@@ -19,7 +19,7 @@
     "katsudon": {
       "nome": "Katsudon",
       "nome_japones": "カツ丼",
-      "descricao": "O prato da vitória e da coragem. Tonkatsu dourado sobre arroz, envolvido em ovo macio. No Japão, é tradição comer katsudon antes de provas e desafios — 'katsu' significa vencer. Mas também é o prato que reconforta após derrotas que ninguém mais vê.",
+      "descricao": "Tonkatsu dourado sobre arroz, envolvido em ovo. O prato da vitória — e do consolo após derrotas invisíveis.",
       "tempo_preparo": 20,
       "cliente_ideal": "tanaka",
 
@@ -35,7 +35,7 @@
     "ochazuke": {
       "nome": "Ochazuke",
       "nome_japones": "お茶漬け",
-      "descricao": "Chá verde quente derramado sobre arroz com salmão, umeboshi e nori. O prato dos trabalhadores noturnos, dos que chegam em casa quando todos dormem. No Japão, é a refeição silenciosa de quem precisa de conforto sem precisar pedir.",
+      "descricao": "Chá verde sobre arroz com salmão e umeboshi. A refeição silenciosa de quem chega em casa quando todos dormem.",
       "tempo_preparo": 10,
       "cliente_ideal": "ryo",
 
@@ -51,7 +51,7 @@
     "missoshiru": {
       "nome": "Missoshiru",
       "nome_japones": "味噌汁",
-      "descricao": "A sopa que é um abraço líquido. Missô dissolvido em dashi, com tofu tremulando e wakame flutuando. No Japão, é servida em todo café da manhã, todo jantar — o fio invisível que conecta todas as refeições, todas as famílias, todas as memórias de casa.",
+      "descricao": "Missô em dashi, com tofu e wakame. O fio invisível que conecta todas as refeições e memórias de casa.",
       "tempo_preparo": 12,
       "cliente_ideal": "midori",
 
@@ -67,7 +67,7 @@
     "nikujaga": {
       "nome": "Nikujaga",
       "nome_japones": "肉じゃが",
-      "descricao": "O 'comfort food' definitivo do Japão. Carne, batatas e cebolas cozidos em shoyu doce até tudo ficar macio. É o prato que mães ensinam filhas, que aparece em domingos preguiçosos, que tem gosto de família mesmo quando você come sozinho.",
+      "descricao": "Carne, batatas e cebolas em shoyu doce. O prato dos domingos em família — mesmo quando você come sozinho.",
       "tempo_preparo": 25,
       "cliente_ideal": "sachiko",
 
@@ -83,7 +83,7 @@
     "omurice": {
       "nome": "Omurice",
       "nome_japones": "オムライス",
-      "descricao": "Arroz frito envolvido em omelete dourado, com ketchup desenhando corações ou nomes. É o prato que crianças pedem em aniversários, que aparece em almoços especiais, que carrega memórias de quem cozinhou com amor para quem era pequeno demais para lembrar — mas lembra mesmo assim.",
+      "descricao": "Arroz frito envolvido em omelete dourado. O prato de aniversários, de memórias pequenas demais para lembrar — mas você lembra.",
       "tempo_preparo": 15,
       "cliente_ideal": "hiroto",
 
@@ -99,7 +99,7 @@
     "onigiri": {
       "nome": "Onigiri",
       "nome_japones": "おにぎり",
-      "descricao": "Triângulos de arroz moldados à mão, recheados com umeboshi ou salmão, envoltos em nori crocante. No Japão, são vendidos em toda konbini, mas os melhores são feitos em casa — imperfeitos, assimétricos, carregando o formato das mãos de quem os fez.",
+      "descricao": "Triângulos de arroz com umeboshi ou salmão, envoltos em nori. Os melhores carregam o formato das mãos de quem os fez.",
       "tempo_preparo": 10,
       "cliente_ideal": null,
 
@@ -113,7 +113,7 @@
     "gyudon": {
       "nome": "Gyudon",
       "nome_japones": "牛丼",
-      "descricao": "Fatias finas de carne bovina cozidas em shoyu doce sobre arroz fumegante. O prato dos estudantes, dos trabalhadores de escritório, dos que precisam de energia para continuar. No Japão, representa persistência — seguir em frente mesmo quando o dia foi difícil.",
+      "descricao": "Carne bovina em shoyu doce sobre arroz. O prato de quem precisa de energia para seguir, mesmo quando o dia foi difícil.",
       "tempo_preparo": 15,
       "cliente_ideal": null,
 
@@ -127,7 +127,7 @@
     "yakitori": {
       "nome": "Yakitori",
       "nome_japones": "焼き鳥",
-      "descricao": "Espetinhos de frango grelhados sobre carvão, pincelados com tare doce e salgado. É a comida dos izakayas, das noites com amigos, das conversas que só acontecem depois do terceiro copo. No Japão, yakitori significa companhia — raramente se come sozinho.",
+      "descricao": "Espetinhos de frango grelhados com tare doce. A comida das noites com amigos — yakitori raramente se come sozinho.",
       "tempo_preparo": 18,
       "cliente_ideal": null,
 

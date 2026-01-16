@@ -58,13 +58,10 @@ def executar_jogo():
         # Processa resultado
         if resultado.resultado == ResultadoNoite.SUCESSO:
             game.registrar_sucesso(resultado.cliente_nome, resultado.memoria or "")
-            mostrar_sucesso(renderer, resultado)
         elif resultado.resultado == ResultadoNoite.FALHA_TEMPO:
             game.registrar_falha(ResultadoNoite.FALHA_TEMPO)
-            mostrar_falha_tempo(renderer, resultado)
         else:
             game.registrar_falha(resultado.resultado)
-            mostrar_falha(renderer, resultado)
 
         # Salva progresso
         game.salvar()
@@ -98,33 +95,6 @@ def executar_noite(
         )
 
     return noite.executar()
-
-
-def mostrar_sucesso(renderer: Renderer, resultado: ResultadoNoiteCompleto):
-    """Mostra mensagem de sucesso após uma noite."""
-    renderer.espaco()
-    renderer.console.print(
-        f"[sucesso]✦ Uma conexão foi feita com {resultado.cliente_nome}.[/sucesso]"
-    )
-    renderer.espaco()
-
-
-def mostrar_falha_tempo(renderer: Renderer, resultado: ResultadoNoiteCompleto):
-    """Mostra mensagem quando o tempo esgota."""
-    renderer.espaco()
-    renderer.console.print(
-        f"[sutil]{resultado.cliente_nome} foi embora. O tempo não esperou.[/sutil]"
-    )
-    renderer.espaco()
-
-
-def mostrar_falha(renderer: Renderer, resultado: ResultadoNoiteCompleto):
-    """Mostra mensagem de falha genérica."""
-    renderer.espaco()
-    renderer.console.print(
-        f"[sutil]A noite termina. Algo ficou por dizer.[/sutil]"
-    )
-    renderer.espaco()
 
 
 def mostrar_transicao(renderer: Renderer, noite_atual: int):
