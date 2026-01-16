@@ -157,12 +157,6 @@ class Noite:
             for op in opcoes
         ]
 
-        # Se prato foi revelado, adiciona opção de cozinha
-        if self._prato_revelado and not self._prato_servido:
-            opcoes_menu.append(
-                (f"[Preparar {self._obter_nome_prato(self._prato_revelado)}]", "cozinha")
-            )
-
         # Mostra menu
         self.renderer.espaco()
         escolha = self.renderer.mostrar_menu(
@@ -174,10 +168,6 @@ class Noite:
         # Processa escolha
         if escolha == 0:
             return None  # Continua
-
-        # Verifica se é opção de cozinha
-        if self._prato_revelado and escolha == len(opcoes) + 1:
-            return self._executar_cozinha()
 
         # Processa escolha de diálogo
         resultado = self.dialogo.processar_escolha(escolha)
