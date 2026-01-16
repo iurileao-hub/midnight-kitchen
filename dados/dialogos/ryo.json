@@ -117,7 +117,7 @@
     "quanto_tempo_corre": {
       "id": "quanto_tempo_corre",
       "contexto": "Os olhos de Ryo ficam distantes.",
-      "texto": "\"Dez anos.\"\n\nA resposta sai automática.\n\n\"Desde o incêndio. Desde que eu corri e não parei.\"\n\nEle ri amargamente.\n\n\"Trabalhava num restaurante. Quando o fogo começou, eu... eu saí pela porta e nunca olhei pra trás.\"",
+      "texto": "\"Uma década.\"\n\nA resposta sai automática.\n\n\"Desde o incêndio. Desde que eu corri e não parei.\"\n\nEle ri amargamente.\n\n\"Trabalhava num restaurante. Quando o fogo começou, eu... eu saí pela porta e nunca olhei pra trás.\"",
       "e_pista": true,
       "pista_id": "incendio",
       "opcoes": [
@@ -221,6 +221,7 @@
           "dica": "provocativo",
           "impacto": 15,
           "tipo": "dialogo_medio",
+          "confianca_minima": 40,
           "proximo": "parou_de_correr"
         },
         {
@@ -313,6 +314,7 @@
           "dica": "provocativo",
           "impacto": 15,
           "tipo": "dialogo_medio",
+          "confianca_minima": 40,
           "proximo": "quer_casa"
         },
         {
@@ -335,6 +337,7 @@
           "dica": "profundo",
           "impacto": 15,
           "tipo": "dialogo_medio",
+          "confianca_minima": 50,
           "proximo": "faria_casa"
         },
         {
@@ -375,6 +378,7 @@
           "dica": "provocativo",
           "impacto": 15,
           "tipo": "dialogo_medio",
+          "confianca_minima": 40,
           "proximo": "honesto_madrugada"
         },
         {
@@ -485,6 +489,7 @@
           "dica": "filosófico",
           "impacto": 15,
           "tipo": "dialogo_medio",
+          "confianca_minima": 50,
           "proximo": "forma_parado"
         }
       ]
@@ -496,7 +501,7 @@
       "texto": "\"O que você quer dizer?\"\n\nEle te olha de verdade pela primeira vez.\n\n\"Que eu estou só... dando voltas? Sem sair do lugar?\"\n\nA pergunta é genuína, quase vulnerável.",
       "opcoes": [
         {
-          "texto": "Você mesmo disse. Dez anos correndo.",
+          "texto": "Você mesmo disse. Todo esse tempo correndo.",
           "dica": "direto",
           "impacto": 15,
           "tipo": "dialogo_medio",
@@ -515,7 +520,7 @@
     "dez_anos_correndo": {
       "id": "dez_anos_correndo",
       "contexto": "Ryo fecha os olhos.",
-      "texto": "\"Dez anos.\"\n\nEle respira fundo.\n\n\"Desde o incêndio. Desde que eu corri enquanto outros ficaram. Enquanto o chefe morreu. Enquanto um garoto foi mais corajoso que eu.\"\n\nA voz dele treme.\n\n\"E dez anos depois, quando Mika precisou de mim, eu estava dirigindo. De novo. Sempre dirigindo.\"",
+      "texto": "\"Tanto tempo.\"\n\nEle respira fundo.\n\n\"Desde o incêndio. Desde que eu corri enquanto outros ficaram. Enquanto o chefe morreu. Enquanto um garoto foi mais corajoso que eu.\"\n\nA voz dele treme.\n\n\"E quando Mika precisou de mim, anos depois, eu estava dirigindo. De novo. Sempre dirigindo.\"",
       "e_pista": true,
       "pista_id": "padrao_fuga",
       "opcoes": [
@@ -568,6 +573,7 @@
           "dica": "profundo",
           "impacto": 18,
           "tipo": "dialogo_medio",
+          "confianca_minima": 60,
           "proximo": "tem_ser_suficiente"
         },
         {
@@ -597,6 +603,7 @@
           "dica": "provocativo",
           "impacto": 15,
           "tipo": "dialogo_medio",
+          "confianca_minima": 40,
           "proximo": "mika_faria"
         }
       ]
@@ -648,6 +655,7 @@
           "dica": "provocativo",
           "impacto": 15,
           "tipo": "dialogo_medio",
+          "confianca_minima": 40,
           "proximo": "sentindo_agora"
         },
         {
@@ -670,6 +678,7 @@
           "dica": "profundo",
           "impacto": 15,
           "tipo": "dialogo_medio",
+          "confianca_minima": 50,
           "proximo": "ainda_vivo"
         },
         {
@@ -770,6 +779,7 @@
           "dica": "profundo",
           "impacto": 15,
           "tipo": "dialogo_medio",
+          "confianca_minima": 50,
           "proximo": "cicatrizes_dentro"
         }
       ]
@@ -817,6 +827,7 @@
           "dica": "provocativo",
           "impacto": 15,
           "tipo": "dialogo_medio",
+          "confianca_minima": 50,
           "proximo": "takeshi_diria"
         }
       ]
@@ -832,6 +843,7 @@
           "dica": "filosófico",
           "impacto": 15,
           "tipo": "dialogo_medio",
+          "confianca_minima": 60,
           "proximo": "coragem_medo"
         },
         {
@@ -847,7 +859,7 @@
     "coragem_medo": {
       "id": "coragem_medo",
       "contexto": "Ryo fica em silêncio.",
-      "texto": "\"Agir apesar do medo...\"\n\nEle repete as palavras lentamente.\n\n\"O garoto tinha medo. Vi nos olhos dele. Mas ele voltou mesmo assim.\"\n\nPausa longa.\n\n\"E eu? Eu deixei o medo vencer. E continuo deixando. Dez anos depois, ainda estou correndo.\"",
+      "texto": "\"Agir apesar do medo...\"\n\nEle repete as palavras lentamente.\n\n\"O garoto tinha medo. Vi nos olhos dele. Mas ele voltou mesmo assim.\"\n\nPausa longa.\n\n\"E eu? Eu deixei o medo vencer. E continuo deixando. Uma década depois, ainda estou correndo.\"",
       "e_pista": true,
       "pista_id": "padrao_fuga",
       "opcoes": [
@@ -882,7 +894,7 @@
     "fazer_ochazuke_alt": {
       "id": "fazer_ochazuke_alt",
       "contexto": "Ryo hesita.",
-      "texto": "\"Faz dez anos que não como ochazuke.\"\n\nEle olha para a porta. Depois para você.\n\n\"Não sei se consigo.\"\n\nMas ele não se levanta.\n\n\"Mas... tá. Tá bom.\"",
+      "texto": "\"Faz tanto tempo que não como ochazuke.\"\n\nEle olha para a porta. Depois para você.\n\n\"Não sei se consigo.\"\n\nMas ele não se levanta.\n\n\"Mas... tá. Tá bom.\"",
       "opcoes": [
         {
           "texto": "Ochazuke. Vou preparar.",
@@ -912,6 +924,7 @@
           "dica": "profundo",
           "impacto": 15,
           "tipo": "dialogo_medio",
+          "confianca_minima": 60,
           "proximo": "diria_garoto"
         }
       ]
@@ -934,6 +947,7 @@
           "dica": "profundo",
           "impacto": 15,
           "tipo": "dialogo_medio",
+          "confianca_minima": 50,
           "proximo": "cicatrizes_dentro"
         }
       ]
@@ -949,6 +963,7 @@
           "dica": "provocativo",
           "impacto": 15,
           "tipo": "dialogo_medio",
+          "confianca_minima": 60,
           "proximo": "passado_vivo"
         },
         {
@@ -964,7 +979,7 @@
     "passado_vivo": {
       "id": "passado_vivo",
       "contexto": "Ryo para.",
-      "texto": "Silêncio.\n\nEle olha para você.\n\nDepois para as próprias mãos.\n\n\"Você tem razão.\"\n\nA voz sai baixa.\n\n\"Dez anos e ainda está tão vivo quanto naquela noite. O cheiro de fumaça. O som do alarme. A visão do garoto voltando enquanto eu corria.\"",
+      "texto": "Silêncio.\n\nEle olha para você.\n\nDepois para as próprias mãos.\n\n\"Você tem razão.\"\n\nA voz sai baixa.\n\n\"Todo esse tempo e ainda está tão vivo quanto naquela noite. O cheiro de fumaça. O som do alarme. A visão do garoto voltando enquanto eu corria.\"",
       "opcoes": [
         {
           "texto": "Talvez seja hora de enfrentar em vez de fugir.",
@@ -1096,6 +1111,7 @@
           "dica": "profundo",
           "impacto": 15,
           "tipo": "dialogo_medio",
+          "confianca_minima": 70,
           "proximo": "sobre_precisar"
         },
         {
@@ -1300,7 +1316,7 @@
     "ja_levantar": {
       "id": "ja_levantar",
       "contexto": "Ryo olha ao redor como se visse pela primeira vez.",
-      "texto": "\"Estou parado.\"\n\nA constatação parece surpreendê-lo.\n\n\"Pela primeira vez em dez anos, estou realmente parado.\"\n\nEle ri, mas é um riso genuíno.\n\n\"Mika ia gostar. Ia fazer curry udon e dizer 'viu? Não foi tão difícil'.\"",
+      "texto": "\"Estou parado.\"\n\nA constatação parece surpreendê-lo.\n\n\"Pela primeira vez em tanto tempo, estou realmente parado.\"\n\nEle ri, mas é um riso genuíno.\n\n\"Mika ia gostar. Ia fazer curry udon e dizer 'viu? Não foi tão difícil'.\"",
       "e_pista": true,
       "pista_id": "curry_udon",
       "revelacao_prato": "curry_udon",
@@ -1395,7 +1411,7 @@
     "silencio_confortavel": {
       "id": "silencio_confortavel",
       "contexto": "Algo em Ryo desacelera um pouco.",
-      "texto": "\"É.\"\n\nEle olha ao redor, menos agitado agora.\n\n\"Trabalhei em restaurante antes. Tempo diferente. Mais barulho, mais gente.\"\n\nOs dedos param de tamborilar.\n\n\"Mudei de área. Há dez anos.\"",
+      "texto": "\"É.\"\n\nEle olha ao redor, menos agitado agora.\n\n\"Trabalhei em restaurante antes. Tempo diferente. Mais barulho, mais gente.\"\n\nOs dedos param de tamborilar.\n\n\"Mudei de área. Faz uma década.\"",
       "e_pista": true,
       "pista_id": "trabalhou_restaurante",
       "opcoes": [
@@ -1407,7 +1423,7 @@
           "proximo": "porque_mudou"
         },
         {
-          "texto": "Dez anos é muito tempo. O que aconteceu?",
+          "texto": "Uma década é muito tempo. O que aconteceu?",
           "dica": "perceptivo",
           "impacto": 12,
           "tipo": "dialogo_medio",
@@ -1501,7 +1517,7 @@
     "depois_turno": {
       "id": "depois_turno",
       "contexto": "Ryo pisca, surpreso com a pergunta.",
-      "texto": "\"Depois do turno?\"\n\nAlgo muda no rosto dele. Uma sombra de sorriso.\n\n\"Ochazuke. O chefe fazia ochazuke pra gente. Arroz com chá verde, simples assim.\"\n\nEle fecha os olhos por um segundo.\n\n\"Faz dez anos que não como isso. Não consigo.\"",
+      "texto": "\"Depois do turno?\"\n\nAlgo muda no rosto dele. Uma sombra de sorriso.\n\n\"Ochazuke. O chefe fazia ochazuke pra gente. Arroz com chá verde, simples assim.\"\n\nEle fecha os olhos por um segundo.\n\n\"Desde aquela noite, não consigo comer isso. Não consigo.\"",
       "revelacao_prato": "ochazuke",
       "opcoes": [
         {
@@ -1532,7 +1548,7 @@
     "preparar_ochazuke": {
       "id": "preparar_ochazuke",
       "contexto": "Você começa a preparar o ochazuke.",
-      "texto": "",
+      "texto": "A água ferve. O arroz está quente, recém-cozido.\n\nVocê prepara o chá verde com cuidado. Os flocos de salmão, as folhas de nori.\n\nO cheiro preenche o ar — simples, reconfortante. Como uma refeição de fim de turno.\n\nRyo observa em silêncio. Os dedos pararam de tamborilar.",
       "tipo_cena": "cozinha",
       "prato": "ochazuke"
     },
@@ -1562,7 +1578,7 @@
     "olha_porta": {
       "id": "olha_porta",
       "contexto": "Ryo olha para a porta instintivamente, depois se força a parar.",
-      "texto": "\"Hábito.\"\n\nEle ri nervoso.\n\n\"Dez anos dirigindo táxi de noite. A gente fica... atento.\" Pausa. \"E antes disso, eu... trabalhava em outro lugar. À noite também.\"",
+      "texto": "\"Hábito.\"\n\nEle ri nervoso.\n\n\"Anos dirigindo táxi de noite. A gente fica... atento.\" Pausa. \"E antes disso, eu... trabalhava em outro lugar. À noite também.\"",
       "e_pista": true,
       "pista_id": "outro_lugar",
       "opcoes": [
@@ -1608,6 +1624,7 @@
           "dica": "filosófico",
           "impacto": 12,
           "tipo": "dialogo_medio",
+          "confianca_minima": 40,
           "proximo": "mesmo_tipo"
         }
       ]
@@ -1623,6 +1640,7 @@
           "dica": "profundo",
           "impacto": 15,
           "tipo": "dialogo_medio",
+          "confianca_minima": 50,
           "proximo": "parar_fugir"
         }
       ]
@@ -1631,12 +1649,12 @@
     "parar_fugir": {
       "id": "parar_fugir",
       "contexto": "Ryo fica em silêncio por um momento.",
-      "texto": "\"Parar de fugir...\"\n\nEle olha para as próprias mãos.\n\n\"Eu trabalhei num restaurante assim. Dez anos atrás. Era garçom. O chefe era... era bom.\"\n\nA voz dele muda.\n\n\"O lugar pegou fogo. Eu corri. E nunca parei.\"",
+      "texto": "\"Parar de fugir...\"\n\nEle olha para as próprias mãos.\n\n\"Eu trabalhei num restaurante assim. Antes de virar taxista. Era garçom. O chefe era... era bom.\"\n\nA voz dele muda.\n\n\"O lugar pegou fogo. Eu corri. E nunca parei.\"",
       "e_pista": true,
       "pista_id": "correu",
       "opcoes": [
         {
-          "texto": "Dez anos correndo é muito tempo.",
+          "texto": "Tanto tempo correndo. É muito peso pra carregar.",
           "dica": "empático",
           "impacto": 15,
           "tipo": "dialogo_medio",
@@ -1814,7 +1832,7 @@
     "preparar_curry": {
       "id": "preparar_curry",
       "contexto": "Você começa a preparar o curry udon.",
-      "texto": "",
+      "texto": "O curry borbulha devagar. O aroma é quente, acolhedor.\n\nVocê cozinha o udon até ficar no ponto certo. Macio mas firme.\n\nO caldo dourado envolve os noodles na tigela. Vapor sobe em espirais.\n\nRyo respira fundo, fechando os olhos por um momento.",
       "tipo_cena": "cozinha",
       "prato": "curry_udon"
     },
@@ -1838,6 +1856,7 @@
           "dica": "provocativo",
           "impacto": 15,
           "tipo": "dialogo_medio",
+          "confianca_minima": 50,
           "proximo": "parar_fugir"
         }
       ]
@@ -1894,7 +1913,7 @@
     "nao_vergonha": {
       "id": "nao_vergonha",
       "contexto": "Ryo balança a cabeça lentamente.",
-      "texto": "\"Não é vergonha?\"\n\nEle olha para as próprias mãos.\n\n\"Eu deixei meu chefe morrer. Deixei um garoto de dezoito anos ser mais corajoso que eu.\"\n\nOs olhos dele estão vazios.\n\n\"E dez anos depois, deixei minha esposa morrer porque peguei mais uma corrida.\"\n\nEle ri amargamente. \"Parece que fugir é a única coisa que eu sei fazer.\"",
+      "texto": "\"Não é vergonha?\"\n\nEle olha para as próprias mãos.\n\n\"Eu deixei meu chefe morrer. Deixei um garoto de dezoito anos ser mais corajoso que eu.\"\n\nOs olhos dele estão vazios.\n\n\"E quando Mika precisou de mim, anos depois, eu estava em outra corrida.\"\n\nEle ri amargamente. \"Parece que fugir é a única coisa que eu sei fazer.\"",
       "e_pista": true,
       "pista_id": "padrao_fuga",
       "opcoes": [
@@ -1977,7 +1996,7 @@
     "esteve_antes": {
       "id": "esteve_antes",
       "contexto": "Ryo franze a testa, tentando lembrar.",
-      "texto": "\"Não sei. Talvez.\"\n\nEle olha ao redor com mais atenção.\n\n\"Trabalhei num restaurante parecido. Dez anos atrás. Antes de virar taxista.\"\n\nOs olhos param em você por um segundo.\n\n\"Tinha um cozinheiro lá. Um garoto. Mais novo que eu.\"",
+      "texto": "\"Não sei. Talvez.\"\n\nEle olha ao redor com mais atenção.\n\n\"Trabalhei num restaurante parecido. Faz tempo. Antes de virar taxista.\"\n\nOs olhos param em você por um segundo.\n\n\"Tinha um cozinheiro lá. Um garoto. Mais novo que eu.\"",
       "e_pista": true,
       "pista_id": "trabalhou_restaurante",
       "pensamento_master": "Um garoto. Mais novo. As palavras ecoam de um jeito estranho.",
@@ -1994,6 +2013,7 @@
           "dica": "filosófico",
           "impacto": 10,
           "tipo": "dialogo_medio",
+          "confianca_minima": 40,
           "proximo": "mesmo_tipo"
         }
       ]
