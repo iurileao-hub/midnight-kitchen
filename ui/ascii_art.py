@@ -8,27 +8,31 @@ Artes ASCII que dão personalidade visual ao jogo.
 class AsciiArt:
     """Coleção de arte ASCII para o jogo."""
 
-    # Logo principal do jogo - Beco de Shinjuku com restaurante ao fundo
+    # Logo principal do jogo - Noite chuvosa em Shinjuku
     LOGO = """
-[grey30]                                  _[/grey30]
-[grey30]                             ___/[/grey30]   [grey30]\\___[/grey30]
-[grey30]                        ____/[/grey30]   [grey42]∥ ∥[/grey42]   [grey30]\\____[/grey30]
-[grey50]             ~~~~~~~~/~~~~~∥~∥~∥~~~~~\\~~~~~~~~[/grey50]
-[grey30]            ____/[/grey30]         [grey42]∥ ∥ ∥[/grey42]         [grey30]\\____[/grey30]
-[grey30]       ____/[/grey30]     [dark_orange]░░░░░[/dark_orange]   [grey42]∥ ∥ ∥[/grey42]   [dark_orange]░░░░░[/dark_orange]     [grey30]\\____[/grey30]
-[grey30]  ____/[/grey30]         [dark_orange]░▓▓▓▓░[/dark_orange]  [grey42]∥ ∥ ∥[/grey42]  [dark_orange]░▓▓▓▓░[/dark_orange]         [grey30]\\____[/grey30]
-[grey27] |▒▒|[/grey27]  [grey50]▪───▪[/grey50]   [orange1]░▓▓▓░[/orange1]              [orange1]░▓▓▓░[/orange1]   [grey50]▪───▪[/grey50]  [grey27]|▒▒|[/grey27]
-[grey27] |▒▒|[/grey27]  [grey50]│[/grey50][yellow3]▓▓▓[/yellow3][grey50]│[/grey50]    [dark_orange]║║║[/dark_orange]                [dark_orange]║║║[/dark_orange]    [grey50]│[/grey50][yellow3]▓▓▓[/yellow3][grey50]│[/grey50]  [grey27]|▒▒|[/grey27]
-[grey27] |▒▒|[/grey27]  [grey50]▪───▪[/grey50]       [grey62]┌──────────────────┐[/grey62]       [grey50]▪───▪[/grey50]  [grey27]|▒▒|[/grey27]
-[grey27] |▒▒|[/grey27]  [grey50]▪───▪[/grey50]       [grey62]│[/grey62] [dark_orange]深  夜  食  堂[/dark_orange] [grey62]│[/grey62]       [grey50]▪───▪[/grey50]  [grey27]|▒▒|[/grey27]
-[grey27] |▒▒|[/grey27]  [grey50]│[/grey50][wheat1]░░░[/wheat1][grey50]│[/grey50]       [grey62]├──────────────────┤[/grey62]       [grey50]│[/grey50][wheat1]░░░[/wheat1][grey50]│[/grey50]  [grey27]|▒▒|[/grey27]
-[grey27] |▒▒|[/grey27]  [grey50]▪───▪[/grey50]       [grey62]│[/grey62][grey70]┃ ┃ ┃[/grey70] [orange1]▒▒[/orange1] [grey70]┃ ┃ ┃[/grey70][grey62]│[/grey62]       [grey50]▪───▪[/grey50]  [grey27]|▒▒|[/grey27]
-[grey27] |▒▒|[/grey27]              [grey62]│[/grey62] [grey70]╲╱╲╱[/grey70] [orange1]▒▒[/orange1] [grey70]╲╱╲╱[/grey70] [grey62]│[/grey62]              [grey27]|▒▒|[/grey27]
-[grey27] |▒▒|[/grey27][grey19]_____________[/grey19][grey62]│[/grey62][grey19]____[/grey19][yellow4]▒▒▒▒▒▒[/yellow4][grey19]____[/grey19][grey62]│[/grey62][grey19]_____________[/grey19][grey27]|▒▒|[/grey27]
-[grey23] |[/grey23][grey30]░░░    ░░[/grey30]       [yellow4]░░░░░░░░░░[/yellow4]       [grey30]░░    ░░░[/grey30][grey23]|[/grey23]
-[grey19] |___________________[/grey19][grey30]░░░░░░[/grey30][grey19]___________________|[/grey19]
+[grey15]     ╱ [/grey15][grey23]╱[/grey23]    [grey19]╱[/grey19]   [magenta]▄▀▀▀▄[/magenta]   [grey19]╱[/grey19]  [cyan]▄▀▀▄[/cyan] [grey15]╱[/grey15]   [hot_pink]▄▀▀▀▀▄[/hot_pink]  [grey19]╱[/grey19]  [grey15]╱[/grey15]
+[grey19]   ╱[/grey19]   [grey15]╱[/grey15]  [grey23]╱[/grey23]   [magenta]█ 酒 █[/magenta]  [grey15]╱[/grey15]   [cyan]█▀▀█[/cyan]   [grey19]╱[/grey19]  [hot_pink]█ 24H █[/hot_pink] [grey15]╱[/grey15]   [grey19]╱[/grey19]
+[grey23]  ╱[/grey23] [grey19]╱[/grey19]    [grey15]╱[/grey15]   [magenta]▀▄▄▄▀[/magenta] [grey19]╱[/grey19]    [cyan]▀▄▄▀[/cyan] [grey15]╱[/grey15]    [hot_pink]▀▄▄▄▄▀[/hot_pink]   [grey23]╱[/grey23]   [grey15]╱[/grey15]
+[grey23] ╱[/grey23]    [grey15]╱[/grey15]   [grey19]╱[/grey19]    [blue]║[/blue] [grey19]╱[/grey19]  [green]▄▄▄▄▄[/green] [grey15]╱[/grey15] [blue]║[/blue]   [grey23]╱[/grey23] [deep_pink4]║[/deep_pink4]   [grey15]╱[/grey15]  [grey19]╱[/grey19]    [grey23]╱[/grey23]
+[grey27]╱[/grey27]  [grey23]╱[/grey23]    [grey15]╱[/grey15]  [grey19]╱[/grey19] [blue]║[/blue][grey23]╱[/grey23]   [green]█カラオケ█[/green]  [blue]║[/blue] [grey19]╱[/grey19]  [deep_pink4]║[/deep_pink4] [grey15]╱[/grey15]   [grey23]╱[/grey23]    [grey15]╱[/grey15]  [grey19]╱[/grey19]
+[grey30]▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔[/grey30]
+[grey35]                     [dark_orange]┌─────────────────────┐[/dark_orange]
+[grey35]                     [dark_orange]│[/dark_orange]   [orange1]░░░░░░░░░░░░░░░[/orange1]   [dark_orange]│[/dark_orange]
+[grey35]      [red]░[/red]              [dark_orange]│[/dark_orange]  [orange1]░[/orange1][yellow1] 深 夜 食 堂 [/yellow1][orange1]░[/orange1]  [dark_orange]│[/dark_orange]              [red]░[/red]
+[grey39]     [red]░▓░[/red]             [dark_orange]│[/dark_orange]   [orange1]░░░░░░░░░░░░░░░[/orange1]   [dark_orange]│[/dark_orange]             [red]░▓░[/red]
+[grey39]     [red]░▓░[/red]             [dark_orange]├─────────────────────┤[/dark_orange]             [red]░▓░[/red]
+[grey42]     [dark_red]║║║[/dark_red]             [grey62]│[/grey62][wheat1]▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓[/wheat1][grey62]│[/grey62]             [dark_red]║║║[/dark_red]
+[grey42]                     [grey62]│[/grey62][orange1]┃  ┃  ┃[/orange1] [yellow1]░▓▓░[/yellow1] [orange1]┃  ┃  ┃[/orange1][grey62]│[/grey62]
+[grey46]                     [grey62]│[/grey62][orange1] ╲╱ ╲╱ [/orange1] [yellow1]░▓▓░[/yellow1] [orange1] ╲╱ ╲╱ [/orange1][grey62]│[/grey62]
+[grey46]                     [grey62]│[/grey62][wheat1]▓▓▓▓▓▓▓[/wheat1][yellow3]▓▓▓▓▓▓▓[/yellow3][wheat1]▓▓▓▓▓▓▓[/wheat1][grey62]│[/grey62]
+[grey50]  [grey35]▄[/grey35]                  [grey62]│[/grey62][grey19]▄[/grey19][yellow4]░░░░░░░░░░░░░░░░░░░[/yellow4][grey19]▄[/grey19][grey62]│[/grey62]                  [grey35]▄[/grey35]
+[grey50]▄███▄[/grey50]          [grey30]▄▄[/grey30]   [grey19]▀[/grey19][yellow4]░░░░░░░░░░░░░░░░░░░░░[/yellow4][grey19]▀[/grey19]   [grey30]▄▄[/grey30]          [grey50]▄███▄[/grey50]
+[grey54]█████[/grey54]   [grey35]▄▄▄[/grey35]  [grey39]████[/grey39]  [yellow3]░░░░░░░░░░░░░░░░░░░░░░░[/yellow3]  [grey39]████[/grey39]  [grey35]▄▄▄[/grey35]   [grey54]█████[/grey54]
+[grey58]━━━━━━━━━━━━━━━━━[/grey58][yellow4]░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░[/yellow4][grey58]━━━━━━━━━━━━━━━━━[/grey58]
+[grey27]▓[/grey27] [magenta dim]~[/magenta dim] [grey30]▓[/grey30] [cyan dim]~[/cyan dim] [grey23]▓[/grey23]  [yellow3]~░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░~[/yellow3]  [grey27]▓[/grey27] [hot_pink dim]~[/hot_pink dim] [grey30]▓[/grey30] [green dim]~[/green dim] [grey23]▓[/grey23]
+[grey19]▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔[/grey19]
 
-[white bold]                M I D N I G H T   K I T C H E N[/white bold]"""
+[white bold]                   M I D N I G H T   K I T C H E N[/white bold]"""
 
     # Lanterna japonesa (menor, para headers)
     LANTERNA_PEQUENA = """[dark_orange]
