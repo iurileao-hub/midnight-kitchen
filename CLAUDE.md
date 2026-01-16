@@ -56,7 +56,7 @@ midnight-kitchen/
 ├── ui/                  # Interface
 │   ├── styles.py        # Estilos e cores
 │   ├── components.py    # Componentes UI
-│   ├── ascii_art.py     # Arte ASCII
+│   ├── ascii_art.py     # Arte ASCII (beco de Shinjuku)
 │   ├── effects.py       # Efeitos visuais
 │   └── renderer.py      # Renderizacao
 │
@@ -144,4 +144,4 @@ explicando a origem da cicatriz de Master.
 
 ---
 
-*Atualizado: 15/01/2026 — v2.0 completa + dialogos expandidos (592 nos)*
+*Atualizado: 16/01/2026 — v2.0 completa + novo logo ASCII (beco de Shinjuku)*

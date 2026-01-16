@@ -8,20 +8,27 @@ Artes ASCII que dão personalidade visual ao jogo.
 class AsciiArt:
     """Coleção de arte ASCII para o jogo."""
 
-    # Logo principal do jogo - Design limpo e centralizado
+    # Logo principal do jogo - Beco de Shinjuku com restaurante ao fundo
     LOGO = """
-[grey23]╔═══════════════════════════════════════════════════════════╗[/grey23]
-[grey23]║[/grey23]                                                           [grey23]║[/grey23]
-[grey23]║[/grey23]     [dark_orange]░░░░░░░[/dark_orange]                                               [grey23]║[/grey23]
-[grey23]║[/grey23]    [dark_orange]░░░░░░░░░[/dark_orange]      [white]M I D N I G H T   K I T C H E N[/white]        [grey23]║[/grey23]
-[grey23]║[/grey23]   [dark_orange]░░░░░░░░░░░[/dark_orange]                                             [grey23]║[/grey23]
-[grey23]║[/grey23]    [dark_orange]░░░░░░░░░[/dark_orange]                                              [grey23]║[/grey23]
-[grey23]║[/grey23]     [dark_orange]░░░░░░░[/dark_orange]                                               [grey23]║[/grey23]
-[grey23]║[/grey23]       [dark_orange]║║║[/dark_orange]                                                 [grey23]║[/grey23]
-[grey23]║[/grey23]       [dark_orange]║║║[/dark_orange]         [grey50]Uma historia de culpa,[/grey50]                  [grey23]║[/grey23]
-[grey23]║[/grey23]    [dark_orange]═══╩╩╩═══[/dark_orange]          [grey50]memoria e perdao.[/grey50]                   [grey23]║[/grey23]
-[grey23]║[/grey23]                                                           [grey23]║[/grey23]
-[grey23]╚═══════════════════════════════════════════════════════════╝[/grey23]"""
+[grey30]                                  _[/grey30]
+[grey30]                             ___/[/grey30]   [grey30]\\___[/grey30]
+[grey30]                        ____/[/grey30]   [grey42]∥ ∥[/grey42]   [grey30]\\____[/grey30]
+[grey50]             ~~~~~~~~/~~~~~∥~∥~∥~~~~~\\~~~~~~~~[/grey50]
+[grey30]            ____/[/grey30]         [grey42]∥ ∥ ∥[/grey42]         [grey30]\\____[/grey30]
+[grey30]       ____/[/grey30]     [dark_orange]░░░░░[/dark_orange]   [grey42]∥ ∥ ∥[/grey42]   [dark_orange]░░░░░[/dark_orange]     [grey30]\\____[/grey30]
+[grey30]  ____/[/grey30]         [dark_orange]░▓▓▓▓░[/dark_orange]  [grey42]∥ ∥ ∥[/grey42]  [dark_orange]░▓▓▓▓░[/dark_orange]         [grey30]\\____[/grey30]
+[grey27] |▒▒|[/grey27]  [grey50]▪───▪[/grey50]   [orange1]░▓▓▓░[/orange1]              [orange1]░▓▓▓░[/orange1]   [grey50]▪───▪[/grey50]  [grey27]|▒▒|[/grey27]
+[grey27] |▒▒|[/grey27]  [grey50]│[/grey50][yellow3]▓▓▓[/yellow3][grey50]│[/grey50]    [dark_orange]║║║[/dark_orange]                [dark_orange]║║║[/dark_orange]    [grey50]│[/grey50][yellow3]▓▓▓[/yellow3][grey50]│[/grey50]  [grey27]|▒▒|[/grey27]
+[grey27] |▒▒|[/grey27]  [grey50]▪───▪[/grey50]       [grey62]┌──────────────────┐[/grey62]       [grey50]▪───▪[/grey50]  [grey27]|▒▒|[/grey27]
+[grey27] |▒▒|[/grey27]  [grey50]▪───▪[/grey50]       [grey62]│[/grey62] [dark_orange]深  夜  食  堂[/dark_orange] [grey62]│[/grey62]       [grey50]▪───▪[/grey50]  [grey27]|▒▒|[/grey27]
+[grey27] |▒▒|[/grey27]  [grey50]│[/grey50][wheat1]░░░[/wheat1][grey50]│[/grey50]       [grey62]├──────────────────┤[/grey62]       [grey50]│[/grey50][wheat1]░░░[/wheat1][grey50]│[/grey50]  [grey27]|▒▒|[/grey27]
+[grey27] |▒▒|[/grey27]  [grey50]▪───▪[/grey50]       [grey62]│[/grey62][grey70]┃ ┃ ┃[/grey70] [orange1]▒▒[/orange1] [grey70]┃ ┃ ┃[/grey70][grey62]│[/grey62]       [grey50]▪───▪[/grey50]  [grey27]|▒▒|[/grey27]
+[grey27] |▒▒|[/grey27]              [grey62]│[/grey62] [grey70]╲╱╲╱[/grey70] [orange1]▒▒[/orange1] [grey70]╲╱╲╱[/grey70] [grey62]│[/grey62]              [grey27]|▒▒|[/grey27]
+[grey27] |▒▒|[/grey27][grey19]_____________[/grey19][grey62]│[/grey62][grey19]____[/grey19][yellow4]▒▒▒▒▒▒[/yellow4][grey19]____[/grey19][grey62]│[/grey62][grey19]_____________[/grey19][grey27]|▒▒|[/grey27]
+[grey23] |[/grey23][grey30]░░░    ░░[/grey30]       [yellow4]░░░░░░░░░░[/yellow4]       [grey30]░░    ░░░[/grey30][grey23]|[/grey23]
+[grey19] |___________________[/grey19][grey30]░░░░░░[/grey30][grey19]___________________|[/grey19]
+
+[white bold]                M I D N I G H T   K I T C H E N[/white bold]"""
 
     # Lanterna japonesa (menor, para headers)
     LANTERNA_PEQUENA = """[dark_orange]
