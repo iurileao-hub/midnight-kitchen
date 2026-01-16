@@ -137,16 +137,18 @@ class Componentes:
         """
         Cria um painel para pensamentos internos de Master.
 
-        Estilo diferenciado - itálico, mais escuro.
+        Estilo diferenciado - itálico, borda sutil, marcador visual.
         """
         linhas = texto.strip().split("\n")
         formatado = "\n".join(f"[pensamento]{linha}[/pensamento]" for linha in linhas)
 
         return Panel(
-            formatado,
-            border_style="grey30",
-            width=LARGURA_PAINEL - 8,
-            padding=(0, 2),
+            Align.center(formatado),
+            title="[grey50]─── ✦ ───[/grey50]",
+            title_align="center",
+            border_style="grey42",
+            width=LARGURA_PAINEL - 4,
+            padding=(1, 3),
         )
 
     def painel_memoria(self, titulo: str, texto: str) -> Panel:

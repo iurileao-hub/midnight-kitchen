@@ -9,6 +9,7 @@ from typing import Optional
 
 from rich.console import Console
 from rich.theme import Theme
+from rich.align import Align
 
 from config import LARGURA_PAINEL
 from ui.styles import Tema
@@ -121,10 +122,17 @@ class Renderer:
         self.console.print(AsciiArt.DIVISOR)
 
     def mostrar_pensamento(self, texto: str) -> None:
-        """Exibe um pensamento interno de Master."""
+        """Exibe um pensamento interno de Master com destaque visual."""
+        # Pausa antes para criar separação
+        self.efeitos.pausar(0.5)
         self.console.print()
-        self.efeitos.digitar_pensamento(texto)
-        self.efeitos.pausa_dramatica()
+
+        # Usa painel visual para destacar o pensamento
+        painel = self.componentes.painel_pensamento(texto)
+        self.console.print(Align.center(painel))
+
+        # Pausa mais longa depois para o jogador absorver
+        self.efeitos.pausar(2.0)
 
     def mostrar_dialogo_cliente(
         self,
