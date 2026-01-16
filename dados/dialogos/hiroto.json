@@ -164,12 +164,12 @@
     "lugar_madrugada": {
       "id": "lugar_madrugada",
       "contexto": "Hiroto acena com entusiasmo.",
-      "texto": "\"É! E é por isso que estou aqui.\"\n\nEle abre o caderninho.\n\n\"Estou procurando algo. Alguém, na verdade. Há dez anos.\"",
+      "texto": "\"É! E é por isso que estou aqui.\"\n\nEle abre o caderninho.\n\n\"Estou procurando algo. Alguém, na verdade. Há uma década.\"",
       "e_pista": true,
       "pista_id": "procurando_alguem",
       "opcoes": [
         {
-          "texto": "Dez anos é muito tempo.",
+          "texto": "Isso é muito tempo.",
           "dica": "impressionado",
           "impacto": 10,
           "tipo": "dialogo_curto",
@@ -254,7 +254,7 @@
     "procurando_desde": {
       "id": "procurando_desde",
       "contexto": "Hiroto acena com intensidade.",
-      "texto": "\"Dez anos. Sem parar.\"\n\nEle abre o caderninho novamente.\n\n\"Tenho listas. De restaurantes. De pessoas que trabalhavam na área. De qualquer pista que encontro.\"",
+      "texto": "\"Desde aquela noite. Sem parar.\"\n\nEle abre o caderninho novamente.\n\n\"Tenho listas. De restaurantes. De pessoas que trabalhavam na área. De qualquer pista que encontro.\"",
       "opcoes": [
         {
           "texto": "Posso ver o caderninho?",
@@ -339,7 +339,8 @@
           "dica": "entendendo",
           "impacto": 12,
           "tipo": "dialogo_medio",
-          "proximo": "memoria_protege"
+          "proximo": "memoria_protege",
+          "confianca_minima": 45
         }
       ]
     },
@@ -503,7 +504,8 @@
           "dica": "empático",
           "impacto": 15,
           "tipo": "dialogo_medio",
-          "proximo": "devastador"
+          "proximo": "devastador",
+          "confianca_minima": 40
         }
       ]
     },
@@ -526,7 +528,7 @@
     "forca_vontade": {
       "id": "forca_vontade",
       "contexto": "Hiroto olha para você.",
-      "texto": "\"Não é força. É dívida.\"\n\nA voz é firme.\n\n\"Ele me deu dez anos de vida. O mínimo que posso fazer é usar esses anos para encontrá-lo.\"\n\nPausa.\n\n\"Mesmo que demore mais dez. Ou vinte. Ou toda a minha vida.\"",
+      "texto": "\"Não é força. É dívida.\"\n\nA voz é firme.\n\n\"Ele me deu uma década de vida. O mínimo que posso fazer é usar esses anos para encontrá-lo.\"\n\nPausa.\n\n\"Mesmo que demore outra década. Ou duas. Ou toda a minha vida.\"",
       "gatilho_prato": true,
       "opcoes": [
         {
@@ -651,7 +653,8 @@
           "dica": "percebendo",
           "impacto": 12,
           "tipo": "dialogo_medio",
-          "proximo": "corpo_procurando"
+          "proximo": "corpo_procurando",
+          "confianca_minima": 45
         }
       ]
     },
@@ -666,7 +669,8 @@
           "dica": "questionando",
           "impacto": 10,
           "tipo": "dialogo_medio",
-          "proximo": "trauma_gratidao"
+          "proximo": "trauma_gratidao",
+          "confianca_minima": 50
         }
       ]
     },
@@ -681,7 +685,8 @@
           "dica": "entendendo",
           "impacto": 15,
           "tipo": "dialogo_medio",
-          "proximo": "confrontar_dois"
+          "proximo": "confrontar_dois",
+          "confianca_minima": 55
         }
       ]
     },
@@ -696,7 +701,8 @@
           "dica": "firme",
           "impacto": 15,
           "tipo": "dialogo_medio",
-          "proximo": "nao_desperdicou"
+          "proximo": "nao_desperdicou",
+          "confianca_minima": 50
         }
       ]
     },
@@ -822,10 +828,10 @@
     "quando_incendio": {
       "id": "quando_incendio",
       "contexto": "Hiroto olha para o relógio instintivamente.",
-      "texto": "\"Dez anos atrás. Exatamente.\"\n\nEle olha para você.\n\n\"Hoje é aniversário. Não do meu nascimento. Do dia que fui salvo. Do dia que ganhei uma segunda chance.\"",
+      "texto": "\"Naquela época. Exatamente nesta data.\"\n\nEle olha para você.\n\n\"Hoje é aniversário. Não do meu nascimento. Do dia que fui salvo. Do dia que ganhei uma segunda chance.\"",
       "e_pista": true,
       "pista_id": "aniversario_hoje",
-      "pensamento_master": "Dez anos. Hoje. A coincidência fica pesada no ar.",
+      "pensamento_master": "Uma década inteira. Hoje. A coincidência fica pesada no ar.",
       "opcoes": [
         {
           "texto": "Você veio aqui hoje por isso?",
@@ -862,7 +868,8 @@
           "dica": "difícil",
           "impacto": 10,
           "tipo": "dialogo_medio",
-          "proximo": "nunca_encontrar"
+          "proximo": "nunca_encontrar",
+          "confianca_minima": 45
         },
         {
           "texto": "Seus amigos sabem da história toda?",
@@ -884,7 +891,8 @@
           "dica": "empático",
           "impacto": 15,
           "tipo": "dialogo_medio",
-          "proximo": "solitario"
+          "proximo": "solitario",
+          "confianca_minima": 40
         }
       ]
     },
@@ -899,7 +907,8 @@
           "dica": "gentil",
           "impacto": 12,
           "tipo": "dialogo_medio",
-          "proximo": "ele_lembra"
+          "proximo": "ele_lembra",
+          "confianca_minima": 50
         }
       ]
     },
@@ -975,7 +984,8 @@
           "dica": "cuidadoso",
           "impacto": 10,
           "tipo": "dialogo_medio",
-          "proximo": "nao_quiser"
+          "proximo": "nao_quiser",
+          "confianca_minima": 45
         },
         {
           "texto": "Sua mãe também quer agradecer?",
@@ -997,7 +1007,8 @@
           "dica": "esperançoso",
           "impacto": 15,
           "tipo": "dialogo_medio",
-          "proximo": "agradecer_juntos"
+          "proximo": "agradecer_juntos",
+          "confianca_minima": 55
         }
       ]
     },
@@ -1052,10 +1063,10 @@
     "quanto_tempo": {
       "id": "quanto_tempo",
       "contexto": "Hiroto olha para o caderninho nas mãos.",
-      "texto": "\"Dez anos.\"\n\nEle diz isso como se fosse normal.\n\n\"Desde que eu tinha oito. É basicamente minha vida inteira.\"",
+      "texto": "\"Uma década.\"\n\nEle diz isso como se fosse normal.\n\n\"Desde que eu tinha oito. É basicamente minha vida inteira.\"",
       "e_pista": true,
       "pista_id": "dez_anos",
-      "pensamento_master": "Dez anos. Oito anos de idade. Os números se encaixam de um jeito estranho.",
+      "pensamento_master": "Uma década. Oito anos de idade. Os números se encaixam de um jeito estranho.",
       "opcoes": [
         {
           "texto": "O que aconteceu quando você tinha oito anos?",
@@ -1107,7 +1118,7 @@
           "proximo": "alguem_salvou"
         },
         {
-          "texto": "E você está procurando essa pessoa há dez anos?",
+          "texto": "E você está procurando essa pessoa desde então?",
           "dica": "conectando",
           "impacto": 12,
           "tipo": "dialogo_medio",
@@ -1152,7 +1163,8 @@
           "dica": "firme",
           "impacto": 15,
           "tipo": "dialogo_medio",
-          "proximo": "sobreviveu"
+          "proximo": "sobreviveu",
+          "confianca_minima": 50
         }
       ]
     },
@@ -1160,14 +1172,15 @@
     "sobreviveu": {
       "id": "sobreviveu",
       "contexto": "Hiroto acena com intensidade.",
-      "texto": "\"Por causa dele. Só por causa dele.\"\n\nEle olha para você.\n\n\"Os bombeiros disseram depois que se eu tivesse ficado mais um minuto lá dentro... não teria sobrevivido.\"\n\nPausa.\n\n\"Ele me tirou no limite. Arriscou a própria vida pra me dar mais um minuto. E esse minuto se tornou dez anos.\"",
+      "texto": "\"Por causa dele. Só por causa dele.\"\n\nEle olha para você.\n\n\"Os bombeiros disseram depois que se eu tivesse ficado mais um minuto lá dentro... não teria sobrevivido.\"\n\nPausa.\n\n\"Ele me tirou no limite. Arriscou a própria vida pra me dar mais um minuto. E esse minuto se tornou toda uma vida.\"",
       "opcoes": [
         {
           "texto": "E você quer que ele saiba que valeram a pena.",
           "dica": "entendendo",
           "impacto": 15,
           "tipo": "dialogo_medio",
-          "proximo": "valeram_pena"
+          "proximo": "valeram_pena",
+          "confianca_minima": 55
         }
       ]
     },
@@ -1233,7 +1246,8 @@
           "dica": "gentil",
           "impacto": 15,
           "tipo": "dialogo_medio",
-          "proximo": "saberia"
+          "proximo": "saberia",
+          "confianca_minima": 60
         }
       ]
     },
@@ -1245,7 +1259,7 @@
       "revelacao_prato": "omurice",
       "opcoes": [
         {
-          "texto": "Posso fazer omurice para você. Dez anos depois.",
+          "texto": "Posso fazer omurice para você. Depois de todo esse tempo.",
           "dica": "oferecendo",
           "impacto": 20,
           "tipo": "dialogo_medio",
@@ -1272,7 +1286,7 @@
     "preparar_omurice": {
       "id": "preparar_omurice",
       "contexto": "Você começa a preparar o omurice.",
-      "texto": "",
+      "texto": "Você aquece a frigideira. O arroz já está pronto, esperando.\n\nHiroto observa cada movimento seu. Como se procurasse algo nos seus gestos. Uma memória. Um reconhecimento.\n\nO cheiro do arroz frito se mistura com o do ovo batido. O som da espátula contra o metal.\n\nEste prato que ele nunca comeu. Esta promessa que ficou suspensa por tanto tempo.",
       "tipo_cena": "cozinha",
       "prato": "omurice"
     },
@@ -1280,12 +1294,12 @@
     "pesquisa": {
       "id": "pesquisa",
       "contexto": "Hiroto olha para o caderninho.",
-      "texto": "\"Mais ou menos. É uma pesquisa pessoal.\"\n\nEle sorri, meio constrangido.\n\n\"Estou procurando alguém. Alguém que estava aqui perto há dez anos.\"",
+      "texto": "\"Mais ou menos. É uma pesquisa pessoal.\"\n\nEle sorri, meio constrangido.\n\n\"Estou procurando alguém. Alguém que estava aqui perto há muito tempo.\"",
       "e_pista": true,
       "pista_id": "procurando_alguem",
       "opcoes": [
         {
-          "texto": "Dez anos é muito tempo. O que aconteceu?",
+          "texto": "Muito tempo. O que aconteceu?",
           "dica": "curioso",
           "impacto": 12,
           "tipo": "dialogo_medio",
@@ -1354,7 +1368,7 @@
     "procura_cicatriz": {
       "id": "procura_cicatriz",
       "contexto": "Hiroto olha diretamente para você.",
-      "texto": "\"Entre outras coisas.\"\n\nOs olhos dele percorrem seu rosto. Param na sua cicatriz.\n\n\"Você... trabalhou em algum restaurante há dez anos?\"",
+      "texto": "\"Entre outras coisas.\"\n\nOs olhos dele percorrem seu rosto. Param na sua cicatriz.\n\n\"Você... trabalhava nessa área naquela época?\"",
       "e_pista": true,
       "pista_id": "pergunta_direta",
       "pensamento_master": "O mundo para por um segundo. Você sente o peso do olhar dele.",
@@ -1396,14 +1410,15 @@
     "silencio_trabalho": {
       "id": "silencio_trabalho",
       "contexto": "Você continua trabalhando. Hiroto não para de olhar.",
-      "texto": "O silêncio se estende. Hiroto não desvia os olhos.\n\n\"Você não respondeu.\"\n\nA voz dele está mais baixa agora.\n\n\"O restaurante. Há dez anos. Você estava lá?\"",
+      "texto": "O silêncio se estende. Hiroto não desvia os olhos.\n\n\"Você não respondeu.\"\n\nA voz dele está mais baixa agora.\n\n\"O restaurante. Naquela noite. Você estava lá?\"",
       "opcoes": [
         {
           "texto": "O que você faria se eu estivesse?",
           "dica": "neutro",
           "impacto": 15,
           "tipo": "dialogo_medio",
-          "proximo": "se_estivesse"
+          "proximo": "se_estivesse",
+          "confianca_minima": 60
         }
       ]
     },
@@ -1411,7 +1426,7 @@
     "se_estivesse": {
       "id": "se_estivesse",
       "contexto": "Hiroto para de respirar por um segundo.",
-      "texto": "\"Eu...\"\n\nEle engole.\n\n\"Eu diria obrigado. Diria que passei dez anos procurando. Diria que a vida que você salvou... ela valeu a pena.\"\n\nAs lágrimas finalmente caem.\n\n\"Eu diria que você não se machucou em vão. Que eu estou aqui. Vivo. Por sua causa.\"",
+      "texto": "\"Eu...\"\n\nEle engole.\n\n\"Eu diria obrigado. Diria que passei todos esses anos procurando. Diria que a vida que você salvou... ela valeu a pena.\"\n\nAs lágrimas finalmente caem.\n\n\"Eu diria que você não se machucou em vão. Que eu estou aqui. Vivo. Por sua causa.\"",
       "e_pista": true,
       "pista_id": "revelacao",
       "opcoes": [
@@ -1420,7 +1435,8 @@
           "dica": "revelando",
           "impacto": 20,
           "tipo": "dialogo_longo",
-          "proximo": "revelacao_final"
+          "proximo": "revelacao_final",
+          "confianca_minima": 70
         }
       ]
     },
@@ -1429,10 +1445,11 @@
       "id": "revelacao_final",
       "contexto": "Hiroto congela.",
       "texto": "\"Era você.\"\n\nNão é uma pergunta.\n\n\"Esse tempo todo... era você.\"\n\nEle se levanta do banco, as mãos tremendo.\n\n\"Eu procurei em tantos lugares. E você estava aqui. Fazendo o que sempre fez. Cuidando das pessoas.\"",
+      "pensamento_master": "A criança. A fumaça. A voz dizendo 'aguenta um pouco'. Tudo volta de uma vez. Você finalmente lembra.",
       "revelacao_prato": "omurice",
       "opcoes": [
         {
-          "texto": "Deixa eu fazer aquele omurice agora. Dez anos atrasado.",
+          "texto": "Deixa eu fazer aquele omurice agora. Atrasado, mas ainda em tempo.",
           "dica": "",
           "impacto": 20,
           "tipo": "cozinha",
@@ -1499,7 +1516,7 @@
     "muita_gente": {
       "id": "muita_gente",
       "contexto": "Hiroto não desvia o olhar.",
-      "texto": "\"É verdade.\"\n\nMas ele não para de olhar.\n\n\"Você trabalhou em algum restaurante há dez anos? Nessa área?\"",
+      "texto": "\"É verdade.\"\n\nMas ele não para de olhar.\n\n\"Você trabalhava em restaurante naquela época? Nessa área?\"",
       "opcoes": [
         {
           "texto": "Por que você quer saber?",

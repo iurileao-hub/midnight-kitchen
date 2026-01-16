@@ -185,7 +185,7 @@
     "nao_precisa_falar": {
       "id": "nao_precisa_falar",
       "contexto": "Sachiko balança a cabeça.",
-      "texto": "\"Preciso. Faz dez anos e eu ainda não...\"\n\nEla para, recompõe.\n\n\"Eu disse que o restaurante dele era um fracasso. Que eu tinha vergonha.\"",
+      "texto": "\"Preciso. Faz uma década e eu ainda não...\"\n\nEla para, recompõe.\n\n\"Eu disse que o restaurante dele era um fracasso. Que eu tinha vergonha.\"",
       "e_pista": true,
       "pista_id": "vergonha",
       "opcoes": [
@@ -259,6 +259,7 @@
         {
           "texto": "E agora você entende?",
           "dica": "profundo",
+          "confianca_minima": 50,
           "impacto": 15,
           "tipo": "dialogo_medio",
           "proximo": "agora_entende"
@@ -296,12 +297,13 @@
         {
           "texto": "E se a comida for sobre memória, não culpa?",
           "dica": "profundo",
+          "confianca_minima": 55,
           "impacto": 15,
           "tipo": "dialogo_medio",
           "proximo": "memoria_nao_culpa"
         },
         {
-          "texto": "Posso fazer para você. Talvez seja diferente.",
+          "texto": "Talvez seja diferente se alguém fizer para você.",
           "dica": "oferecendo",
           "impacto": 18,
           "tipo": "dialogo_medio",
@@ -323,7 +325,7 @@
           "proximo": "tinha_razao"
         },
         {
-          "texto": "Deixa eu fazer nikujaga. Para você lembrar direito.",
+          "texto": "Nikujaga. Para você lembrar direito.",
           "dica": "oferecendo",
           "impacto": 18,
           "tipo": "dialogo_medio",
@@ -441,7 +443,7 @@
       "texto": "\"Mas eu nunca disse isso pra ele.\"\n\nEla limpa o rosto com as costas da mão.\n\n\"A última coisa que eu disse foi que tinha vergonha dele. Uma semana depois, ele morreu.\"",
       "opcoes": [
         {
-          "texto": "Deixa eu fazer nikujaga para você. Como ele faria.",
+          "texto": "Nikujaga. Como ele faria.",
           "dica": "oferecendo",
           "impacto": 20,
           "tipo": "dialogo_medio",
@@ -588,7 +590,7 @@
     "aconteceu_restaurante": {
       "id": "aconteceu_restaurante",
       "contexto": "Sachiko fica tensa.",
-      "texto": "\"Incêndio. Há dez anos.\"\n\nEla fecha os olhos.\n\n\"A fiação estava velha. Ele sabia. Mas não tinha dinheiro para reformar.\"\n\nUma pausa.\n\n\"Ele morreu no incêndio.\"",
+      "texto": "\"Incêndio. Desde aquela noite.\"\n\nEla fecha os olhos.\n\n\"A fiação estava velha. Ele sabia. Mas não tinha dinheiro para reformar.\"\n\nUma pausa.\n\n\"Ele morreu no incêndio.\"",
       "e_pista": true,
       "pista_id": "incendio",
       "pensamento_master": "A verdade te atinge em ondas. O restaurante. Takeshi. Dez anos. Você estava lá.",
@@ -650,7 +652,7 @@
     "dia_longo": {
       "id": "dia_longo",
       "contexto": "Sachiko ri sem humor.",
-      "texto": "\"Longo. Como todos.\"\n\nEla olha para as próprias mãos.\n\n\"Dez anos assim. Desde que meu pai morreu. Trabalho, trabalho, trabalho.\"\n\nPausa.\n\n\"Para não pensar.\"",
+      "texto": "\"Longo. Como todos.\"\n\nEla olha para as próprias mãos.\n\n\"Anos assim. Desde que meu pai morreu. Trabalho, trabalho, trabalho.\"\n\nPausa.\n\n\"Para não pensar.\"",
       "opcoes": [
         {
           "texto": "Pensar no quê?",
@@ -724,6 +726,7 @@
         {
           "texto": "Seu pai queria isso para você?",
           "dica": "profundo",
+          "confianca_minima": 45,
           "impacto": 12,
           "tipo": "dialogo_medio",
           "proximo": "pai_queria"
@@ -850,7 +853,7 @@
     "voce_feliz": {
       "id": "voce_feliz",
       "contexto": "Sachiko ri sem humor.",
-      "texto": "\"Não.\"\n\nA palavra ecoa no silêncio.\n\n\"Mas não sei mais como ser. Faz dez anos que trabalho assim. Desde que ele morreu.\"",
+      "texto": "\"Não.\"\n\nA palavra ecoa no silêncio.\n\n\"Mas não sei mais como ser. Todo esse tempo trabalhando assim. Desde que ele morreu.\"",
       "opcoes": [
         {
           "texto": "Desde o incêndio?",
@@ -905,7 +908,7 @@
       "pista_id": "aprendiz",
       "opcoes": [
         {
-          "texto": "Deixa eu fazer algo para você. Nikujaga, talvez?",
+          "texto": "Nikujaga, talvez?",
           "dica": "oferecendo",
           "impacto": 18,
           "tipo": "dialogo_medio",
@@ -981,7 +984,7 @@
     "passado": {
       "id": "passado",
       "contexto": "Sachiko acena lentamente.",
-      "texto": "\"Ele morreu. Há dez anos.\"\n\nEla não olha para você.\n\n\"Um incêndio. No restaurante dele.\"",
+      "texto": "\"Ele morreu. Tantos anos atrás.\"\n\nEla não olha para você.\n\n\"Um incêndio. No restaurante dele.\"",
       "e_pista": true,
       "pista_id": "incendio",
       "pensamento_master": "Dez anos. Incêndio. Restaurante. As palavras se conectam como peças de um quebra-cabeça.",
@@ -1059,7 +1062,7 @@
       "revelacao_prato": "nikujaga",
       "opcoes": [
         {
-          "texto": "Posso fazer nikujaga. Se você quiser tentar.",
+          "texto": "Nikujaga. Se quiser tentar.",
           "dica": "oferecendo",
           "impacto": 18,
           "tipo": "dialogo_medio",
@@ -1086,7 +1089,7 @@
     "preparar_nikujaga": {
       "id": "preparar_nikujaga",
       "contexto": "Você começa a preparar o nikujaga.",
-      "texto": "",
+      "texto": "Você se vira para a cozinha. As mãos encontram os ingredientes como velhos conhecidos.\n\nBatata. Carne. Cebola. Shoyu. O mesmo ritual que Takeshi fazia.",
       "tipo_cena": "cozinha",
       "prato": "nikujaga"
     },
@@ -1108,6 +1111,7 @@
         {
           "texto": "O que você queria ter dito a ele?",
           "dica": "profundo",
+          "confianca_minima": 60,
           "impacto": 15,
           "tipo": "dialogo_medio",
           "proximo": "queria_dizer"
@@ -1166,7 +1170,7 @@
       "pista_id": "aprendiz",
       "opcoes": [
         {
-          "texto": "Deixa eu fazer algo para você. O que seu pai costumava preparar?",
+          "texto": "O que seu pai costumava preparar?",
           "dica": "redirecionando",
           "impacto": 15,
           "tipo": "dialogo_medio",
@@ -1249,7 +1253,7 @@
     "silencio_diz_mais": {
       "id": "silencio_diz_mais",
       "contexto": "Sachiko bebe o chá devagar.",
-      "texto": "\"Meu pai dizia isso.\"\n\nAs palavras saem antes que ela possa segurá-las.\n\n\"Ele era cozinheiro. Tinha um restaurante pequeno. Morreu há dez anos.\"",
+      "texto": "\"Meu pai dizia isso.\"\n\nAs palavras saem antes que ela possa segurá-las.\n\n\"Ele era cozinheiro. Tinha um restaurante pequeno. Morreu há muito tempo.\"",
       "e_pista": true,
       "pista_id": "pai",
       "opcoes": [
@@ -1278,7 +1282,7 @@
           "proximo": "fazia_oque"
         },
         {
-          "texto": "Posso fazer nikujaga. Se quiser lembrar.",
+          "texto": "Nikujaga. Se quiser lembrar.",
           "dica": "oferecendo",
           "impacto": 15,
           "tipo": "dialogo_medio",
@@ -1474,7 +1478,7 @@
     "ainda_luto": {
       "id": "ainda_luto",
       "contexto": "Sachiko fecha os olhos.",
-      "texto": "\"Dez anos. E ainda parece que foi ontem.\"\n\nEla abre os olhos.\n\n\"O cheiro de nikujaga me faz chorar. O som de chuva no telhado. Restaurantes pequenos.\"",
+      "texto": "\"Tanto tempo. E ainda parece que foi ontem.\"\n\nEla abre os olhos.\n\n\"O cheiro de nikujaga me faz chorar. O som de chuva no telhado. Restaurantes pequenos.\"",
       "opcoes": [
         {
           "texto": "Essas memórias são dele. São preciosas.",
@@ -1509,6 +1513,7 @@
         {
           "texto": "Faz. Mas não precisa ser a única parte.",
           "dica": "sábio",
+          "confianca_minima": 65,
           "impacto": 15,
           "tipo": "dialogo_medio",
           "proximo": "nao_unica_parte"
@@ -1624,7 +1629,7 @@
       "texto": "\"Talvez.\"\n\nEla guarda o caderno devagar.\n\n\"Mas você tem algo... familiar. No jeito de cozinhar. De ficar em silêncio.\"",
       "opcoes": [
         {
-          "texto": "Deixa eu fazer algo para você. O que seu pai costumava preparar?",
+          "texto": "E o que ele fazia para você? De especial.",
           "dica": "desviando",
           "impacto": 15,
           "tipo": "dialogo_medio",
@@ -1679,7 +1684,7 @@
           "proximo": "trabalhou_la"
         },
         {
-          "texto": "Deixa eu fazer nikujaga para você.",
+          "texto": "Nikujaga?",
           "dica": "desviando",
           "impacto": 15,
           "tipo": "dialogo_medio",
@@ -1771,7 +1776,7 @@
       "texto": "\"Ele morreu sendo quem era. Cuidando de alguém.\"\n\nEla abre os olhos, vermelhos de chorar.\n\n\"Obrigada. Por me contar. Por estar aqui.\"",
       "opcoes": [
         {
-          "texto": "Deixa eu fazer o nikujaga dele. Para você lembrar.",
+          "texto": "O nikujaga dele. Para você lembrar.",
           "dica": "oferecendo",
           "impacto": 20,
           "tipo": "dialogo_medio",
@@ -1892,10 +1897,10 @@
     "agora_sabe": {
       "id": "agora_sabe",
       "contexto": "Sachiko fecha o caderno com cuidado.",
-      "texto": "\"Sei. Dez anos depois. Mas sei.\"\n\nEla guarda o caderno na pasta.\n\n\"Obrigada. Por me deixar... por me deixar falar sobre ele.\"",
+      "texto": "\"Sei. Depois de tanto tempo. Mas sei.\"\n\nEla guarda o caderno na pasta.\n\n\"Obrigada. Por me deixar... por me deixar falar sobre ele.\"",
       "opcoes": [
         {
-          "texto": "Deixa eu fazer nikujaga. Para vocês dois.",
+          "texto": "Nikujaga. Para vocês dois.",
           "dica": "oferecendo",
           "impacto": 20,
           "tipo": "dialogo_medio",
@@ -1942,7 +1947,7 @@
       "revelacao_prato": "nikujaga",
       "opcoes": [
         {
-          "texto": "Posso fazer assim. Se você quiser.",
+          "texto": "Assim, então. Se quiser.",
           "dica": "oferecendo",
           "impacto": 18,
           "tipo": "dialogo_medio",
@@ -1987,7 +1992,7 @@
       "texto": "\"Então...\"\n\nEla olha para você com olhos novos.\n\n\"Então somos família. De certa forma.\"",
       "opcoes": [
         {
-          "texto": "De certa forma. Deixa eu fazer nikujaga para nós.",
+          "texto": "De certa forma. Nikujaga para nós?",
           "dica": "caloroso",
           "impacto": 20,
           "tipo": "dialogo_medio",

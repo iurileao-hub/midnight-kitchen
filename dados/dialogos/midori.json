@@ -102,7 +102,8 @@
           "dica": "empático",
           "impacto": 15,
           "tipo": "dialogo_medio",
-          "proximo": "tarde_demais"
+          "proximo": "tarde_demais",
+          "confianca_minima": 40
         }
       ]
     },
@@ -262,10 +263,10 @@
     "incendio_grande": {
       "id": "incendio_grande",
       "contexto": "O rosto de Midori fica sério.",
-      "texto": "\"Há dez anos. O restaurante do Takeshi-san pegou fogo durante a noite.\"\n\nEla engole em seco.\n\n\"O fogo se espalhou. Minha loja, a padaria, tudo foi atingido.\"\n\n\"Mas o pior foi... Takeshi-san não conseguiu sair.\"",
+      "texto": "\"Faz tanto tempo já. O restaurante do Takeshi-san pegou fogo durante a noite.\"\n\nEla engole em seco.\n\n\"O fogo se espalhou. Minha loja, a padaria, tudo foi atingido.\"\n\n\"Mas o pior foi... Takeshi-san não conseguiu sair.\"",
       "e_pista": true,
       "pista_id": "incendio",
-      "pensamento_master": "As palavras atravessam você. Dez anos. O mesmo incêndio.",
+      "pensamento_master": "As palavras atravessam você. Uma década. O mesmo incêndio.",
       "opcoes": [
         {
           "texto": "Foi um acidente?",
@@ -318,7 +319,8 @@
           "dica": "reconfortante",
           "impacto": 12,
           "tipo": "dialogo_medio",
-          "proximo": "nao_culpe"
+          "proximo": "nao_culpe",
+          "confianca_minima": 35
         }
       ]
     },
@@ -382,7 +384,8 @@
           "dica": "empático",
           "impacto": 15,
           "tipo": "dialogo_medio",
-          "proximo": "nao_podia_saber"
+          "proximo": "nao_podia_saber",
+          "confianca_minima": 45
         },
         {
           "texto": "O que ele respondeu?",
@@ -526,7 +529,8 @@
           "dica": "honrar memória",
           "impacto": 20,
           "tipo": "dialogo_medio",
-          "proximo": "oferecer_miso"
+          "proximo": "oferecer_miso",
+          "confianca_minima": 50
         }
       ]
     },
@@ -981,10 +985,10 @@
     "ele_ainda_faz": {
       "id": "ele_ainda_faz",
       "contexto": "O sorriso some.",
-      "texto": "\"Não. Takeshi-san faleceu há dez anos.\"\n\nMidori toca o broche.\n\n\"No incêndio do restaurante. Ele... não conseguiu sair.\"",
+      "texto": "\"Não. Takeshi-san faleceu faz muito tempo.\"\n\nMidori toca o broche.\n\n\"No incêndio do restaurante. Ele... não conseguiu sair.\"",
       "e_pista": true,
       "pista_id": "incendio",
-      "pensamento_master": "Dez anos. O mesmo incêndio.",
+      "pensamento_master": "Tanto tempo. O mesmo incêndio.",
       "opcoes": [
         {
           "texto": "Sinto muito pela sua perda.",
@@ -999,10 +1003,10 @@
     "era_passado": {
       "id": "era_passado",
       "contexto": "Midori toca o broche suavemente.",
-      "texto": "\"Ele faleceu. Há dez anos.\"\n\nUma pausa.\n\n\"Um incêndio. O restaurante pegou fogo numa noite de inverno. Takeshi-san... não conseguiu sair.\"",
+      "texto": "\"Ele faleceu. Numa noite de inverno.\"\n\nUma pausa.\n\n\"Um incêndio. O restaurante pegou fogo. Takeshi-san... não conseguiu sair.\"",
       "e_pista": true,
       "pista_id": "incendio",
-      "pensamento_master": "As palavras atravessam você como vento gelado. Dez anos. O mesmo incêndio.",
+      "pensamento_master": "As palavras atravessam você como vento gelado. Desde aquela noite. O mesmo incêndio.",
       "opcoes": [
         {
           "texto": "Sinto muito. Perder um amigo assim...",
@@ -1072,7 +1076,7 @@
     "preparar_miso": {
       "id": "preparar_miso",
       "contexto": "Você começa a preparar o missoshiru.",
-      "texto": "",
+      "texto": "Você se move para a cozinha em silêncio.\n\nMidori observa você trabalhar, os olhos seguindo cada gesto com atenção de quem costumava notar detalhes.\n\nO vapor começa a subir da panela, trazendo consigo um aroma familiar.",
       "tipo_cena": "cozinha",
       "prato": "missoshiru"
     },
@@ -1215,7 +1219,7 @@
     "aposentada": {
       "id": "aposentada",
       "contexto": "Midori acena.",
-      "texto": "\"Há dez anos. A loja... não sobreviveu a um incêndio no bairro.\"\n\nO sorriso vacila por um segundo.\n\n\"Mas não é isso que me traz aqui tão tarde. É...\" Ela hesita. \"É outra coisa.\"",
+      "texto": "\"Faz muito tempo. A loja... não sobreviveu a um incêndio no bairro.\"\n\nO sorriso vacila por um segundo.\n\n\"Mas não é isso que me traz aqui tão tarde. É...\" Ela hesita. \"É outra coisa.\"",
       "e_pista": true,
       "pista_id": "incendio",
       "opcoes": [
@@ -1247,7 +1251,7 @@
     "restaurante_existe": {
       "id": "restaurante_existe",
       "contexto": "O rosto de Midori se fecha.",
-      "texto": "\"Não. Pegou fogo há dez anos.\"\n\nEla olha para o chá esfriando.\n\n\"Takeshi-san morreu naquela noite. E eu... eu carreguei algo desde então.\"",
+      "texto": "\"Não. Pegou fogo numa noite de inverno.\"\n\nEla olha para o chá esfriando.\n\n\"Takeshi-san morreu naquela noite. E eu... eu carreguei algo desde então.\"",
       "e_pista": true,
       "pista_id": "incendio",
       "opcoes": [
@@ -1303,7 +1307,8 @@
           "dica": "compreensivo",
           "impacto": 15,
           "tipo": "dialogo_medio",
-          "proximo": "peso_silencio"
+          "proximo": "peso_silencio",
+          "confianca_minima": 50
         }
       ]
     },
@@ -1488,10 +1493,10 @@
     "fez_oque_podia_incendio": {
       "id": "fez_oque_podia_incendio",
       "contexto": "Midori limpa os olhos.",
-      "texto": "\"Na noite do incêndio, sim. Fiz.\"\n\n\"Mas uma semana antes... quando vi as faíscas...\"\n\n\"Ali eu não fiz o suficiente.\"\n\nEla olha para você.\n\n\"E agora carrego isso. Todo dia. Por dez anos.\"",
+      "texto": "\"Na noite do incêndio, sim. Fiz.\"\n\n\"Mas uma semana antes... quando vi as faíscas...\"\n\n\"Ali eu não fiz o suficiente.\"\n\nEla olha para você.\n\n\"E agora carrego isso. Todo dia. Por tanto tempo.\"",
       "opcoes": [
         {
-          "texto": "Dez anos é muito tempo para carregar culpa.",
+          "texto": "Todo esse tempo é muito peso para carregar.",
           "dica": "gentil",
           "impacto": 15,
           "tipo": "dialogo_medio",
@@ -1532,7 +1537,7 @@
     "contando_agora": {
       "id": "contando_agora",
       "contexto": "Midori sorri fracamente.",
-      "texto": "\"Sim. Primeira vez em dez anos.\"\n\n\"Não sei por que. Talvez porque este lugar me lembre dele.\"\n\n\"Ou talvez porque... porque eu preciso ouvir que não foi minha culpa.\"\n\nEla olha para você com esperança.\n\n\"Mesmo que eu não acredite totalmente.\"",
+      "texto": "\"Sim. Primeira vez desde aquela noite.\"\n\n\"Não sei por que. Talvez porque este lugar me lembre dele.\"\n\n\"Ou talvez porque... porque eu preciso ouvir que não foi minha culpa.\"\n\nEla olha para você com esperança.\n\n\"Mesmo que eu não acredite totalmente.\"",
       "opcoes": [
         {
           "texto": "Não foi sua culpa. Você avisou. Ele era responsável por agir.",
@@ -1621,7 +1626,8 @@
           "dica": "oferecendo alívio",
           "impacto": 15,
           "tipo": "dialogo_medio",
-          "proximo": "deixar_peso"
+          "proximo": "deixar_peso",
+          "confianca_minima": 55
         },
         {
           "texto": "Missoshiru ajuda. Takeshi sabia disso.",
@@ -1680,7 +1686,8 @@
           "dica": "empático",
           "impacto": 15,
           "tipo": "dialogo_medio",
-          "proximo": "ninguem_extraordinario"
+          "proximo": "ninguem_extraordinario",
+          "confianca_minima": 55
         },
         {
           "texto": "Deixa eu fazer missoshiru. Simples, mas feito com cuidado.",
@@ -1845,7 +1852,7 @@
     "dura_consigo": {
       "id": "dura_consigo",
       "contexto": "Midori sorri triste.",
-      "texto": "\"Talvez. Dez anos fazendo isso.\"\n\n\"Mas não sei como parar. Como perdoar a mim mesma.\"\n\n\"Takeshi-san perdoaria. Ele sempre perdoava.\"\n\nEla limpa os olhos.\n\n\"Mas ele não está aqui para dizer isso.\"",
+      "texto": "\"Talvez. Uma vida inteira fazendo isso.\"\n\n\"Mas não sei como parar. Como perdoar a mim mesma.\"\n\n\"Takeshi-san perdoaria. Ele sempre perdoava.\"\n\nEla limpa os olhos.\n\n\"Mas ele não está aqui para dizer isso.\"",
       "opcoes": [
         {
           "texto": "Então eu vou dizer. Você merece perdão.",
@@ -1972,7 +1979,8 @@
           "dica": "empático",
           "impacto": 12,
           "tipo": "dialogo_medio",
-          "proximo": "dificil_reconstruir"
+          "proximo": "dificil_reconstruir",
+          "confianca_minima": 45
         },
         {
           "texto": "O que você fez depois?",
@@ -2050,7 +2058,8 @@
           "dica": "perspectiva diferente",
           "impacto": 15,
           "tipo": "dialogo_medio",
-          "proximo": "lembranca_boa"
+          "proximo": "lembranca_boa",
+          "confianca_minima": 60
         },
         {
           "texto": "Deixa eu fazer missoshiru. Para honrar essa última conversa.",
@@ -2101,7 +2110,8 @@
           "dica": "ritualístico",
           "impacto": 20,
           "tipo": "dialogo_medio",
-          "proximo": "oferecer_miso"
+          "proximo": "oferecer_miso",
+          "confianca_minima": 70
         }
       ]
     },
@@ -2109,7 +2119,7 @@
     "hora_perdoar": {
       "id": "hora_perdoar",
       "contexto": "Midori respira profundamente.",
-      "texto": "\"Hora de me perdoar.\"\n\n\"Dez anos é tempo suficiente de penitência.\"\n\n\"Takeshi-san não ia querer isso. Ele ia querer que eu vivesse.\"\n\nEla olha para você com gratidão.\n\n\"Obrigada. Por escutar. Por não julgar.\"\n\n\"Por me lembrar que sou humana. Que errar é humano.\"\n\nPausa.\n\n\"Takeshi faria missoshiru agora. Para marcar esse recomeço.\"",
+      "texto": "\"Hora de me perdoar.\"\n\n\"Tanto tempo já é penitência suficiente.\"\n\n\"Takeshi-san não ia querer isso. Ele ia querer que eu vivesse.\"\n\nEla olha para você com gratidão.\n\n\"Obrigada. Por escutar. Por não julgar.\"\n\n\"Por me lembrar que sou humana. Que errar é humano.\"\n\nPausa.\n\n\"Takeshi faria missoshiru agora. Para marcar esse recomeço.\"",
       "revelacao_prato": "missoshiru",
       "opcoes": [
         {
@@ -2132,7 +2142,8 @@
           "dica": "reconfortante",
           "impacto": 15,
           "tipo": "dialogo_medio",
-          "proximo": "acoes_falam"
+          "proximo": "acoes_falam",
+          "confianca_minima": 55
         },
         {
           "texto": "Não é tarde. Você pode honrá-lo agora. Com missoshiru.",
@@ -2154,7 +2165,8 @@
           "dica": "validar",
           "impacto": 18,
           "tipo": "dialogo_medio",
-          "proximo": "amor_imperfeito"
+          "proximo": "amor_imperfeito",
+          "confianca_minima": 60
         },
         {
           "texto": "E agora eu vou cuidar de você. Com missoshiru.",
