@@ -60,6 +60,12 @@ midnight-kitchen/
 │   ├── effects.py       # Efeitos visuais
 │   └── renderer.py      # Renderizacao
 │
+├── tests/               # Testes automatizados
+│   ├── README.md        # Documentacao dos testes
+│   ├── test_play.py     # Teste exploratorio
+│   ├── test_cliente.py  # Teste por cliente
+│   └── test_finais.py   # Teste de finais
+│
 └── docs/                # Documentacao
     ├── DESIGN.md        # Design consolidado
     └── PROMPTS.md       # Prompts de analise
@@ -152,6 +158,29 @@ Parametros ajustaveis:
 
 ---
 
+## Testes Automatizados
+
+Suite de testes usando `pexpect` para automacao de terminal.
+
+```bash
+# Instalar dependencia de testes
+pip install pexpect
+
+# Testar cliente especifico
+python tests/test_cliente.py yuki
+
+# Testar tipo de final
+python tests/test_finais.py perfeito
+```
+
+Documentacao completa em `tests/README.md`.
+
+**Nota:** Testes validam execucao do jogo, mas tem limitacoes
+com navegacao de dialogos complexos. Logica de finais verificada
+via simulacao direta.
+
+---
+
 ## Inspiracao
 
 Baseado na serie de TV **Midnight Diner** (深夜食堂 Shinya Shokudo),
@@ -160,4 +189,4 @@ explicando a origem da cicatriz de Master.
 
 ---
 
-*Atualizado: 16/01/2026 — v2.0 completa + otimizacoes de codigo*
+*Atualizado: 17/01/2026 — v2.0 completa + suite de testes automatizados*
