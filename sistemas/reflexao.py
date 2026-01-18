@@ -53,54 +53,82 @@ da madrugada. Cada cliente trouxe uma peca do quebra-cabeca
 que voce tentou esquecer por dez anos."""
 
 
-TRANSICAO_ENVELOPE = """Seus olhos se voltam para o envelope amarelado
-no canto do balcao.
+TRANSICAO_ENVELOPE = """Esta manha, quando voce abriu a porta do restaurante,
+havia um envelope no chao. Pardo, amarelado pelo tempo.
 
-O envelope que Yuki deixou na primeira noite.
-"Para quando voce estiver pronto", ela disse.
+Nenhum selo. Nenhum endereco. Apenas seu nome,
+escrito em letra feminina que voce reconheceu.
+
+Yuki.
+
+Ela deve ter vindo de madrugada, enquanto a cidade dormia.
+Deixou o envelope e foi embora, sem acordar ninguem.
 
 Suas maos tremem ao pega-lo.
-O papel esta gasto nas bordas, como se tivesse sido
-guardado por anos. Dentro, algo rigido. Uma foto, talvez."""
+Ela disse que iria ver as fotos. Que precisava entender.
+Agora, parece que ela quer que voce entenda tambem."""
 
 
-CONTEUDO_ENVELOPE = """Uma fotografia antiga desliza do envelope.
+CONTEUDO_ENVELOPE = """Um bilhete cai primeiro. Letra de Yuki.
 
-Nela, voce se ve. Jovem. Vinte e poucos anos.
-Carregando uma crianca para fora de um predio em chamas.
-Seu rosto esta coberto de fuligem, mas os olhos...
-Os olhos estao determinados.
+"Eu finalmente olhei.
 
-Atras da foto, uma anotacao em letra feminina:
+Dez anos carregando essas fotos sem coragem de ver.
+Naquela noite no seu restaurante, algo mudou.
+Voce me deu forca para encarar.
 
-"O heroi que nunca soube que era."
+E eu vi. Vi voce. Jovem. Entrando no fogo.
+Vi a crianca nos seus bracos.
+Vi o heroi que nunca soube que era.
 
-E entao, um recorte de jornal. Amarelado. Datado de dez anos atras.
+Mas vi outra coisa tambem.
+
+Uma foto que eu tinha esquecido de olhar.
+O quadro de energia do lado de fora. Faiscas.
+O fogo comecou ali. Nao dentro. Fora.
+
+Pesquisei nos arquivos do jornal onde trabalho."
+
+Voce tira o recorte de jornal. Amarelado. Datado de dez anos atras.
 
 PERICIA CONFIRMA: CURTO-CIRCUITO CAUSOU INCENDIO
 Investigacao descarta negligencia. Fiacao antiga
 do predio foi a causa do acidente que matou
 o renomado chef Takeshi Yamamoto.
 
-Junto, um bilhete de Yuki:
+A voz dentro de voce — aquela que sussurrava que foi
+sua culpa, que voce deveria ter feito mais, que Takeshi
+morreu por sua causa — finalmente silencia.
 
-"Encontrei isso nos arquivos do jornal onde trabalho.
-Voce nao causou o incendio. Voce salvou vidas.
-Takeshi sabia. Ele voltou para salvar voce,
-nao por sua culpa — por escolha propria.
-Como voce escolheu salvar aquela crianca."
+O bilhete continua:
+
+"Voce nao causou o incendio. Ninguem causou.
+Foi um acidente. Uma fiacao velha. Nada mais.
+
+Takeshi voltou para salvar voce nao por culpa —
+por escolha. Como voce escolheu salvar aquela crianca.
+
+Obrigada. Por me ajudar a ver.
+Espero que isso ajude voce tambem.
+
+— Yuki"
 
 Suas maos param de tremer.
 Pela primeira vez em dez anos, param de tremer."""
 
 
-SEM_ENVELOPE = """Seus olhos procuram pelo balcao.
-O envelope que Yuki poderia ter deixado... nao esta la.
+SEM_ENVELOPE = """Voce pensa em Yuki. A fotografa da primeira noite.
 
-Na primeira noite, ela foi embora sem revelar o que carregava.
-Algumas respostas se perderam com ela.
+Ela carregava algo. Um envelope. Fotos de uma noite antiga.
+Mas foi embora ainda fechada, ainda carregando seu peso.
 
-Voce nunca sabera o que havia naquele envelope amarelado."""
+Voce se pergunta se ela encontrou coragem para olhar.
+Se descobriu algo nas fotos que a libertou.
+Se pensou em voce.
+
+Algumas respostas se perdem assim.
+Na noite. No silencio. Na distancia entre estranhos
+que quase se conheceram."""
 
 
 # ============================================================

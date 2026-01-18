@@ -930,7 +930,7 @@
     "capturou_peso": {
       "id": "capturou_peso",
       "contexto": "Yuki acena, os olhos umidos.",
-      "texto": "\"Pesa. Muito.\"\n\nEla tira o envelope da bolsa. Pardo, amarelado pelo tempo. Coloca no balcao.\n\n\"Tanto tempo carregando. Sem mostrar. Sem olhar direito.\"\n\nEla olha para voce.\n\n\"Eu vim andando. Sem destino. E acabei aqui.\" Um riso baixo. \"Talvez fosse para eu vir.\"",
+      "texto": "\"Pesa. Muito.\"\n\nEla tira o envelope da bolsa. Pardo, amarelado pelo tempo. Segura com as duas maos.\n\n\"Tanto tempo carregando. Sem mostrar. Sem olhar direito.\"\n\nGuarda o envelope de volta. Devagar.\n\n\"Eu vim andando. Sem destino. E acabei aqui.\" Um riso baixo. \"Talvez fosse para eu vir.\"",
       "e_pista": false,
       "gatilho_prato": true,
       "opcoes": [
@@ -954,7 +954,7 @@
     "envelope_fotos": {
       "id": "envelope_fotos",
       "contexto": "Yuki olha para a bolsa.",
-      "texto": "\"Sim.\"\n\nEla hesita. Tira o envelope. Pardo, amarelado pelo tempo.\n\n\"Tanto tempo. Carrego ha tanto tempo.\"\n\nColoca no balcao. Nao abre.\n\n\"O homem que entrou no fogo — ele sobreviveu. Com uma cicatriz. Grande. No rosto.\"\n\nOs olhos dela encontram os seus.\n\n\"Nunca soube quem ele era.\"",
+      "texto": "\"Sim.\"\n\nEla hesita. Tira o envelope. Pardo, amarelado pelo tempo.\n\n\"Tanto tempo. Carrego ha tanto tempo.\"\n\nSegura contra o peito. Nao abre.\n\n\"O homem que entrou no fogo — ele sobreviveu. Com uma cicatriz. Grande. No rosto.\"\n\nOs olhos dela encontram os seus.\n\n\"Nunca soube quem ele era.\"",
       "e_pista": true,
       "pista_id": "homem_cicatriz",
       "pensamento_master": "Voce sente a cicatriz como se fosse feita de fogo outra vez.",
@@ -979,7 +979,7 @@
     "testemunhos_nao_pedidos": {
       "id": "testemunhos_nao_pedidos",
       "contexto": "Yuki olha para voce com olhos cansados.",
-      "texto": "Ela fica em silencio. Depois:\n\n\"E isso. Exatamente.\"\n\nPega o envelope da bolsa. Pardo, amarelado.\n\n\"Eu nao pedi para ver aquilo. Mas vi. E agora carrego.\"\n\nColoca o envelope no balcao.\n\n\"Talvez este seja o lugar para deixar ir.\"",
+      "texto": "Ela fica em silencio. Depois:\n\n\"E isso. Exatamente.\"\n\nPega o envelope da bolsa. Pardo, amarelado.\n\n\"Eu nao pedi para ver aquilo. Mas vi. E agora carrego.\"\n\nSegura o envelope. Olha para ele.\n\n\"Talvez este seja o lugar para encontrar coragem de olhar.\"",
       "e_pista": false,
       "gatilho_prato": true,
       "opcoes": [
@@ -1045,13 +1045,13 @@
     "acenar_sim": {
       "id": "acenar_sim",
       "contexto": "O ar parece mais denso. Yuki absorve a revelacao.",
-      "texto": "Yuki fica em silencio. Lagrimas escorrem pelo rosto.\n\n\"Todo esse tempo.\" Sussurro. \"Carregando suas fotos. E voce estava aqui.\"\n\nEla empurra o envelope para voce.\n\n\"Sao suas. Sempre foram.\"",
+      "texto": "Yuki fica em silencio. Lagrimas escorrem pelo rosto.\n\n\"Todo esse tempo.\" Sussurro. \"Carregando suas fotos. E voce estava aqui.\"\n\nEla aperta o envelope contra o peito.\n\n\"Eu nunca olhei direito. Tinha medo.\" Respira fundo. \"Mas agora... talvez eu precise ver. Entender o que aconteceu de verdade.\"",
       "e_pista": false,
       "pensamento_master": "As fotos. Do incendio. De voce entrando nas chamas. A historia que voce tentou esquecer.",
       "opcoes": [
         {
-          "texto": "Guarda. Sao suas tambem agora.",
-          "dica": "generoso",
+          "texto": "Quando estiver pronta, voce vai saber o que fazer.",
+          "dica": "gentil",
           "impacto": 20,
           "tipo": "dialogo_medio",
           "proximo": "fotos_dela"
@@ -1085,8 +1085,8 @@
 
     "fotos_dela": {
       "id": "fotos_dela",
-      "contexto": "Yuki olha para o envelope, surpresa.",
-      "texto": "\"Minhas?\"\n\nEla hesita.\n\n\"Voce nao quer ver?\"\n\nVoce balanca a cabeca.\n\n\"Eu ja vivi aquilo. Nao preciso ver fotos.\" Pausa. \"Mas voce carregou isso por tanto tempo. Talvez seja hora de deixar ir.\"\n\nEla respira fundo.\n\n\"Talvez comendo algo. Como faziamos em familia.\"",
+      "contexto": "Yuki guarda o envelope na bolsa com cuidado.",
+      "texto": "Ela guarda o envelope. Mas diferente de antes — com menos medo.\n\n\"Voce nao quer ver?\"\n\nVoce balanca a cabeca.\n\n\"Eu ja vivi aquilo. Nao preciso ver fotos.\" Pausa. \"Mas voce... voce precisa. Quando estiver pronta.\"\n\nEla respira fundo. Algo se solta.\n\n\"Talvez comendo algo primeiro. Como faziamos em familia.\"",
       "e_pista": false,
       "revelacao_prato": "tamago_gohan",
       "opcoes": [
@@ -1128,7 +1128,7 @@
     "muito_tempo": {
       "id": "muito_tempo",
       "contexto": "Yuki olha para voce com olhos cansados, mas algo neles esta mais leve.",
-      "texto": "\"Sim. Muito.\"\n\nEla abre a bolsa. Tira o envelope pardo, amarelado pelo tempo. Coloca no balcao.\n\n\"Vim andando. Sem destino. Vi a lanterna. O noren.\"\n\nUm riso baixo.\n\n\"Talvez estivesse procurando um lugar para deixar ir.\"",
+      "texto": "\"Sim. Muito.\"\n\nEla abre a bolsa. Tira o envelope pardo, amarelado pelo tempo. Segura por um momento.\n\n\"Vim andando. Sem destino. Vi a lanterna. O noren.\"\n\nGuarda o envelope. Um riso baixo.\n\n\"Talvez estivesse procurando coragem para olhar.\"",
       "e_pista": false,
       "gatilho_prato": true,
       "opcoes": [
@@ -1404,7 +1404,7 @@
     "encontrar_onde_deixar": {
       "id": "encontrar_onde_deixar",
       "contexto": "Algo nas suas palavras ressoa em Yuki.",
-      "texto": "Ela olha ao redor do restaurante.\n\n\"Talvez seja por isso que entrei aqui.\"\n\nAbre a bolsa. Tira o envelope pardo, amarelado. Coloca no balcao.\n\n\"Nunca mostrei para ninguem.\" Olha para voce. \"Mas se voce tiver tempo...\"",
+      "texto": "Ela olha ao redor do restaurante.\n\n\"Talvez seja por isso que entrei aqui.\"\n\nAbre a bolsa. Tira o envelope pardo, amarelado. Segura nas maos.\n\n\"Nunca mostrei para ninguem. Nem para mim mesma, direito.\" Olha para voce. \"Mas talvez hoje...\"",
       "e_pista": false,
       "gatilho_prato": true,
       "opcoes": [
@@ -1973,7 +1973,7 @@
     "envelope_revelado": {
       "id": "envelope_revelado",
       "contexto": "Yuki olha para a bolsa, surpresa.",
-      "texto": "\"Voce percebeu.\"\n\nNao e pergunta. Tira o envelope pardo, amarelado.\n\n\"Sim. Faz parte.\" Coloca no balcao. \"Fotos. De uma noite que nunca consegui esquecer.\"\n\nOlha para voce.\n\n\"De um incendio. E de um homem que salvou vidas.\"",
+      "texto": "\"Voce percebeu.\"\n\nNao e pergunta. Tira o envelope pardo, amarelado.\n\n\"Sim. Faz parte.\" Segura contra o peito. \"Fotos. De uma noite que nunca consegui esquecer.\"\n\nOlha para voce.\n\n\"De um incendio. E de um homem que salvou vidas.\"",
       "e_pista": true,
       "pista_id": "envelope_revelado",
       "pensamento_master": "As fotos. Daquela noite. Do fogo. De voce.",
@@ -2067,7 +2067,7 @@
     "ainda_tem_foto": {
       "id": "ainda_tem_foto",
       "contexto": "Yuki toca a bolsa.",
-      "texto": "\"Tenho.\"\n\nTira o envelope pardo, amarelado.\n\n\"Todo esse tempo. Carrego.\" Coloca no balcao. \"Sem coragem de olhar. Nem de jogar fora.\"\n\nOlha para voce.\n\n\"Como se eu devesse algo a esse homem. Mas nao sei o que.\"",
+      "texto": "\"Tenho.\"\n\nTira o envelope pardo, amarelado.\n\n\"Todo esse tempo. Carrego.\" Segura com forca. \"Sem coragem de olhar. Nem de jogar fora.\"\n\nOlha para voce.\n\n\"Como se eu devesse algo a esse homem. Mas nao sei o que.\"",
       "e_pista": true,
       "pista_id": "devendo_algo",
       "opcoes": [
@@ -2098,7 +2098,7 @@
     "lugar_descansar": {
       "id": "lugar_descansar",
       "contexto": "Yuki considera.",
-      "texto": "\"Um lugar para descansar...\"\n\nOlha ao redor.\n\n\"Talvez seja isso. O que eu estava procurando. Sem saber.\"\n\nTira o envelope da bolsa. Pardo, amarelado.\n\n\"Todo esse tempo carregando. Talvez seja hora.\"\n\nOlha para voce.\n\n\"Mas primeiro... queria comer algo. De casa.\"",
+      "texto": "\"Um lugar para descansar...\"\n\nOlha ao redor.\n\n\"Talvez seja isso. O que eu estava procurando. Sem saber.\"\n\nToca o envelope na bolsa. Pardo, amarelado.\n\n\"Todo esse tempo carregando. Talvez seja hora de olhar.\"\n\nOlha para voce.\n\n\"Mas primeiro... queria comer algo. De casa.\"",
       "e_pista": false,
       "opcoes": [
         {
@@ -2144,7 +2144,7 @@
     "carrega_noite": {
       "id": "carrega_noite",
       "contexto": "Yuki acena.",
-      "texto": "\"Carrego. Sim.\"\n\nTira o envelope. Pardo, amarelado pelo tempo.\n\n\"Fotos. De uma noite. De um incendio. De um homem que salvou vidas.\"\n\nColoca no balcao.\n\n\"Nunca tive coragem de olhar direito. Nem de mostrar.\" Olha para voce. \"Ate agora, talvez.\"",
+      "texto": "\"Carrego. Sim.\"\n\nTira o envelope. Pardo, amarelado pelo tempo.\n\n\"Fotos. De uma noite. De um incendio. De um homem que salvou vidas.\"\n\nSegura com as duas maos.\n\n\"Nunca tive coragem de olhar direito. Nem de mostrar.\" Olha para voce. \"Ate agora, talvez.\"",
       "e_pista": true,
       "pista_id": "envelope_noite",
       "pensamento_master": "As fotos. Daquela noite. O passado ali, num envelope pardo.",
