@@ -5,7 +5,11 @@ Efeitos de digitação, transições e animações
 que criam imersão e atmosfera.
 """
 
+import sys
 import time
+import select
+import termios
+import tty
 from typing import Optional
 
 from rich.console import Console
@@ -22,6 +26,23 @@ from config import (
 )
 
 
+def _input_disponivel() -> bool:
+    """Verifica se há input disponível no stdin (não-bloqueante)."""
+    try:
+        return select.select([sys.stdin], [], [], 0)[0] != []
+    except (ValueError, OSError):
+        return False
+
+
+def _limpar_buffer_input() -> None:
+    """Limpa qualquer input pendente no buffer."""
+    try:
+        while _input_disponivel():
+            sys.stdin.read(1)
+    except (ValueError, OSError):
+        pass
+
+
 class Efeitos:
     """
     Gerencia efeitos visuais do jogo.
@@ -32,6 +53,11 @@ class Efeitos:
 
     def __init__(self, console: Console):
         self.console = console
+        self._texto_pulado = False  # Flag para pular texto em sequência
+
+    def resetar_pulo(self) -> None:
+        """Reseta a flag de pular texto (chamar após interação do jogador)."""
+        self._texto_pulado = False
 
     def digitar(
         self,
@@ -42,6 +68,9 @@ class Efeitos:
     ) -> None:
         """
         Exibe texto com efeito de digitação (máquina de escrever).
+
+        O jogador pode pressionar ENTER para mostrar o texto completo
+        imediatamente, útil ao rejogar o jogo.
 
         Args:
             texto: O texto a ser exibido
@@ -64,17 +93,53 @@ class Efeitos:
         if estilo:
             texto_formatado.stylize(estilo)
 
+        # Se já pulou texto anterior (em sequência), mostra direto
+        if self._texto_pulado:
+            self.console.print(texto_formatado, end="\n" if nova_linha else "")
+            return
+
         # Usa Live para atualização suave - digita caractere por caractere
         texto_exibido = Text(style=estilo if estilo else None)
+        pulado = False
 
-        with Live(texto_exibido, console=self.console, refresh_per_second=60, transient=True) as live:
-            for char in texto_formatado.plain:
-                texto_exibido.append(char)
-                live.update(texto_exibido)
-                time.sleep(velocidade)
+        # Configura terminal para modo raw (detectar ENTER imediatamente)
+        fd = sys.stdin.fileno()
+        try:
+            configuracao_original = termios.tcgetattr(fd)
+            tty.setcbreak(fd)  # Modo cbreak: input imediato sem echo
+        except (termios.error, ValueError, OSError):
+            configuracao_original = None
+
+        try:
+            _limpar_buffer_input()  # Limpa input anterior
+
+            with Live(texto_exibido, console=self.console, refresh_per_second=60, transient=True) as live:
+                for char in texto_formatado.plain:
+                    # Verifica se jogador quer pular (ENTER pressionado)
+                    if _input_disponivel():
+                        tecla = sys.stdin.read(1)
+                        if tecla in ('\n', '\r', ' '):  # ENTER ou ESPAÇO
+                            pulado = True
+                            self._texto_pulado = True  # Marca para pular próximos textos
+                            break
+
+                    texto_exibido.append(char)
+                    live.update(texto_exibido)
+                    time.sleep(velocidade)
+        finally:
+            # Restaura configuração do terminal
+            if configuracao_original is not None:
+                try:
+                    termios.tcsetattr(fd, termios.TCSADRAIN, configuracao_original)
+                except (termios.error, ValueError, OSError):
+                    pass
 
         # Imprime versão final com formatação completa
         self.console.print(texto_formatado, end="\n" if nova_linha else "")
+
+        # Limpa buffer se pulou (evita ENTER fantasma no próximo input)
+        if pulado:
+            _limpar_buffer_input()
 
     def digitar_rapido(self, texto: str, estilo: str = "") -> None:
         """Digita texto mais rapidamente."""

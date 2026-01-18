@@ -197,6 +197,7 @@ class Noite:
             self.renderer.console.print(
                 f"\n[destaque]Você percebe que {nome_prato} seria perfeito agora.[/destaque]"
             )
+            self.renderer.pausar()  # Garante que jogador veja a dica antes de continuar
 
         # Verifica se é cena de cozinha
         if resultado.tipo_cena == "cozinha":
@@ -218,9 +219,6 @@ class Noite:
             "Qual prato preparar?",
             pratos,
         )
-
-        if escolha == 0:
-            return None
 
         prato_escolhido = pratos[escolha - 1][0]  # ID do prato
 

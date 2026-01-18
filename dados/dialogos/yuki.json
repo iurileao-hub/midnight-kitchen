@@ -179,10 +179,33 @@
           "dica": "pratico",
           "impacto": 10,
           "tipo": "dialogo_curto",
-          "proximo": "quer_comer"
+          "proximo": "quer_mais_algo"
         },
         {
           "texto": "[Acenar, concordando]",
+          "dica": "silencioso",
+          "impacto": 15,
+          "tipo": "silencio",
+          "proximo": "silencio_profundo"
+        }
+      ]
+    },
+
+    "quer_mais_algo": {
+      "id": "quer_mais_algo",
+      "contexto": "Yuki considera a pergunta.",
+      "texto": "Ela olha para a tigela vazia. Depois para voce.\n\n\"Acho que estou bem por agora.\"\n\nUma pausa. Os dedos vao para a alca da camera.\n\n\"Obrigada. Fazia tempo que nao comia assim. Com calma.\"",
+      "e_pista": false,
+      "opcoes": [
+        {
+          "texto": "O que voce estava pensando enquanto andava?",
+          "dica": "gentil",
+          "impacto": 12,
+          "tipo": "dialogo_medio",
+          "proximo": "estava_procurando"
+        },
+        {
+          "texto": "[Acenar e continuar trabalhando]",
           "dica": "silencioso",
           "impacto": 15,
           "tipo": "silencio",

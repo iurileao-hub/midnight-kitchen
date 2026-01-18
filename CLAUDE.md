@@ -80,6 +80,10 @@ midnight-kitchen/
 - **Dia 7:** Reflexao + revelacao do final
 - **Save automatico:** Entre noites
 
+### Controles
+- **ENTER/ESPACO:** Pula texto durante digitacao (util ao rejogar)
+- **Numeros:** Seleciona opcoes nos menus
+
 ### Sistema de Confianca
 - 0-20: Fechado
 - 21-40: Cauteloso
@@ -135,7 +139,6 @@ com multiplos caminhos, pistas progressivas e gatilhos emocionais.
 | Omurice | オムライス | Hiroto |
 | Onigiri | おにぎり | Generico |
 | Gyudon | 牛丼 | Generico |
-| Yakitori | 焼き鳥 | Generico |
 
 ---
 
@@ -189,4 +192,4 @@ explicando a origem da cicatriz de Master.
 
 ---
 
-*Atualizado: 17/01/2026 — v2.0 completa + suite de testes automatizados*
+*Atualizado: 18/01/2026 — v2.1 melhorias de UX e correcoes*

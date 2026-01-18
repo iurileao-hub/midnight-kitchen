@@ -35,7 +35,7 @@
     "curry_udon": {
       "nome": "Curry Udon",
       "nome_japones": "カレーうどん",
-      "descricao": "Udon grosso em caldo de curry quente. O abraço em forma de comida que Mika fazia para Ryo toda noite.",
+      "descricao": "Udon grosso em caldo de curry quente. O abraço em forma de comida para quem chega tarde em casa.",
       "tempo_preparo": 15,
       "cliente_ideal": "ryo",
 
@@ -138,20 +138,6 @@
       "narrativa_servir": "A tigela de gyudon é reconfortante. Você a coloca no balcão.\n\nComida de quem precisa continuar.",
 
       "reacao_generica": "Saboroso. Reconfortante. Mas esta noite, algo diferente era necessário."
-    },
-
-    "yakitori": {
-      "nome": "Yakitori",
-      "nome_japones": "焼き鳥",
-      "descricao": "Espetinhos de frango grelhados com tare doce. A comida das noites com amigos — yakitori raramente se come sozinho.",
-      "tempo_preparo": 18,
-      "cliente_ideal": null,
-
-      "narrativa_preparo": "Os espetinhos repousam sobre a grelha. O carvão crepita.\n\nVocê vira cada um com precisão. O tare carameliza, fumando. O cheiro preenche o restaurante inteiro.\n\nNegima — frango e cebolinha alternados. Tsukune — almôndegas de frango. Cada espetinho, uma pequena obra.",
-
-      "narrativa_servir": "Os espetinhos chegam ainda fumegando. Você os coloca num suporte de madeira.\n\nComida de noites longas. De conversas honestas.",
-
-      "reacao_generica": "O yakitori está perfeito. Mas não é o prato que esta pessoa precisava — não esta noite."
     }
   }
 }

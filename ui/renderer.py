@@ -38,6 +38,7 @@ class Renderer:
     def limpar(self) -> None:
         """Limpa a tela."""
         self.console.clear()
+        self.efeitos.resetar_pulo()  # Reseta flag de pular texto em nova tela
 
     def mostrar_logo(self) -> None:
         """Exibe o logo do jogo."""
@@ -180,7 +181,7 @@ class Renderer:
         Exibe menu especializado de pratos com descrições culturais.
 
         Returns:
-            Índice do prato escolhido (0 = cancelar)
+            Índice do prato escolhido (1-based)
         """
         from rich.panel import Panel
         from rich.text import Text
@@ -199,7 +200,9 @@ class Renderer:
             linhas.append(Text(f"   {desc}", style="grey62"))
             linhas.append(Text())  # Espaço entre pratos
 
-        linhas.append(Text("0. [Voltar]", style="grey50"))
+        # Remove última linha vazia
+        if linhas and isinstance(linhas[-1], Text) and not linhas[-1].plain.strip():
+            linhas.pop()
 
         # Monta painel
         conteudo = Text()
@@ -223,7 +226,7 @@ class Renderer:
             escolha = self.componentes.prompt_escolha("Escolha")
             try:
                 num = int(escolha)
-                if 0 <= num <= len(pratos):
+                if 1 <= num <= len(pratos):
                     return num
                 self.console.print("[erro]Opção inválida.[/erro]")
             except ValueError:
@@ -254,6 +257,7 @@ class Renderer:
     def pausar(self) -> None:
         """Pausa esperando input do jogador."""
         self.componentes.prompt_continuar()
+        self.efeitos.resetar_pulo()  # Reseta flag de pular texto após interação
 
     def mostrar_erro(self, mensagem: str) -> None:
         """Exibe mensagem de erro."""
